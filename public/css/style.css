@@ -1,0 +1,163 @@
+/*
+    Include Fonts
+*/
+@font-face {
+    font-family: ABeeZee-Regular;
+    src: url("../fonts/ABeeZee-Regular.ttf");
+}
+
+body{
+    font-family: ABeeZee-Regular;
+}
+
+/* 
+    Text and Font
+*/
+.text-color-white{
+    color: white !important;
+}
+.text-color-black{
+    color: black !important;
+}
+.text-style-bold{
+    font-weight: bold;
+}
+/* 
+    End Text and Font
+*/
+/* 
+    Bottons
+*/
+.btn-nav{
+    border: none;
+    border-radius: 30px;
+    width: 100px;
+    color: white;
+    margin: 14px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+.btn-nav:hover {
+    border: none;
+    border-radius: 30px;
+    width: 100px;
+    color: white;
+    margin: 14px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border: 2px solid #fff;
+    color: #fff !important;
+    background-color: #000 !important;
+}
+.btn-color-gold{
+    background-color: #f7ed4a;
+}
+.btn-color-outline-gold{
+    border: 2px solid #f7ed4a;
+    color: #f7ed4a !important;
+}
+.btn-color-outline-black{
+    border: 5px solid #000;
+    color: #000 !important;
+}
+.btn-color-red{
+    background-color: #ec1212;
+}
+
+/* 
+    End Bottons
+*/
+/* Navbar Brand */
+.navbar-brand{
+    font-size: 18px;
+    margin: 14px 30px;
+}
+/* Navbar Brand */
+
+/* Carousel Settings */
+.carousel-slide-image{
+    width:100%;
+    height: 550px !important;
+}
+/* End Carousel Settings */
+/* Main Content */
+.main-content{
+    margin: 0px !important;
+    padding: 20px;
+}
+.bg-color-grey{
+    background-color:#f9f9f9;
+}
+.bg-color-black{
+    background-color:#191919;
+}
+.main-content-heading{
+    color: #000;
+    font-size: 45px;
+    margin:100px;
+    font-weight: bold;
+}
+/* End Main Content */
+/* Cards Services */
+.cards-services{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+.card-service{
+    width: 30%;
+    text-align: center;
+    padding: 20px;
+}
+.card-service-image{
+    width:100%;
+    height: 250px !important;
+    margin: 25px;
+}
+.card-service-paragraph{
+    width:100%;
+    font-size: 14px;
+}
+.card-service-news{
+    width: 45%;
+    padding: 20px;
+}
+.card-service-news-image{
+    width: 100%;
+    height: 350px;
+}
+.card-service-news-title{
+    font-size: 45px;
+}
+.card-service-news-paragraph{
+    font-size: 18px;
+}
+.card-service-news-continue-btn{
+    border: none;
+    border-radius: 30px;
+    width: 100px;
+    margin: 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+.card-service-news-continue-btn:hover{
+    color: cornflowerblue !important;
+    border-radius: 30px;
+    width: 100px;
+    margin: 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+/* End Cards Services */
+.text-align-center{
+    text-align: center;
+}
