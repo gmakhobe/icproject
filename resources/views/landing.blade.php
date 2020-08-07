@@ -12,7 +12,7 @@
         <!-- Styles -->
         <!-- Latest compiled and minified CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-        <link rel="stylesheet" href="{{ asset('/css/style.css') }}"
+        <link rel="stylesheet" href="{{ asset('/css/style.css') }}">
         <!-- End Styles -->
 
         <style>
@@ -261,23 +261,21 @@
                     <h4 class="modal-title">Login In</h4>
                 </div>
                 <div class="modal-body">
-                <form action=""">
                     <div class="form-group">
                         <label for="email">Email address:</label>
-                        <input type="email" class="form-control" name="email">
+                        <input type="email" class="form-control" id="log-email">
                     </div>
                     <div class="form-group">
                         <label for="pwd">Password:</label>
-                        <input type="password" class="form-control" name="pwd">
+                        <input type="password" class="form-control" id="log-password">
                     </div>
                     <div class="checkbox">
-                        <label><input type="checkbox"> Remember me</label>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Login</button>
-                </form> 
+                        <label><input type="checkbox" id="log-rememver-me"> Remember me</label>
+                    </div> 
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button id="loginBTN" type="submit" class="btn btn-primary" onclick="AppLogin()">Login</button>
                 </div>
             </div>
         </div>
@@ -294,36 +292,37 @@
                     <h4 class="modal-title">Register</h4>
                 </div>
                 <div class="modal-body">
-                <form action=""">
-                    <div class="form-group">
-                        <label for="email">Email address:</label>
-                        <input type="email" class="form-control" name="email">
+                    <div id="reg-container">
+                        <div class="form-group">
+                            <label for="email">Email address:</label>
+                            <input type="email" class="form-control" id="reg-email">
+                        </div>
+                        <div class="form-group">
+                            <label for="pwd">Password:</label>
+                            <input type="password" class="form-control" id="reg-password">
+                        </div>
+                        <div class="form-group">
+                            <label for="confirm-pwd"> Confirm Password:</label>
+                            <input type="password" class="form-control" id="reg-confirm-password">
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <label for="pwd">Password:</label>
-                        <input type="password" class="form-control" name="pwd">
-                    </div>
-                    <div class="form-group">
-                        <label for="confirm-pwd"> Confirm Password:</label>
-                        <input type="password" class="form-control" name="confirm-pwd">
-                    </div>
-                    
-                    <button type="submit" class="btn btn-primary">Register</button>
-                </form> 
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button id="registerBTN" type="submit" class="btn btn-primary" onclick="AppRegister()">Register</button>
                 </div>
             </div>
         </div>
     </div>
     <!-- End Register Modal -->
-
+    <input type="hidden" class="form-control" id="index-csrf" value="{{ csrf_token() }}" hidden>
     <!-- Script -->    
     <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <!-- Local Javascript-->
+    <script src="{{ asset('js/index.request.js')}}"></script>
     <!-- End Script -->
 
     </body>
