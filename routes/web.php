@@ -24,4 +24,5 @@ Route::get('/terminal', function () {
 //Post requests
 Route::get('/register/email/{email}/password/{password}', 'IndexController@register');
 Route::get('/login/email/{email}/password/{password}', 'IndexController@login');
+Route::get('/subscribe/email/{email}', 'IndexController@subscribe');
 

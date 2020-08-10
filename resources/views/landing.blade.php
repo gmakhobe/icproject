@@ -25,6 +25,10 @@
             .subscribe-form{
                 width: 45%
             }
+
+            .cards-service-quote-box{
+                width:20%;
+            }
         </style>
     </head>
     <body>
@@ -179,6 +183,32 @@
     </div>
 
     <div class="container-fluid main-content">
+        <h2 class="main-content-heading text-align-center">ZAR Current Market<br> Price</h2>
+
+        <div class="cards-services">
+            <div class="cards-service-quote-box">
+                <div class="quote-name text-align-center">USDZAR</div>
+                <div class="quote-price text-align-center">Exchange Rate R16.25
+                    <br>Bid/Ask Price 16.22/16.11
+                </div>
+                <div class="quote-date text-align-center">Time: 2020-08-10 11:35:01</div>
+            </div>
+            <div class="cards-service-quote-box">
+                <div class="quote-name text-align-center">USDZAR</div>
+                <div class="quote-name text-align-center">R16.25</div>
+            </div>
+            <div class="cards-service-quote-box">
+                <div class="quote-name text-align-center">USDZAR</div>
+                <div class="quote-name text-align-center">R16.25</div>
+            </div>
+            <div class="cards-service-quote-box">
+                <div class="quote-name text-align-center">USDZAR</div>
+                <div class="quote-name text-align-center">R16.25</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid main-content">
         <h2 class="main-content-heading">News Update</h2>
         
         <div class="cards-services">
@@ -235,14 +265,14 @@
         <p class="subscribe-paragraph">Subscribe to our news later to receieve any news updates!</p>
 
         <div class="cards-services">
-            <form class="subscribe-form">
+            <div class="subscribe-form">
               <div class="input-group">
-                <input type="email" class="form-control" size="50" placeholder="Email Address" required>
+                <input id="s-email" type="email" class="form-control" size="50" placeholder="Email Address" required>
                 <div class="input-group-btn">
-                  <button type="button" class="btn btn-danger">Subscribe</button>
+                  <button id="subscribeBTN" onclick="AppSubscribe()" type="button" class="btn btn-danger">Subscribe</button>
                 </div>
               </div>
-            </form>
+            </div>
         </div>
 
     </div>

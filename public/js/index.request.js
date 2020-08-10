@@ -27,6 +27,35 @@ const icFETCH = (url, datar, csrf) => {
         });
     }));
 }
+// User Subscribe
+const AppSubscribe = () => {
+    document.getElementById("subscribeBTN").style.display = "none";
+    const email = document.getElementById("s-email").value;
+    const csrf = document.getElementById("index-csrf").value;
+
+    if (!email){
+        alert("Email is requred to subscribe.");
+        return ;
+    }
+
+    //Call custome Fetxh
+    icFETCH(`http://127.0.0.1:8000/subscribe/email/${email}`, {Email: email}, csrf)
+    .then(data => {
+
+        if (data.status){
+            alert("Thanks for subscribing, you will receive our news updates and alerts regarding our products.");
+        }
+        if (data.status == 0){
+            alert(alert(data.message));
+        } 
+    })
+    .catch(error => {
+        alert(`An error occured: Please try subscribing again with a different email address the current one is already subscribed!`);
+    });
+    document.getElementById("subscribeBTN").style.display = "block";
+}
+
+// End User Subscribe
 // User Registration
 
 const AppRegister = () => {
