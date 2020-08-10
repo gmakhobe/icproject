@@ -25,7 +25,7 @@ class IndexController extends Controller
         }
     }
 
-    public function login($email, $password){
+    public function login(Request $request, $email, $password){
         //Check if $mail and $password are empty strings
         if (!$email || !$password){
             return json_encode(array("status" => 0, "message" => "All fields are required!"));
@@ -37,6 +37,7 @@ class IndexController extends Controller
             if ($results){
                 $comparePassword = Hash::check($password, $results[0]->Passcode);
                 if ($comparePassword){
+                    $request->session()->put("user", array("User" => $results));
                     return json_encode(array("status" => 1, "message" => "Login success!"));
                 }
                 return json_encode(array("status" => 0, "message" => "Email or Password is incorrect!"));
