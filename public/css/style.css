@@ -161,3 +161,30 @@ body{
 .text-align-center{
     text-align: center;
 }
+
+.aboutus-paragraph{
+    font-size:45px;
+}
+.subscribe-paragraph{
+    font-size:18px;
+}
+.subscribe-form{
+    width: 45%
+}
+
+.cards-service-quote-box{
+    width:20%;
+}
+
+/* Quotes */
+.quotes-text{
+    font-weight: bold;
+}
+
+.quote-name{
+    font-size: 20px;
+}
+.quote-price{
+    font-size: 14px;
+    color:darkgreen;
+}

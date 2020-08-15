@@ -21,8 +21,9 @@ Route::get('/terminal', function () {
 
     return view("terminal");
 });
-//Post requests
+//Get Requests from /
 Route::get('/register/email/{email}/password/{password}', 'IndexController@register');
 Route::get('/login/email/{email}/password/{password}', 'IndexController@login');
 Route::get('/subscribe/email/{email}', 'IndexController@subscribe');
+Route::get('/CURRENCY_EXCHANGE', 'IndexController@exchangeRate');
 

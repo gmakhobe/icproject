@@ -27,6 +27,72 @@ const icFETCH = (url, datar, csrf) => {
         });
     }));
 }
+//Display Null Exchange Rate
+const showNullCurrencyQuotes = () => {
+    let pairs = ["USDZAR", "GBPZAR", "EURZAR", "JPYZAR"];
+    let quotesLayout = document.getElementById('quotes-sections');
+
+    for(let i = 0; i < pairs.length; i++){
+
+        quotesLayout.innerHTML += `
+        <div class="quotes-text cards-service-quote-box">
+            <div class="quote-name text-align-center">${pairs[i]}</div>
+            <div class="text-align-center">Exchange Rate: <span class="quote-price">R0.00</span>
+                <br>Bid/Ask Price: <span class="quote-price">R0.00/R0.00</span>
+            </div>
+            <div class="quote-date text-align-center">Time: 01 Jan 0000 00:00:00</div>
+        </div>
+        `;
+
+    }
+}
+// Dhow valid exchange rate
+const showCurrencyQuotes = (obj) => {
+    let pairs = ["USDZAR", "GBPZAR", "EURZAR", "JPYZAR"];
+    let quotesLayout = document.getElementById('quotes-sections');
+
+    obj = JSON.parse(obj);
+
+    //console.log(obj);
+
+    for (const key in obj) {
+        
+        quotesLayout.innerHTML += `
+        <div class="quotes-text cards-service-quote-box">
+            <div class="quote-name text-align-center">${obj[key][0]["FromCurrencyCode"] + obj[key][0]["ToCurrencyCode"]}</div>
+            <div class="text-align-center">Exchange Rate: <span class="quote-price">${obj[key][0]["ExchangeRate"]}</span>
+                <br>Bid/Ask Price: <span class="quote-price">${obj[key][0]["BidRate"]} / ${obj[key][0]["AskRate"]} </span>
+            </div>
+            <div class="quote-date text-align-center">Time: ${obj[key][0]["CreatedDate"]}</div>
+        </div>`;
+
+    }
+    
+    //console.log(`${obj["GBPZAR"][0]["FromCurrencyCode"] + obj[["GBPZAR"]][0]["ToCurrencyCode"]}`);
+}
+// Onload get landing page currency prices
+const loadQuotesFromServer = () => {
+    const csrf = document.getElementById("index-csrf").value;
+
+    //Get Quotes
+    icFETCH(`http://127.0.0.1:8000/CURRENCY_EXCHANGE`, {reqID: null}, csrf)
+    .then(data => {
+        if (data.status == 1){
+            showCurrencyQuotes(data.message)
+        }
+        if (data.status == 0){
+            alert(`An error occured: Please try reloading the page!`);
+            showNullCurrencyQuotes();
+        } 
+    })
+    .catch(error => {
+        alert(`An error occured: Please try reloading the page [Error Fetching Currency Quotes]=> ${error}!`);
+        showNullCurrencyQuotes();
+    });
+
+}
+
+// End Get Quotes from Server
 // User Subscribe
 const AppSubscribe = () => {
     document.getElementById("subscribeBTN").style.display = "none";

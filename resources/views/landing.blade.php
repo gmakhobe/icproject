@@ -16,19 +16,7 @@
         <!-- End Styles -->
 
         <style>
-            .aboutus-paragraph{
-                font-size:45px;
-            }
-            .subscribe-paragraph{
-                font-size:18px;
-            }
-            .subscribe-form{
-                width: 45%
-            }
-
-            .cards-service-quote-box{
-                width:20%;
-            }
+            
         </style>
     </head>
     <body>
@@ -185,26 +173,11 @@
     <div class="container-fluid main-content">
         <h2 class="main-content-heading text-align-center">ZAR Current Market<br> Price</h2>
 
-        <div class="cards-services">
-            <div class="cards-service-quote-box">
-                <div class="quote-name text-align-center">USDZAR</div>
-                <div class="quote-price text-align-center">Exchange Rate R16.25
-                    <br>Bid/Ask Price 16.22/16.11
-                </div>
-                <div class="quote-date text-align-center">Time: 2020-08-10 11:35:01</div>
-            </div>
-            <div class="cards-service-quote-box">
-                <div class="quote-name text-align-center">USDZAR</div>
-                <div class="quote-name text-align-center">R16.25</div>
-            </div>
-            <div class="cards-service-quote-box">
-                <div class="quote-name text-align-center">USDZAR</div>
-                <div class="quote-name text-align-center">R16.25</div>
-            </div>
-            <div class="cards-service-quote-box">
-                <div class="quote-name text-align-center">USDZAR</div>
-                <div class="quote-name text-align-center">R16.25</div>
-            </div>
+        <div class="cards-services" id="quotes-sections">
+            
+            <!-- Display infor using innerhtml when loading quotes-->
+            
+            
         </div>
     </div>
 
@@ -353,6 +326,9 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <!-- Local Javascript-->
     <script src="{{ asset('js/index.request.js')}}"></script>
+    <script>
+        loadQuotesFromServer();
+    </script>
     <!-- End Script -->
 
     </body>

@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\URL;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
+use App\Http\Logic\StoreQuotes;
 
 class IndexController extends Controller
 {
@@ -59,5 +60,54 @@ class IndexController extends Controller
         }catch(Exception $e){
             return json_encode(array("status" => 0, "message" => "An error occured please try again"));
         }
+    }
+
+    public function exchangeRate(){
+        
+
+        try {
+            $results = DB::select("select * from quoteslandingpage ORDER BY CreatedDate DESC LIMIT 1");
+
+            if (isset($results)){
+                $CreatedDateFromDB = strtotime($results[0]->CreatedDate);
+                $mathsSubtractDate = date("YmdHi") - date("YmdHi", $CreatedDateFromDB);
+            }else{
+                $mathsSubtractDate = 50000;
+            }
+            
+            if (!isset($results) || $mathsSubtractDate > 50){
+                //Get Quotes from API
+                $Quotes = StoreQuotes::StoreLandingPageCurrencyExchange();
+
+                if (!$Quotes["USDZAR"]["Status"] || !$Quotes["GBPZAR"]["Status"] || !$Quotes["EURZAR"]["Status"] || !$Quotes["JPYZAR"]["Status"]){
+                    
+                    //Run this block
+
+                }else{
+                    //Execute on success
+                    //USDZAR
+                    DB::insert('insert into quoteslandingpage (ProviderName, FromCurrencyCode, FromCurrencyName, ToCurrencyCode, ToCurrencyName, ExchangeRate, BidRate, AskRate, TimeZone, LastRefreshed, CreatedDate) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)', ['www.alphavantage.co', $Quotes["USDZAR"]["FromCurrencyCode"], $Quotes["USDZAR"]["FromCurrencyName"], $Quotes["USDZAR"]["ToCurrencyCode"], $Quotes["USDZAR"]["ToCurrencyName"], $Quotes["USDZAR"]["ExchangeRate"], $Quotes["USDZAR"]["BidRate"], $Quotes["USDZAR"]["AskRate"], $Quotes["USDZAR"]["TimeZone"], $Quotes["USDZAR"]["LastRefreshed"], date("Y-m-d H:i:s")]);
+                    //GBPZAR
+                    DB::insert('insert into quoteslandingpage (ProviderName, FromCurrencyCode, FromCurrencyName, ToCurrencyCode, ToCurrencyName, ExchangeRate, BidRate, AskRate, TimeZone, LastRefreshed, CreatedDate) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)', ['www.alphavantage.co', $Quotes["GBPZAR"]["FromCurrencyCode"], $Quotes["GBPZAR"]["FromCurrencyName"], $Quotes["GBPZAR"]["ToCurrencyCode"], $Quotes["GBPZAR"]["ToCurrencyName"], $Quotes["GBPZAR"]["ExchangeRate"], $Quotes["GBPZAR"]["BidRate"], $Quotes["GBPZAR"]["AskRate"], $Quotes["GBPZAR"]["TimeZone"], $Quotes["GBPZAR"]["LastRefreshed"], date("Y-m-d H:i:s")]);
+                    //EURZAR
+                    DB::insert('insert into quoteslandingpage (ProviderName, FromCurrencyCode, FromCurrencyName, ToCurrencyCode, ToCurrencyName, ExchangeRate, BidRate, AskRate, TimeZone, LastRefreshed, CreatedDate) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)', ['www.alphavantage.co', $Quotes["EURZAR"]["FromCurrencyCode"], $Quotes["EURZAR"]["FromCurrencyName"], $Quotes["EURZAR"]["ToCurrencyCode"], $Quotes["EURZAR"]["ToCurrencyName"], $Quotes["EURZAR"]["ExchangeRate"], $Quotes["EURZAR"]["BidRate"], $Quotes["EURZAR"]["AskRate"], $Quotes["EURZAR"]["TimeZone"], $Quotes["EURZAR"]["LastRefreshed"], date("Y-m-d H:i:s")]);
+                    //JPYZAR
+                    DB::insert('insert into quoteslandingpage (ProviderName, FromCurrencyCode, FromCurrencyName, ToCurrencyCode, ToCurrencyName, ExchangeRate, BidRate, AskRate, TimeZone, LastRefreshed, CreatedDate) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)', ['www.alphavantage.co', $Quotes["JPYZAR"]["FromCurrencyCode"], $Quotes["JPYZAR"]["FromCurrencyName"], $Quotes["JPYZAR"]["ToCurrencyCode"], $Quotes["JPYZAR"]["ToCurrencyName"], $Quotes["JPYZAR"]["ExchangeRate"], $Quotes["JPYZAR"]["BidRate"], $Quotes["JPYZAR"]["AskRate"], $Quotes["JPYZAR"]["TimeZone"], $Quotes["JPYZAR"]["LastRefreshed"], date("Y-m-d H:i:s")]);
+
+                }
+            }
+
+            $response = StoreQuotes::GetStoredCurrencyExchangeFromDB();
+            return json_encode(array("status" => 1, "message" => json_encode($response)));
+        }
+        catch (Exception $e) {
+            return json_encode(array("status" => 0, "message" => 1));
+        }
+        catch (InvalidArgumentException $e) {
+            return json_encode(array("status" => 0, "message" => 2));
+        }
+        
+
+        
     }
 }
