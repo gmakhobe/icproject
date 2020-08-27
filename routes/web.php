@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Http\Request;
 
 /*
 |--------------------------------------------------------------------------
@@ -12,15 +13,15 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+$GLOBALS['AppTitle'] = "IC Application";
+
 //Get Requests
 Route::get('/', function () {
-    return view('landing');
+    return view('landing', ["Title" => $GLOBALS['AppTitle']]);
 });
+// /User/*
+Route::get('/user/dashboard', 'UserController@Dashboard')->middleware('IsSessionValid');
 
-Route::get('/terminal', function () {
-
-    return view("terminal");
-});
 //Get Requests from /
 Route::get('/register/email/{email}/password/{password}', 'IndexController@register');
 Route::get('/login/email/{email}/password/{password}', 'IndexController@login');

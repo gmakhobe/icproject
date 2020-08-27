@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>IC Application</title>
+        <title>{{ $Title }}</title>
 
         <!-- Fonts -->
         
@@ -30,7 +30,7 @@
                 <li><a class="text-color-white btn-nav" href="#">About Us</a></li>
                 <li><a class="text-color-black btn-nav btn-color-gold text-style-bold" href="#"  data-toggle="modal" data-target="#loginModal" data-backdrop="static">Login</a></li>
                 <li><a class="text-color-white btn-nav btn-color-red text-style-bold" href="#"  data-toggle="modal" data-target="#registerModal" data-backdrop="static">Register</a></li>
-                <li><a class="text-color-white btn-nav btn-color-outline-gold text-style-bold" href="#">Terminal</a></li>
+                <li><a class="text-color-white btn-nav btn-color-outline-gold text-style-bold" href="#" data-toggle="modal" data-target="#dashboardModal">Dash</a></li>
             </ul>
         </div>
     </nav>
@@ -253,6 +253,29 @@
     <div class="container-fluid main-content text-align-center bg-color-black text-color-white">
         <h2 class="main-content-heading text-color-white">Copyright &copy; {{ date('Y') }}</h2>
     </div>
+
+    <!-- Dashboard Modal -->
+    <div class="modal fade" id="dashboardModal" role="dialog">
+        <div class="modal-dialog">    
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">×</button>
+                    <h4 class="modal-title">Dashboard</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="alert alert-info">
+                        <strong>Info!</strong> Please login or create an account to access full features.
+                      </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button id="loginBTN" type="submit" class="btn btn-primary" onclick="AppLogin()">Login</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Dashboard Modal -->
 
     <!-- Login Modal -->
     <div class="modal fade" id="loginModal" role="dialog">

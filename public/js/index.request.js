@@ -75,7 +75,7 @@ const loadQuotesFromServer = () => {
     const csrf = document.getElementById("index-csrf").value;
 
     //Get Quotes
-    icFETCH(`http://127.0.0.1:8000/CURRENCY_EXCHANGE`, {reqID: null}, csrf)
+    icFETCH(`/CURRENCY_EXCHANGE`, {reqID: null}, csrf)
     .then(data => {
         if (data.status == 1){
             showCurrencyQuotes(data.message)
@@ -105,7 +105,7 @@ const AppSubscribe = () => {
     }
 
     //Call custome Fetxh
-    icFETCH(`http://127.0.0.1:8000/subscribe/email/${email}`, {Email: email}, csrf)
+    icFETCH(`/subscribe/email/${email}`, {Email: email}, csrf)
     .then(data => {
 
         if (data.status){
@@ -141,7 +141,7 @@ const AppRegister = () => {
         return ;
     }
     //Call custome Fetxh
-    icFETCH(`http://127.0.0.1:8000/register/email/${email}/password/${password}`, {Email: email, Password: password}, csrf)
+    icFETCH(`/register/email/${email}/password/${password}`, {Email: email, Password: password}, csrf)
     .then(data => {
         const alertSuccessMSG = `<div class="alert alert-success"><strong>Success!</strong> Registration was successful you may now login.
           </div>`;
@@ -174,14 +174,14 @@ const AppLogin = () => {
         return ;
     }
     //Call custome Fetxh
-    icFETCH(`http://127.0.0.1:8000/login/email/${email}/password/${password}`, {Email: email, Password: password}, csrf)
+    icFETCH(`/login/email/${email}/password/${password}`, {Email: email, Password: password}, csrf)
     .then(data => {
         const alertSuccessMSG = `<div class="alert alert-success"><strong>Success!</strong> Login success, you will be redirected to terminal.
           </div>`;
 
         if (data.status) {
             document.getElementById("reg-container").innerHTML = alertSuccessMSG;
-            location.assign("http://127.0.0.1:8000/terminal");
+            location.assign("/user/dashboard");
         }
         if (data.status == 0) alert(data.message);
     })
