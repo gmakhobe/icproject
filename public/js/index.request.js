@@ -126,36 +126,50 @@ const AppSubscribe = () => {
 
 const AppRegister = () => {
     document.getElementById("registerBTN").style.display = "none";
+    const name = document.getElementById("reg-name").value;
+    const surname = document.getElementById("reg-surname").value;
     const email = document.getElementById("reg-email").value;
     const password = document.getElementById("reg-password").value;
     const confirmPassword = document.getElementById("reg-confirm-password").value;
     const csrf = document.getElementById("index-csrf").value;
 
-    if (!email || !password || !confirmPassword || !csrf){
+    let counter = 0;
+
+    if (!email || !password || !confirmPassword || !csrf || !name || !surname){
         alert("All fields required!");
-        return ;
+        counter++;
+    }
+
+    if (name.length < 3 || surname.length < 3){
+        alert("Name or Surname should be more than 2 charecters!");
+        counter++;
     }
 
     if(password !== confirmPassword){
         alert("Password and confirm password do not match!");
+        counter++;
+    }
+
+    if (counter != 0){
+        document.getElementById("registerBTN").style.display = "inline";
         return ;
     }
     //Call custome Fetxh
-    icFETCH(`/register/email/${email}/password/${password}`, {Email: email, Password: password}, csrf)
+    icFETCH(`/register/email/${email}/password/${password}/name/${name}/surname/${surname}`, {Email: email, Password: password}, csrf)
     .then(data => {
-        const alertSuccessMSG = `<div class="alert alert-success"><strong>Success!</strong> Registration was successful you may now login.
+        const alertSuccessMSG = `<div class="alert alert-success"><strong>Success!</strong> Registration was successful. Please go to your emails to confirm your email address before logging in.
           </div>`;
 
         if (data.status) document.getElementById("reg-container").innerHTML = alertSuccessMSG;
         if (data.status == 0){
             document.getElementById("reg-container").innerHTML = alertSuccessMSG;
-            document.getElementById("registerBTN").style.display = "block";
+            document.getElementById("registerBTN").style.display = "inline";
             alert(alert(data.message));
         } 
     })
     .catch(error => {
         alert(`An error occured: Please try registering again with a different email address!`);
-        document.getElementById("registerBTN").style.display = "block";
+        document.getElementById("registerBTN").style.display = "inline";
     });
 }
 

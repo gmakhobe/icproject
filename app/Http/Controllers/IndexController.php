@@ -8,19 +8,48 @@ use Illuminate\Support\Facades\URL;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 use App\Http\Logic\StoreQuotes;
+use App\Http\Logic\News;
+use App\Mail\Registration;
+use Illuminate\Support\Facades\Mail;
 
 class IndexController extends Controller
 {
-    public function register($email, $password){
+    public function getNews(){
+        return json_encode(News::getFrontPageNews());
+    }
+
+    public function activate($code){
+        $User = DB::select('select * from users where ActivationHash = ?', [$code]);
+
+        if (isset($User[0]->UserId)){
+            DB::update('update users set AccountActive = ?, ActivationHash = ? where ActivationHash = ?', ['Yes',"$code-Used", $code]);
+            return view('landing', ["Title" => "IC Application", "ActivationVal"=> 1]);
+        }else{
+            return redirect('/');
+        }
+    }
+
+    public function register($email, $password, $name, $surname){
         //Check if $mail and $password are empty strings
-        if (!$email || !$password){
+        if (!$email || !$password || !$name || !$surname){
             return json_encode(array("status" => 0, "message" => "All fields are required!"));
         }
         //Hash Password
         try{
             $password = Hash::make($password);
+
+            //Activation Hash
+            $activationHash = rand(99999999, 999999999);
+
             // Insert into the database
-            if (DB::insert('insert into Users(EmailAddress, Passcode) values (?, ?)', [$email, $password]))  return json_encode(array("status" => 1, "message" => "User successfully registered"));
+            DB::insert('insert into users(Name, Surname, EmailAddress, Passcode, ActivationHash) values (?, ?, ?, ?, ?)', [$name, $surname, $email, $password, $activationHash]);  
+
+            $mailArg = array("Name"=> $name, "Surname"=> $surname, "ActivatioHash"=> $activationHash);
+            //Send email to client
+            Mail::to($email)
+                ->send(new Registration($mailArg));
+
+            return json_encode(array("status" => 1, "message" => "User successfully registered"));
         }catch(Exception $e){
             return json_encode(array("status" => 0, "message" => "An error occured please try again"));
         }
@@ -30,15 +59,19 @@ class IndexController extends Controller
         //Check if $mail and $password are empty strings
         if (!$email || !$password){
             return json_encode(array("status" => 0, "message" => "All fields are required!"));
-        }
+        };
         //Get user information from DB
         try{
-            $results =  DB::select('select * from Users where EmailAddress = ?', [$email]);
+            $results =  DB::select('select * from users where EmailAddress = ?', [$email]);
+            if (isset($results[0]->AccountActive) && $results[0]->AccountActive == "No"){
+                return json_encode(array("status" => 0, "message" => "You need to activate your email address beofre logging in!"));
+            }
             //Return positive response on success
             if ($results){
                 $comparePassword = Hash::check($password, $results[0]->Passcode);
                 if ($comparePassword){
                     $request->session()->put("user", array("User" => $results));
+                    
                     return json_encode(array("status" => 1, "message" => "Login success!"));
                 }
                 return json_encode(array("status" => 0, "message" => "Email or Password is incorrect!"));

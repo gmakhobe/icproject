@@ -30,7 +30,6 @@
                 <li><a class="text-color-white btn-nav" href="#">About Us</a></li>
                 <li><a class="text-color-black btn-nav btn-color-gold text-style-bold" href="#"  data-toggle="modal" data-target="#loginModal" data-backdrop="static">Login</a></li>
                 <li><a class="text-color-white btn-nav btn-color-red text-style-bold" href="#"  data-toggle="modal" data-target="#registerModal" data-backdrop="static">Register</a></li>
-                <li><a class="text-color-white btn-nav btn-color-outline-gold text-style-bold" href="#" data-toggle="modal" data-target="#dashboardModal">Dash</a></li>
             </ul>
         </div>
     </nav>
@@ -278,7 +277,12 @@
     <!-- End Dashboard Modal -->
 
     <!-- Login Modal -->
+
+@if ($ActivationVal)
+    <div class="modal in" id="loginModal" role="dialog" style="display: block;">
+@else
     <div class="modal fade" id="loginModal" role="dialog">
+@endif
         <div class="modal-dialog">    
             <!-- Modal content-->
             <div class="modal-content">
@@ -295,9 +299,6 @@
                         <label for="pwd">Password:</label>
                         <input type="password" class="form-control" id="log-password">
                     </div>
-                    <div class="checkbox">
-                        <label><input type="checkbox" id="log-rememver-me"> Remember me</label>
-                    </div> 
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -320,15 +321,23 @@
                 <div class="modal-body">
                     <div id="reg-container">
                         <div class="form-group">
-                            <label for="email">Email address:</label>
+                            <label>Name:</label>
+                            <input type="text" class="form-control" id="reg-name">
+                        </div>
+                        <div class="form-group">
+                            <label>Surname:</label>
+                            <input type="text" class="form-control" id="reg-surname">
+                        </div>
+                        <div class="form-group">
+                            <label>Email address:</label>
                             <input type="email" class="form-control" id="reg-email">
                         </div>
                         <div class="form-group">
-                            <label for="pwd">Password:</label>
+                            <label>Password:</label>
                             <input type="password" class="form-control" id="reg-password">
                         </div>
                         <div class="form-group">
-                            <label for="confirm-pwd"> Confirm Password:</label>
+                            <label> Confirm Password:</label>
                             <input type="password" class="form-control" id="reg-confirm-password">
                         </div>
                     </div>

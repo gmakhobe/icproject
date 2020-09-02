@@ -17,14 +17,16 @@ $GLOBALS['AppTitle'] = "IC Application";
 
 //Get Requests
 Route::get('/', function () {
-    return view('landing', ["Title" => $GLOBALS['AppTitle']]);
+    return view('landing', ["Title" => $GLOBALS['AppTitle'], "ActivationVal"=> 0]);
 });
 // /User/*
 Route::get('/user/dashboard', 'UserController@Dashboard')->middleware('IsSessionValid');
 
 //Get Requests from /
-Route::get('/register/email/{email}/password/{password}', 'IndexController@register');
+Route::get('/register/email/{email}/password/{password}/name/{name}/surname/{surname}', 'IndexController@register');
 Route::get('/login/email/{email}/password/{password}', 'IndexController@login');
 Route::get('/subscribe/email/{email}', 'IndexController@subscribe');
 Route::get('/CURRENCY_EXCHANGE', 'IndexController@exchangeRate');
+Route::get('/activate/{code}', 'IndexController@activate');
+Route::get('/news/frontpage', 'IndexController@getNews');
 

@@ -51,6 +51,8 @@ return [
 
         'mailgun' => [
             'transport' => 'mailgun',
+            'domain' => 'sandboxa8a1a546140046678d3dca73becaeb19.mailgun.org',
+            'secret' => 'y4d640632-ffd8ef97'
         ],
 
         'postmark' => [
@@ -84,8 +86,8 @@ return [
     */
 
     'from' => [
-        'address' => env('MAIL_FROM_ADDRESS', 'hello@example.com'),
-        'name' => env('MAIL_FROM_NAME', 'Example'),
+        'address' => env('MAIL_FROM_ADDRESS', 'postmaster@sandboxa8a1a546140046678d3dca73becaeb19.mailgun.org'),
+        'name' => env('MAIL_FROM_NAME', 'Plugin App'),
     ],
 
     /*
