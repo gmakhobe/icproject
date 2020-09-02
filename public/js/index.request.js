@@ -180,7 +180,6 @@ const AppLogin = () => {
     document.getElementById("loginBTN").style.display = "none";
     const email = document.getElementById("log-email").value;
     const password = document.getElementById("log-password").value;
-    let rememberMe = document.getElementById("log-rememver-me").value;
     const csrf = document.getElementById("index-csrf").value;
 
     if (!email || !password || !csrf){
@@ -203,3 +202,21 @@ const AppLogin = () => {
     document.getElementById("loginBTN").style.display = "block";
 }
 // End User Login
+// News
+// User Login
+const AppNews = () => {
+    const csrf = document.getElementById("index-csrf").value;
+
+    //Call custome Fetxh
+    icFETCH(`/news/frontpage`, {}, csrf)
+    .then(data => {
+        
+
+        console.log(data)[0];
+
+        
+    })
+    .catch(error => alert(`An error occured: Email or Password is incorrect!`));
+    document.getElementById("loginBTN").style.display = "block";
+}
+// End News

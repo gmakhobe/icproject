@@ -359,6 +359,7 @@
     <!-- Local Javascript-->
     <script src="{{ asset('js/index.request.js')}}"></script>
     <script>
+        AppNews();
         loadQuotesFromServer();
     </script>
     <!-- End Script -->
