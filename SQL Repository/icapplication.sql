@@ -6,6 +6,8 @@
 --Create Table
 CREATE TABLE icapplication;
 
+
+USE icapplication;
 -- Host: localhost
 -- Generation Time: Sep 02, 2020 at 11:33 PM
 -- Server version: 10.4.14-MariaDB
