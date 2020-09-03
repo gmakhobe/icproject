@@ -10,7 +10,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="Start your development with a Dashboard for Bootstrap 4.">
   <meta name="author" content="Creative Tim">
-  <title>HOME</title>
+  <title>{{ $Title }} - {{ $Name }}</title>
   <!-- Favicon -->
   
   <!-- Start Stylesheets -->
@@ -77,30 +77,43 @@
         <div class="col-lg-5 col-md-7">
           <div class="card bg-secondary border-0 mb-0">
             <div class="card-header bg-transparent pb-5">
-              <a href="Company name.html" ><h3 align="Center"class="text-black">INVESTMENTS</h3><a/> <br>
-			  <a href="where to invest" ><p><h3 align="right-side"class="text-black">PROFILE</h3> <a href="#" > <h3 align="right" class="text-black">CREATE</h3></p>
-			    <h1 align="center" class="text-black"><b>IC</b></h6>
-			  <a href="financial literacy.html" ><h3 align="left-side" class="text-black">IDEAS</h3> 
-			  <a href="where to invest.html"><p><h3 align="right" class="text-black">NEWS </h3> <a/>
-			  <a href="#" ><h3 align="left" class="text-black">STORE ROOM</h3><br> <a/>
-			  <a href="raw-mat.html" ><h3 align="center" class="text-black">RAW-MATE</h3> <a/>
-			  
-              
-            </div>
-            <div class="card-body px-lg-5 py-lg-5">
-              <div class="text-center text-muted mb-4">
-                <small></small>
-              </div>
-             
+              <a href="Company name.html" >
+                <h3 align="Center"class="text-black">INVESTMENTS</h3>
+              </a> <br>
+			        <a href="where to invest" >
+                <p>
+                  <h3 align="right-side"class="text-black">PROFILE</h3> 
+                    <a href="#" > <h3 align="right" class="text-black">CREATE
+                  </h3></a>
+                </p>
+			      <h1 align="center" class="text-black"><b>IC</b></h1>
+			      <a href="financial literacy.html" ><a href="#" >
+              <h3 align="left-side" class="text-black">IDEAS</h3> 
+			      <a href="where to invest.html">
+              <p>
+                <h3 align="right" class="text-black">NEWS </h3> 
+            </a>
+			      <a href="#" >
+              <h3 align="left" class="text-black">STORE ROOM</h3>
+              <br> 
+            </a>
+			      <a href="raw-mat.html" >
+              <h3 align="center" class="text-black">RAW-MATE</h3>
+            </a>
+          </div>
+          <div class="card-body px-lg-5 py-lg-5">
+            <div class="text-center text-muted mb-4">
+              <small></small>
             </div>
           </div>
-          <div class="row mt-3">
-            <div class="col-6">
+        </div>
+        <div class="row mt-3">
+          <div class="col-6">
              
-            </div>
-            <div class="col-6 text-right">
-              <a href="#" class="text-light"><small></small></a>
-            </div>
+          </div>
+          <div class="col-6 text-right">
+            <a href="#" class="text-light"><small></small></a>
+          </div>
           </div>
         </div>
       </div>

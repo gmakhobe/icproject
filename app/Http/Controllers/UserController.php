@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\Hash;
 
 class UserController extends Controller
 {
+    
     public function Dashboard(Request $request){
         //Properties to be injected
         $properties = ["Name" => $GLOBALS['AppTitle'], "Title" => "Dashboard"];
