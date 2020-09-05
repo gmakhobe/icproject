@@ -1,251 +1,150 @@
-<<<<<<< HEAD
-<!--
-=========================================================
-
--->
 <!DOCTYPE html>
 <html>
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="Start your development with a Dashboard for Bootstrap 4.">
-  <meta name="author" content="Creative Tim">
-  <title>{{ $Title }} - {{ $Name }}</title>
-  <!-- Favicon -->
-  
-  <!-- Start Stylesheets -->
-    <!-- Stylesheet CDN (Important) -->
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.0/normalize.min.css">
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css">
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lykmapipo/themify-icons@0.1.2/css/themify-icons.css">
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pixeden-stroke-7-icon@1.2.3/pe-icon-7-stroke/dist/pe-icon-7-stroke.min.css">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.2.0/css/flag-icon.min.css">
-      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700">
-    <!-- End Stylesheet CDN -->
-    <!-- Stylesheet Local -->
-    <link rel="stylesheet" href="assets/css/local.css"/>
-    <!-- End Stylesheet Local -->
-
-  </head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>{{ $Title }} - {{ $Name }}</title>
+    <meta property="og:type" content="website">
+    <link rel="stylesheet" href="{{ asset('assets/bootstrap/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/fonts/fontawesome-all.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/fonts/font-awesome.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/fonts/fontawesome5-overrides.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/Side-By-Side-Section.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/Circle-Nav.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="{{ asset('assets/css/styles.css') }}">
+</head>
 
 <body>
- <section once="footers" class="cid-s5SKjW17G4" id="footer6-8">
-
-    
-
-    
-
-    <div class="container">
-        <div class="media-container-row align-center mbr-white">
-            <div class="col-12">
-                <p class="mbr-text mb-0 mbr-fonts-style display-7" color="white" text="align-center">
-                
-                </p>
-            </div>
-        </div>
-    </div>
-</section>
-  <!-- Main content -->
-  <div class="main-content">
-    <style>
-    
-    .cid-s5SKjW17G4 {
-    padding-top: 30px;
-    padding-bottom: 30px;
-    background-color: #2e2e2e;
-}
-
-</style>
-    <!-- Header -->
-    <div class="header bg-gradient-primary py-7 py-lg-8 pt-lg-9">
-      <div class="container">
-        <div class="header-body text-center mb-7">
-          <div class="row justify-content-center">
-            <div class="col-xl-5 col-lg-6 col-md-8 px-5">
-              
-              
-            </div>
-          </div>
-        </div>
-      </div>
-     
-    </div>
-    <!-- Page content -->
-    <div class="container mt--8 pb-5">
-      <div class="row justify-content-center">
-        <div class="col-lg-5 col-md-7">
-          <div class="card bg-secondary border-0 mb-0">
-            <div class="card-header bg-transparent pb-5">
-              <a href="Company name.html" >
-                <h3 align="Center"class="text-black">INVESTMENTS</h3>
-              </a> <br>
-			        <a href="/user/profile" >
-                <p>
-                  <h3 align="right-side"class="text-black">PROFILE</h3> 
-                    <a href="#" > <h3 align="right" class="text-black">CREATE
-                  </h3></a>
-                </p>
-			      <h1 align="center" class="text-black"><b>IC</b></h1>
-			      <a href="financial literacy.html" ><a href="#" >
-              <h3 align="left-side" class="text-black">IDEAS</h3> 
-			      <a href="where to invest.html">
-              <p>
-                <h3 align="right" class="text-black">NEWS </h3> 
+    <!-- Start: SectionContainerRowColumn -->
+    <section></section>
+    <!-- End: SectionContainerRowColumn -->
+    <nav class="navbar navbar-light navbar-expand-md sticky-top bounce animated navigation-clean-button" style="height: 80px;background-color: rgb(31,33,40);color: #ffffff;filter: saturate(200%);width: 1360px;max-width: 1360px;">
+        <div class="container-fluid">
+            <button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand d-flex justify-content-center align-items-center sidebar-brand m-0"
+                href="#">
+                <div class="sidebar-brand-icon rotate-n-15">
+                    <i class="fab fa-laravel" style="color: rgba(231,213,213,0.9);"></i>
+                </div>
+                <div class="sidebar-brand-text mx-3">
+                    <span style="letter-spacing: 3px;color: rgba(190,184,184,0.9);">Dashboard</span></div>
             </a>
-			      <a href="#" >
-              <h3 align="left" class="text-black">STORE ROOM</h3>
-              <br> 
-            </a>
-			      <a href="raw-mat.html" >
-              <h3 align="center" class="text-black">RAW-MATE</h3>
-            </a>
-          </div>
-          <div class="card-body px-lg-5 py-lg-5">
-            <div class="text-center text-muted mb-4">
-              <small></small>
-            </div>
-          </div>
+            <div class="collapse navbar-collapse" id="navcol-1"></div>
+            <div class="dropdown no-arrow" style="color: rgb(186,40,180);"><a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false" href="#" style="color: rgb(172,52,183);"><span class="d-none d-lg-inline mr-2 text-gray-600 small" style="color: rgb(201,55,204);"><strong>{{ $NameAndSurname }}</strong></span>
+                @if ($IsBase64)
+                    <img class="border rounded-circle img-profile" src="{{ $ProfilePicture }}">
+                @else
+                    <img style="width:60px;height:60px;" class="border rounded-circle img-profile" src="{{ asset('images/user-icon.svg') }}">
+                @endif
+                </a>
+                <div
+                    class="dropdown-menu shadow dropdown-menu-right animated--grow-in" role="menu"><a class="dropdown-item" role="presentation" href="#"><i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>&nbsp;Profile</a><a class="dropdown-item" role="presentation" href="#"><i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>&nbsp;Portfolio</a>
+                    <div
+                        class="dropdown-divider"></div><a class="dropdown-item" role="presentation" href="/logout3"><i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>&nbsp;Logout</a></div>
         </div>
-        <div class="row mt-3">
-          <div class="col-6">
-             
-          </div>
-          <div class="col-6 text-right">
-            <a href="#" class="text-light"><small></small></a>
-          </div>
-          </div>
         </div>
-      </div>
-    </div>
-  </div>
-  <!-- Footer -->
-   <style>
-    
-    .cid-s5SKjW17G4 {
-    padding-top: 30px;
-    padding-bottom: 30px;
-    background-color: #2e2e2e;
-}
-
-</style>
-    
-<section once="footers" class="cid-s5SKjW17G4" id="footer6-8">
-
-    
-
-    
-
-    <div class="container">
-        <div class="media-container-row align-center mbr-white">
-            <div class="col-12">
-                <p class="mbr-text mb-0 mbr-fonts-style display-7" color="white" text="align-center">
-                
-                </p>
+    </nav>
+    <!-- Start: Side By Side Section -->
+    <section class="index-howto-alt py-3" style="background-color: rgb(31,33,40);width: 1359px;height: 1263px;padding: -125px;padding-top: 42px;">
+        <div class="container">
+            <div class="psd-line pos-rel" style="position: relative;width: 1003px;">
+                <!-- Start: Circle Nav --><section class="iq-features">
+            <div class="container">
+               <div class="row align-items-center">
+                  <div class="col-lg-3 col-md-12"></div>
+                  <div class="col-lg-6 col-md-12">
+                     <div class="holderCircle">
+                        <div class="round"></div>
+                        <div class="dotCircle">
+                           <span class="itemDot active itemDot1" data-tab="1">
+                           <i class="fa fa-clock-o"></i>
+                           <span class="forActive"></span>
+                           </span>
+                           <span class="itemDot itemDot2" data-tab="2">
+                           <i class="fa fa-comments"></i>
+                           <span class="forActive"></span>
+                           </span>
+                           <span class="itemDot itemDot3" data-tab="3">
+                           <i class="fa fa-user"></i>
+                           <span class="forActive"></span>
+                           </span>
+                           <span class="itemDot itemDot4" data-tab="4">
+                           <i class="fa fa-tags"></i>
+                           <span class="forActive"></span>
+                           </span>
+                           <span class="itemDot itemDot5" data-tab="5">
+                           <i class="fa fa-upload"></i>
+                           <span class="forActive"></span>
+                           </span>
+                           <span class="itemDot itemDot6" data-tab="6">
+                           <i class="fa fa-briefcase"></i>
+                           <span class="forActive"></span>
+                           </span>
+                        </div>
+                        <div class="contentCircle">
+                           <div class="CirItem title-box active CirItem1">
+                              <h2 class="title"><span>INVESTMENTS</span></h2>
+                              <p></p>
+                              <i class="fa fa-clock-o"></i>
+                           </div>
+                           <div class="CirItem title-box CirItem2">
+                              <h2 class="title"><span>IDEAS </span></h2>
+                              <p>#</p>
+                              <i class="fa fa-comments"></i>
+                           </div>
+                           <div class="CirItem title-box CirItem3">
+                              <h2 class="title"><span>RAW-MAT</span></h2>
+                              <p>#</p>
+                              <i class="fa fa-user"></i>
+                           </div>
+                           <div class="CirItem title-box CirItem4">
+                              <h2 class="title"><span>PROFILE</span></h2>
+                              <p>#</p>
+                              <i class="fa fa-tags"></i>
+                           </div>
+                           <div class="CirItem title-box CirItem5">
+                              <h2 class="title"><span>STORE-ROOM</span></h2>
+                              <p>#</p>
+                              <i class="fa fa-upload"></i>
+                           </div>
+                           <div class="CirItem title-box CirItem6">
+                              <h2 class="title"><span>CREATE</span></h2>
+                              <p>#</p>
+                              <i class="fa fa-briefcase"></i>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-lg-3 col-md-12"></div>
+               </div>
+            </div>
+        </section>
+                <!-- End: Circle Nav -->
             </div>
         </div>
-    </div>
-</section>
-  <!-- Argon Scripts -->
-
-  <!--
-    ===================================Start Modals ===========================================
-  -->
-  <div class="modal fade" id="loginModal" tabindex="-1" role="dialog">
-    <div class="modal-dialog modal-lg" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title">Login</h5>
-                <button type="button" class="close" data-dismiss="modal">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                
-            <div class="form-group">
-                <label>Email Address:</label>
-                <input type="email" id="l-emailaddress" placeholder="Please enter a valid email address" class="form-control"><small class="form-text text-muted">user@email.com</small>
-            </div>
-            <div class="form-group">
-              <label>Password:</label>
-              <input type="password" id="l-password" placeholder="Please enter secret password" class="form-control"><small class="form-text text-muted">Should be combination of uppercase, lowercase and numbers!</small>
-          </div>
-
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                <button type="button" class="btn btn-primary" onclick="LoginUser()">Login</button>
+    </section>
+    <!-- End: Side By Side Section -->
+    <!-- Start: Footer with social media icons -->
+    <footer data-bs-hover-animate="swing" id="footerpad-1" style="width: 1370px;padding-right: 0px;margin-right: 0px;margin-left: 0px;max-width: auto;padding-bottom: 0px;padding-top: 45px;background-color: #3e3232;height: 129px;">
+        <div class="container" style="padding-left: 0px;padding-right: 0px;height: 102px;background-color: #000000;">
+            <div class="row" style="margin-left: 0px;margin-right: 0px;max-width: 1140px;">
+                <div class="col-md-6 col-lg-8 mx-auto">
+                    <!-- Start: paragraph --><p class="copyright text-muted text-center">PLUGIN &copy;  2020 </p>
+                    <!-- End: paragraph -->
+                </div>
             </div>
         </div>
-    </div>
-</div>
-
-<div class="modal fade" id="registerModal" tabindex="-1" role="dialog">
-  <div class="modal-dialog modal-lg" role="document">
-      <div class="modal-content">
-          <div class="modal-header">
-              <h5 class="modal-title">Register</h5>
-              <button type="button" class="close" data-dismiss="modal">
-                  <span aria-hidden="true">&times;</span>
-              </button>
-          </div>
-          <div class="modal-body">
-              
-
-            <div class="form-group">
-                <label>Firstname:</label>
-                <input type="text" id="r-firstname" placeholder="Enter firstname" class="form-control">
-            </div>
-
-            <div class="form-group">
-              <label>Lastname:</label>
-              <input type="text" id="r-lastname" placeholder="Enter lastname" class="form-control">
-            </div>
-
-            <div class="form-group">
-                <label>Email Address:</label>
-                <input type="email" id="r-emailaddress" placeholder="Please enter a valid email address" class="form-control"><small class="form-text text-muted">user@email.com</small>
-            </div>
-            <div class="form-group">
-                <label>Password:</label>
-                <input type="password" id="r-password" placeholder="********" class="form-control"><small class="form-text text-muted">Should be combination of uppercase, lowercase and numbers!</small>
-            </div>
-            <div class="form-group">
-              <label>Confirm Password:</label>
-              <input type="password" id="r-confirmpassword" placeholder="********" class="form-control"><small class="form-text text-muted">Should be the same as confirm password!</small>
-          </div>
-
-          </div>
-          <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-              <button type="button" class="btn btn-primary" onclick="RegisterUser()">Register</button>
-          </div>
-      </div>
-  </div>
-</div>
-  <!--
-    ===================================End Modals =============================================
-  -->
-  <!-- Locla Javascript -->
-  <script src="{{ asset('assets/js/validators.js') }}"></script>
-  <script src="{{ asset('assets/js/index.js')}}"></script>
-  <!-- end Locla Javascript () -->
-  <!-- Javascript (load after the document has fully rendered) -->
-  <script src="https://cdn.jsdelivr.net/npm/jquery@2.2.4/dist/jquery.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.4/dist/umd/popper.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/jquery-match-height@0.7.2/dist/jquery.matchHeight.min.js"></script>
-  <script src="assets/js/main.js"></script>
-  <!-- End Javascript -->
+    </footer>
+    <!-- End: Footer with social media icons -->
+    <script src="{{ asset('assets/js/jquery.min.js') }}"></script>
+    <script src="{{ asset('assets/bootstrap/js/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('assets/js/bs-init.js') }}"></script>
+    <script src="{{ asset('assets/js/Circle-Nav.js') }}"></script>
 </body>
 
 </html>
-=======
-<!-- Header -->
-@include("user/static/header")
-<!-- Navbar -->
-@include("user/static/navbar")
-<!-- Footer -->
-@include("user/static/footer")
->>>>>>> parent of 934754e... Adding Dashboard

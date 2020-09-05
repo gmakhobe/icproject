@@ -10,14 +10,18 @@ use Illuminate\Support\Facades\Hash;
 use App\Http\Logic\StoreQuotes;
 use App\Http\Logic\News;
 use App\Http\Logic\Validator;
+use App\Http\Logic\AppSession;
 use App\Mail\Registration;
 use Illuminate\Support\Facades\Mail;
 
 class IndexController extends Controller
-{
+{   
+    /*
+        Not Active
     public function getNews(){
         return json_encode(News::getFrontPageNews());
     }
+    */
 
     public function activate($code){
         $User = DB::select('select * from users where ActivationHash = ?', [$code]);
@@ -58,7 +62,7 @@ class IndexController extends Controller
         }
     }
 
-    public function login(Request $request, $email, $password){
+    public function login($email, $password){
         //Check if $mail and $password are empty strings
         if (!$email || !$password){
             return json_encode(array("status" => 0, "message" => "All fields are required!"));
@@ -74,7 +78,7 @@ class IndexController extends Controller
 
                 $comparePassword = Hash::check($password, $results[0]->Passcode);
                 if ($comparePassword){
-                    $request->session()->put("user", array("User" => $results));
+                    AppSession::sessionSet($results);
                     
                     return json_encode(array("status" => 1, "message" => "Login success!"));
                 }
@@ -101,7 +105,6 @@ class IndexController extends Controller
 
     public function exchangeRate(){
         
-
         try {
             $results = DB::select("select * from quoteslandingpage ORDER BY CreatedDate DESC LIMIT 1");
 
@@ -142,9 +145,6 @@ class IndexController extends Controller
         }
         catch (InvalidArgumentException $e) {
             return json_encode(array("status" => 0, "message" => 2));
-        }
-        
-
-        
+        }       
     }
 }

@@ -32,3 +32,4 @@ Route::get('/subscribe/email/{email}', 'IndexController@subscribe');
 Route::get('/CURRENCY_EXCHANGE', 'IndexController@exchangeRate');
 Route::get('/activate/{code}', 'IndexController@activate');
 Route::get('/news/frontpage', 'IndexController@getNews');
+Route::get('/logout', 'IndexLogout');
