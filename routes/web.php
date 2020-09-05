@@ -21,6 +21,9 @@ Route::get('/', function () {
 });
 // /User/*
 Route::get('/user/dashboard', 'UserController@Dashboard')->middleware('IsSessionValid');
+Route::get('/user/profile', 'UserController@Profile')->middleware('IsSessionValid');
+Route::get('/user/profile/userinfo/{name}/{surname}/{username}', 'UserProfileController@SaveUserPersonalInfo')->middleware('IsSessionValid');
+Route::get('/user/profile/SaveUserAddressInfo/{address}/{city}/{country}', 'UserProfileController@SaveUserInfo')->middleware('IsSessionValid');
 
 //Get Requests from /
 Route::get('/register/email/{email}/password/{password}/name/{name}/surname/{surname}', 'IndexController@register');
@@ -29,4 +32,3 @@ Route::get('/subscribe/email/{email}', 'IndexController@subscribe');
 Route::get('/CURRENCY_EXCHANGE', 'IndexController@exchangeRate');
 Route::get('/activate/{code}', 'IndexController@activate');
 Route::get('/news/frontpage', 'IndexController@getNews');
-

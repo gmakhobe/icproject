@@ -80,7 +80,7 @@
               <a href="Company name.html" >
                 <h3 align="Center"class="text-black">INVESTMENTS</h3>
               </a> <br>
-			        <a href="where to invest" >
+			        <a href="/user/profile" >
                 <p>
                   <h3 align="right-side"class="text-black">PROFILE</h3> 
                     <a href="#" > <h3 align="right" class="text-black">CREATE
@@ -227,7 +227,7 @@
     ===================================End Modals =============================================
   -->
   <!-- Locla Javascript -->
-  <script src="{{ asset('assets/js/validators.js')}}"></script>
+  <script src="{{ asset('assets/js/validators.js') }}"></script>
   <script src="{{ asset('assets/js/index.js')}}"></script>
   <!-- end Locla Javascript () -->
   <!-- Javascript (load after the document has fully rendered) -->
