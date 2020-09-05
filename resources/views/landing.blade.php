@@ -24,7 +24,7 @@
     <nav class="navbar navbar-inverse navbar-fixed-top navbar-dark">
         <div class="container">
             <div class="navbar-header">
-                <a class="navbar-brand text-color-white text-style-bold" href="#">IC Application</a>
+                <a class="navbar-brand text-color-white text-style-bold" href="#">{{ $Title }}</a>
             </div>
             <ul class="nav navbar-nav navbar-right">
                 <li><a class="text-color-white btn-nav" href="#">About Us</a></li>
@@ -179,17 +179,53 @@
             
         </div>
     </div>
+
     <!--
-        News Section
     <div class="container-fluid main-content">
         <h2 class="main-content-heading">News Update</h2>
+        
+        <div class="cards-services">
+            <div class="card-service-news">
+                <img class="card-service-news-image img-rounded" src="{{ asset('/images/news-slide.jpg') }}" alt="Investment">
+            </div>
+            <div class="card-service-news">
+                <h2 class="card-service-news-title">News Title (E.G) Sasol Share Price Plummets<h2>
+                <p class="card-service-news-paragraph"> Yesterday something happened to SASOL share price, the move was not expecte at all this is a shock to the market</p>
+                <center>
+                    <a href="#" class="card-service-news-continue-btn btn-color-outline-black">Continue reading ></a>
+                </center>
+            </div>
+        </div>
 
-        <div id="main-content-news">
+        <div class="cards-services">
+            <div class="card-service-news">
+                <img class="card-service-news-image img-rounded" src="{{ asset('/images/news-slide.jpg') }}" alt="Investment">
+            </div>
+            <div class="card-service-news">
+                <h2 class="card-service-news-title">News Title (E.G) Sasol Share Price Plummets<h2>
+                <p class="card-service-news-paragraph"> Yesterday something happened to SASOL share price, the move was not expecte at all this is a shock to the market</p>
+                <center>
+                    <a href="#" class="card-service-news-continue-btn btn-color-outline-black">Continue reading ></a>
+                </center>
+            </div>
+        </div>
 
+        <div class="cards-services">
+            <div class="card-service-news">
+                <img class="card-service-news-image img-rounded" src="{{ asset('/images/news-slide.jpg') }}" alt="Investment">
+            </div>
+            <div class="card-service-news">
+                <h2 class="card-service-news-title">News Title (E.G) Sasol Share Price Plummets<h2>
+                <p class="card-service-news-paragraph"> Yesterday something happened to SASOL share price, the move was not expecte at all this is a shock to the market</p>
+                <center>
+                    <a href="#" class="card-service-news-continue-btn btn-color-outline-black">Continue reading ></a>
+                </center>
+            </div>
         </div>
 
     </div>
--->
+    -->
+
     <div class="container-fluid main-content text-align-center bg-color-black text-color-white">
         <h2 class="main-content-heading text-color-white">About Us</h2>
 
@@ -258,8 +294,8 @@
                 </div>
                 <div class="modal-body">
                     <div class="form-group">
-                        <label for="email">Email address:</label>
-                        <input type="email" class="form-control" id="log-email">
+                        <label for="email">Email address / Username:</label>
+                        <input type="text" class="form-control" id="log-email">
                     </div>
                     <div class="form-group">
                         <label for="pwd">Password:</label>

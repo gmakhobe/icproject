@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!--
 =========================================================
 
@@ -240,3 +241,11 @@
 </body>
 
 </html>
+=======
+<!-- Header -->
+@include("user/static/header")
+<!-- Navbar -->
+@include("user/static/navbar")
+<!-- Footer -->
+@include("user/static/footer")
+>>>>>>> parent of 934754e... Adding Dashboard

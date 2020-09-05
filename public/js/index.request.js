@@ -204,35 +204,19 @@ const AppLogin = () => {
 // End User Login
 // News
 // User Login
-/*const AppNews = () => {
+const AppNews = () => {
     const csrf = document.getElementById("index-csrf").value;
 
     //Call custome Fetxh
     icFETCH(`/news/frontpage`, {}, csrf)
     .then(data => {
         
-        for(let i = 0; i < 3; i++){
-            console.log(data[i]);
 
-            document.getElementById('main-content-news').innerHTML = `
-            <div class="cards-services">
-                <div class="card-service-news">
-                    <img class="card-service-news-image img-rounded" src="{{ asset('/images/news-slide.jpg') }}" alt="Investment">
-                </div>
-                <div class="card-service-news">
-                    <h2 class="card-service-news-title">News Title (E.G) Sasol Share Price Plummets<h2>
-                    <p class="card-service-news-paragraph"> Yesterday something happened to SASOL share price, the move was not expecte at all this is a shock to the market</p>
-                    <center>
-                        <a href="#" class="card-service-news-continue-btn btn-color-outline-black">Continue reading ></a>
-                    </center>
-                </div>
-            </div>
-            `;
+        console.log(data)[0];
 
-        }
         
     })
     .catch(error => alert(`An error occured: Email or Password is incorrect!`));
     document.getElementById("loginBTN").style.display = "block";
 }
-// End News*/
+// End News

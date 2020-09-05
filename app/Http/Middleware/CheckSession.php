@@ -18,6 +18,12 @@ class CheckSession
         if ( !session()->get('user') ){
            return redirect('/');
         }
+        //Getting user information from session class
+        $UserInfomation = session()->get('user');
+        $UserInfomation = $UserInfomation["User"][0];
+        if (!$UserInfomation->Profile_Status){
+            //return redirect('/user/profile');
+        }
         return $next($request);
     }
 }

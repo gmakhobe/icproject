@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 use App\Http\Logic\StoreQuotes;
 use App\Http\Logic\News;
+use App\Http\Logic\Validator;
 use App\Mail\Registration;
 use Illuminate\Support\Facades\Mail;
 
@@ -34,6 +35,8 @@ class IndexController extends Controller
         if (!$email || !$password || !$name || !$surname){
             return json_encode(array("status" => 0, "message" => "All fields are required!"));
         }
+        //Make username
+        $username = Validator::getUsername($email);
         //Hash Password
         try{
             $password = Hash::make($password);
@@ -42,7 +45,7 @@ class IndexController extends Controller
             $activationHash = rand(99999999, 999999999);
 
             // Insert into the database
-            DB::insert('insert into users(Name, Surname, EmailAddress, Passcode, ActivationHash) values (?, ?, ?, ?, ?)', [$name, $surname, $email, $password, $activationHash]);  
+            DB::insert('insert into users(Name, Surname, EmailAddress, Passcode, ActivationHash, Username) values (?, ?, ?, ?, ?, ?)', [$name, $surname, $email, $password, $activationHash, $username]);  
 
             $mailArg = array("Name"=> $name, "Surname"=> $surname, "ActivatioHash"=> $activationHash);
             //Send email to client
@@ -62,17 +65,18 @@ class IndexController extends Controller
         };
         //Get user information from DB
         try{
-            $results =  DB::select('select * from users where EmailAddress = ?', [$email]);
+            $results =  DB::select('SELECT * FROM users WHERE EmailAddress = ? OR Username = ?', [$email, $email]);
             if (isset($results[0]->AccountActive) && $results[0]->AccountActive == "No"){
                 return json_encode(array("status" => 0, "message" => "You need to activate your email address beofre logging in!"));
             }
             //Return positive response on success
             if ($results){
+
                 $comparePassword = Hash::check($password, $results[0]->Passcode);
                 if ($comparePassword){
-                    //$request->session()->put("user", array("User" => $results));
+                    $request->session()->put("user", array("User" => $results));
                     
-                    //return json_encode(array("status" => 1, "message" => "Login success!"));
+                    return json_encode(array("status" => 1, "message" => "Login success!"));
                 }
                 return json_encode(array("status" => 0, "message" => "Email or Password is incorrect!"));
             }

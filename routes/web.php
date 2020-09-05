@@ -13,7 +13,7 @@ use Illuminate\Http\Request;
 | contains the "web" middleware group. Now create something great!
 |
 */
-$GLOBALS['AppTitle'] = "IC Application";
+$GLOBALS['AppTitle'] = "Plugun";
 
 //Get Requests
 Route::get('/', function () {
