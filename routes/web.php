@@ -21,7 +21,7 @@ Route::get('/', function () {
 });
 // /User/*
 Route::get('/user/dashboard', 'UserController@Dashboard')->middleware('IsSessionValid');
-Route::get('/user/profile', 'UserController@Profile')->middleware('IsSessionValid');
+Route::get('/user/profile', 'UserProfile')->middleware('IsSessionValid');
 Route::get('/user/profile/userinfo/{name}/{surname}/{username}', 'UserProfileController@SaveUserPersonalInfo')->middleware('IsSessionValid');
 Route::get('/user/profile/SaveUserAddressInfo/{address}/{city}/{country}', 'UserProfileController@SaveUserInfo')->middleware('IsSessionValid');
 

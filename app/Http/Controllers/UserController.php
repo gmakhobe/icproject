@@ -23,22 +23,6 @@ class UserController extends Controller
     }
 
     public function Profile(Request $request){
-        //Getting user information from session class
-        $UserInfomation = $request->session()->get('user');
-        $UserInfomation = $UserInfomation["User"][0];
-
-        $InfoToInject = array(
-            'Name'=> $UserInfomation->Name,
-            'Surname'=> $UserInfomation->Surname,
-            'EmailAddress'=> $UserInfomation->EmailAddress,
-            'Username'=> $UserInfomation->Username,
-            'Address'=> $UserInfomation->Address,
-            'City'=> $UserInfomation->City,
-            'Country'=> $UserInfomation->Country
-        );
-        //Properties to be injected
-        $properties = ["Name" => $GLOBALS['AppTitle'], "Title" => "Dashboard", "UserInfo"=> $InfoToInject];
-        //print_r($InfoToInject);
-        return view("user/profile", $properties);
+        
     }
 }
