@@ -15,9 +15,9 @@
         <link rel="stylesheet" href="{{ asset('/css/style.css') }}">
         <!-- End Styles -->
 
-        <style>
-            
-        </style>
+        <!-- JS CDN Assets-->
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+        <!-- End JSCDN Assets-->
     </head>
     <body>
 
@@ -27,7 +27,6 @@
                 <a class="navbar-brand text-color-white text-style-bold" href="#">{{ $Title }}</a>
             </div>
             <ul class="nav navbar-nav navbar-right">
-                <li><a class="text-color-white btn-nav" href="#">About Us</a></li>
                 <li><a class="text-color-black btn-nav btn-color-gold text-style-bold" href="#"  data-toggle="modal" data-target="#loginModal" data-backdrop="static">Login</a></li>
                 <li><a class="text-color-white btn-nav btn-color-red text-style-bold" href="#"  data-toggle="modal" data-target="#registerModal" data-backdrop="static">Register</a></li>
             </ul>
@@ -111,8 +110,26 @@
         </a>
     </div>
 
+    <div class="container-fluid main-content text-align-center">
+        <h2 class="main-content-heading">SUBSCRIBE</h2>
+
+        <p class="subscribe-paragraph">Subscribe to our news letter to receieve all our news updates!</p>
+
+        <div class="cards-services">
+            <div class="subscribe-form">
+              <div class="input-group">
+                <input id="s-email" type="email" class="form-control" size="50" placeholder="Email Address" required>
+                <div class="input-group-btn">
+                  <button id="subscribeBTN" onclick="AppSubscribe()" type="button" class="btn btn-danger">Subscribe</button>
+                </div>
+              </div>
+            </div>
+        </div>
+
+    </div>
+
     <div class="container-fluid main-content bg-color-grey">
-        <h2 class="main-content-heading text-align-center">IC Online Services</h2>
+        <h2 class="main-content-heading text-align-center">ONLINE SERVICES</h2>
 
         <div class="cards-services">
             <div class="card-service">
@@ -169,16 +186,16 @@
         </div>
     </div>
 
-    <div class="container-fluid main-content">
+    <!--<div class="container-fluid main-content">
         <h2 class="main-content-heading text-align-center">ZAR Current Market<br> Price</h2>
 
         <div class="cards-services" id="quotes-sections">
             
-            <!-- Display infor using innerhtml when loading quotes-->
+             Display infor using innerhtml when loading quotes
             
             
         </div>
-    </div>
+    </div>-->
 
     <!--
     <div class="container-fluid main-content">
@@ -227,29 +244,44 @@
     -->
 
     <div class="container-fluid main-content text-align-center bg-color-black text-color-white">
-        <h2 class="main-content-heading text-color-white">About Us</h2>
+        <h2 class="main-content-heading text-color-white">ABOUT US</h2>
 
-        <p class="aboutus-paragraph">We are a new global plartform the aims at connecting investors with small business together with Markets!</p>
+        <p class="aboutus-paragraph">We are a new global plartform with the aim of connecting investors with small business together with Markets!</p>
 
     </div>
 
+
     <div class="container-fluid main-content text-align-center">
-        <h2 class="main-content-heading">Subscribe</h2>
-
-        <p class="subscribe-paragraph">Subscribe to our news later to receieve any news updates!</p>
-
-        <div class="cards-services">
-            <div class="subscribe-form">
-              <div class="input-group">
-                <input id="s-email" type="email" class="form-control" size="50" placeholder="Email Address" required>
-                <div class="input-group-btn">
-                  <button id="subscribeBTN" onclick="AppSubscribe()" type="button" class="btn btn-danger">Subscribe</button>
+        <div class="container-fluid bg-grey">
+            <h2 class="text-center">CONTACT</h2>
+            <div class="row">
+              <div class="col-sm-5">
+                <p>Contact us and we'll get back to you within 24 hours.</p>
+                <p><span class="glyphicon glyphicon-map-marker"></span> Johannesburg, RSA</p>
+                <p><span class="glyphicon glyphicon-phone"></span> +27 000000000</p>
+                <p><span class="glyphicon glyphicon-envelope"></span> info@plugin.co.za</p>
+              </div>
+              <div class="col-sm-7">
+                <div class="row">
+                  <div class="col-sm-6 form-group">
+                    <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+                  </div>
+                  <div class="col-sm-6 form-group">
+                    <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+                  </div>
+                </div>
+                <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea><br>
+                <div class="row">
+                  <div class="col-sm-12 form-group">
+                    <button class="btn btn-success pull-right" id="ContactFormSubmit">Send</button>
+                  </div>
                 </div>
               </div>
             </div>
-        </div>
+          </div> 
 
     </div>
+
 
     <div class="container-fluid main-content text-align-center bg-color-black text-color-white">
         <h2 class="main-content-heading text-color-white">Copyright &copy; {{ date('Y') }}</h2>
@@ -290,16 +322,16 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal">×</button>
-                    <h4 class="modal-title">Login In</h4>
+                    <h2 class="modal-title text-center">Login</h2>
                 </div>
                 <div class="modal-body">
                     <div class="form-group">
                         <label for="email">Email address / Username:</label>
-                        <input type="text" class="form-control" id="log-email">
+                        <input placeholder="john255" type="text" class="form-control" id="log-email">
                     </div>
                     <div class="form-group">
                         <label for="pwd">Password:</label>
-                        <input type="password" class="form-control" id="log-password">
+                        <input placeholder="*******" type="password" class="form-control" id="log-password">
                     </div>
                 </div>
                 <div class="modal-footer">
@@ -318,29 +350,29 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal">×</button>
-                    <h4 class="modal-title">Register</h4>
+                    <h2 class="modal-title text-center">Register</h2>
                 </div>
                 <div class="modal-body">
                     <div id="reg-container">
                         <div class="form-group">
                             <label>Name:</label>
-                            <input type="text" class="form-control" id="reg-name">
+                            <input placeholder="John" type="text" class="form-control" id="reg-name">
                         </div>
                         <div class="form-group">
                             <label>Surname:</label>
-                            <input type="text" class="form-control" id="reg-surname">
+                            <input placeholder="Doe" type="text" class="form-control" id="reg-surname">
                         </div>
                         <div class="form-group">
                             <label>Email address:</label>
-                            <input type="email" class="form-control" id="reg-email">
+                            <input placeholder="john.doe.mail.com" type="email" class="form-control" id="reg-email">
                         </div>
                         <div class="form-group">
                             <label>Password:</label>
-                            <input type="password" class="form-control" id="reg-password">
+                            <input placeholder="*******" type="password" class="form-control" id="reg-password">
                         </div>
                         <div class="form-group">
                             <label> Confirm Password:</label>
-                            <input type="password" class="form-control" id="reg-confirm-password">
+                            <input placeholder="*******" type="password" class="form-control" id="reg-confirm-password">
                         </div>
                     </div>
                 </div>
@@ -362,7 +394,7 @@
     <script src="{{ asset('js/index.request.js')}}"></script>
     <script>
         //AppNews();
-        loadQuotesFromServer();
+        //loadQuotesFromServer();
     </script>
     <!-- End Script -->
 

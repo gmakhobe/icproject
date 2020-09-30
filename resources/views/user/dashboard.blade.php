@@ -6,14 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>{{ $Title }} - {{ $Name }}</title>
     <meta property="og:type" content="website">
-    <link rel="stylesheet" href="{{ asset('assets/bootstrap/css/bootstrap.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/fonts/fontawesome-all.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/fonts/font-awesome.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/fonts/fontawesome5-overrides.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/Side-By-Side-Section.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/Circle-Nav.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets1/bootstrap/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets1/fonts/fontawesome-all.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets1/fonts/font-awesome.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets1/fonts/fontawesome5-overrides.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets1/css/Side-By-Side-Section.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets1/css/Circle-Nav.css') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
-    <link rel="stylesheet" href="{{ asset('assets/css/styles.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets1/css/styles.css') }}">
 </head>
 
 <body>
@@ -61,20 +61,22 @@
                      <div class="holderCircle">
                         <div class="round"></div>
                         <div class="dotCircle">
-                           <span class="itemDot active itemDot1" data-tab="1">
-                           <i class="fa fa-clock-o"></i>
-                           <span class="forActive"></span>
-                           </span>
+                            <a href="/user/investment">
+                                <span class="itemDot active itemDot1" data-tab="1">
+                                    <i class="fa fa-chart-line"></i>
+                                    <span class="forActive"></span>
+                                </span>
+                            </a>
                            <span class="itemDot itemDot2" data-tab="2">
-                           <i class="fa fa-comments"></i>
+                           <i class="fa fa-book"></i>
                            <span class="forActive"></span>
                            </span>
                            <span class="itemDot itemDot3" data-tab="3">
-                           <i class="fa fa-user"></i>
+                           <i class="fab fa-envira"></i>
                            <span class="forActive"></span>
                            </span>
                            <span class="itemDot itemDot4" data-tab="4">
-                           <i class="fa fa-tags"></i>
+                           <i class="fa fa-user"></i>
                            <span class="forActive"></span>
                            </span>
                            <span class="itemDot itemDot5" data-tab="5">
@@ -82,9 +84,15 @@
                            <span class="forActive"></span>
                            </span>
                            <span class="itemDot itemDot6" data-tab="6">
-                           <i class="fa fa-briefcase"></i>
+                           <i class="fa fa-plus-square"></i>
                            <span class="forActive"></span>
                            </span>
+                           <a href="/user/news">
+                                <span class="itemDot itemDot7" data-tab="7">
+                                <i class="fa fa-newspaper"></i>
+                                <span class="forActive"></span>
+                            </span>
+                           </a>
                         </div>
                         <div class="contentCircle">
                            <div class="CirItem title-box active CirItem1">
@@ -117,6 +125,11 @@
                               <p>#</p>
                               <i class="fa fa-briefcase"></i>
                            </div>
+                           <div class="CirItem title-box CirItem7">
+                            <h2 class="title"><span>News</span></h2>
+                            <p>#</p>
+                            <i class="fa fa-briefcase"></i>
+                         </div>
                         </div>
                      </div>
                   </div>
@@ -141,10 +154,10 @@
         </div>
     </footer>
     <!-- End: Footer with social media icons -->
-    <script src="{{ asset('assets/js/jquery.min.js') }}"></script>
-    <script src="{{ asset('assets/bootstrap/js/bootstrap.min.js') }}"></script>
-    <script src="{{ asset('assets/js/bs-init.js') }}"></script>
-    <script src="{{ asset('assets/js/Circle-Nav.js') }}"></script>
+    <script src="{{ asset('assets1/js/jquery.min.js') }}"></script>
+    <script src="{{ asset('assets1/bootstrap/js/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('assets1/js/bs-init.js') }}"></script>
+    <script src="{{ asset('assets1/js/Circle-Nav.js') }}"></script>
 </body>
 
 </html>

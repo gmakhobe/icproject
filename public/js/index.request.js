@@ -1,3 +1,13 @@
+/*
+    Valisator Sanitizer
+*/
+const aq_formatter = (param) => {
+	//
+	return param.replace(/&/g, "911amp;").replace(/>/g, "911gt;").replace(/</g, "911lt;").replace(/"/g, "911quot;").replace(/'/g, "911apos");
+}
+/*
+    End Valisator Sanitizer
+*/
 //Custom Fetch Request
 const icFETCH = (url, datar, csrf) => {
     return (new Promise((resolve, reject) => {
@@ -100,7 +110,7 @@ const AppSubscribe = () => {
     const csrf = document.getElementById("index-csrf").value;
 
     if (!email){
-        alert("Email is requred to subscribe.");
+        swal("Subscribe Alert", "Email is requred to subscribe.");
         return ;
     }
 
@@ -108,15 +118,15 @@ const AppSubscribe = () => {
     icFETCH(`/subscribe/email/${email}`, {Email: email}, csrf)
     .then(data => {
 
-        if (data.status){
-            alert("Thanks for subscribing, you will receive our news updates and alerts regarding our products.");
-        }
-        if (data.status == 0){
-            alert(alert(data.message));
-        } 
+        //On success response from serve show alert
+        swal("Subscribe Alert", data.message);
+ 
     })
     .catch(error => {
-        alert(`An error occured: Please try subscribing again with a different email address the current one is already subscribed!`);
+        
+        //Response with error
+        swal("Subscribe Alert", `Please try subscribing again with a different email address the current one has subscribed!`);
+
     });
     document.getElementById("subscribeBTN").style.display = "block";
 }
@@ -136,17 +146,17 @@ const AppRegister = () => {
     let counter = 0;
 
     if (!email || !password || !confirmPassword || !csrf || !name || !surname){
-        alert("All fields required!");
+        swal("Registration Alert", "All fields required!");
         counter++;
     }
 
     if (name.length < 3 || surname.length < 3){
-        alert("Name or Surname should be more than 2 charecters!");
+        swal("Registration Alert", "Name or Surname must be more than 2 charecters long!");
         counter++;
     }
 
     if(password !== confirmPassword){
-        alert("Password and confirm password do not match!");
+        swal("Registration Alert", "Password and confirm password do not match!");
         counter++;
     }
 
@@ -183,7 +193,7 @@ const AppLogin = () => {
     const csrf = document.getElementById("index-csrf").value;
 
     if (!email || !password || !csrf){
-        alert("All fields required!");
+        swal("Login Alert", "All fields required!");
         return ;
     }
     //Call custome Fetxh
@@ -196,9 +206,9 @@ const AppLogin = () => {
             document.getElementById("reg-container").innerHTML = alertSuccessMSG;
             location.assign("/user/dashboard");
         }
-        if (data.status == 0) alert(data.message);
+        if (data.status == 0) swal("Login Alert", data.message);
     })
-    .catch(error => alert(`An error occured: Email or Password is incorrect!`));
+    .catch(error => swal("Login Alert", `An error occured: Email or Password is incorrect!`));
     document.getElementById("loginBTN").style.display = "block";
 }
 // End User Login
@@ -220,3 +230,51 @@ const AppNews = () => {
     document.getElementById("loginBTN").style.display = "block";
 }
 // End News
+/*
+
+    Contact Us form input
+
+*/
+//Get element
+const ContactFormSubmit = document.getElementById("ContactFormSubmit");
+//on element click
+ContactFormSubmit.addEventListener('click', () => {
+    //Hide button
+    ContactFormSubmit.style.display = "none";
+    //Get element by id
+    const name = aq_formatter(document.getElementById('name').value);
+    const email = aq_formatter(document.getElementById('email').value);
+    const comments = aq_formatter(document.getElementById('comments').value);
+    const csrf = document.getElementById("index-csrf").value;
+
+    if ( (name.length <= 2 || !name) && (email.length <= 2 || !email) && (comments.length <= 2 || !comments)){
+        swal("Contact Us", `All fields are required!`);
+        ContactFormSubmit.style.display = "inline";
+    }
+    /*//Check Email Address
+    console.log(`Is email: ${email.search("@")}`);
+    if (!email.search("@") || email.search("@") == '-1' || email.search("@") == -1){
+        swal("Contact Us", `Please enter a valid email address!`);
+        ContactFormSubmit.style.display = "inline";
+    }*/
+
+    //Call custome Fetxh
+    icFETCH(`/contactus/${name}/${email}/${comments}`, {}, csrf)
+    .then(data => {
+        
+        const response = data;
+        
+        if (response.status){
+            swal("Contact Us", `Hi we have recieved your message and we will get back to you shortly.`);
+        }else{
+            swal("Contact Us", `There was an error sending your email please try again!`);
+        }
+
+        
+    })
+    .catch(error => {
+        swal("Contact Us", `An error occured please try again => ${error}!`);
+    });
+    ContactFormSubmit.style.display = "inline"; 
+
+});

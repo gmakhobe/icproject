@@ -13,7 +13,7 @@ use Illuminate\Http\Request;
 | contains the "web" middleware group. Now create something great!
 |
 */
-$GLOBALS['AppTitle'] = "Plugun";
+$GLOBALS['AppTitle'] = "Plugin";
 
 //Get Requests
 Route::get('/', function () {
@@ -21,9 +21,26 @@ Route::get('/', function () {
 });
 // /User/*
 Route::get('/user/dashboard', 'UserController@Dashboard')->middleware('IsSessionValid');
+
+// /User/Profile
 Route::get('/user/profile', 'UserProfile')->middleware('IsSessionValid');
 Route::get('/user/profile/userinfo/{name}/{surname}/{username}', 'UserProfileController@SaveUserPersonalInfo')->middleware('IsSessionValid');
 Route::get('/user/profile/SaveUserAddressInfo/{address}/{city}/{country}', 'UserProfileController@SaveUserInfo')->middleware('IsSessionValid');
+
+// /User/Create
+Route::get('/user/create', 'CreateController@Index')->middleware('IsSessionValid');
+
+// /User/News
+Route::get('/user/news', 'NewsController@NewsView')->middleware('IsSessionValid');
+Route::get('/user/news/podcast', 'NewsController@PodcastView')->middleware('IsSessionValid');
+
+// /User/Investment
+Route::get('/user/investment', 'InvestmentController@InvestmentView')->middleware('IsSessionValid');
+Route::get('/user/investment/company/{name}', 'InvestmentController@Company')->middleware('IsSessionValid');
+Route::get('/user/investment/service/{name}', 'InvestmentController@Service')->middleware('IsSessionValid');
+Route::get('/user/investment/event/{name}', 'InvestmentController@Event')->middleware('IsSessionValid');
+Route::get('/user/investment/hedge-fund/{name}', 'InvestmentController@HedgeFund')->middleware('IsSessionValid');
+//Route::get('/user/news/podcast', 'NewsController@PodcastView')->middleware('IsSessionValid');
 
 //Get Requests from /
 Route::get('/register/email/{email}/password/{password}/name/{name}/surname/{surname}', 'IndexController@register');
@@ -33,3 +50,4 @@ Route::get('/CURRENCY_EXCHANGE', 'IndexController@exchangeRate');
 Route::get('/activate/{code}', 'IndexController@activate');
 Route::get('/news/frontpage', 'IndexController@getNews');
 Route::get('/logout', 'IndexLogout');
+Route::get('/contactus/{name}/{email}/{comments}', 'IndexController@contactus');

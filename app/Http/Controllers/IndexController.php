@@ -12,6 +12,7 @@ use App\Http\Logic\News;
 use App\Http\Logic\Validator;
 use App\Http\Logic\AppSession;
 use App\Mail\Registration;
+use App\Mail\ContactUs;
 use Illuminate\Support\Facades\Mail;
 
 class IndexController extends Controller
@@ -97,9 +98,9 @@ class IndexController extends Controller
         }
         //Insert info into the DB
         try{
-            if (DB::insert('INSERT INTO Subscribers(EmailAddress) values (?)', [$email]))  return json_encode(array("status" => 1, "message" => ""));
+            if (DB::insert('INSERT INTO Subscribers(EmailAddress) values (?)', [$email]))  return json_encode(array("status" => 1, "message" => "Subscribe Alert", "Thanks for subscribing, you will receive our news updates and alerts regarding our products."));
         }catch(Exception $e){
-            return json_encode(array("status" => 0, "message" => "An error occured please try again"));
+            return json_encode(array("status" => 0, "message" => "An error occured please try again later!"));
         }
     }
 
@@ -146,5 +147,23 @@ class IndexController extends Controller
         catch (InvalidArgumentException $e) {
             return json_encode(array("status" => 0, "message" => 2));
         }       
+    }
+
+    //Contact us form 
+    public function contactus($name, $email, $comments){
+
+        try{
+
+            $mailArg = array("Name"=> $name, "Email"=> $email, "Comments"=> $comments);
+            //Send email to client
+            Mail::to($email)
+                ->send(new ContactUs($mailArg));
+            
+            return json_encode(array("status" => 1, "message" => "Sent"));
+
+        }catch(Exception $e){
+            return json_encode(array("status" => 0, "message" => $e));
+        }
+
     }
 }

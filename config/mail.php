@@ -36,7 +36,7 @@ return [
     'mailers' => [
         'smtp' => [
             'transport' => 'smtp',
-            'host' => env('MAIL_HOST', 'smtp.mailgun.org'),
+            'host' => env('MAIL_HOST', 'smtp.gmail.com'),
             'port' => env('MAIL_PORT', 587),
             'encryption' => env('MAIL_ENCRYPTION', 'tls'),
             'username' => env('MAIL_USERNAME'),
@@ -86,7 +86,7 @@ return [
     */
 
     'from' => [
-        'address' => env('MAIL_FROM_ADDRESS', 'postmaster@sandboxa8a1a546140046678d3dca73becaeb19.mailgun.org'),
+        'address' => env('MAIL_FROM_ADDRESS', 'matcha2021@gmail.com'),
         'name' => env('MAIL_FROM_NAME', 'Plugin App'),
     ],
 
