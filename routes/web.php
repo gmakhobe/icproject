@@ -20,6 +20,12 @@ Route::get('/', function () {
     return view('landing', ["Title" => $GLOBALS['AppTitle'], "ActivationVal"=> 0]);
 });
 // /User/*
+Route::get('/alert/alertcenter', 'AlertsController@AlertGetAlertCenterContent')->middleware('IsSessionValid');
+Route::get('/alert/messagecenter', 'AlertsController@AlertGetMessageCenterContent')->middleware('IsSessionValid');
+Route::get('/alert/alertcenter/off', 'AlertsController@AlertShutAlertCenter')->middleware('IsSessionValid');
+Route::get('/alert/messagecenter/off', 'AlertsController@AlertShutMessageCenter')->middleware('IsSessionValid');
+
+// /Alerts/AlertCenter*
 Route::get('/user/dashboard', 'UserController@Dashboard')->middleware('IsSessionValid');
 
 // /User/Profile

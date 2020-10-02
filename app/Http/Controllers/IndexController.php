@@ -4,11 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\URL;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 use App\Http\Logic\StoreQuotes;
-use App\Http\Logic\News;
 use App\Http\Logic\Validator;
 use App\Http\Logic\AppSession;
 use App\Mail\Registration;
