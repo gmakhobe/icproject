@@ -14,7 +14,7 @@ class AlertsController extends Controller
     public function AlertShutMessagesCenter(){
         //Set session info
         $UserInformation = AppSession::sessionGetUserInfo();
-        DB::update('UPDATE Alerts SET Seen = 1 WHERE AlertType = 1 AND AlertIndId IN (SELECT (No.NotificationId) FROM Notifications No INNER JOIN Alerts Al WHERE Al.AlertType = 1 AND No.NotificationId = Al.AlertIndId AND No.ToId = (SELECT UserId FROM users WHERE EmailAddress = ?) AND Al.Seen = 0)', [$UserInformation['Email']]);
+        DB::update('UPDATE Alerts Al SET Seen = 1 WHERE Al.AlertType = 2 AND Al.AlertIndId IN ( SELECT Me.MessageId FROM Messages Me INNER JOIN users Us WHERE Al.AlertType = 2 AND Me.MessageId = Al.AlertIndId AND Me.ToId = ( SELECT UserId FROM users WHERE EmailAddress = ? ) AND Al.Seen = 0 ) ', [$UserInformation['Email']]);
 
         return 1;
     }
@@ -49,7 +49,7 @@ class AlertsController extends Controller
     public function AlertShutAlertCenter(){
         //Set session info
         $UserInformation = AppSession::sessionGetUserInfo();
-        DB::update('UPDATE Alerts SET Seen = 1 WHERE AlertType = 1 AND AlertIndId IN (SELECT (No.NotificationId) FROM Notifications No INNER JOIN Alerts Al WHERE Al.AlertType = 1 AND No.NotificationId = Al.AlertIndId AND No.ToId = (SELECT UserId FROM users WHERE EmailAddress = ?) AND Al.Seen = 0)', [$UserInformation['Email']]);
+        DB::update('UPDATE Alerts Al SET Seen = 1 WHERE Al.AlertType = 1 AND Al.AlertIndId IN ( SELECT (No.NotificationId) FROM Notifications No WHERE Al.AlertType = 1 AND No.NotificationId = Al.AlertIndId AND No.ToId = ( SELECT UserId FROM users WHERE EmailAddress = ? ) AND Al.Seen = 0) ', [$UserInformation['Email']]);
 
         return 1;
     }

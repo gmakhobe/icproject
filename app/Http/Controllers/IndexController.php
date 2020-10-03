@@ -48,7 +48,7 @@ class IndexController extends Controller
             $activationHash = rand(99999999, 999999999);
 
             // Insert into the database
-            DB::insert('insert into users(Name, Surname, EmailAddress, Passcode, ActivationHash, Username) values (?, ?, ?, ?, ?, ?)', [$name, $surname, $email, $password, $activationHash, $username]);  
+            DB::insert('insert into users(UserId, Name, Surname, EmailAddress, Passcode, ActivationHash, Username) values (0, ?, ?, ?, ?, ?, ?)', [$name, $surname, $email, $password, $activationHash, $username]);  
 
             $mailArg = array("Name"=> $name, "Surname"=> $surname, "ActivatioHash"=> $activationHash);
             //Send email to client
