@@ -18,3 +18,4 @@
 <!-- JS CDN Assets-->
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 <!-- End JSCDN Assets-->
+<link rel="stylesheet" href="/css/style2.css">

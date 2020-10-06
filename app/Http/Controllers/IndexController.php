@@ -48,12 +48,12 @@ class IndexController extends Controller
             $activationHash = rand(99999999, 999999999);
 
             // Insert into the database
-            DB::insert('insert into users(UserId, Name, Surname, EmailAddress, Passcode, ActivationHash, Username) values (0, ?, ?, ?, ?, ?, ?)', [$name, $surname, $email, $password, $activationHash, $username]);  
+            DB::insert('insert into users(UserId, Name, Surname, EmailAddress, Passcode, ActivationHash, Username, AccountActive) values (0, ?, ?, ?, ?, ?, ?, ?)', [$name, $surname, $email, $password, $activationHash, $username, "Yes"]);  
 
             $mailArg = array("Name"=> $name, "Surname"=> $surname, "ActivatioHash"=> $activationHash);
             //Send email to client
-            Mail::to($email)
-                ->send(new Registration($mailArg));
+            //Mail::to($email)
+            //    ->send(new Registration($mailArg));
 
             return json_encode(array("status" => 1, "message" => "User successfully registered"));
         }catch(Exception $e){

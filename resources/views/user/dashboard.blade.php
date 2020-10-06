@@ -21,7 +21,7 @@
     <!-- Start: SectionContainerRowColumn -->
     <section></section>
     <!-- End: SectionContainerRowColumn -->
-    <nav class="navbar navbar-light navbar-expand-md sticky-top bounce animated navigation-clean-button" style="height: 80px;background-color: rgb(31,33,40);color: #ffffff;filter: saturate(200%);width: 1360px;max-width: 1360px;">
+    <nav class="navbar navbar-light navbar-expand-md sticky-top bounce animated navigation-clean-button" style="height: 80px;background-color: rgb(31,33,40);color: #ffffff;>
         <div class="container-fluid">
             <button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1">
                 <span class="sr-only">Toggle navigation</span>
@@ -68,18 +68,24 @@
                                     <span class="forActive"></span>
                                 </span>
                             </a>
-                           <span class="itemDot itemDot2" data-tab="2">
-                           <i class="fa fa-book"></i>
-                           <span class="forActive"></span>
-                           </span>
-                           <span class="itemDot itemDot3" data-tab="3">
-                           <i class="fab fa-envira"></i>
-                           <span class="forActive"></span>
-                           </span>
-                           <span class="itemDot itemDot4" data-tab="4">
-                           <i class="fa fa-user"></i>
-                           <span class="forActive"></span>
-                           </span>
+                            <a href="/user/ideas">
+                                <span class="itemDot itemDot2" data-tab="2">
+                                    <i class="fa fa-book"></i>
+                                    <span class="forActive"></span>
+                                </span>
+                            </a>
+                           <a href="/user/rawmate">
+                                <span class="itemDot itemDot3" data-tab="3">
+                                    <i class="fab fa-envira"></i>
+                                    <span class="forActive"></span>
+                                </span>
+                           </a>
+                           <a href="/user/profile">
+                                <span class="itemDot itemDot4" data-tab="4">
+                                    <i class="fa fa-user"></i>
+                                    <span class="forActive"></span>
+                                </span>
+                            </a>
                            <span class="itemDot itemDot5" data-tab="5">
                            <i class="fa fa-upload"></i>
                            <span class="forActive"></span>

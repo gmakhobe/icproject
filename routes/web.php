@@ -48,6 +48,15 @@ Route::get('/user/investment/event/{name}', 'InvestmentController@Event')->middl
 Route::get('/user/investment/hedge-fund/{name}', 'InvestmentController@HedgeFund')->middleware('IsSessionValid');
 //Route::get('/user/news/podcast', 'NewsController@PodcastView')->middleware('IsSessionValid');
 
+// /User/rawmate
+Route::get('/user/rawmate', 'RawmateterialController@RawmateView')->middleware('IsSessionValid');
+
+// /User/profile
+Route::get('/user/profile', 'ProfileController@ProfileView')->middleware('IsSessionValid');
+
+// /User/ideas
+Route::get('/user/ideas', 'IdeasController@IdeasView')->middleware('IsSessionValid');
+
 //Get Requests from /
 Route::get('/register/email/{email}/password/{password}/name/{name}/surname/{surname}', 'IndexController@register');
 Route::get('/login/email/{email}/password/{password}', 'IndexController@login');

@@ -167,8 +167,10 @@ const AppRegister = () => {
     //Call custome Fetxh
     icFETCH(`/register/email/${email}/password/${password}/name/${name}/surname/${surname}`, {Email: email, Password: password}, csrf)
     .then(data => {
-        const alertSuccessMSG = `<div class="alert alert-success"><strong>Success!</strong> Registration was successful. Please go to your emails to confirm your email address before logging in.
+        const alertSuccessMSG = `<div class="alert alert-success"><strong>Success!</strong> Registration was successful. You may login.
           </div>`;
+        /*const alertSuccessMSG = `<div class="alert alert-success"><strong>Success!</strong> Registration was successful. Please go to your emails to confirm your email address before logging in.
+          </div>`;*/
 
         if (data.status) document.getElementById("reg-container").innerHTML = alertSuccessMSG;
         if (data.status == 0){

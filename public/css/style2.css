@@ -1,0 +1,13 @@
+.my-bg-color-grey {
+    background-color: rgb(52, 58, 64) !important;
+    color: white;
+}
+
+.my-text-color-black {
+    color: black;
+}
+
+.my-invest-second-nav-btn {
+    color: #fff;
+    background-color: transparent;
+}

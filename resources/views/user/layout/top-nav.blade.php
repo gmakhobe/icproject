@@ -1,17 +1,19 @@
 <nav class="navbar navbar-light navbar-expand bg-dark shadow mb-4 topbar static-top"
-    style="background-color: rgb(50,46,46);color: rgb(50,46,46);width: 1349px;height: 74px;margin-top: -3px;">
-    <div class="container-fluid"><button class="btn btn-link d-md-none rounded-circle mr-3" id="sidebarToggleTop"
-            type="button" style="color: rgb(50,46,46);"><i class="fas fa-bars"></i></button>
-        <form class="form-inline bg-dark d-none d-sm-inline-block mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search"
-            style="margin-left: 18px;margin-right: 67px;background-color: #322e2e;">
-            <div class="input-group" style="margin-left: 26px;"><input
-                    class="bg-dark border-danger form-control border-0 small" type="text" placeholder="Search for ..."
-                    style="width: 413px;height: 45px;margin-left: 118px;margin-right: 0px;padding-left: 14px;color: rgb(245,67,67);"
-                    autocomplete="on" required=""></div>
+    style="background-color: rgb(50,46,46);color: rgb(50,46,46);">
+    <div class="container-fluid">
+        <button class="btn btn-link d-md-none rounded-circle mr-3" id="sidebarToggleTop" type="button" style="color: rgb(50,46,46);">
+            <i class="fas fa-bars"></i>
+        </button>
+        <form class="form-inline bg-dark d-none d-sm-inline-block mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
+            <div class="input-group">
+                <input class="bg-dark border-danger form-control border-0 small" type="text"  placeholder="Search for ..." style="width: 413px;margin-left: 118px;margin-right: 0px;padding-left: 14px;color: rgb(245,67,67);" autocomplete="on" required="">
+            </div>
         </form>
-        <div class="input-group-append"><button class="btn btn-primary py-0" type="button"
-                style="padding-left: 16px;background-color: rgb(245,67,67);height: 46px;"><i
-                    class="fas fa-search"></i></button></div>
+        <div class="input-group-append">
+            <button class="btn btn-primary py-0" type="button" style="background-color: rgb(245,67,67);height: 46px;">
+                <i class="fas fa-search"></i>
+            </button>
+        </div>
         <ul class="nav navbar-nav text-dark flex-nowrap ml-auto" style="background-color: rgb(90,92,105);">
             <li class="nav-item dropdown d-sm-none no-arrow"><a class="dropdown-toggle nav-link" data-toggle="dropdown"
                     aria-expanded="false" href="#"><i class="fas fa-search"></i></a>
@@ -26,6 +28,13 @@
                     </form>
                 </div>
             </li>
+
+            <style>
+                .fas{
+                    color: #fff !important;
+                }
+            </style>
+
             <li class="nav-item dropdown no-arrow mx-1" role="presentation">
                 <div onclick="AlertCenter_(1)" class="nav-item dropdown no-arrow">
                     <a id="AlertCenterCount" class="dropdown-toggle nav-link" data-toggle="dropdown"
@@ -61,7 +70,7 @@
             </li>
 
             <!-- Start : Alert Messages -->
-            <li class="nav-item dropdown no-arrow mx-1" role="presentation">
+            <li class="nav-item dropdown no-arrow mx-1 text-white" role="presentation">
                 <div onclick="AlertCenter_(0)" class="nav-item dropdown no-arrow">
                     <a id="MessageCenterCount" class="dropdown-toggle nav-link" data-toggle="dropdown"
                         aria-expanded="false" href="#">
@@ -151,7 +160,7 @@
                 src="{{ asset('images/user-icon.svg') }}">
         @endif
 
-        <span class="d-none d-lg-inline mr-2 text-gray-600 small" style="color: rgb(245,67,67);">
+        <span class="d-none d-lg-inline mr-2 text-gray-600 small" style="color: #fff;">
             <strong>{{ $NameAndSurname }}</strong>
         </span>
         <a class="border rounded d-inline scroll-to-top" href="#page-top">
