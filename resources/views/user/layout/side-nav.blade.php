@@ -58,25 +58,22 @@
                 </a>
                 <ul class="nav list-group flex-column d-inline-block submenu">
                     <li class="nav-item list-group-item pl-3">
-                        <a class="nav-link" href="#">ARTICLES</a>
+                        <a class="nav-link" href="/user/news/articles">ARTICLES</a>
                     </li>
                     <li class="nav-item list-group-item pl-3">
-                        <a class="nav-link active" href="#">WHERE TO INVEST</a>
+                        <a class="nav-link active" href="/user/news/where-to-invest">WHERE TO INVEST</a>
                     </li>
                     <li class="nav-item list-group-item pl-3">
-                        <a class="nav-link active" href="#">PODCAST & RADIO</a>
+                        <a class="nav-link active" href="/user/news/podcasts">PODCAST & RADIO</a>
                     </li>
                     <li class="nav-item list-group-item pl-3">
-                        <a class="nav-link active" href="#">CHANNELS</a>
+                        <a class="nav-link active" href="/user/news/channels">CHANNELS</a>
                     </li>
                     <li class="nav-item list-group-item pl-3">
                         <a class="nav-link active" href="#">PORTFOLIO</a>
                     </li>
                     <li class="nav-item list-group-item pl-3">
-                        <a class="nav-link active" href="#">WRITING BLOG</a>
-                    </li>
-                    <li class="nav-item list-group-item pl-3">
-                        <a class="nav-link active" href="#">BLOGS & WEBINARS</a>
+                        <a class="nav-link active" href="/user/news/blog">BLOGS</a>
                     </li>
                 </ul>
             </li>

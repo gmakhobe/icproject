@@ -1,13 +1,102 @@
 .my-bg-color-grey {
     background-color: rgb(52, 58, 64) !important;
-    color: white;
+    color: white !important!
+}
+
+.my-bg-transparent-grey {
+    background-color: transparent !important;
 }
 
 .my-text-color-black {
     color: black;
 }
 
+.my-text-color-white{
+    color: #fff;
+}
+
 .my-invest-second-nav-btn {
     color: #fff;
     background-color: transparent;
+}
+
+.my-text-center {
+    text-align: center;
+}
+
+.my-news-card{
+    height:100px !important;
+}
+
+.my-news-card-img{
+    width:100%;
+    height: 200px;
+}
+
+.my-news-card-img-left{
+    width:100%;
+    height: 250px;
+}
+
+.my-news-video{
+    width:100%;
+    height: auto;
+}
+
+.my-news-card-channel-list{
+    width:100%;
+    height: 150px;
+}
+
+.my-video-view{
+    width:100%;
+    height: 350px;
+}
+
+.my-news-card-channel-list-image{
+    width:100%;
+    height: auto;
+}
+
+.my-news-card-img-channel-name{
+    width:100%;
+    height: 150px !important;
+}
+a{
+    text-decoration: none;
+    text-decoration-color: #fff;
+    color: #fff;
+}
+a:hover{
+    text-decoration: none;
+    text-decoration-color: yellow;
+    color: yellow;
+}
+a:visited{
+    text-decoration: none;
+}
+.my-news-card-img-news-view{
+    width: 100%;
+    height: 450px;   
+}
+
+.my-news-card-video-news-view{
+    width: 100%;
+    height: 450px;
+}
+
+.my-rawmate-main-thumbnail{
+    width: 100%;
+    height: auto;
+}
+
+.my-blog-blog-post-thumbnail{
+    height:200px;
+    width:350 px;
+}
+
+.my-audio-card {
+    border: solid #fff;
+    border-left: solid red 8px;
+
 }

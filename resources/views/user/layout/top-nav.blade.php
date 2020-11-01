@@ -1,12 +1,16 @@
 <nav class="navbar navbar-light navbar-expand bg-dark shadow mb-4 topbar static-top"
     style="background-color: rgb(50,46,46);color: rgb(50,46,46);">
     <div class="container-fluid">
-        <button class="btn btn-link d-md-none rounded-circle mr-3" id="sidebarToggleTop" type="button" style="color: rgb(50,46,46);">
+        <button class="btn btn-link d-md-none rounded-circle mr-3" id="sidebarToggleTop" type="button"
+            style="color: rgb(50,46,46);">
             <i class="fas fa-bars"></i>
         </button>
         <form class="form-inline bg-dark d-none d-sm-inline-block mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
             <div class="input-group">
-                <input class="bg-dark border-danger form-control border-0 small" type="text"  placeholder="Search for ..." style="width: 413px;margin-left: 118px;margin-right: 0px;padding-left: 14px;color: rgb(245,67,67);" autocomplete="on" required="">
+                <input class="bg-dark border-danger form-control border-0 small" type="text"
+                    placeholder="Search for ..."
+                    style="width: 413px;margin-left: 118px;margin-right: 0px;padding-left: 14px;color: rgb(245,67,67);"
+                    autocomplete="on" required="">
             </div>
         </form>
         <div class="input-group-append">
@@ -30,9 +34,10 @@
             </li>
 
             <style>
-                .fas{
+                .fas {
                     color: #fff !important;
                 }
+
             </style>
 
             <li class="nav-item dropdown no-arrow mx-1" role="presentation">
@@ -106,8 +111,8 @@
 
                 const AlertCenter_ = (param) => {
 
-                    let url = (param ? '/alert/alertcenter/off': '/alert/messagecenter/off');
-                    
+                    let url = (param ? '/alert/alertcenter/off' : '/alert/messagecenter/off');
+
                     fetch(url, {
                             method: "get",
                             headers: {
@@ -122,7 +127,7 @@
                         })
                         .then(text => {
 
-                            (param ? AlertCenterCall(1): AlertCenterCall(0))
+                            (param ? AlertCenterCall(1) : AlertCenterCall(0))
 
                         })
                         .catch(res => {
@@ -160,9 +165,11 @@
                 src="{{ asset('images/user-icon.svg') }}">
         @endif
 
-        <span class="d-none d-lg-inline mr-2 text-gray-600 small" style="color: #fff;">
-            <strong>{{ $NameAndSurname }}</strong>
-        </span>
+        <strong>
+            <span id="Name-Ref" class="d-none d-lg-inline mr-2 text-gray-600 small" style="color: #fff;">
+                {{ $NameAndSurname }}
+            </span>
+        </strong>
         <a class="border rounded d-inline scroll-to-top" href="#page-top">
             <i class="fas fa-angle-up"></i>
         </a>

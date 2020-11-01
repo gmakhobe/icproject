@@ -9,7 +9,7 @@ class InvestmentGetCompany{
     public static function GetCompanyIndustriesCompanies(){
 
         //Info from Database
-        $Data = DB::select('SELECT IT.IndustryTypeName AS "Type", I.IndustryName AS "Industry", I.IndustryId AS "IndustryId", C.CompanyName AS "Company", C.CompanyId AS "CompanyId" FROM IndustryTypes IT INNER JOIN Industries I ON IT.IndustryTypeId = I.IndustryTypeId INNER JOIN Company C ON C.IndustryId = I.IndustryId WHERE IT.IndustryTypeName = ? AND C.IsActive = ?', ["Company", 1]);
+        $Data = DB::select('SELECT IT.IndustryTypeName AS "Type", I.IndustryName AS "Industry", I.IndustryId AS "IndustryId", C.CompanyName AS "Company", C.CompanyId AS "CompanyId", C.CompanySymbol AS "CompanySymbol" FROM IndustryTypes IT INNER JOIN Industries I ON IT.IndustryTypeId = I.IndustryTypeId INNER JOIN Company C ON C.IndustryId = I.IndustryId WHERE IT.IndustryTypeName = ? AND C.IsActive = ?', ["Company", 1]);
         $myArray = [];
         $temp = [];
         $tempCount = 1;
@@ -22,7 +22,8 @@ class InvestmentGetCompany{
                  "Industry"=> $Data[$index]->Industry,
                  "IndustryId"=> $Data[$index]->IndustryId,
                  "Company"=> $Data[$index]->Company,
-                 "CompanyId"=> $Data[$index]->CompanyId
+                 "CompanyId"=> $Data[$index]->CompanyId,
+                 "Symbol"=> $Data[$index]->CompanySymbol
                 ]);
             }else{
                 //Push to the original array
@@ -35,7 +36,8 @@ class InvestmentGetCompany{
                     "Industry"=> $Data[$index]->Industry,
                     "IndustryId"=> $Data[$index]->IndustryId,
                     "Company"=> $Data[$index]->Company,
-                    "CompanyId"=> $Data[$index]->CompanyId
+                    "CompanyId"=> $Data[$index]->CompanyId,
+                    "Symbol"=> $Data[$index]->CompanySymbol
                    ]);
                 $tempCount++;
             }

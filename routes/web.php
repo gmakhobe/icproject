@@ -36,20 +36,42 @@ Route::get('/user/profile/SaveUserAddressInfo/{address}/{city}/{country}', 'User
 // /User/Create
 Route::get('/user/create', 'CreateController@Index')->middleware('IsSessionValid');
 
-// /User/News
+// /User/News /user/news/  
 Route::get('/user/news', 'NewsController@NewsView')->middleware('IsSessionValid');
-Route::get('/user/news/podcast', 'NewsController@PodcastView')->middleware('IsSessionValid');
+Route::get('/user/news/read/{heading}/{id}', 'NewsController@NewsViewRead')->middleware('IsSessionValid');
+Route::get('/user/news/article/read/{heading}/{id}', 'NewsController@NewsViewArticleRead')->middleware('IsSessionValid');
+Route::get('/user/news/comment/{comment}/{newsId}/{commentInd}', 'NewsController@NewsViewReadComment')->middleware('IsSessionValid');
+Route::get('/user/news/articles', 'NewsController@ArticlesView')->middleware('IsSessionValid');
+Route::get('/user/news/channels', 'NewsController@ChannelsView')->middleware('IsSessionValid');
+Route::get('/user/news/channel/name/{name}/{id}/{type}', 'NewsController@ChannelNameView')->middleware('IsSessionValid');
+Route::get('/user/news/channel/search/{search}/{id}', 'NewsController@ChannelsViewSearch')->middleware('IsSessionValid');
+Route::get('/user/news/video/{name}/{id}', 'NewsController@NewsViewVideo')->middleware('IsSessionValid');
+Route::get('/user/news/podcasts', 'NewsController@PodcastView')->middleware('IsSessionValid');
+Route::get('/user/news/podcasts/increment/{PodcastId}', 'NewsController@PodcastAddView')->middleware('IsSessionValid');
+Route::get('/user/news/where-to-invest', 'NewsController@WhereToInvestView')->middleware('IsSessionValid');
+Route::get('/user/news/blog', 'NewsController@NewsBlogView')->middleware('IsSessionValid');
+Route::get('/user/news/blog/read/{heading}/{id}', 'NewsController@NewsBlogReadView')->middleware('IsSessionValid');
+Route::get('/user/news/blog/author/{name}/{id}', 'NewsController@NewsBlogAuthorView')->middleware('IsSessionValid');
+Route::get('/user/news/blog/search/{search}', 'NewsController@NewsBlogSearch')->middleware('IsSessionValid');
 
-// /User/Investment
+// /User/News/Subject 
+
+// Start /User/Investment
 Route::get('/user/investment', 'InvestmentController@InvestmentView')->middleware('IsSessionValid');
 Route::get('/user/investment/company/{name}', 'InvestmentController@Company')->middleware('IsSessionValid');
 Route::get('/user/investment/service/{name}', 'InvestmentController@Service')->middleware('IsSessionValid');
+Route::get('/user/investment/startupindex/{name}', 'InvestmentController@StartUpIndex')->middleware('IsSessionValid');
+Route::get('/user/investment/hedgefund/{name}', 'InvestmentController@HedgeFund')->middleware('IsSessionValid');
 Route::get('/user/investment/event/{name}', 'InvestmentController@Event')->middleware('IsSessionValid');
-Route::get('/user/investment/hedge-fund/{name}', 'InvestmentController@HedgeFund')->middleware('IsSessionValid');
+Route::get('/user/investment/newschannel/{name}', 'InvestmentController@NewsChannel')->middleware('IsSessionValid');
+// End /User/Investment
+
 //Route::get('/user/news/podcast', 'NewsController@PodcastView')->middleware('IsSessionValid');
 
 // /User/rawmate
 Route::get('/user/rawmate', 'RawmateterialController@RawmateView')->middleware('IsSessionValid');
+Route::get('/user/rawmate/product/{name}/{id}', 'RawmateterialController@RawmateProductView')->middleware('IsSessionValid');
+Route::get('/user/rawmate/seller/{name}/{id}', 'RawmateterialController@RawmateSellerProfileView')->middleware('IsSessionValid');
 
 // /User/profile
 Route::get('/user/profile', 'ProfileController@ProfileView')->middleware('IsSessionValid');

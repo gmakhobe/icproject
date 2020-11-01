@@ -34,7 +34,7 @@
     <!-- Start: Top Navbar -->
     @include('/user/layout/top-nav')
     <!-- End: Top Navbar -->
-
+    <!--
     <div class="container m-2">
         <div class="row">
             <div class="col-md-1"></div>
@@ -62,7 +62,8 @@
             <div class="col-md-1"></div>
         </div>
     </div>
-
+-->
+    <!--
     <div class="container m-2">
         <div class="row">
             <div class="col-md-1"></div>
@@ -123,6 +124,7 @@
             <div class="col-md-1"></div>
         </div>
     </div>
+-->
 
     <div class="container">
 
@@ -136,7 +138,7 @@
                     <h2>Industries</h2>
                     <p class="text-white">Select Industry</p>
 
-                    <div class="row my-text-color-black">
+                    <div class="row my-text-color-white">
 
                         <div class="col-md-3">
                             <table class="table table-bordered table-dark table-hover">
@@ -146,7 +148,8 @@
                                 <tbody>
                                     @foreach ($ListOfCompanyInd as $CompanyInd)
                                         <tr>
-                                            <td data-toggle="modal" data-target="#{{ $CompanyInd['Name'] }}">{{ $CompanyInd['Name'] }}
+                                            <td data-toggle="modal" data-target="#{{ $CompanyInd['Name'] }}">
+                                                {{ $CompanyInd['Name'] }}
                                             </td>
 
                                             <!-- The Modal -->
@@ -156,20 +159,118 @@
 
                                                         <!-- Modal Header -->
                                                         <div class="modal-header">
-                                                            <h4 class="modal-title text-center">{{ $CompanyInd['Name'] }} Sector Companies</h4>
+                                                            <center>
+                                                                <h4 class="my-text-color-white">
+                                                                    {{ $CompanyInd['Name'] }} Sector Companies
+                                                                </h4>
+                                                            </center>
                                                             <button type="button" class="close"
                                                                 data-dismiss="modal">&times;</button>
                                                         </div>
 
                                                         <!-- Modal body -->
                                                         <div class="modal-body ">
-                                                            @foreach( $CompanyIndustriesCompanies as $CompanyIndustriesCompany)
-                                                            
-                                                                @for($index = 0; $index < count($CompanyIndustriesCompany); $index++)
-                                                                    
+                                                            @foreach ($CompanyIndustriesCompanies as $CompanyIndustriesCompany)
+
+                                                                @for ($index = 0; $index < count($CompanyIndustriesCompany); $index++)
+
                                                                     @if ($CompanyInd['Name'] == $CompanyIndustriesCompany[$index]['Industry'])
                                                                         <div class="list-group ">
-                                                                            <a href="/user/investment/company/{{ $CompanyIndustriesCompany[$index]['Company'] }}" class="list-group-item list-group-item-action my-bg-color-grey">{{ $CompanyIndustriesCompany[$index]['Company'] }}</a>
+                                                                            <a href="/user/investment/company/{{ $CompanyIndustriesCompany[$index]['Symbol'] }}"
+                                                                                class="list-group-item list-group-item-action my-bg-color-grey">
+                                                                                <span
+                                                                                    class="my-text-color-white">{{ $CompanyIndustriesCompany[$index]['Company'] }},
+                                                                                    {{ $CompanyIndustriesCompany[$index]['Symbol'] }}<br>
+                                                                                    <ul class="pagination">
+                                                                                        <li class="page-item">
+                                                                                            <strong>Bid/Ask:</strong>
+                                                                                            2.400
+                                                                                            / 2.680,
+                                                                                        </li>
+                                                                                        <li class="page-item">
+                                                                                            <strong>Change:</strong>
+                                                                                            -0.8%,
+                                                                                        </li>
+                                                                                        <li class="page-item">
+                                                                                            <strong>Market Cap:</strong>
+                                                                                            177.55M,
+                                                                                        </li>
+                                                                                        <li class="page-item">
+                                                                                            <strong>Revenue:</strong>
+                                                                                            69.71M,
+                                                                                        </li>
+                                                                                        <li class="page-item">
+                                                                                            <strong>EPS:</strong> -0.71,
+                                                                                        </li>
+                                                                                    </ul>
+                                                                                </span>
+                                                                            </a>
+                                                                        </div>
+                                                                    @endif
+
+                                                                @endfor
+
+                                                            @endforeach
+                                                        </div>
+
+                                                        <!-- Modal footer -->
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-secondary"
+                                                                data-dismiss="modal">Close</button>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </tr>
+                                    @endforeach
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="col-md-3">
+                            <table class="table table-bordered table-dark table-hover my-text-color-white">
+                                <thead>
+                                    <th>Services</th>
+                                </thead>
+                                <tbody>
+
+                                    @foreach ($ListOfServiceInd as $ServiceInd)
+                                        <tr>
+                                            <td data-toggle="modal" data-target="#Service{{ $ServiceInd['Id'] }}">
+                                                {{ $ServiceInd['Name'] }}
+                                            </td>
+
+                                            <!-- The Modal -->
+                                            <div class="modal fade my-bg-color-grey"
+                                                id="Service{{ $ServiceInd['Id'] }}">
+                                                <div class="modal-dialog modal-xl my-bg-color-grey">
+                                                    <div class="modal-content my-bg-color-grey">
+
+                                                        <!-- Modal Header -->
+                                                        <div class="modal-header">
+                                                            <h4 class="modal-title text-center my-text-color-white">
+                                                                {{ $ServiceInd['Name'] }} Sector Services
+                                                            </h4>
+                                                            <button type="button" class="close"
+                                                                data-dismiss="modal">&times;</button>
+                                                        </div>
+
+                                                        <!-- Modal body -->
+                                                        <div class="modal-body ">
+                                                            @foreach ($CompanyIndustriesServices as $CompanyIndustriesService)
+
+                                                                @for ($index = 0; $index < count($CompanyIndustriesService); $index++)
+
+                                                                    @if ($ServiceInd['Name'] == $CompanyIndustriesService[$index]['Industry'])
+                                                                        <div class="list-group ">
+                                                                            <a href="/user/investment/service/{{ $CompanyIndustriesService[$index]['Service'] }}"
+                                                                                class="list-group-item list-group-item-action my-bg-color-grey">
+                                                                                <span class="my-text-color-white">
+                                                                                    {{ $CompanyIndustriesService[$index]['Service'] }}
+                                                                                </span>
+                                                                            </a>
                                                                         </div>
                                                                     @endif
 
@@ -197,28 +298,61 @@
                         <div class="col-md-3">
                             <table class="table table-bordered table-dark table-hover">
                                 <thead>
-                                    <th>Services</th>
-                                </thead>
-                                <tbody>
-                                    @foreach ($ListOfServiceInd as $ServiceInd)
-                                        <tr>
-                                            <td>{{ $ServiceInd['Name'] }}</td>
-
-                                        </tr>
-                                    @endforeach
-                                </tbody>
-                            </table>
-                        </div>
-
-                        <div class="col-md-3">
-                            <table class="table table-bordered table-dark table-hover">
-                                <thead>
                                     <th>Event</th>
                                 </thead>
                                 <tbody>
+
                                     @foreach ($ListOfEventInd as $EventInd)
                                         <tr>
-                                            <td>{{ $EventInd['Name'] }}</td>
+                                            <td data-toggle="modal" data-target="#Event{{ $EventInd['Id'] }}">
+                                                {{ $EventInd['Name'] }}
+                                            </td>
+
+                                            <!-- The Modal -->
+                                            <div class="modal fade my-bg-color-grey" id="Event{{ $EventInd['Id'] }}">
+                                                <div class="modal-dialog modal-xl my-bg-color-grey">
+                                                    <div class="modal-content my-bg-color-grey">
+
+                                                        <!-- Modal Header -->
+                                                        <div class="modal-header">
+                                                            <h4 class="modal-title text-center my-text-color-white">
+                                                                {{ $EventInd['Name'] }}
+                                                                Event</h4>
+                                                            <button type="button" class="close"
+                                                                data-dismiss="modal">&times;</button>
+                                                        </div>
+
+                                                        <!-- Modal body -->
+                                                        <div class="modal-body ">
+                                                            @foreach ($CompanyIndustriesEvents as $CompanyIndustriesEvent)
+
+                                                                @for ($index = 0; $index < count($CompanyIndustriesEvent); $index++)
+
+                                                                    @if ($EventInd['Name'] == $CompanyIndustriesEvent[$index]['Industry'])
+                                                                        <div class="list-group ">
+                                                                            <a href="/user/investment/event/{{ $CompanyIndustriesEvent[$index]['Event'] }}"
+                                                                                class="list-group-item list-group-item-action my-bg-color-grey">
+                                                                                <span class="my-text-color-white">
+                                                                                    {{ $CompanyIndustriesEvent[$index]['Event'] }}
+                                                                                </span>
+                                                                            </a>
+                                                                        </div>
+                                                                    @endif
+
+                                                                @endfor
+
+                                                            @endforeach
+                                                        </div>
+
+                                                        <!-- Modal footer -->
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-secondary"
+                                                                data-dismiss="modal">Close</button>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
 
                                         </tr>
                                     @endforeach
@@ -232,12 +366,62 @@
                                     <th>Hedge Fund</th>
                                 </thead>
                                 <tbody>
+
                                     @foreach ($ListOfHedgeFundInd as $HedgeFundInd)
                                         <tr>
-                                            <td>{{ $HedgeFundInd['Name'] }}</td>
+                                            <td data-toggle="modal" data-target="#HedgeFund{{ $HedgeFundInd['Id'] }}">
+                                                {{ $HedgeFundInd['Name'] }}
+                                            </td>
+
+                                            <!-- The Modal -->
+                                            <div class="modal fade my-bg-color-grey"
+                                                id="HedgeFund{{ $HedgeFundInd['Id'] }}">
+                                                <div class="modal-dialog modal-xl my-bg-color-grey">
+                                                    <div class="modal-content my-bg-color-grey">
+
+                                                        <!-- Modal Header -->
+                                                        <div class="modal-header">
+                                                            <h4 class="modal-title text-center my-text-color-white">
+                                                                {{ $HedgeFundInd['Name'] }} Sector Hedge Fund
+                                                            </h4>
+                                                            <button type="button" class="close"
+                                                                data-dismiss="modal">&times;</button>
+                                                        </div>
+
+                                                        <!-- Modal body -->
+                                                        <div class="modal-body ">
+                                                            @foreach ($CompanyIndustriesHedgeFunds as $CompanyIndustriesHedgeFund)
+
+                                                                @for ($index = 0; $index < count($CompanyIndustriesHedgeFund); $index++)
+
+                                                                    @if ($HedgeFundInd['Name'] == $CompanyIndustriesHedgeFund[$index]['Industry'])
+                                                                        <div class="list-group ">
+                                                                            <a href="/user/investment/hedgefund/{{ $CompanyIndustriesHedgeFund[$index]['HedgeFund'] }}"
+                                                                                class="list-group-item list-group-item-action my-bg-color-grey">
+                                                                                <span
+                                                                                    class="my-text-color-white">{{ $CompanyIndustriesHedgeFund[$index]['HedgeFund'] }}</span>
+                                                                            </a>
+                                                                        </div>
+                                                                    @endif
+
+                                                                @endfor
+
+                                                            @endforeach
+                                                        </div>
+
+                                                        <!-- Modal footer -->
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-secondary"
+                                                                data-dismiss="modal">Close</button>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
 
                                         </tr>
                                     @endforeach
+
                                 </tbody>
                             </table>
                         </div>
@@ -257,12 +441,63 @@
                                     <th>Start-Up Index</th>
                                 </thead>
                                 <tbody>
+
                                     @foreach ($ListOfStartUpIndexInd as $StartUpIndexInd)
                                         <tr>
-                                            <td>{{ $StartUpIndexInd['Name'] }}</td>
+                                            <td data-toggle="modal"
+                                                data-target="#StartUpIndex{{ $StartUpIndexInd['Id'] }}">
+                                                {{ $StartUpIndexInd['Name'] }}
+                                            </td>
+
+                                            <!-- The Modal -->
+                                            <div class="modal fade my-bg-color-grey"
+                                                id="StartUpIndex{{ $StartUpIndexInd['Id'] }}">
+                                                <div class="modal-dialog modal-xl my-bg-color-grey">
+                                                    <div class="modal-content my-bg-color-grey">
+
+                                                        <!-- Modal Header -->
+                                                        <div class="modal-header">
+                                                            <h4 class="modal-title text-center my-text-color-white">
+                                                                {{ $StartUpIndexInd['Name'] }} Sector Start-Up Index
+                                                            </h4>
+                                                            <button type="button" class="close"
+                                                                data-dismiss="modal">&times;</button>
+                                                        </div>
+
+                                                        <!-- Modal body -->
+                                                        <div class="modal-body ">
+                                                            @foreach ($CompanyIndustriesStartUpIndex as $CompanyIndustryStartUpIndex)
+
+                                                                @for ($index = 0; $index < count($CompanyIndustryStartUpIndex); $index++)
+
+                                                                    @if ($StartUpIndexInd['Name'] == $CompanyIndustryStartUpIndex[$index]['Industry'])
+                                                                        <div class="list-group ">
+                                                                            <a href="/user/investment/startupindex/{{ $CompanyIndustryStartUpIndex[$index]['Service'] }}"
+                                                                                class="list-group-item list-group-item-action my-bg-color-grey">
+                                                                                <span
+                                                                                    class="my-text-color-white">{{ $CompanyIndustryStartUpIndex[$index]['Service'] }}</span>
+                                                                            </a>
+                                                                        </div>
+                                                                    @endif
+
+                                                                @endfor
+
+                                                            @endforeach
+                                                        </div>
+
+                                                        <!-- Modal footer -->
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-secondary"
+                                                                data-dismiss="modal">Close</button>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
 
                                         </tr>
                                     @endforeach
+
                                 </tbody>
                             </table>
                         </div>
@@ -273,12 +508,61 @@
                                     <th>News Channel</th>
                                 </thead>
                                 <tbody>
+
                                     @foreach ($ListOfNewsChannelsInd as $NewsChannelsInd)
                                         <tr>
-                                            <td>{{ $NewsChannelsInd['Name'] }}</td>
+                                            <td data-toggle="modal" data-target="#News{{ $NewsChannelsInd['Id'] }}">
+                                                {{ $NewsChannelsInd['Name'] }}
+                                            </td>
+
+                                            <!-- The Modal -->
+                                            <div class="modal fade my-bg-color-grey"
+                                                id="News{{ $NewsChannelsInd['Id'] }}">
+                                                <div class="modal-dialog modal-xl my-bg-color-grey">
+                                                    <div class="modal-content my-bg-color-grey">
+
+                                                        <!-- Modal Header -->
+                                                        <div class="modal-header">
+                                                            <h4 class="modal-title text-center">
+                                                                {{ $NewsChannelsInd['Name'] }} Sector News Channel
+                                                            </h4>
+                                                            <button type="button" class="close"
+                                                                data-dismiss="modal">&times;</button>
+                                                        </div>
+
+                                                        <!-- Modal body -->
+                                                        <div class="modal-body ">
+                                                            @foreach ($CompanyIndustriesNewsChannels as $CompanyIndustriesNewsChannel)
+
+                                                                @for ($index = 0; $index < count($CompanyIndustriesNewsChannel); $index++)
+
+                                                                    @if ($NewsChannelsInd['Name'] == $CompanyIndustriesNewsChannel[$index]['Industry'])
+                                                                        <div class="list-group ">
+                                                                            <a href="/user/investment/newschannel/{{ $CompanyIndustriesNewsChannel[$index]['NewsChannel'] }}"
+                                                                                class="list-group-item list-group-item-action my-bg-color-grey">
+                                                                                {{ $CompanyIndustriesNewsChannel[$index]['NewsChannel'] }}
+                                                                            </a>
+                                                                        </div>
+                                                                    @endif
+
+                                                                @endfor
+
+                                                            @endforeach
+                                                        </div>
+
+                                                        <!-- Modal footer -->
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-secondary"
+                                                                data-dismiss="modal">Close</button>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
 
                                         </tr>
                                     @endforeach
+
                                 </tbody>
                             </table>
                         </div>
