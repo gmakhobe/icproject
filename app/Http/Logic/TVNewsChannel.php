@@ -81,7 +81,7 @@ class TVNewsChannel
     {
 
         //Info from Database
-        $Data = DB::select('SELECT NV.NVId AS "Id", NV.VideoTitle AS "Title", NV.VideoLink AS "Video", NV.VideoDescription AS "Description", NV.Author AS "Author", NV.VideoBanner AS "Banner", NV.PublishedDate AS "Date", NS.Subject AS "Subject", NC.NCId AS "ChannelId", NC.Name AS "ChannelName" FROM NewsVideos NV INNER JOIN NewsSubjects NS ON NS.SubjectId = NV.TopicId INNER JOIN NewsChannel NC ON NC.NCId = NV.ChannelId WHERE NV.VideoTitle = ? AND NV.NVId = ? LIMIT ?', [$name, $id, $limit]);
+        $Data = DB::select('SELECT NV.Views AS "Views", NV.NVId AS "Id", NV.VideoTitle AS "Title", NV.VideoLink AS "Video", NV.VideoDescription AS "Description", NV.Author AS "Author", NV.VideoBanner AS "Banner", NV.PublishedDate AS "Date", NS.Subject AS "Subject", NC.NCId AS "ChannelId", NC.Name AS "ChannelName" FROM NewsVideos NV INNER JOIN NewsSubjects NS ON NS.SubjectId = NV.TopicId INNER JOIN NewsChannel NC ON NC.NCId = NV.ChannelId WHERE NV.VideoTitle = ? AND NV.NVId = ? LIMIT ?', [$name, $id, $limit]);
         $myArray = [];
 
         for ($index = 0; $index < count($Data); $index++) {
@@ -97,7 +97,8 @@ class TVNewsChannel
                 "Description" => $Data[0]->Description,
                 "Video" => $Data[0]->Video,
                 "Title" => $Data[0]->Title,
-                "Id" => $Data[0]->Id
+                "Id" => $Data[0]->Id,
+                "Views" =>  $Data[0]->Views
             ]);
         }
 

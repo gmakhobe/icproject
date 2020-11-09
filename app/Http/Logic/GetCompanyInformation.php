@@ -7,10 +7,10 @@ use Illuminate\Support\Facades\DB;
 class GetCompanyInformation
 {
 
-    //Get Company Report
+    //Get company Report
     public static function GetCompanyReports($Symbol){
         //Get Data
-        $Data = DB::select('SELECT * FROM Company c INNER JOIN InvestmentReports ir ON ir.OrganisationId = c.CompanyId WHERE c.CompanySymbol = ? AND IndustryTypeId = ?', [$Symbol, 1]);
+        $Data = DB::select('SELECT * FROM company c INNER JOIN investmentreports ir ON ir.OrganisationId = c.CompanyId WHERE c.CompanySymbol = ? AND IndustryTypeId = ?', [$Symbol, 1]);
         $newArr = [];
 
         if ($Data){
@@ -29,10 +29,10 @@ class GetCompanyInformation
         }
     }
 
-    //Get Company Visuals
+    //Get company Visuals
     public static function GetCompanyVisuals($Symbol){
         //Get Data
-        $Data = DB::select('SELECT * FROM Company c INNER JOIN InvestmentGallery ig ON ig.OrganisationId = c.CompanyId WHERE c.CompanySymbol = ? AND ig.IndustryTypeId = ?', [$Symbol, 1]);
+        $Data = DB::select('SELECT * FROM company c INNER JOIN investmentgallery ig ON ig.OrganisationId = c.CompanyId WHERE c.CompanySymbol = ? AND ig.IndustryTypeId = ?', [$Symbol, 1]);
         $newArr = [];
 
         if ($Data){
@@ -50,10 +50,10 @@ class GetCompanyInformation
         }
     }
 
-    //Get Company News
+    //Get company News
     public static function GetCompanyNews($Symbol){
         //Get Data
-        $Data = DB::select('SELECT * FROM Company c INNER JOIN InvestmentNews ins ON ins.OrganisationId = c.CompanyId WHERE c.CompanySymbol = ? AND ins.IndustryTypeId =? ORDER BY ins.CreatedDate Desc LIMIT ?', [$Symbol, 1, 3]);
+        $Data = DB::select('SELECT * FROM company c INNER JOIN investmentnews ins ON ins.OrganisationId = c.CompanyId WHERE c.CompanySymbol = ? AND ins.IndustryTypeId =? ORDER BY ins.CreatedDate Desc LIMIT ?', [$Symbol, 1, 3]);
         $newArr = [];
 
         if ($Data){
@@ -77,10 +77,10 @@ class GetCompanyInformation
         }
     }
 
-    //Get Company Information
+    //Get company Information
     public static function GetCompanyManagement($Symbol){
         //Get Data
-        $Data = DB::select('SELECT * FROM Company c INNER JOIN InvestmentManagement im ON c.CompanyId = im.OrganisationId WHERE c.CompanySymbol = ? AND im.IndustryTypeId = ?', [$Symbol, 1]);
+        $Data = DB::select('SELECT * FROM company c INNER JOIN investmentmanagement im ON c.CompanyId = im.OrganisationId WHERE c.CompanySymbol = ? AND im.IndustryTypeId = ?', [$Symbol, 1]);
         $newArr = [];
 
         if ($Data){
@@ -99,10 +99,10 @@ class GetCompanyInformation
         }
     }
 
-    //Get Company Information
+    //Get company Information
     public static function GetCompanyInformation($Symbol){
         //Get Data
-        $Data = DB::select('SELECT * FROM Company c INNER JOIN CompanyInformation ci ON ci.CompanyId = c.CompanyId INNER JOIN IndustryTypes it ON it.IndustryTypeId = c.IndustryId INNER JOIN Industries i ON i.IndustryId = c.IndustryId WHERE c.CompanySymbol = ?', [$Symbol]);
+        $Data = DB::select('SELECT * FROM company c INNER JOIN companyinformation ci ON ci.CompanyId = c.CompanyId INNER JOIN industrytypes it ON it.IndustryTypeId = c.IndustryId INNER JOIN industries i ON i.IndustryId = c.IndustryId WHERE c.CompanySymbol = ?', [$Symbol]);
 
         if ($Data){
             //On success

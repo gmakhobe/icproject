@@ -37,6 +37,73 @@ const icFETCH = (url, datar, csrf) => {
         });
     }));
 }
+
+// User Forgot Password
+const AppResetPassword = () => {
+    const password = document.getElementById("reset-password").value;
+    const cpassword = document.getElementById("reset-confirm-password").value;
+    const email = document.getElementById("reset-email").value;
+    const hash = document.getElementById("reset-hash").value;
+    const csrf = "shdsiohoihdndnfpjwjdpwcnfbogoifwddvlfblffoe";
+    
+    if (!password || !cpassword){
+        swal("Rest Password Alert", "All fields required!");
+        return ;
+    }
+    if (password != cpassword){
+        swal("Rest Password Alert", "Password and confirm password are not the same!");
+        return ;
+    }
+    if (password.length < 5){
+        swal("Rest Password Alert", "Password should be morethan 5 charecters long!");
+        return ;
+    }
+
+    document.getElementById("resetpasswordBTN").style.display = "none";
+
+    //Call custome Fetxh
+    icFETCH(`/resetpasswordhard/password/${password}/hash/${hash}/email/${email}`, {Email: email}, csrf)
+    .then(data => {
+        
+        if (data.status) {
+            swal("Reset Password Alert", data.message);
+            location.assign("/activate/1");
+            return ;
+        }
+        if (data.status == 0) swal("Reset Password Alert", data.message);
+    })
+    .catch(error => swal("Reset Password Alert", `Server error occured!`));
+    document.getElementById("resetpasswordBTN").style.display = "inline";
+}
+// End User Forgot Password
+
+// User Forgot Password
+const AppForgotPassword = () => {
+    const email = aq_formatter(document.getElementById("log-email").value);
+    const csrf = "shdsiohoihdndnfpjwjdpwcnfbogoifwddvlfblffoe";
+    
+    if (!email){
+        swal("Forgot Password Alert", "All fields required!");
+        return ;
+    }
+
+    document.getElementById("forgotpasswordBTN").style.display = "none";
+
+    //Call custome Fetxh
+    icFETCH(`/forgotpassword/email/${email}`, {Email: email}, csrf)
+    .then(data => {
+        
+        if (data.status) {
+            swal("Forgot Password Alert", data.message);
+            return ;
+        }
+        if (data.status == 0) swal("Forgot Password Alert", data.message);
+    })
+    .catch(error => swal("Forgot Password Alert", `An error occured: Email or Password is incorrect!`));
+    document.getElementById("forgotpasswordBTN").style.display = "inline";
+}
+// End User Forgot Password
+
 //Display Null Exchange Rate
 const showNullCurrencyQuotes = () => {
     let pairs = ["USDZAR", "GBPZAR", "EURZAR", "JPYZAR"];
@@ -253,12 +320,13 @@ ContactFormSubmit.addEventListener('click', () => {
         swal("Contact Us", `All fields are required!`);
         ContactFormSubmit.style.display = "inline";
     }
-    /*//Check Email Address
+    //Check Email Address
     console.log(`Is email: ${email.search("@")}`);
     if (!email.search("@") || email.search("@") == '-1' || email.search("@") == -1){
         swal("Contact Us", `Please enter a valid email address!`);
         ContactFormSubmit.style.display = "inline";
-    }*/
+        return ;
+    }
 
     //Call custome Fetxh
     icFETCH(`/contactus/${name}/${email}/${comments}`, {}, csrf)
@@ -271,6 +339,10 @@ ContactFormSubmit.addEventListener('click', () => {
         }else{
             swal("Contact Us", `There was an error sending your email please try again!`);
         }
+
+        document.getElementById('name').value = "";
+        document.getElementById('email').value = "";
+        document.getElementById('comments').value = "";
 
         
     })

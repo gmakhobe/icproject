@@ -51,7 +51,7 @@ class NewsBlog
     //Get A Blog Post
     public static function GetNewsBlogPost($heading, $id){
         //Get Data from table
-        $Data = DB::select('SELECT U.ProfilePicture AS "ProfileLink", U.Username AS "Username", U.UserId AS "UserId", NBP.Heading, NBP.SubHeading, NBP.Post, NBP.ImageLink, NBP.TimeSpan, NBP.NewsBlogId, NBP.NewsBlogPostId, NBP.CreatedDate FROM NewsBlogs NS INNER JOIN NewsBlogPost NBP ON NS.NewsBlogId = NBP.NewsBlogId INNER JOIN users U ON U.UserId = NS.UserId WHERE NBP.Heading = ? AND NBP.NewsBlogPostId = ?', [$heading, $id]);
+        $Data = DB::select('SELECT NBP.Views AS "Views", U.ProfilePicture AS "ProfileLink", U.Username AS "Username", U.UserId AS "UserId", NBP.Heading, NBP.SubHeading, NBP.Post, NBP.ImageLink, NBP.TimeSpan, NBP.NewsBlogId, NBP.NewsBlogPostId, NBP.CreatedDate FROM NewsBlogs NS INNER JOIN NewsBlogPost NBP ON NS.NewsBlogId = NBP.NewsBlogId INNER JOIN users U ON U.UserId = NS.UserId WHERE NBP.Heading = ? AND NBP.NewsBlogPostId = ?', [$heading, $id]);
         //Empty arr
         $myArray = [];
 
@@ -68,7 +68,8 @@ class NewsBlog
                 "BlogId" => $Data[$index]->NewsBlogId,
                 "NewsBlogId" => $Data[$index]->NewsBlogPostId,
                 "Date" => $Data[$index]->CreatedDate,
-                "Post" => $Data[$index]->Post
+                "Post" => $Data[$index]->Post,
+                "Views" => $Data[$index]->Views
             ]);
         }
 

@@ -9,7 +9,7 @@ class InvestmentIndustries{
     public static function GetCompanyIndusties(){
 
         //Info from Database
-        $Data = DB::select('SELECT * FROM Industries WHERE IndustryTypeId = ?', [1]);
+        $Data = DB::select('SELECT * FROM industries WHERE IndustryTypeId = ?', [1]);
         $myArray = [];
         //Loop through
         foreach ($Data as $data){
@@ -25,7 +25,7 @@ class InvestmentIndustries{
     public static function GetServiceIndusties(){
 
         //Info from Database
-        $Data = DB::select('SELECT * FROM Industries WHERE IndustryTypeId = ?', [2]);
+        $Data = DB::select('SELECT * FROM industries WHERE IndustryTypeId = ?', [2]);
         $myArray = [];
         //Loop through
         foreach ($Data as $data){
@@ -42,7 +42,7 @@ class InvestmentIndustries{
     public static function GetEventIndusties(){
 
         //Info from Database
-        $Data = DB::select('SELECT * FROM Industries WHERE IndustryTypeId = ?', [3]);
+        $Data = DB::select('SELECT * FROM industries WHERE IndustryTypeId = ?', [3]);
         $myArray = [];
         //Loop through
         foreach ($Data as $data){
@@ -59,7 +59,7 @@ class InvestmentIndustries{
     public static function GetHedgeFundIndusties(){
 
         //Info from Database
-        $Data = DB::select('SELECT * FROM Industries WHERE IndustryTypeId = ?', [4]);
+        $Data = DB::select('SELECT * FROM industries WHERE IndustryTypeId = ?', [4]);
         $myArray = [];
         //Loop through
         foreach ($Data as $data){
@@ -76,7 +76,7 @@ class InvestmentIndustries{
     public static function GetStartUpIndexIndusties(){
 
         //Info from Database
-        $Data = DB::select('SELECT * FROM Industries WHERE IndustryTypeId = ?', [5]);
+        $Data = DB::select('SELECT * FROM industries WHERE IndustryTypeId = ?', [5]);
         $myArray = [];
         //Loop through
         foreach ($Data as $data){
@@ -93,7 +93,7 @@ class InvestmentIndustries{
     public static function GetNewsChannelsIndusties(){
 
         //Info from Database
-        $Data = DB::select('SELECT * FROM Industries WHERE IndustryTypeId = ?', [6]);
+        $Data = DB::select('SELECT * FROM industries WHERE IndustryTypeId = ?', [6]);
         $myArray = [];
         //Loop through
         foreach ($Data as $data){

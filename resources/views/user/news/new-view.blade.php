@@ -54,7 +54,7 @@
                             </center>
                             <i>
                                 <p class="my-text-color-white p-3">{{ $ChannelNewsContent[0]['Author'] }} /
-                                    {{ $ChannelNewsContent[0]['Date'] }}</p>
+                                    {{ $ChannelNewsContent[0]['Date'] }} / {{ $ChannelNewsContent[0]['Views'] }} views</p>
                             </i>
 
                             <p class="my-text-color-white p-3">Topic:

@@ -10,7 +10,7 @@ class GetHedgeFundInformation
     //Get Investors
     public static function GetHedgeFundInvestors($name){
         //Get Data
-        $Data = DB::select('SELECT * FROM HedgeFunds HF INNER JOIN InvestmentInvestors II ON II.OrganisationId = HF.HedgeFundId INNER JOIN Industries I ON I.IndustryId = HF.IndustryId WHERE HF.HedgeFundName = ? AND II.IndustryId = ?', [$name, 4]);
+        $Data = DB::select('SELECT * FROM hedgefunds HF INNER JOIN investmentinvestors II ON II.OrganisationId = HF.HedgeFundId INNER JOIN industries I ON I.IndustryId = HF.IndustryId WHERE HF.HedgeFundName = ? AND II.IndustryId = ?', [$name, 4]);
         $newArr = [];
 
         if ($Data){
@@ -32,7 +32,7 @@ class GetHedgeFundInformation
     //Get Company News
     public static function GetHedgeFundNews($name){
         //Get Data
-        $Data = DB::select('SELECT ins.Heading AS "Heading", ins.News AS "News", ins.ImageLink AS "ImageLink", ins.CreatedDate AS "CreatedDate", ins.AuthorName AS "AuthorName", ins.CompanyNewsId AS "CompanyNewsId" FROM HedgeFunds HF INNER JOIN InvestmentNews ins ON ins.OrganisationId = HF.HedgeFundId INNER JOIN Industries I ON I.IndustryId = HF.IndustryId WHERE HF.HedgeFundName = ? AND ins.IndustryTypeId = ?', [$name, 4]);
+        $Data = DB::select('SELECT ins.Heading AS "Heading", ins.News AS "News", ins.ImageLink AS "ImageLink", ins.CreatedDate AS "CreatedDate", ins.AuthorName AS "AuthorName", ins.CompanyNewsId AS "CompanyNewsId" FROM hedgefunds HF INNER JOIN investmentnews ins ON ins.OrganisationId = HF.HedgeFundId INNER JOIN industries I ON I.IndustryId = HF.IndustryId WHERE HF.HedgeFundName = ? AND ins.IndustryTypeId = ?', [$name, 4]);
         $newArr = [];
 
         if ($Data){
@@ -59,7 +59,7 @@ class GetHedgeFundInformation
     //Get Calendar
     public static function GetHedgeFundCalendar($name){
         //Get Data
-        $Data = DB::select('SELECT * FROM HedgeFunds HF INNER JOIN InvestmentCalendar IC ON IC.OrganisationId = HF.HedgeFundId INNER JOIN Industries I ON I.IndustryId = HF.IndustryId WHERE HF.HedgeFundName = ? AND IC.IndustryId = ?', [$name, 4]);
+        $Data = DB::select('SELECT * FROM hedgefunds HF INNER JOIN investmentcalendar IC ON IC.OrganisationId = HF.HedgeFundId INNER JOIN industries I ON I.IndustryId = HF.IndustryId WHERE HF.HedgeFundName = ? AND IC.IndustryId = ?', [$name, 4]);
         $newArr = [];
 
         if ($Data){
@@ -82,7 +82,7 @@ class GetHedgeFundInformation
     //Get Report
     public static function GetHedgeFundReports($name){
         //Get Data
-        $Data = DB::select('SELECT * FROM HedgeFunds HF INNER JOIN InvestmentReports IR ON IR.OrganisationId = HF.HedgeFundId INNER JOIN Industries I ON I.IndustryId = HF.IndustryId WHERE HF.HedgeFundName = ? AND IR.IndustryTypeId = ?', [$name, 4]);
+        $Data = DB::select('SELECT * FROM hedgefunds HF INNER JOIN investmentreports IR ON IR.OrganisationId = HF.HedgeFundId INNER JOIN industries I ON I.IndustryId = HF.IndustryId WHERE HF.HedgeFundName = ? AND IR.IndustryTypeId = ?', [$name, 4]);
         $newArr = [];
 
         if ($Data){
@@ -104,7 +104,7 @@ class GetHedgeFundInformation
     //Get Pitch
     public static function GetHedgeFundPitch($name){
         //Get Data
-        $Data = DB::select('SELECT * FROM HedgeFunds HF INNER JOIN InvestmentPitch IP ON IP.OrganisationId = HF.HedgeFundId INNER JOIN Industries I ON I.IndustryId = HF.IndustryId WHERE HF.HedgeFundName = ? AND IP.IndustryId = ?', [$name, 4]);
+        $Data = DB::select('SELECT * FROM hedgefunds HF INNER JOIN investmentpitch IP ON IP.OrganisationId = HF.HedgeFundId INNER JOIN industries I ON I.IndustryId = HF.IndustryId WHERE HF.HedgeFundName = ? AND IP.IndustryId = ?', [$name, 4]);
 
         if ($Data){
             //On success
@@ -121,7 +121,7 @@ class GetHedgeFundInformation
     //Get Information
     public static function GetHedgeFundManagement($name){
         //Get Data
-        $Data = DB::select('SELECT * FROM HedgeFunds HF INNER JOIN InvestmentManagement IM ON IM.OrganisationId = HF.HedgeFundId INNER JOIN Industries I ON I.IndustryId = HF.IndustryId WHERE HF.HedgeFundName = ? AND IM.IndustryTypeId = ?', [$name, 4]);
+        $Data = DB::select('SELECT * FROM hedgefunds HF INNER JOIN investmentmanagement IM ON IM.OrganisationId = HF.HedgeFundId INNER JOIN industries I ON I.IndustryId = HF.IndustryId WHERE HF.HedgeFundName = ? AND IM.IndustryTypeId = ?', [$name, 4]);
         $newArr = [];
 
         if ($Data){
@@ -143,7 +143,7 @@ class GetHedgeFundInformation
     //Get Information
     public static function GetHedgeFundInformation($name){
         //Get Data
-        $Data = DB::select('SELECT * FROM HedgeFunds HF INNER JOIN HedgeFundInformation HFI ON HFI.OrganisationId = HF.HedgeFundId INNER JOIN Industries I ON I.IndustryId = HF.IndustryId WHERE HF.HedgeFundName = ? AND HFI.IndustryId = ?', [$name, 4]);
+        $Data = DB::select('SELECT * FROM hedgefunds HF INNER JOIN hedgefundinformation HFI ON HFI.OrganisationId = HF.HedgeFundId INNER JOIN industries I ON I.IndustryId = HF.IndustryId WHERE HF.HedgeFundName = ? AND HFI.IndustryId = ?', [$name, 4]);
 
         if ($Data){
             //On success

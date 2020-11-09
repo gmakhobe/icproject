@@ -19,6 +19,12 @@ $GLOBALS['AppTitle'] = "Plugin";
 Route::get('/', function () {
     return view('landing', ["Title" => $GLOBALS['AppTitle'], "ActivationVal"=> 0]);
 });
+Route::get('/forgotpassword', function () {
+    return view('/forgotpassword', ["Title" => $GLOBALS['AppTitle'], "Name"=> "Forgot Password", "Indicator"=> 1]);
+});
+Route::get('/forgotpassword/email/{email}', 'IndexController@ForgotPassword');
+Route::get('/passwordreset/{hash}', 'IndexController@PasswordResetView');
+Route::get('/resetpasswordhard/password/{password}/hash/{hash}/email/{email}', 'IndexController@PasswordResetHard');
 // /User/* 
 Route::get('/alert/alertcenter', 'AlertsController@AlertGetAlertCenterContent')->middleware('IsSessionValid');
 Route::get('/alert/messagecenter', 'AlertsController@AlertGetMessageCenterContent')->middleware('IsSessionValid');

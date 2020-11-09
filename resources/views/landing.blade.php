@@ -333,6 +333,9 @@
                         <label for="pwd">Password:</label>
                         <input placeholder="*******" type="password" class="form-control" id="log-password">
                     </div>
+
+                    <br>
+                    <a class="btn" href="/forgotpassword">Forgot Password?</a>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>

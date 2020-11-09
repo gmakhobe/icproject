@@ -34,7 +34,7 @@ class NewsArticles
     {
 
         //Info from Database
-        $Data = DB::select('SELECT NC.Name AS "ChannelName", NC.NCId AS "ChannelId", NA.ArticleId AS "ArticleId", NA.Heading AS "Headline", NA.Article AS "Article", NA.Author AS "Author", NA.Banner AS "Banner", NS.Subject AS "Subject", NA.PublishedDate AS "Date" FROM NewsArticles NA INNER JOIN NewsSubjects NS ON NS.SubjectId = NA.TopicId INNER JOIN NewsChannel NC ON NC.NCId = NA.ChannelId WHERE NA.Heading = ? AND NA.ArticleId = ? LIMIT ?', [$heading, $id, $limit]);
+        $Data = DB::select('SELECT NA.Views AS "Views", NC.Name AS "ChannelName", NC.NCId AS "ChannelId", NA.ArticleId AS "ArticleId", NA.Heading AS "Headline", NA.Article AS "Article", NA.Author AS "Author", NA.Banner AS "Banner", NS.Subject AS "Subject", NA.PublishedDate AS "Date" FROM NewsArticles NA INNER JOIN NewsSubjects NS ON NS.SubjectId = NA.TopicId INNER JOIN NewsChannel NC ON NC.NCId = NA.ChannelId WHERE NA.Heading = ? AND NA.ArticleId = ? LIMIT ?', [$heading, $id, $limit]);
         $myArray = [];
 
         for ($index = 0; $index < count($Data); $index++) {
@@ -49,7 +49,8 @@ class NewsArticles
                 "Author" => $Data[0]->Author,
                 "Banner" => $Data[0]->Banner,
                 "Subject" => $Data[0]->Subject,
-                "Date" => $Data[0]->Date
+                "Date" => $Data[0]->Date,
+                "Views" => $Data[0]->Views
             ]);
         }
 

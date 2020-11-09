@@ -65,6 +65,11 @@ class NewsController extends Controller
         //return ;
         if ($GetNewsBlogPost){
 
+            $OriginalViews = DB::select('SELECT Views FROM newsblogpost WHERE NewsBlogPostId = ?', [$GetNewsBlogPost[0]["NewsBlogId"]]);
+            DB::update('UPDATE newsblogpost SET Views = ? WHERE NewsBlogPostId = ?', [++$OriginalViews[0]->Views, $GetNewsBlogPost[0]["NewsBlogId"]]);
+
+            //print_r($GetNewsBlogPost);
+
             return view('user/news/blog-read-view', ["Name" => $GLOBALS['AppTitle'], "Title" => "$name - Blogs", "NameAndSurname" => $userInfo["Name"] . " " . $userInfo["Surname"], "ProfilePicture" => $userProfilePicture["Base64"], "IsBase64" => $userProfilePicture["IsBase64"], "GetNewsBlogPost"=> $GetNewsBlogPost, "ChannelNewsComments"=> $ChannelNewsComments]);
 
         }else{
@@ -100,6 +105,11 @@ class NewsController extends Controller
         //print_r($ChannelNewsContent);
         //return ;
         if ($ChannelNewsContent) {
+
+            //print_r($ChannelNewsContent);
+
+            $OriginalViews = DB::select('SELECT Views FROM newsvideos WHERE NVId = ?', [$ChannelNewsContent[0]["Id"]]);
+            DB::update('UPDATE newsvideos SET Views = ? WHERE NVId = ?', [++$OriginalViews[0]->Views, $ChannelNewsContent[0]["Id"]]);
 
             return view('user/news/video-view', ["Name" => $GLOBALS['AppTitle'], "Title" => "$name - News", "NameAndSurname" => $userInfo["Name"] . " " . $userInfo["Surname"], "ProfilePicture" => $userProfilePicture["Base64"], "IsBase64" => $userProfilePicture["IsBase64"], "ChannelNewsContent" => $ChannelNewsContent, "ChannelNewsContent" => $ChannelNewsContent, "NewsId" => $id, "ChannelNewsComments" => $ChannelNewsComments]);
         } else {
@@ -239,6 +249,11 @@ class NewsController extends Controller
 
         if ($ChannelNewsContent) {
 
+            $OriginalViews = DB::select('SELECT Views FROM newsarticles WHERE ArticleId = ?', [$ChannelNewsContent[0]["NewsId"]]);
+            DB::update('UPDATE newsarticles SET Views = ? WHERE ArticleId = ?', [++$OriginalViews[0]->Views, $ChannelNewsContent[0]["NewsId"]]);
+
+            //print_r($ChannelNewsContent);
+
             return view('user/news/article-view', ["Name" => $GLOBALS['AppTitle'], "Title" => "$heading - News", "NameAndSurname" => $userInfo["Name"] . " " . $userInfo["Surname"], "ProfilePicture" => $userProfilePicture["Base64"], "IsBase64" => $userProfilePicture["IsBase64"], "ChannelNewsContent" => $ChannelNewsContent, "ChannelNewsComments" => $ChannelNewsComments, "NewsId" => $id]);
         } else {
             return redirect("/user/dashboard");
@@ -256,6 +271,9 @@ class NewsController extends Controller
         $ChannelNewsComments = NewsChannel::GetChannelNewsComments($heading, $id, 0);
 
         if ($ChannelNewsContent) {
+
+            $OriginalViews = DB::select('SELECT Views FROM news WHERE NewsId = ?', [$ChannelNewsContent[0]["NewsId"]]);
+            DB::update('UPDATE news SET Views = ? WHERE NewsId = ?', [++$OriginalViews[0]->Views, $ChannelNewsContent[0]["NewsId"]]);
 
             return view('user/news/new-view', ["Name" => $GLOBALS['AppTitle'], "Title" => "$heading - News", "NameAndSurname" => $userInfo["Name"] . " " . $userInfo["Surname"], "ProfilePicture" => $userProfilePicture["Base64"], "IsBase64" => $userProfilePicture["IsBase64"], "ChannelNewsContent" => $ChannelNewsContent, "ChannelNewsComments" => $ChannelNewsComments, "NewsId" => $id]);
         } else {

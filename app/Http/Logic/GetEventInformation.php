@@ -10,7 +10,7 @@ class GetEventInformation
     //Get News
     public static function GetEventNews($news){
         //Get Data
-        $Data = DB::select('SELECT ins.Heading AS "Heading", ins.News AS "News", ins.ImageLink AS "ImageLink", ins.CreatedDate AS "CreatedDate", ins.AuthorName AS "AuthorName", ins.CompanyNewsId AS "NewsId" FROM Events E INNER JOIN InvestmentNews ins ON E.EventId= ins.OrganisationId WHERE E.EventName = ? AND ins.IndustryTypeId = ?', [$news, 3]);
+        $Data = DB::select('SELECT ins.Heading AS "Heading", ins.News AS "News", ins.ImageLink AS "ImageLink", ins.CreatedDate AS "CreatedDate", ins.AuthorName AS "AuthorName", ins.CompanyNewsId AS "NewsId" FROM events E INNER JOIN investmentnews ins ON E.EventId= ins.OrganisationId WHERE E.EventName = ? AND ins.IndustryTypeId = ?', [$news, 3]);
         $newArr = [];
 
         if ($Data){
@@ -37,7 +37,7 @@ class GetEventInformation
     //Get Earnings
     public static function GetEventEarnings($name){
         //Get Data
-        $Data = DB::select('SELECT * FROM Events E INNER JOIN InvestmentEarnings ie ON E.EventId= ie.OrganisationId WHERE E.EventName = "Durban July" AND ie.IndustryId = 3 ', [$name, 1]);
+        $Data = DB::select('SELECT * FROM events E INNER JOIN investmentearnings ie ON E.EventId= ie.OrganisationId WHERE E.EventName = "Durban July" AND ie.IndustryId = 3 ', [$name, 1]);
         $newArr = [];
 
         if ($Data){
@@ -60,7 +60,7 @@ class GetEventInformation
     //Get Reports
     public static function GetEventReports($name){
         //Get Data
-        $Data = DB::select('SELECT * FROM Events E INNER JOIN InvestmentReports ir ON E.EventId= ir.OrganisationId WHERE E.EventName = ? AND ir.IndustryTypeId = ? ', [$name, 3]);
+        $Data = DB::select('SELECT * FROM events E INNER JOIN investmentreports ir ON E.EventId= ir.OrganisationId WHERE E.EventName = ? AND ir.IndustryTypeId = ? ', [$name, 3]);
         $newArr = [];
 
         if ($Data){
@@ -82,7 +82,7 @@ class GetEventInformation
     //Get Pitch
     public static function GetEventPitch($name){
         //Get Data
-        $Data = DB::select('SELECT * FROM Events E INNER JOIN InvestmentPitch ip ON E.EventId= ip.OrganisationId WHERE E.EventName = ? AND ip.IndustryId = ?', [$name, 3]);
+        $Data = DB::select('SELECT * FROM events E INNER JOIN investmentpitch ip ON E.EventId= ip.OrganisationId WHERE E.EventName = ? AND ip.IndustryId = ?', [$name, 3]);
 
         if ($Data){
             //On success
@@ -99,7 +99,7 @@ class GetEventInformation
     //Get Information
     public static function GetEventManagement($name){
         //Get Data
-        $Data = DB::select('SELECT * FROM Events E INNER JOIN InvestmentManagement im ON E.EventId= im.OrganisationId WHERE E.EventName = ? AND im.IndustryTypeId = ?', [$name, 3]);
+        $Data = DB::select('SELECT * FROM events E INNER JOIN investmentmanagement im ON E.EventId= im.OrganisationId WHERE E.EventName = ? AND im.IndustryTypeId = ?', [$name, 3]);
         $newArr = [];
 
         if ($Data){
@@ -121,7 +121,7 @@ class GetEventInformation
     //Get Information
     public static function GetEventInformation($name){
         //Get Data
-        $Data = DB::select('SELECT * FROM Events E INNER JOIN EventInformation EI ON EI.OrganisationId = E.EventId INNER JOIN Industries i ON i.IndustryId = E.IndustryId INNER JOIN IndustryTypes it ON it.IndustryTypeId = i.IndustryTypeId WHERE E.EventName = ?', [$name]);
+        $Data = DB::select('SELECT * FROM events E INNER JOIN eventinformation EI ON EI.OrganisationId = E.EventId INNER JOIN industries i ON i.IndustryId = E.IndustryId INNER JOIN industrytypes it ON it.IndustryTypeId = i.IndustryTypeId WHERE E.EventName = ?', [$name]);
 
         if ($Data){
             //On success

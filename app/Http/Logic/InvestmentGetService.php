@@ -6,11 +6,11 @@ use Illuminate\Support\Facades\DB;
 
 class InvestmentGetService{
 
-    //Get Service NewsChannels
+    //Get service NewsChannels
     public static function GetCompanyIndustriesNewsChannels(){
 
         //Info from Database
-        $Data = DB::select('SELECT IT.IndustryTypeName AS "Type", I.IndustryName AS "Industry", I.IndustryId AS "IndustryId", NC.NewsChannelName AS "NewsChannel", NC.NewsChannelId AS "NewsChannelId" FROM IndustryTypes IT INNER JOIN Industries I ON I.IndustryTypeId = IT.IndustryTypeId INNER JOIN NewsChannels NC ON NC.IndustryId = I.IndustryId WHERE I.IndustryTypeId = ? AND NC.IsActive = ?', [6, 1]);
+        $Data = DB::select('SELECT IT.IndustryTypeName AS "Type", I.IndustryName AS "Industry", I.IndustryId AS "IndustryId", NC.NewsChannelName AS "NewsChannel", NC.NewsChannelId AS "NewsChannelId" FROM industrytypes IT INNER JOIN industries I ON I.IndustryTypeId = IT.IndustryTypeId INNER JOIN newschannels NC ON NC.IndustryId = I.IndustryId WHERE I.IndustryTypeId = ? AND NC.IsActive = ?', [6, 1]);
         $myArray = [];
         $temp = [];
         $tempCount = 1;
@@ -45,11 +45,11 @@ class InvestmentGetService{
         return $myArray;
     }
     
-    //Get Service hedge fund
+    //Get service hedge fund
     public static function GetCompanyIndustriesHedgeFund(){
 
         //Info from Database
-        $Data = DB::select('SELECT IT.IndustryTypeName AS "Type", I.IndustryName AS "Industry", I.IndustryId AS "IndustryId", HF.HedgeFundName AS "HedgeFund", HF.HedgeFundId AS "HedgeFundId" FROM IndustryTypes IT INNER JOIN Industries I ON I.IndustryTypeId = IT.IndustryTypeId INNER JOIN HedgeFunds HF ON HF.IndustryId = I.IndustryId WHERE I.IndustryTypeId = ? AND HF.IsActive = ?', [4, 1]);
+        $Data = DB::select('SELECT IT.IndustryTypeName AS "Type", I.IndustryName AS "Industry", I.IndustryId AS "IndustryId", HF.HedgeFundName AS "HedgeFund", HF.HedgeFundId AS "HedgeFundId" FROM industrytypes IT INNER JOIN industries I ON I.IndustryTypeId = IT.IndustryTypeId INNER JOIN hedgefunds HF ON HF.IndustryId = I.IndustryId WHERE I.IndustryTypeId = ? AND HF.IsActive = ?', [4, 1]);
         $myArray = [];
         $temp = [];
         $tempCount = 1;
@@ -84,11 +84,11 @@ class InvestmentGetService{
         return $myArray;
     }
 
-    //Get Service Events
+    //Get service Events
     public static function GetCompanyIndustriesEvents(){
 
         //Info from Database
-        $Data = DB::select('SELECT IT.IndustryTypeName AS "Type", I.IndustryName AS "Industry", I.IndustryId AS "IndustryId", E.EventName AS "Event", E.EventId AS "EventId" FROM IndustryTypes IT INNER JOIN Industries I ON I.IndustryTypeId = IT.IndustryTypeId INNER JOIN Events E ON E.IndustryId = I.IndustryId WHERE I.IndustryTypeId = ? AND E.IsActive = ?', [3, 1]);
+        $Data = DB::select('SELECT IT.IndustryTypeName AS "Type", I.IndustryName AS "Industry", I.IndustryId AS "IndustryId", E.EventName AS "Event", E.EventId AS "EventId" FROM industrytypes IT INNER JOIN industries I ON I.IndustryTypeId = IT.IndustryTypeId INNER JOIN events E ON E.IndustryId = I.IndustryId WHERE I.IndustryTypeId = ? AND E.IsActive = ?', [3, 1]);
         $myArray = [];
         $temp = [];
         $tempCount = 1;
@@ -123,11 +123,11 @@ class InvestmentGetService{
         return $myArray;
     }
     
-    //Get Service Industies
+    //Get service Industies
     public static function GetCompanyIndustriesStartUpIndex(){
 
         //Info from Database
-        $Data = DB::select('SELECT IT.IndustryTypeName AS "Type", I.IndustryName AS "Industry", I.IndustryId AS "IndustryId", S.ServiceName AS "Service", S.ServiceId AS "ServiceId" FROM IndustryTypes IT INNER JOIN Industries I ON I.IndustryTypeId = IT.IndustryTypeId INNER JOIN Service S ON S.IndustryId = I.IndustryId WHERE I.IndustryTypeId = ? AND S.IsActive = ?', [5, 1]);
+        $Data = DB::select('SELECT IT.IndustryTypeName AS "Type", I.IndustryName AS "Industry", I.IndustryId AS "IndustryId", S.ServiceName AS "Service", S.ServiceId AS "ServiceId" FROM industrytypes IT INNER JOIN industries I ON I.IndustryTypeId = IT.IndustryTypeId INNER JOIN service S ON S.IndustryId = I.IndustryId WHERE I.IndustryTypeId = ? AND S.IsActive = ?', [5, 1]);
         $myArray = [];
         $temp = [];
         $tempCount = 1;
@@ -166,7 +166,7 @@ class InvestmentGetService{
     public static function GetCompanyIndustriesServices(){
 
         //Info from Database
-        $Data = DB::select('SELECT IT.IndustryTypeName AS "Type", I.IndustryName AS "Industry", I.IndustryId AS "IndustryId", S.ServiceName AS "Service", S.ServiceId AS "ServiceId" FROM IndustryTypes IT INNER JOIN Industries I ON I.IndustryTypeId = IT.IndustryTypeId INNER JOIN Service S ON S.IndustryId = I.IndustryId WHERE I.IndustryTypeId = ? AND S.IsActive = ?', [2, 1]);
+        $Data = DB::select('SELECT IT.IndustryTypeName AS "Type", I.IndustryName AS "Industry", I.IndustryId AS "IndustryId", S.ServiceName AS "Service", S.ServiceId AS "ServiceId" FROM industrytypes IT INNER JOIN industries I ON I.IndustryTypeId = IT.IndustryTypeId INNER JOIN service S ON S.IndustryId = I.IndustryId WHERE I.IndustryTypeId = ? AND S.IsActive = ?', [2, 1]);
         $myArray = [];
         $temp = [];
         $tempCount = 1;

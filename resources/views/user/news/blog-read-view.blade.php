@@ -55,7 +55,6 @@
                             </p>
                             </center>
 
-
                             <img class="my-news-card-img-news-view p-3" src="{{ $GetNewsBlogPost[0]["Image"] }}" alt="{{ $GetNewsBlogPost[0]["Heading"] }} image">
                             
                             <center>
@@ -63,7 +62,7 @@
                                 <p class="my-text-color-white p-3">
                                     <a href="/user/news/blog/author/{{ $GetNewsBlogPost[0]["Username"] }}/{{ $GetNewsBlogPost[0]["BlogId"] }}"><span class="my-text-color-white">{{ $GetNewsBlogPost[0]["Username"] }}</span></a> /
                                     {{ $GetNewsBlogPost[0]["TimeSpan"] }} Min /
-                                    {{ $GetNewsBlogPost[0]["Date"] }}
+                                    {{ $GetNewsBlogPost[0]["Date"] }} / {{ $GetNewsBlogPost[0]["Views"] }} Views
                                 </p>
                             </i>
                             </center>

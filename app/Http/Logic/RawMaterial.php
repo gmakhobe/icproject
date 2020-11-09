@@ -9,7 +9,7 @@ class RawMaterial
     //Get a list of raw mate
     public static function GetRawMatProduct($Name, $Id){
         //Get Date
-        $Data = DB::select('SELECT RS.RawmateSellerId, RS.Name, RP.RawMateProductId, RP.ProductName, RP.ProductDescription, RP.ProductPrice, RP.ProductCurrency, RP.ProductImage, RP.ProductMeasurement, RP.ProductQuantity FROM RawmateSeller RS INNER JOIN RawmateProduct RP ON RS.RawmateSellerId = RP.SellerId WHERE RP.ProductName = ? AND RP.RawMateProductId = ?', [$Name ,$Id]);
+        $Data = DB::select('SELECT RS.RawmateSellerId, RS.Name, RP.RawMateProductId, RP.ProductName, RP.ProductDescription, RP.ProductPrice, RP.ProductCurrency, RP.ProductImage, RP.ProductMeasurement, RP.ProductQuantity FROM rawmateseller RS INNER JOIN rawmateproduct RP ON RS.RawmateSellerId = RP.SellerId WHERE RP.ProductName = ? AND RP.RawMateProductId = ?', [$Name ,$Id]);
         $myArray = [];
         //Loop through
         for ($index = 0; $index < count($Data); $index++) {
@@ -33,7 +33,7 @@ class RawMaterial
     //Get a list of raw mate
     public static function GetRawMats($Type, $Limit){
         //Get Date
-        $Data = DB::select('SELECT RS.RawmateSellerId, RS.Name, RP.RawMateProductId, RP.ProductName, RP.ProductDescription, RP.ProductPrice, RP.ProductCurrency, RP.ProductImage, RP.ProductMeasurement FROM RawmateSeller RS INNER JOIN RawmateProduct RP ON RS.RawmateSellerId = RP.SellerId WHERE RP.RawmateProcessType = ? ORDER BY RP.PublishedDate DESC LIMIT ?', [$Type ,$Limit]);
+        $Data = DB::select('SELECT RS.RawmateSellerId, RS.Name, RP.RawMateProductId, RP.ProductName, RP.ProductDescription, RP.ProductPrice, RP.ProductCurrency, RP.ProductImage, RP.ProductMeasurement FROM rawmateseller RS INNER JOIN rawmateproduct RP ON RS.RawmateSellerId = RP.SellerId WHERE RP.RawmateProcessType = ? ORDER BY RP.PublishedDate DESC LIMIT ?', [$Type ,$Limit]);
         $myArray = [];
         //Loop through
         for ($index = 0; $index < count($Data); $index++) {

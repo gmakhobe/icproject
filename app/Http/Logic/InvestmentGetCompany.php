@@ -5,11 +5,11 @@ namespace App\Http\Logic;
 use Illuminate\Support\Facades\DB;
 
 class InvestmentGetCompany{
-    //Get Company Industies
+    //Get company Industies
     public static function GetCompanyIndustriesCompanies(){
 
         //Info from Database
-        $Data = DB::select('SELECT IT.IndustryTypeName AS "Type", I.IndustryName AS "Industry", I.IndustryId AS "IndustryId", C.CompanyName AS "Company", C.CompanyId AS "CompanyId", C.CompanySymbol AS "CompanySymbol" FROM IndustryTypes IT INNER JOIN Industries I ON IT.IndustryTypeId = I.IndustryTypeId INNER JOIN Company C ON C.IndustryId = I.IndustryId WHERE IT.IndustryTypeName = ? AND C.IsActive = ?', ["Company", 1]);
+        $Data = DB::select('SELECT IT.IndustryTypeName AS "Type", I.IndustryName AS "Industry", I.IndustryId AS "IndustryId", C.CompanyName AS "Company", C.CompanyId AS "CompanyId", C.CompanySymbol AS "CompanySymbol" FROM industrytypes IT INNER JOIN industries I ON IT.IndustryTypeId = I.IndustryTypeId INNER JOIN company C ON C.IndustryId = I.IndustryId WHERE IT.IndustryTypeName = ? AND C.IsActive = ?', ["Company", 1]);
         $myArray = [];
         $temp = [];
         $tempCount = 1;
