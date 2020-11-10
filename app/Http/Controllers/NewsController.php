@@ -30,7 +30,7 @@ class NewsController extends Controller
         }
     }
     //
-    //View News Blog Author
+    //View news Blog Author
     public function NewsBlogAuthorView($name, $id)
     {
         //Properties to be injected
@@ -52,7 +52,7 @@ class NewsController extends Controller
 
         }
     }
-    //View News Blog Read
+    //View news Blog Read
     public function NewsBlogReadView($name, $id)
     {
         //Properties to be injected
@@ -78,7 +78,7 @@ class NewsController extends Controller
 
         }
     }
-    //View News Blog
+    //View news Blog
     public function NewsBlogView()
     {
         //Properties to be injected
@@ -92,7 +92,7 @@ class NewsController extends Controller
 
         return view('user/news/blog-view', ["Name" => $GLOBALS['AppTitle'], "Title" => "Blogs", "NameAndSurname" => $userInfo["Name"] . " " . $userInfo["Surname"], "ProfilePicture" => $userProfilePicture["Base64"], "IsBase64" => $userProfilePicture["IsBase64"], "GetLatestNewsBlogPosts"=> $GetLatestNewsBlogPosts, "GetLatestNewsBlogs"=> $GetLatestNewsBlogs]);
     }
-    //View News Read
+    //View news Read
     public function NewsViewVideo($name, $id)
     {
 
@@ -226,17 +226,17 @@ class NewsController extends Controller
 
         return view('user/news/news', ["Name" => $GLOBALS['AppTitle'], "Title" => "News", "NameAndSurname" => $userInfo["Name"] . " " . $userInfo["Surname"], "ProfilePicture" => $userProfilePicture["Base64"], "IsBase64" => $userProfilePicture["IsBase64"], "NewsSubjects" => $NewsSubjects, "EconomicNews" => $EconomicNews, "SPNews" => $SPNews, "InvestmentNews" => $InvestmentNews, "TechNews" => $TechNews, "FinanceNews" => $FinanceNews, "NewsVideos" => $NewsVideos]);
     }
-    //View News Read Comment
+    //View news Read Comment
     public function NewsViewReadComment($comment, $id, $commentind)
     {
 
         //Properties
         $userInfo = AppSession::sessionGetUserInfo();
-        DB::insert('INSERT INTO NewsComments(Comment, NewsId, UserId, CommentInd) VALUES(?, ?, ( SELECT UserId FROM users WHERE EmailAddress = ?), ?)', [$comment, $id, $userInfo["Email"], $commentind]);
+        DB::insert('INSERT INTO newscomments(Comment, NewsId, UserId, CommentInd) VALUES(?, ?, ( SELECT UserId FROM users WHERE EmailAddress = ?), ?)', [$comment, $id, $userInfo["Email"], $commentind]);
 
         return json_encode(["status" => 1]);
     }
-    //View News Article Read
+    //View news Article Read
     public function NewsViewArticleRead($heading, $id)
     {
 
@@ -259,7 +259,7 @@ class NewsController extends Controller
             return redirect("/user/dashboard");
         }
     }
-    //View News Read
+    //View news Read
     public function NewsViewRead($heading, $id)
     {
 

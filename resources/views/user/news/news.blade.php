@@ -242,7 +242,7 @@
                 <!-- Start: Jumbotron -->
                 <div class="container jumbotron m-3 my-bg-color-grey">
                     <h3>My TV News</h3>
-                    <p class="my-text-color-white">More TV News Channels > </p>
+                    <p class="my-text-color-white">More TV news Channels > </p>
                 </div>
                 <!-- End: Jumbotron -->
 

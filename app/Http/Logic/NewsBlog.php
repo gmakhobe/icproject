@@ -32,7 +32,7 @@ class NewsBlog
     {
 
         //Info from Database
-        $Data = DB::select('SELECT NCS.Comment AS "Comment", NCS.CommentDate AS "Date", U.ProfilePicture AS "Image", U.Name AS "Name", U.Surname AS "Surname" FROM NewsBlogPost NBP INNER JOIN NewsBlogs NB ON NB.NewsBlogId = NBP.NewsBlogPostId INNER JOIN NewsComments NCS ON NCS.NewsId = NBP.NewsBlogPostId INNER JOIN users U ON U.UserId = NCS.UserId WHERE NBP.Heading = ? AND NBP.NewsBlogPostId = ? AND NCS.CommentInd = ?', [$name, $Id, $commentind]);
+        $Data = DB::select('SELECT NCS.Comment AS "Comment", NCS.CommentDate AS "Date", U.ProfilePicture AS "Image", U.Name AS "Name", U.Surname AS "Surname" FROM NewsBlogPost NBP INNER JOIN NewsBlogs NB ON NB.NewsBlogId = NBP.NewsBlogPostId INNER JOIN newscomments NCS ON NCS.NewsId = NBP.NewsBlogPostId INNER JOIN users U ON U.UserId = NCS.UserId WHERE NBP.Heading = ? AND NBP.NewsBlogPostId = ? AND NCS.CommentInd = ?', [$name, $Id, $commentind]);
         $myArray = [];
 
         for ($index = 0; $index < count($Data); $index++) {

@@ -37,7 +37,7 @@ class News{
     {
 
         //Info from Database
-        $Data = DB::select('SELECT NC.Name AS "ChannelName", NC.NCId AS "ChannelId", N.NewsId AS "NewsId", N.Heading AS "Headline", N.News AS "News", N.Author AS "Author", N.MainBunner AS "Banner", NS.Subject AS "Subject", N.PublishedDate AS "Date" FROM News N INNER JOIN NewsSubjects NS ON NS.SubjectId = N.TopicId INNER JOIN NewsChannel NC ON NC.NCId = N.ChannelId WHERE NC.ChannelType = ? AND N.TopicId = ? ORDER BY N.PublishedDate DESC LIMIT ?', [0, $Topic, $Limit]);
+        $Data = DB::select('SELECT NC.Name AS "ChannelName", NC.NCId AS "ChannelId", N.NewsId AS "NewsId", N.Heading AS "Headline", N.News AS "News", N.Author AS "Author", N.MainBunner AS "Banner", NS.Subject AS "Subject", N.PublishedDate AS "Date" FROM news N INNER JOIN newssubjects NS ON NS.SubjectId = N.TopicId INNER JOIN newschannel NC ON NC.NCId = N.ChannelId WHERE NC.ChannelType = ? AND N.TopicId = ? ORDER BY N.PublishedDate DESC LIMIT ?', [0, $Topic, $Limit]);
         $myArray = [];
 
         //Loop through
@@ -64,7 +64,7 @@ class News{
     {
 
         //Info from Database
-        $Data = DB::select('SELECT NC.NCId AS "ChannelId", NC.Name AS "ChannelName", NV.NVId AS "VideoId", NV.VideoTitle AS "Title", NV.VideoLink AS "Video", NV.Author AS "Author", NV.VideoBanner AS "Banner", NV.PublishedDate AS "Date", NS.Subject AS "Subject" FROM NewsVideos NV INNER JOIN NewsSubjects NS ON NS.SubjectId = NV.TopicId INNER JOIN NewsChannel NC ON NC.NCId = NV.ChannelId WHERE NC.ChannelType = ? ORDER BY NV.PublishedDate DESC LIMIT ?', [1, $Limit]);
+        $Data = DB::select('SELECT NC.NCId AS "ChannelId", NC.Name AS "ChannelName", NV.NVId AS "VideoId", NV.VideoTitle AS "Title", NV.VideoLink AS "Video", NV.Author AS "Author", NV.VideoBanner AS "Banner", NV.PublishedDate AS "Date", NS.Subject AS "Subject" FROM newsvideos NV INNER JOIN newssubjects NS ON NS.SubjectId = NV.TopicId INNER JOIN newschannel NC ON NC.NCId = NV.ChannelId WHERE NC.ChannelType = ? ORDER BY NV.PublishedDate DESC LIMIT ?', [1, $Limit]);
         $myArray = [];
 
         //Loop through

@@ -524,7 +524,7 @@
                                                         <!-- Modal Header -->
                                                         <div class="modal-header">
                                                             <h4 class="modal-title text-center">
-                                                                {{ $NewsChannelsInd['Name'] }} Sector News Channel
+                                                                {{ $NewsChannelsInd['Name'] }} Sector news Channel
                                                             </h4>
                                                             <button type="button" class="close"
                                                                 data-dismiss="modal">&times;</button>

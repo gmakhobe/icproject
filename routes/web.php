@@ -82,8 +82,8 @@ Route::get('/user/rawmate/seller/{name}/{id}', 'RawmateterialController@RawmateS
 // /User/profile
 Route::get('/user/profile', 'ProfileController@ProfileView')->middleware('IsSessionValid');
 
-// /User/ideas
-Route::get('/user/ideas', 'IdeasController@IdeasView')->middleware('IsSessionValid');
+// /User/Create
+Route::get('/user/create', 'CreateController@CreateView')->middleware('IsSessionValid');
 
 //Get Requests from /
 Route::get('/register/email/{email}/password/{password}/name/{name}/surname/{surname}', 'IndexController@register');

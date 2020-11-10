@@ -11,7 +11,7 @@ class NewsPodcasts
     public static function GetIncrementViews($PodcastId, $Counter)
     {
         //Info from Database
-        $Data = DB::select('UPDATE NewsPodcasts SET PodcastCount = (? + (SELECT PodcastCount FROM NewsPodcasts WHERE NewsPodcastId = ?)) WHERE NewsPodcastId = ?', [$Counter, $PodcastId, $PodcastId]);
+        $Data = DB::select('UPDATE newspodcasts SET PodcastCount = (? + (SELECT PodcastCount FROM newspodcasts WHERE NewsPodcastId = ?)) WHERE NewsPodcastId = ?', [$Counter, $PodcastId, $PodcastId]);
 
         return $Data;
     }
@@ -20,7 +20,7 @@ class NewsPodcasts
     public static function GetLatestPodcasts($Limit)
     {
         //Info from Database
-        $Data = DB::select('SELECT NP.NewsPodcastId, NP.PodcastName, NP.PodcastDescription, NP.AudioLink, NP.PodcastCountry, NP.PodcastRating, NP.PodcastCount, NP.PodcastCreatedDate, NS.Subject, U.Username FROM NewsPodcasts NP INNER JOIN users U ON U.UserId = NP.UserId INNER JOIN NewsSubjects NS ON NS.SubjectId = NP.PodcastTopic ORDER BY NP.PodcastCreatedDate DESC LIMIT ?', [$Limit]);
+        $Data = DB::select('SELECT NP.NewsPodcastId, NP.PodcastName, NP.PodcastDescription, NP.AudioLink, NP.PodcastCountry, NP.PodcastRating, NP.PodcastCount, NP.PodcastCreatedDate, NS.Subject, U.Username FROM newspodcasts NP INNER JOIN users U ON U.UserId = NP.UserId INNER JOIN newssubjects NS ON NS.SubjectId = NP.PodcastTopic ORDER BY NP.PodcastCreatedDate DESC LIMIT ?', [$Limit]);
         $myArray = [];
         //Loop through
         for ($index = 0; $index < count($Data); $index++) {
@@ -46,7 +46,7 @@ class NewsPodcasts
     public static function GetTopRatedPodcasts($Limit)
     {
         //Info from Database
-        $Data = DB::select('SELECT NP.NewsPodcastId, NP.PodcastName, NP.PodcastDescription, NP.AudioLink, NP.PodcastCountry, NP.PodcastRating, NP.PodcastCount, NP.PodcastCreatedDate, NS.Subject, U.Username FROM NewsPodcasts NP INNER JOIN users U ON U.UserId = NP.UserId INNER JOIN NewsSubjects NS ON NS.SubjectId = NP.PodcastTopic ORDER BY NP.PodcastRating DESC LIMIT ?', [$Limit]);
+        $Data = DB::select('SELECT NP.NewsPodcastId, NP.PodcastName, NP.PodcastDescription, NP.AudioLink, NP.PodcastCountry, NP.PodcastRating, NP.PodcastCount, NP.PodcastCreatedDate, NS.Subject, U.Username FROM newspodcasts NP INNER JOIN users U ON U.UserId = NP.UserId INNER JOIN newssubjects NS ON NS.SubjectId = NP.PodcastTopic ORDER BY NP.PodcastRating DESC LIMIT ?', [$Limit]);
         $myArray = [];
         //Loop through
         for ($index = 0; $index < count($Data); $index++) {
@@ -71,7 +71,7 @@ class NewsPodcasts
     public static function GetTopPodcasts($Limit)
     {
         //Info from Database
-        $Data = DB::select('SELECT NP.NewsPodcastId, NP.PodcastName, NP.PodcastDescription, NP.AudioLink, NP.PodcastCountry, NP.PodcastRating, NP.PodcastCount, NP.PodcastCreatedDate, NS.Subject, U.Username FROM NewsPodcasts NP INNER JOIN users U ON U.UserId = NP.UserId INNER JOIN NewsSubjects NS ON NS.SubjectId = NP.PodcastTopic ORDER BY NP.PodcastCount DESC LIMIT ?', [$Limit]);
+        $Data = DB::select('SELECT NP.NewsPodcastId, NP.PodcastName, NP.PodcastDescription, NP.AudioLink, NP.PodcastCountry, NP.PodcastRating, NP.PodcastCount, NP.PodcastCreatedDate, NS.Subject, U.Username FROM newspodcasts NP INNER JOIN users U ON U.UserId = NP.UserId INNER JOIN newssubjects NS ON NS.SubjectId = NP.PodcastTopic ORDER BY NP.PodcastCount DESC LIMIT ?', [$Limit]);
         $myArray = [];
         //Loop through
         for ($index = 0; $index < count($Data); $index++) {

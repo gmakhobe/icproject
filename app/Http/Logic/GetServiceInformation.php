@@ -31,7 +31,7 @@ class GetServiceInformation
     //Get Company News
     public static function GetServiceNews($Symbol, $ServiceInd){
         //Get Data
-        $Data = DB::select('SELECT ins.Heading AS "Heading", ins.News AS "News", ins.ImageLink AS "ImageLink", ins.CreatedDate AS "CreatedDate", ins.AuthorName AS "AuthorName", ins.CompanyNewsId AS "CompanyNewsId" FROM service s INNER JOIN InvestmentNews ins ON ins.OrganisationId = s.ServiceId INNER JOIN industries i ON i.IndustryId = s.IndustryId INNER JOIN industrytypes it ON it.IndustryTypeId = ins.IndustryTypeId WHERE s.ServiceName = ? AND s.ServiceType = ?', [$Symbol, $ServiceInd]);
+        $Data = DB::select('SELECT ins.Heading AS "Heading", ins.News AS "News", ins.ImageLink AS "ImageLink", ins.CreatedDate AS "CreatedDate", ins.AuthorName AS "AuthorName", ins.CompanyNewsId AS "CompanyNewsId" FROM service s INNER JOIN investmentnews ins ON ins.OrganisationId = s.ServiceId INNER JOIN industries i ON i.IndustryId = s.IndustryId INNER JOIN industrytypes it ON it.IndustryTypeId = ins.IndustryTypeId WHERE s.ServiceName = ? AND s.ServiceType = ?', [$Symbol, $ServiceInd]);
         $newArr = [];
 
         if ($Data){
@@ -81,7 +81,7 @@ class GetServiceInformation
     //Get Company Report
     public static function GetServiceAssets($Symbol, $ServiceInd){
         //Get Data
-        $Data = DB::select('SELECT * FROM service s INNER JOIN InvestmentAssets ia ON ia.OrganisationId = s.ServiceId INNER JOIN industries i ON i.IndustryId = s.IndustryId INNER JOIN industrytypes it ON it.IndustryTypeId = ia.IndustryId WHERE s.ServiceName = ? AND s.ServiceType = ?', [$Symbol, $ServiceInd]);
+        $Data = DB::select('SELECT * FROM service s INNER JOIN investmentassets ia ON ia.OrganisationId = s.ServiceId INNER JOIN industries i ON i.IndustryId = s.IndustryId INNER JOIN industrytypes it ON it.IndustryTypeId = ia.IndustryId WHERE s.ServiceName = ? AND s.ServiceType = ?', [$Symbol, $ServiceInd]);
         $newArr = [];
 
         if ($Data){
@@ -126,7 +126,7 @@ class GetServiceInformation
     //Get Company Report
     public static function GetServiceEarnings($Symbol, $ServiceInd){
         //Get Data
-        $Data = DB::select('SELECT * FROM service s INNER JOIN InvestmentEarnings ie ON ie.OrganisationId = s.ServiceId INNER JOIN industries i ON i.IndustryId = s.IndustryId INNER JOIN industrytypes it ON it.IndustryTypeId = ie.IndustryId WHERE s.ServiceName = ? AND s.ServiceType = ?', [$Symbol, $ServiceInd]);
+        $Data = DB::select('SELECT * FROM service s INNER JOIN investmentearnings ie ON ie.OrganisationId = s.ServiceId INNER JOIN industries i ON i.IndustryId = s.IndustryId INNER JOIN industrytypes it ON it.IndustryTypeId = ie.IndustryId WHERE s.ServiceName = ? AND s.ServiceType = ?', [$Symbol, $ServiceInd]);
         $newArr = [];
 
         if ($Data){

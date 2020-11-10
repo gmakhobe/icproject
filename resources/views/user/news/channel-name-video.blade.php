@@ -125,7 +125,7 @@
 
                 </div>
 
-                <!-- Technology News -->
+                <!-- Technology news -->
                 <h3 class="my-text-color-white p-5">{{ $NewsSubjects[3] }} News</h3>
                 <div class="row">
 

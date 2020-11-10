@@ -9,7 +9,7 @@ class GetNewsContents{
     //Get economic newa
     public static function GetEconomicNews(){
         //Recieve data from db
-        $Data = DB::select('SELECT * FROM NewsSubjects WHERE IsActive = ?', [1]);
+        $Data = DB::select('SELECT * FROM newssubjects WHERE IsActive = ?', [1]);
         $newArr = [];
         //Loop through results
         foreach($Data as $data){
@@ -21,7 +21,7 @@ class GetNewsContents{
     //Get news subjects
     public static function GetNewsSubjects(){
         //Recieve data from db
-        $Data = DB::select('SELECT * FROM NewsSubjects WHERE IsActive = ?', [1]);
+        $Data = DB::select('SELECT * FROM newssubjects WHERE IsActive = ?', [1]);
         $newArr = [];
         //Loop through results
         foreach($Data as $data){

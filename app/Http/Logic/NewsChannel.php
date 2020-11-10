@@ -56,7 +56,7 @@ class NewsChannel
     {
 
         //Info from Database
-        $Data = DB::select('SELECT N.NewsId AS "NewsId", N.Heading AS "Headline", N.News AS "News", N.Author AS "Author", N.MainBunner AS "Banner", NS.Subject AS "Subject", N.PublishedDate AS "Date" FROM News N INNER JOIN NewsSubjects NS ON NS.SubjectId = N.TopicId INNER JOIN NewsChannel NC ON NC.NCId = N.ChannelId WHERE NC.ChannelType = ? AND N.TopicId = ? AND N.ChannelId = ? ORDER BY N.PublishedDate DESC LIMIT ?', [0, $Topic, $Channel, $Limit]);
+        $Data = DB::select('SELECT N.NewsId AS "NewsId", N.Heading AS "Headline", N.News AS "News", N.Author AS "Author", N.MainBunner AS "Banner", NS.Subject AS "Subject", N.PublishedDate AS "Date" FROM news N INNER JOIN newssubjects NS ON NS.SubjectId = N.TopicId INNER JOIN newschannel NC ON NC.NCId = N.ChannelId WHERE NC.ChannelType = ? AND N.TopicId = ? AND N.ChannelId = ? ORDER BY N.PublishedDate DESC LIMIT ?', [0, $Topic, $Channel, $Limit]);
         $myArray = [];
 
         //Loop through
@@ -80,7 +80,7 @@ class NewsChannel
     {
 
         //Info from Database
-        $Data = DB::select('SELECT N.Views AS "NewsViews", NC.Name AS "ChannelName", NC.NCId, N.NewsId AS "NewsId", N.Heading AS "Headline", N.News AS "News", N.Author AS "Author", N.MainBunner AS "Banner", NS.Subject AS "Subject", N.PublishedDate AS "Date" FROM News N INNER JOIN NewsSubjects NS ON NS.SubjectId = N.TopicId INNER JOIN NewsChannel NC ON NC.NCId = N.ChannelId WHERE N.Heading = ? AND N.NewsId = ? LIMIT ?', [$heading, $id, $limit]);
+        $Data = DB::select('SELECT N.Views AS "NewsViews", NC.Name AS "ChannelName", NC.NCId, N.NewsId AS "NewsId", N.Heading AS "Headline", N.News AS "News", N.Author AS "Author", N.MainBunner AS "Banner", NS.Subject AS "Subject", N.PublishedDate AS "Date" FROM news N INNER JOIN newssubjects NS ON NS.SubjectId = N.TopicId INNER JOIN newschannel NC ON NC.NCId = N.ChannelId WHERE N.Heading = ? AND N.NewsId = ? LIMIT ?', [$heading, $id, $limit]);
         $myArray = [];
 
         for ($index = 0; $index < count($Data); $index++) {
@@ -107,7 +107,7 @@ class NewsChannel
     {
 
         //Info from Database
-        $Data = DB::select('SELECT NCS.Comment AS "Comment", NCS.CommentDate AS "Date", U.ProfilePicture AS "Image", U.Name AS "Name", U.Surname AS "Surname" FROM News N INNER JOIN NewsSubjects NS ON NS.SubjectId = N.TopicId INNER JOIN NewsChannel NC ON NC.NCId = N.ChannelId INNER JOIN NewsComments NCS ON NCS.NewsId = N.NewsId INNER JOIN users U ON U.UserId = NCS.UserId WHERE N.Heading = ? AND N.NewsId = ? AND NCS.CommentInd = ?', [$heading, $id, $commentind]);
+        $Data = DB::select('SELECT NCS.Comment AS "Comment", NCS.CommentDate AS "Date", U.ProfilePicture AS "Image", U.Name AS "Name", U.Surname AS "Surname" FROM news N INNER JOIN newssubjects NS ON NS.SubjectId = N.TopicId INNER JOIN newschannel NC ON NC.NCId = N.ChannelId INNER JOIN newscomments NCS ON NCS.NewsId = N.NewsId INNER JOIN users U ON U.UserId = NCS.UserId WHERE N.Heading = ? AND N.NewsId = ? AND NCS.CommentInd = ?', [$heading, $id, $commentind]);
         $myArray = [];
 
         for ($index = 0; $index < count($Data); $index++) {
@@ -129,7 +129,7 @@ class NewsChannel
     {
 
         //Info from Database
-        $Data = DB::select('SELECT * FROM NewsChannel WHERE `Name` LIKE ? AND ChannelType = ?', ["%$search%", $type]);
+        $Data = DB::select('SELECT * FROM newschannel WHERE `Name` LIKE ? AND ChannelType = ?', ["%$search%", $type]);
         $myArray = [];
         //Loop through
         for ($index = 0; $index < count($Data); $index++) {

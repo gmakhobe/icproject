@@ -56,7 +56,7 @@ class TVNewsChannel
     {
 
         //Info from Database
-        $Data = DB::select('SELECT NV.VideoTitle AS "Title", NV.VideoLink AS "Video", NV.VideoDescription AS "Description", NV.Author AS "Author", NV.VideoBanner AS "Banner", NV.PublishedDate AS "Date", NV.NVId AS "VideoId", NS.Subject AS "Subject" FROM NewsVideos NV INNER JOIN NewsSubjects NS ON NS.SubjectId = NV.TopicId INNER JOIN NewsChannel NC ON NC.NCId = NV.ChannelId WHERE NC.ChannelType = ? AND NV.TopicId = ? AND NV.ChannelId = ? ORDER BY NV.PublishedDate DESC LIMIT ?', [1, $Topic, $Channel, $Limit]);
+        $Data = DB::select('SELECT NV.VideoTitle AS "Title", NV.VideoLink AS "Video", NV.VideoDescription AS "Description", NV.Author AS "Author", NV.VideoBanner AS "Banner", NV.PublishedDate AS "Date", NV.NVId AS "VideoId", NS.Subject AS "Subject" FROM newsvideos NV INNER JOIN newssubjects NS ON NS.SubjectId = NV.TopicId INNER JOIN newschannel NC ON NC.NCId = NV.ChannelId WHERE NC.ChannelType = ? AND NV.TopicId = ? AND NV.ChannelId = ? ORDER BY NV.PublishedDate DESC LIMIT ?', [1, $Topic, $Channel, $Limit]);
         $myArray = [];
 
         //Loop through
@@ -81,7 +81,7 @@ class TVNewsChannel
     {
 
         //Info from Database
-        $Data = DB::select('SELECT NV.Views AS "Views", NV.NVId AS "Id", NV.VideoTitle AS "Title", NV.VideoLink AS "Video", NV.VideoDescription AS "Description", NV.Author AS "Author", NV.VideoBanner AS "Banner", NV.PublishedDate AS "Date", NS.Subject AS "Subject", NC.NCId AS "ChannelId", NC.Name AS "ChannelName" FROM NewsVideos NV INNER JOIN NewsSubjects NS ON NS.SubjectId = NV.TopicId INNER JOIN NewsChannel NC ON NC.NCId = NV.ChannelId WHERE NV.VideoTitle = ? AND NV.NVId = ? LIMIT ?', [$name, $id, $limit]);
+        $Data = DB::select('SELECT NV.Views AS "Views", NV.NVId AS "Id", NV.VideoTitle AS "Title", NV.VideoLink AS "Video", NV.VideoDescription AS "Description", NV.Author AS "Author", NV.VideoBanner AS "Banner", NV.PublishedDate AS "Date", NS.Subject AS "Subject", NC.NCId AS "ChannelId", NC.Name AS "ChannelName" FROM newsvideos NV INNER JOIN newssubjects NS ON NS.SubjectId = NV.TopicId INNER JOIN newschannel NC ON NC.NCId = NV.ChannelId WHERE NV.VideoTitle = ? AND NV.NVId = ? LIMIT ?', [$name, $id, $limit]);
         $myArray = [];
 
         for ($index = 0; $index < count($Data); $index++) {
@@ -109,7 +109,7 @@ class TVNewsChannel
     {
 
         //Info from Database
-        $Data = DB::select('SELECT NCS.Comment AS "Comment", NCS.CommentDate AS "Date", U.ProfilePicture AS "Image", U.Name AS "Name", U.Surname AS "Surname" FROM NewsVideos NV INNER JOIN NewsSubjects NS ON NS.SubjectId = NV.TopicId INNER JOIN NewsChannel NC ON NC.NCId = NV.ChannelId INNER JOIN NewsComments NCS ON NCS.NewsId = NV.NVId INNER JOIN users U ON U.UserId = NCS.UserId WHERE NV.VideoTitle = ? AND NV.NVId = ? AND NCS.CommentInd = ?', [$name, $videoId, $commentind]);
+        $Data = DB::select('SELECT NCS.Comment AS "Comment", NCS.CommentDate AS "Date", U.ProfilePicture AS "Image", U.Name AS "Name", U.Surname AS "Surname" FROM newsvideos NV INNER JOIN newssubjects NS ON NS.SubjectId = NV.TopicId INNER JOIN newschannel NC ON NC.NCId = NV.ChannelId INNER JOIN newscomments NCS ON NCS.NewsId = NV.NVId INNER JOIN users U ON U.UserId = NCS.UserId WHERE NV.VideoTitle = ? AND NV.NVId = ? AND NCS.CommentInd = ?', [$name, $videoId, $commentind]);
         $myArray = [];
 
         for ($index = 0; $index < count($Data); $index++) {
@@ -131,7 +131,7 @@ class TVNewsChannel
     {
 
         //Info from Database
-        $Data = DB::select('SELECT * FROM NewsChannel WHERE `Name` LIKE ? AND ChannelType = ?', ["%$search%", $type]);
+        $Data = DB::select('SELECT * FROM newschannel WHERE `Name` LIKE ? AND ChannelType = ?', ["%$search%", $type]);
         $myArray = [];
         //Loop through
         for ($index = 0; $index < count($Data); $index++) {

@@ -8,7 +8,7 @@ class NewsArticles
 {
     //Get Articles Latest Articles non main
     public static function GetArticlesView($limit, $displayind){
-        $Data = DB::select('SELECT * FROM NewsArticles NA INNER JOIN NewsChannel NC ON NC.NCId = NA.ChannelId INNER JOIN NewsSubjects NS ON NS.SubjectId = NA.TopicId WHERE NA.DisplayInd = ? ORDER BY NA.PublishedDate DESC LIMIT ?', [$displayind, $limit]);
+        $Data = DB::select('SELECT * FROM newsarticles NA INNER JOIN newschannel NC ON NC.NCId = NA.ChannelId INNER JOIN newssubjects NS ON NS.SubjectId = NA.TopicId WHERE NA.DisplayInd = ? ORDER BY NA.PublishedDate DESC LIMIT ?', [$displayind, $limit]);
         $myArray = [];
 
         for ($index = 0; $index < count($Data); $index++) {
@@ -34,7 +34,7 @@ class NewsArticles
     {
 
         //Info from Database
-        $Data = DB::select('SELECT NA.Views AS "Views", NC.Name AS "ChannelName", NC.NCId AS "ChannelId", NA.ArticleId AS "ArticleId", NA.Heading AS "Headline", NA.Article AS "Article", NA.Author AS "Author", NA.Banner AS "Banner", NS.Subject AS "Subject", NA.PublishedDate AS "Date" FROM NewsArticles NA INNER JOIN NewsSubjects NS ON NS.SubjectId = NA.TopicId INNER JOIN NewsChannel NC ON NC.NCId = NA.ChannelId WHERE NA.Heading = ? AND NA.ArticleId = ? LIMIT ?', [$heading, $id, $limit]);
+        $Data = DB::select('SELECT NA.Views AS "Views", NC.Name AS "ChannelName", NC.NCId AS "ChannelId", NA.ArticleId AS "ArticleId", NA.Heading AS "Headline", NA.Article AS "Article", NA.Author AS "Author", NA.Banner AS "Banner", NS.Subject AS "Subject", NA.PublishedDate AS "Date" FROM newsarticles NA INNER JOIN newssubjects NS ON NS.SubjectId = NA.TopicId INNER JOIN newschannel NC ON NC.NCId = NA.ChannelId WHERE NA.Heading = ? AND NA.ArticleId = ? LIMIT ?', [$heading, $id, $limit]);
         $myArray = [];
 
         for ($index = 0; $index < count($Data); $index++) {
@@ -62,7 +62,7 @@ class NewsArticles
     {
 
         //Info from Database
-        $Data = DB::select('SELECT NC.Name AS "ChannelName", NC.NCId AS "ChannelId", NA.ArticleId AS "Id", NA.Heading AS "Heading", NA.Article AS "Article", NA.Author AS "Author", NA.Banner AS "Banner", NA.PublishedDate AS "Date", NS.Subject AS "Subject" FROM NewsArticles NA INNER JOIN NewsChannel NC ON NC.NCId = NA.ChannelId INNER JOIN NewsSubjects NS ON NS.SubjectId = NA.TopicId WHERE NA.ChannelId = ? ORDER BY NA.PublishedDate DESC LIMIT ?', [$id, $limit]);
+        $Data = DB::select('SELECT NC.Name AS "ChannelName", NC.NCId AS "ChannelId", NA.ArticleId AS "Id", NA.Heading AS "Heading", NA.Article AS "Article", NA.Author AS "Author", NA.Banner AS "Banner", NA.PublishedDate AS "Date", NS.Subject AS "Subject" FROM newsarticles NA INNER JOIN newschannel NC ON NC.NCId = NA.ChannelId INNER JOIN newssubjects NS ON NS.SubjectId = NA.TopicId WHERE NA.ChannelId = ? ORDER BY NA.PublishedDate DESC LIMIT ?', [$id, $limit]);
         $myArray = [];
 
         for ($index = 0; $index < count($Data); $index++) {
