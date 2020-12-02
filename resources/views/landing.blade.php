@@ -5,202 +5,332 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <title>{{ $Title }}</title>
-
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        <meta name="description" content="">
+        <meta name="keywords" content="">
+        <meta name="author" content="templatemo">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
         <!-- Fonts -->
-        
+
         <!-- Fonts -->
         <!-- Styles -->
         <!-- Latest compiled and minified CSS -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+        <link rel="stylesheet" href="{{ asset('assets1/css/bootstrap.min.css') }}">
         <link rel="stylesheet" href="{{ asset('/css/style.css') }}">
+
+
+
+
+        <link rel="stylesheet" href="{{ asset('assets1/css/animate.css') }}">
+        <link rel="stylesheet" href="{{ asset('assets1/css/font-awesome.min.css') }}">
+        <link rel="stylesheet" href="{{ asset('assets1/css/templatemo-style.css') }}">
+
+
+        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700" rel="stylesheet">
         <!-- End Styles -->
 
         <!-- JS CDN Assets-->
         <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
         <!-- End JSCDN Assets-->
     </head>
-    <body>
+    <body data-spy="scroll" data-target=".navbar-collapse" data-offset="50">
 
-    <nav class="navbar navbar-inverse navbar-fixed-top navbar-dark">
-        <div class="container">
-            <div class="navbar-header">
-                <a class="navbar-brand text-color-white text-style-bold" href="#">{{ $Title }}</a>
-            </div>
-            <ul class="nav navbar-nav navbar-right">
-                <li><a class="text-color-black btn-nav btn-color-gold text-style-bold" href="#"  data-toggle="modal" data-target="#loginModal" data-backdrop="static">Login</a></li>
-                <li><a class="text-color-white btn-nav btn-color-red text-style-bold" href="#"  data-toggle="modal" data-target="#registerModal" data-backdrop="static">Register</a></li>
-            </ul>
+    <div class="navbar navbar-fixed-top custom-navbar" role="navigation">
+     <div  class="container">
+
+          <!-- navbar header -->
+          <div class="navbar-header">
+               <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon icon-bar"></span>
+                    <span class="icon icon-bar"></span>
+                    <span class="icon icon-bar"></span>
+               </button>
+               <a href="#" class="navbar-brand">Plugin</a>
+          </div>
+
+          <div style="padding-bottom:2.5%" class="collapse navbar-collapse" >
+
+               <ul class="nav navbar-nav navbar-right">
+
+               <a href="#about" class="wow fadeInUp smoothScroll section-btn btn btn-success" data-wow-delay="1.4s"  data-toggle="modal" data-target="#loginModal" data-backdrop="static">Login</a>
+                              <a href="#about" class="wow fadeInUp smoothScroll section-btn btn btn-success" data-wow-delay="1.4s"  data-toggle="modal" data-target="#registerModal" data-backdrop="static">Register</a>
+
+               </ul>
+          </div>
+
+     </div>
+</div>
+<!-- Home Section -->
+
+<section id="home" class="parallax-section">
+     <div class="container">
+          <div class="row">
+
+               <div class="col-md-6 col-sm-6">
+                    <div class="home-img"></div>
+               </div>
+
+               <div class="col-md-6 col-sm-6">
+                    <div class="home-thumb">
+                         <div class="section-title">
+
+                              <h1 class="wow fadeInUp" data-wow-delay="0.6s" style="color:white">Welcome to  <strong style="color:white" >Plugin</strong> </h1>
+                              <p class="wow fadeInUp" data-wow-delay="0.9s"> "slogan or phrase goes here".</p>
+
+
+                         </div>
+                    </div>
+               </div>
+
+
+          </div>
+     </div>
+</section>
+
+<!-- Service Section -->
+
+<!-- Experience Section -->
+
+
+<!-- Education Section -->
+
+
+<!-- Quotes Section -->
+<section class="hero-unit">
+
+<div class="row">
+  <div class="large-12 columns">
+    <hgroup style="color:black;padding-left:40%">
+      <h1 style="text-shadow: 2px 2px purple;"> system features</h1>
+
+    </hgroup>
+
+
+    <ul  class="small-block-grid-2 medium-block-grid-3 flip-cards">
+
+      <li id="investment" ontouchstart="this.classList.toggle('hover');">
+        <div  class="large button card-front">
+          <a href="#">Investments</a>
+          <i class="fa fa-code card-icon "></i>
         </div>
-    </nav>
+        <div class="panel card-back">
+          <i class="fa fa-code card-icon"></i>
+          <div class="hub-info">
+            <a href="#">JKLCode.com</a>
+            <p>Find coding gists, cheatsheets, plugins, themes, resources, and tutorials.</p>
+          </div>
+          <small class="clear">Updated TTH.</small>
+        </div>
+      </li>
 
-    <div id="myCarousel" class="carousel slide" data-ride="carousel">
-        <!-- Indicators -->
-        <ol class="carousel-indicators">
-            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-            <li data-target="#myCarousel" data-slide-to="1"></li>
-            <li data-target="#myCarousel" data-slide-to="2"></li>
-            <li data-target="#myCarousel" data-slide-to="3"></li>
-            <li data-target="#myCarousel" data-slide-to="4"></li>
-            <li data-target="#myCarousel" data-slide-to="5"></li>
-            <li data-target="#myCarousel" data-slide-to="6"></li>
-        </ol>
-
-        <!-- Wrapper for slides -->
-        <div class="carousel-inner">
-            
-            <div class="item active">
-                <img class="carousel-slide-image" src="{{ asset('/images/investment-slide.jpg') }}" alt="Investment Slide">
-                <div class="carousel-caption">
-                    <h2>Investment</h2>
-                </div>
-            </div>
-
-            <div class="item">
-                <img class="carousel-slide-image" src="{{ asset('/images/create-slide.jpg') }}" alt="Create Slide">
-                <div class="carousel-caption">
-                    <h2>Create</h2>
-                </div>
-            </div>
-
-            <div class="item">
-                <img class="carousel-slide-image" src="{{ asset('/images/ideas-slide.jpg') }}" alt="Ideas Slide">
-                <div class="carousel-caption">
-                    <h2>Ideas</h2>
-                </div>
-            </div>
-
-            <div class="item">
-                <img class="carousel-slide-image" src="{{ asset('/images/news-slide.jpg') }}" alt="News Slide">
-                <div class="carousel-caption">
-                    <h2>News</h2>
-                </div>
-            </div>
-
-            <div class="item">
-                <img class="carousel-slide-image" src="{{ asset('/images/profile-slide.jpg') }}" alt="Profile Slide">
-                <div class="carousel-caption">
-                    <h2>Profile</h2>
-                </div>
-            </div>
-
-            <div class="item">
-                <img class="carousel-slide-image" src="{{ asset('/images/store-room-slide.jpg') }}" alt="Store Room Slide">
-                <div class="carousel-caption">
-                    <h2>Store Room</h2>
-                </div>
-            </div>
-
-            <div class="item">
-                <img class="carousel-slide-image" src="{{ asset('/images/raw-materials-slide.jpg') }}" alt="Raw Materials Slide">
-                <div class="carousel-caption">
-                    <h2>Raw Materials</h2>
-                </div>
-            </div>
-
+      <li ontouchstart="this.classList.toggle('hover');">
+        <div class="large button card-front">
+          <a href="http://www.aaronsnowberger.com">Raw-Mate</a>
+          <i class="fa fa-pencil-square-o card-icon"></i>
         </div>
 
-        <!-- Left and right controls -->
-        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-            <span class="glyphicon glyphicon-chevron-left"></span>
-            <span class="sr-only">Previous</span>
-        </a>
-        <a class="right carousel-control" href="#myCarousel" data-slide="next">
-            <span class="glyphicon glyphicon-chevron-right"></span>
-            <span class="sr-only">Next</span>
-        </a>
+        <div class="panel card-back">
+          <i class="fa fa-pencil-square-o card-icon"></i>
+          <div class="hub-info">
+            <a href="http://www.aaronsnowberger.com">AaronSnowberger.com</a>
+            <p>Take a look at my graphic design portfolio and contact me for design work.</p>
+          </div>
+          <small class="clear">Updated Saturdays.</small>
+        </div>
+      </li>
+
+      <li ontouchstart="this.classList.toggle('hover');">
+        <div class="large button card-front">
+          <a href="">Store Room</a>
+          <i class="fa fa-paper-plane-o card-icon"></i>
+        </div>
+
+        <div class="panel card-back">
+          <i class="fa fa-paper-plane-o card-icon"></i>
+          <div class="hub-info">
+            <a href="">Udemy.com</a>
+            <p>Join classes about Computers, Technology, Coding, Design, and Language Learning.</p>
+          </div>
+          <small class="clear">Updated Mondays.</small>
+        </div>
+      </li>
+
+      <li ontouchstart="this.classList.toggle('hover');">
+        <div class="large button card-front">
+          <a href="">News Feed</a>
+          <i class="fa fa-map-o card-icon"></i>
+        </div>
+
+        <div class="panel card-back">
+          <i class="fa fa-map-o card-icon"></i>
+          <div class="hub-info">
+            <a href="">KeysToAGoodLife.com</a>
+            <p>Find resources about business, family, exercise, and other various topics.</p>
+          </div>
+          <small class="clear">Updated monthly.</small>
+        </div>
+      </li>
+
+      <li ontouchstart="this.classList.toggle('hover');">
+        <div class="large button card-front">
+          <a href="http://www.keytokorean.com">Create</a>
+          <i class="fa fa-language card-icon"></i>
+        </div>
+
+        <div class="panel card-back">
+          <i class="fa fa-language card-icon"></i>
+          <div class="hub-info">
+            <a href="http://www.keytokorean.com">KeyToKorean.com</a>
+            <p>Take your Korean from "foreign" to fluent with vocab lists and grammar guides.</p>
+          </div>
+          <small class="clear">Updated MWF.</small>
+        </div>
+      </li>
+
+      <li ontouchstart="this.classList.toggle('hover');">
+        <div class="large button card-front">
+          <a href="http://www.aicfchurch.org">Ideas</a>
+          <i class="fa fa-users card-icon"></i>
+        </div>
+
+        <div class="panel card-back">
+          <i class="fa fa-users card-icon"></i>
+          <div class="hub-info">
+            <a href="http://www.aicfchurch.org">AICFChurch.org</a>
+            <p>Listen to sermon podcasts or download church graphic design resources.</p>
+          </div>
+          <small class="clear">Updated the 4th Sunday.</small>
+        </div>
+      </li>
+
+    </ul>
+  </div>
+
+  <div class="large-12 columns">
+    <div class="small-12 small-centered medium-6 medium-centered large-3 large-centered columns clients">
+      <a href="#">
+
+        <p class="text-center">
+          <span class="fa-stack">
+                      <i class="fa fa-circle fa-stack-2x"></i>
+                      <i class="fa fa-angle-right fa-inverse fa-stack-1x"></i>
+                  </span>
+        </p>
+      </a>
+    </div>
+    <!-- end .clients -->
+  </div>
+
+</div>
+</section>
+
+
+
+<div class="container-fluid main-content text-align-center bg-color-black text-color-white">
+        <h2 class="main-content-heading text-color-white">ABOUT US</h2>
+
+        <p class="aboutus-paragraph">We are a new global plartform with the aim of connecting investors with small business together with Markets!</p>
+
     </div>
 
-    <div class="container-fluid main-content text-align-center">
-        <h2 class="main-content-heading">SUBSCRIBE</h2>
+<!-- Contact Section -->
 
-        <p class="subscribe-paragraph">Subscribe to our news letter to receieve all our news updates!</p>
+<section id="contact" class="parallax-section">
+     <div class="container">
+          <div class="row">
 
-        <div class="cards-services">
-            <div class="subscribe-form">
-              <div class="input-group">
-                <input id="s-email" type="email" class="form-control" size="50" placeholder="Email Address" required>
-                <div class="input-group-btn">
-                  <button id="subscribeBTN" onclick="AppSubscribe()" type="button" class="btn btn-danger">Subscribe</button>
-                </div>
-              </div>
-            </div>
-        </div>
+               <div class="col-md-6 col-sm-12">
+                    <div class="contact-form">
+                         <div class="wow fadeInUp section-title" data-wow-delay="0.2s">
+                              <h1 class="color-white">Contact Us</h1>
+                              <p class="color-white"></p>
+                         </div>
 
-    </div>
+                         <div id="contact-form">
 
-    <div class="container-fluid main-content bg-color-grey">
-        <h2 class="main-content-heading text-align-center">ONLINE SERVICES</h2>
+                                   <div class="wow fadeInUp" data-wow-delay="1s">
+                                        <input name="name" type="text" class="form-control" id="name" placeholder="Your Name">
+                                   </div>
+                                   <div class="wow fadeInUp" data-wow-delay="1.2s">
+                                        <input name="email" type="email" class="form-control" id="email" placeholder="Your Email">
+                                   </div>
+                                   <div class="wow fadeInUp" data-wow-delay="1.4s">
+                                        <textarea name="comments" rows="5" class="form-control" id="comments" placeholder="Write your comment..."></textarea>
+                                   </div>
+                                   <div class="wow fadeInUp col-md-6 col-sm-8" data-wow-delay="1.6s">
+                                        <input name="submit" type="submit" class="form-control" id="ContactFormSubmit" value="Send">
+                                   </div>
 
-        <div class="cards-services">
-            <div class="card-service">
-                <h4 clas="text-style-bold">Investment</4>
-                <img class="card-service-image img-rounded" src="{{ asset('/images/investment-slide.jpg') }}" alt="Investment Image">
-                <p class="card-service-paragraph">
-                    Investment for business, individual or Financial Advisor by selecting from a wide range of raw materials, companies and shares.
-                </p>
-            </div>
-            <div class="card-service">
-                <h4 clas="text-style-bold">Create</4>
-                <img class="card-service-image img-rounded" src="{{ asset('/images/create-slide.jpg') }}" alt="Investment Image">
-                <p class="card-service-paragraph">
-                    Create a profile as an individual or business to get investors and platform users to see what it is all about. 
-                </p>
-            </div>
-            <div class="card-service">
-                <h4 clas="text-style-bold">Idea</4>
-                <img class="card-service-image img-rounded" src="{{ asset('/images/ideas-slide.jpg') }}" alt="Investment">
-                <p class="card-service-paragraph">
-                    Have a great idea that needs funding? well create a profile and publish you profile by folowing the guidelines to get funding.
-                </p>
-            </div>
+                         </div>
 
-        <div class="card-service">
-                <h4 clas="text-style-bold">News</4>
-                <img class="card-service-image img-rounded" src="{{ asset('/images/news-slide.jpg') }}" alt="Investment Image">
-                <p class="card-service-paragraph">
-                    Stay up to date with the latest financial and economic news so that you are always informed anywhere and anytime.
-                </p>
-            </div>
-            <div class="card-service">
-                <h4 clas="text-style-bold">Profile</4>
-                <img class="card-service-image img-rounded" src="{{ asset('/images/profile-slide.jpg') }}" alt="Investment Image">
-                <p class="card-service-paragraph">
-                    By having a profile with IC you will receive premium treatment, whenever there are opportunities whatsoever you will stay informed. 
-                </p>
-            </div>
-            <div class="card-service">
-                <h4 clas="text-style-bold">Store Rooom</4>
-                <img class="card-service-image img-rounded" src="{{ asset('/images/store-room-slide.jpg') }}" alt="Investment">
-                <p class="card-service-paragraph">
-                    Have access to a store room where all of the content you create as a user is stored. You own your content.
-                </p>
-            </div>
+                    </div>
+               </div>
 
-            <div class="card-service">
-                <h4 clas="text-style-bold">Raw Materials</4>
-                <img class="card-service-image img-rounded" src="{{ asset('/images/raw-materials-slide.jpg') }}" alt="Investment">
-                <p class="card-service-paragraph">
-                    Want to buy gold, coal or chrome? We got you, we have made it easy for you to buy raw materials. Just create and account and buy any raw material you want from the available list.
-                </p>
-            </div>
-        </div>
-    </div>
+               <div class="col-md-3 col-sm-6">
+                    <div class="background-image contact-img"></div>
+               </div>
+
+               <div class="bg-dark col-md-3 col-sm-6">
+                    <div class="contact-thumb">
+                         <div class="wow fadeInUp contact-info" data-wow-delay="0.6s">
+                              <h3 class="color-white">Visit my office</h3>
+                              <p>Johannesburg, RSA</p>
+                         </div>
+
+                         <div class="wow fadeInUp contact-info" data-wow-delay="0.8s">
+                              <h3 class="color-white">Contact.</h3>
+                              <p>Contact us and we'll get back to you within 24 hours.</p>
+                              <p><i class="fa fa-phone"></i>+27 000000000</p>
+                              <p><i class="fa fa-envelope-o"></i> <a href="mailto:hello@company.co">info@plugin.co.za</a></p>
+                              <p><i class="fa fa-globe"></i> <a href="#">plugin.co</a></p>
+                         </div>
+
+                    </div>
+               </div>
+
+          </div>
+     </div>
+</section>
+
+<!-- Footer Section -->
+
+
+
+<!-- SCRIPTS -->
+
+<script  src="{{ asset('assets1/js/jquery.js') }}"> </script>
+<script   src="{{ asset('assets1/js/smoothscroll.js') }}"> </script>
+<script   src="{{ asset('assets1/css/templatemo-style.css') }}"> </script>
+<script  src="{{ asset('assets1/js/jquery.parallax.js') }}"> </script>
+<script   src="{{ asset('assets1/js/wow.min.js') }}"> </script>
+<script  src="{{ asset('assets1/js/custom.js') }}"> </script>
+
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.parallax.js"></script>
+<script src="js/smoothscroll.js"></script>
+<script src="js/wow.min.js"></script>
+<script src="js/custom.js"></script>
+
+
+
 
     <!--<div class="container-fluid main-content">
         <h2 class="main-content-heading text-align-center">ZAR Current Market<br> Price</h2>
 
         <div class="cards-services" id="quotes-sections">
-            
+
              Display infor using innerhtml when loading quotes
-            
-            
+
+
         </div>
     </div>-->
 
     <!--
     <div class="container-fluid main-content">
         <h2 class="main-content-heading">News Update</h2>
-        
+
         <div class="cards-services">
             <div class="card-service-news">
                 <img class="card-service-news-image img-rounded" src="{{ asset('/images/news-slide.jpg') }}" alt="Investment">
@@ -243,53 +373,28 @@
     </div>
     -->
 
+
+
+
+
+    <footer>
     <div class="container-fluid main-content text-align-center bg-color-black text-color-white">
-        <h2 class="main-content-heading text-color-white">ABOUT US</h2>
-
-        <p class="aboutus-paragraph">We are a new global plartform with the aim of connecting investors with small business together with Markets!</p>
-
-    </div>
-
-
-    <div class="container-fluid main-content text-align-center">
-        <div class="container-fluid bg-grey">
-            <h2 class="text-center">CONTACT</h2>
-            <div class="row">
-              <div class="col-sm-5">
-                <p>Contact us and we'll get back to you within 24 hours.</p>
-                <p><span class="glyphicon glyphicon-map-marker"></span> Johannesburg, RSA</p>
-                <p><span class="glyphicon glyphicon-phone"></span> +27 000000000</p>
-                <p><span class="glyphicon glyphicon-envelope"></span> info@plugin.co.za</p>
-              </div>
-              <div class="col-sm-7">
-                <div class="row">
-                  <div class="col-sm-6 form-group">
-                    <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
-                  </div>
-                  <div class="col-sm-6 form-group">
-                    <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
-                  </div>
-                </div>
-                <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea><br>
-                <div class="row">
-                  <div class="col-sm-12 form-group">
-                    <button class="btn btn-success pull-right" id="ContactFormSubmit">Send</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div> 
-
-    </div>
-
-
-    <div class="container-fluid main-content text-align-center bg-color-black text-color-white">
+    <ul class="wow fadeInUp social-icon" data-wow-delay="2s">
+                         <li><a href="#" class="fa fa-facebook"></a></li>
+                         <li><a href="#" class="fa fa-twitter"></a></li>
+                         <li><a href="#" class="fa fa-google-plus"></a></li>
+                         <li><a href="#" class="fa fa-dribbble"></a></li>
+                         <li><a href="#" class="fa fa-linkedin"></a></li>
+                    </ul>
         <h2 class="main-content-heading text-color-white">Copyright &copy; {{ date('Y') }}</h2>
+
     </div>
+</footer>
+
 
     <!-- Dashboard Modal -->
     <div class="modal fade" id="dashboardModal" role="dialog">
-        <div class="modal-dialog">    
+        <div class="modal-dialog">
             <!-- Modal content-->
             <div class="modal-content">
                 <div class="modal-header">
@@ -317,11 +422,11 @@
 @else
     <div class="modal fade" id="loginModal" role="dialog">
 @endif
-        <div class="modal-dialog">    
+        <div style="width: 35%" class="modal-dialog"  >
             <!-- Modal content-->
-            <div class="modal-content">
+            <div style="background: linear-gradient(#131215 0%, #d32d2d 100%); color:white" class="modal-content" >
                 <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal">×</button>
+                    <button type="button" style="background-color:white" class="close" data-dismiss="modal">×</button>
                     <h2 class="modal-title text-center">Login</h2>
                 </div>
                 <div class="modal-body">
@@ -338,8 +443,8 @@
                     <a class="btn" href="/forgotpassword">Forgot Password?</a>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                    <button id="loginBTN" type="submit" class="btn btn-primary" onclick="AppLogin()">Login</button>
+                    <button type="button"  class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button id="loginBTN" style="color: red, background-color:White" type="submit" class="btn btn-primary" onclick="AppLogin()">Login</button>
                 </div>
             </div>
         </div>
@@ -348,7 +453,7 @@
 
     <!-- Register Modal -->
     <div class="modal fade" id="registerModal" role="dialog">
-        <div class="modal-dialog">    
+        <div class="modal-dialog">
             <!-- Modal content-->
             <div class="modal-content">
                 <div class="modal-header">
@@ -388,7 +493,7 @@
     </div>
     <!-- End Register Modal -->
     <input type="hidden" class="form-control" id="index-csrf" value="{{ csrf_token() }}" hidden>
-    <!-- Script -->    
+    <!-- Script -->
     <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!-- Latest compiled JavaScript -->
