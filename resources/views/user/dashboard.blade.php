@@ -18,7 +18,7 @@
 
 <body>
     <!-- Start: SectionContainerRowColumn -->
-    <setion></section>
+    <section></section>
     <!-- End: SectionContainerRowColumn -->
     <nav class="navbar navbar-light navbar-expand-md sticky-top bounce animated navigation-clean-button" style="height: 80px;background: linear-gradient(to right,#a889e6 0%, #53005e 100%);; color: #ffffff;">
         <div class="container-fluid">
@@ -70,7 +70,7 @@
     <section class="main-dashboard">       
             <hgroup class="heading">
             <br>
-                <h1>Welcome Back, Daryl Nyawasha</h>
+                <h1>Welcome Back, {{ $NameAndSurname }}</h1>
                 <h3>Just keep learning. Make new opportunities.</h3>
             </hgroup>
 
