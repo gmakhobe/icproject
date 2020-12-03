@@ -16,12 +16,13 @@ use Illuminate\Support\Facades\Mail;
 
 class IndexController extends Controller
 {   
-    /*
-        Not Active
-    public function getNews(){
-        return json_encode(News::getFrontPageNews());
+    public function LoginView(){
+        return view('login', ["Title" => $GLOBALS['AppTitle']]);
     }
-    */ 
+
+    public function RegisterView(){
+        return view('register', ["Title" => $GLOBALS['AppTitle']]);
+    }
 
     public function PasswordResetHard($password, $hash, $email){
         

@@ -94,3 +94,7 @@ Route::get('/activate/{code}', 'IndexController@activate');
 Route::get('/news/frontpage', 'IndexController@getNews');
 Route::get('/logout', 'IndexLogout');
 Route::get('/contactus/{name}/{email}/{comments}', 'IndexController@contactus');
+
+//User Login and Register
+Route::get('/user/login', 'IndexController@LoginView');
+Route::get('/user/register', 'IndexController@RegisterView');

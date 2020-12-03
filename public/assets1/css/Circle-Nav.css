@@ -1,3 +1,51 @@
+
+.main-dashboard{
+  /* background: url(https://www.bearchitecture.com/wp-content/uploads/2017/04/BPM_0449_V3.jpg) no-repeat center  */
+  /* background: url(https://www.bearchitecture.com/wp-content/uploads/2017/04/BPM_0449_V3.jpg) */
+  background: white;
+  /* background: linear-gradient(to right,#a889e6 0%, #53005e 100%); */
+}
+
+.heading{
+  padding-left: 2.5%;
+}
+
+.iq-features{
+  padding-left: 25%;
+}
+
+
+#wrapper{
+  margin: 0 auto;
+  width: 80%;
+  height: 500px;
+  filter: drop-shadow(0px 16px 8px rgba(0,0,0,0.8));
+  /*background: url(https://pixabay.com/static/uploads/photo/2015/09/02/12/32/mystic-918502_640.jpg) center fixed*/
+  /* background: url(https://res.cloudinary.com/tonyooi/image/upload/v1443159870/sample.jpg) center fixed */
+  background-size: cover;
+}
+
+#glass-pane{
+  z-index: 1;
+  border: 1px solid white;
+  position: relative;
+  color: white;
+  width: 30%;
+  height: 200px;}
+  #glass-pane:before {    
+    z-index: -1;
+    position: absolute;
+    content: '';
+    /*background: url(https://pixabay.com/static/uploads/photo/2015/09/02/12/32/mystic-918502_640.jpg) center fixed*/
+    /* background: url(https://res.cloudinary.com/tonyooi/image/upload/v1443159870/sample.jpg) center fixed */
+    background-size: cover;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    filter: blur(3px) sepia(30%);
+}
+
 .holderCircle {
   width: 500px;
   height: 500px;
@@ -24,15 +72,17 @@
   width: 80px;
   height: 80px;
   position: absolute;
-  background: #ffffff;
-  color: #7d4ac7;
+  background:  #e3ddf0;
+  color: purple;
+  /* color: #7d4ac7; */
+
   border-radius: 20px;
   text-align: center;
   line-height: 80px;
   font-size: 30px;
   z-index: 3;
   cursor: pointer;
-  border: 2px solid #e6e6e6;
+  border: 2px solid  #e3ddf0;
 }
 
 .dotCircle .itemDot .forActive {
@@ -50,7 +100,7 @@
   content: '';
   width: 5px;
   height: 5px;
-  border: 3px solid #7d4ac7;
+  border: 3px solid purple;
   bottom: -31px;
   left: -14px;
   filter: blur(1px);
@@ -66,7 +116,7 @@
   top: -15px;
   position: absolute;
   transform: rotate(-45deg);
-  border: 6px solid #a733bb;
+  border: 6px solid purple;
   right: -39px;
 }
 
@@ -80,7 +130,7 @@
   top: 45px;
   width: 410px;
   height: 410px;
-  border: 2px dotted #a733bb;
+  border: 2px dotted purple;
   border-radius: 100%;
   -webkit-animation: rotation 100s infinite linear;
 }
@@ -88,11 +138,11 @@
 .dotCircle .itemDot:hover, .dotCircle .itemDot.active {
   color: #ffffff;
   transition: 0.5s;
-  background: #7d4ac7;
-  background: -moz-linear-gradient(left, #7d4ac7 0%, #a733bb 100%);
-  background: -webkit-linear-gradient(left, #7d4ac7 0%, #a733bb 100%);
-  background: linear-gradient(to right, #7d4ac7 0%, #a733bb 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#7d4ac7', endColorstr='#a733bb', GradientType=1);
+  background: gray;
+  background: -moz-linear-gradient(left, #a889e6 0%, #53005e 100%);
+  background: -webkit-linear-gradient(left, #a889e6 0%, #53005e 100%);
+  background: linear-gradient(to right,#a889e6 0%, #53005e 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#7d4ac7', endColorstr='#a733bb', GradientType=1); 
   border: 2px solid #ffffff;
   -webkit-box-shadow: 0 30px 30px 0 rgba(0, 0, 0, .13);
   -moz-box-shadow: 0 30px 30px 0 rgba(0, 0, 0, .13);
@@ -149,32 +199,49 @@
   opacity: 0.1;
 }
 
-@media only screen and (min-width:300px) and (max-width:599px) {
-  .holderCircle {
-    width: 300px;
-    height: 300px;
-    margin: 110px auto;
-  }
+h1,
+h3 {
+  margin-top: -0.5rem;
+  margin-bottom: 0;
+  color: purple;
+  /* text-shadow: 2px 2px black; */
+}
+/*
+ * RESPONSIVENESS -------------------------------------------------
+ */
+ @media only screen and ( max-width: 40em ) {
+	.main-dashboard {
+		height: 800px;
+	}
+	.flip-cards li {
+		width: 50%;
+		/*height: 160px;*/
+	}
+}
+@media only screen and ( max-width: 30em ) {
+	.main-dashboard h1 {
+		font-size: 1.75rem;
+	}
+	.main-dashboard h3 {
+		font-size: 1.125rem;
+	}
+}
+@media only screen and ( max-width: 25em ) {
+	.main-dashboard {
+		height: 920px;
+	}
+	.main-dashboard hgroup {
+		margin: 2rem 0;
+	}
+	.main-dashboard h1 {
+		font-size: 1.35rem;
+		padding-bottom: 0.25rem;
+	}
+	.main-dashboard h3 {
+		font-size: 0.85rem;
+	}
 }
 
-@media only screen and (min-width:300px) and (max-width:599px) {
-  .holderCircle::after {
-    width: 100%;
-    height: 100%;
-  }
-}
-
-@media only screen and (min-width:300px) and (max-width:599px) {
-  .dotCircle {
-    width: 100%;
-    height: 100%;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    margin: auto;
-  }
-}
 
 .title-box .title {
   font-weight: 600;
@@ -186,7 +253,7 @@
 .title-box span {
   text-shadow: 0 10px 10px rgba(0, 0, 0, .15);
   font-weight: 800;
-  color: #640178;
+  color: purple;
 }
 
 .title-box p {
