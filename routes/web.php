@@ -98,3 +98,8 @@ Route::get('/contactus/{name}/{email}/{comments}', 'IndexController@contactus');
 //User Login and Register
 Route::get('/user/login', 'IndexController@LoginView');
 Route::get('/user/register', 'IndexController@RegisterView');
+
+
+//User Ideas
+Route::get('/user/ideas', 'IdeasController@IndexView')->middleware('IsSessionValid');
+Route::get('/user/ideas/strategies-and-indicators', 'IdeasController@StrategiesIndicatorsView')->middleware('IsSessionValid');
