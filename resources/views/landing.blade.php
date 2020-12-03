@@ -76,7 +76,7 @@
                          <div class="section-title">
 
                               <h1 class="wow fadeInUp" data-wow-delay="0.6s" style="color:white">Welcome to  <strong style="color:white" >Plugin</strong> </h1>
-                              <p class="wow fadeInUp" data-wow-delay="0.9s"> "slogan or phrase goes here".</p>
+                              <p class="wow fadeInUp" data-wow-delay="0.9s"> <i>A HYBRID SOFTWARE </i></p>
 
 
                          </div>
