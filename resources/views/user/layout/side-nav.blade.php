@@ -162,6 +162,8 @@
             <ul class="nav navbar-nav">
 
 
+              <li class="dropdown">
+
               <li><a  id="MessageCenterCount" class="dropdown-toggle nav-link" data-toggle="dropdown"
                         aria-expanded="false" href="#"><i class="fa fa-comments" onclick="AlertCenter_(0)">
                         <div  class="nav-item dropdown no-arrow">
@@ -226,10 +228,13 @@
                 </a>
                 </li>
                 <li class="dropdown">
+<<<<<<< HEAD
 
 
               <li class="dropdown">
 
+=======
+>>>>>>> d2fb04d703a618221abf4a770f4b40a6d98a0982
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">My profile <span class="caret"></span></a>
                 <ul class="dropdown-menu">
                   <li><a href="#"><i class="fa fa-user-o fw"></i> My account</a></li>
