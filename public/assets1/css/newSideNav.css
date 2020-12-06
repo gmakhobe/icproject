@@ -36,9 +36,7 @@
     float: left;
     height: 100%;
     width: 290px;
-    background: -moz-linear-gradient(left, #a889e6 0%, #53005e 100%);
-    background: -webkit-linear-gradient(left, #a889e6 0%, #53005e 100%);
-    background: linear-gradient(to right,#a889e6 0%, #53005e 100%);
+    background:  #a889e6;
     color: #CCC;
     -webkit-transform: translateX(0);
     -moz-transform: translateX(0);
@@ -54,10 +52,9 @@
   }
 
   .side-nav .heading {
-    background-color: #7e34ffa0;
+    background-color: #a889e6;
     padding: 15px 15px 15px 30px;
     overflow: hidden;
-    border-bottom: 1px solid #ffffff
   }
   .side-nav .heading > img {
     border-radius: 50%;
