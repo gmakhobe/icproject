@@ -118,7 +118,7 @@
 
           <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
 
-            <!-- End : Alert Messages -->
+
 
             <script>
                 AlertCenterCall(1);
@@ -199,7 +199,6 @@
                 <div  class="nav-item dropdown no-arrow">
 
 
-                    <!-- Start : Alert Center -->
                     <div class="dropdown-menu dropdown-menu-right dropdown-list dropdown-menu-right animated--grow-in"
                         role="menu">
                         <h6 class="dropdown-header">Alerts Center</h6>
@@ -219,7 +218,6 @@
 
                         </div>
                     </div>
-                    <!-- End : Alert Center -->
 
                 </div>
                 </i>
