@@ -18,64 +18,80 @@
        <aside class="side-nav" id="show-side-navigation1">
 
       <div class="heading">
-        <img src="https://uniim1.shutterfly.com/ng/services/mediarender/THISLIFE/021036514417/media/23148907008/medium/1501685726/enhance" alt="">
-
+              @if ($IsBase64)
+                    <img class="border rounded-circle img-profile" src="{{ $ProfilePicture }}">
+                @else
+                  <img src="https://media.salon.com/2013/01/Facebook-no-profile-picture-icon-620x389.jpg" class="border rounded-circle img-profile">
+                @endif
         <div class="info">
-          <h3><a href="#">Mostafa Omar</a></h3>
-          <p>Lorem ipsum dolor sit amet consectetur.</p>
-        </div>
+
+          <h3><a href="#"  style="letter-spacing: 3px;color: rgba(190,184,184,0.9); color: white;">{{ $NameAndSurname }}</a></h3>
+
+
+
+                  </div>
       </div>
 
-      <div class="search" style="color:white">
-        <input type="text" placeholder="Type here"><i class="fa fa-search"></i>
-      </div>
       <ul class="categories">
-        <li><i class="fa fa-home fa-fw" aria-hidden="true"></i><a href="#"> About us</a>
-<!--aria-hidden 은  장애인을 위해 화면내용을 읽어주는 screen reader 등에서 해당 엘리먼트를 숨기기 위한 속성 -->
+        <li><i class="fa fa-home fa-fw" aria-hidden="true"></i>
+          <a href="/user/dashboard">Home</a>
+        </li>
+
+        <li>
+          <i class="fa fa-support fa-fw"></i><a href="/user/investment"> Investment</a>
+        </li>
+
+        <li>
+          <i class="fa fa-user fa-fw"></i>
+          <a href="/user/profile"> Profile</a>
           <ul class="side-nav-dropdown">
-            <li><a href="#">Lorem ipsum</a></li>
-            <li><a href="#">ipsum dolor</a></li>
-            <li><a href="#">dolor ipsum</a></li>
-            <li><a href="#">amet consectetur</a></li>
-            <li><a href="#">ipsum dolor sit</a></li>
+              <li><a href="#">Portfolio</a></li>
+              <li><a href="#">Awards</a></li>
+            </ul>
+        </li>
+
+
+        <li><i class="fa fa-support fa-fw"></i><a href="/user/rawmate"> Raw-Mate</a>
+          <ul class="side-nav-dropdown">
+            <li><a href="#">Seller Profile</a></li>
+            <li><a href="#">Timeline</a></li>
           </ul>
         </li>
-        <li><i class="fa fa-support fa-fw"></i><a href="#"> Subscribe us</a>
+
+        <li><i class="fa fa-users fa-fw"></i><a href="#">News & Events</a>
           <ul class="side-nav-dropdown">
-            <li><a href="#">Lorem ipsum</a></li>
-            <li><a href="#">ipsum dolor</a></li>
-            <li><a href="#">dolor ipsum</a></li>
-            <li><a href="#">amet consectetur</a></li>
-            <li><a href="#">ipsum dolor sit</a></li>
+            <li><a href="/user/news/articles">Articles</a></li>
+            <li><a href="/user/news/where-to-invest">Where to Invest</a></li>
+            <li><a href="/user/news/podcasts">Podcast & Radio</a></li>
+            <li><a href="/user/news/channels">Channels</a></li>
+            <li><a href="#">Portfolio</a></li>
+            <li><a href="/user/news/blog">Blogs</a></li>
           </ul>
         </li>
-        <li><i class="fa fa-envelope fa-fw"></i><a href="#"> Contact us</a>
+
+        <li><i class="fa fa-upload fa-fw"></i><a href="#"> Store-Room</a>
           <ul class="side-nav-dropdown">
-            <li><a href="#">Lorem ipsum</a></li>
-            <li><a href="#">ipsum dolor</a></li>
-            <li><a href="#">dolor ipsum</a></li>
-            <li><a href="#">amet consectetur</a></li>
-            <li><a href="#">ipsum dolor sit</a></li>
+            <li><a href="#">Dashboard</a></li>
           </ul>
         </li>
-        <li><i class="fa fa-users fa-fw"></i><a href="#"> Our team</a>
+
+        <li><i class="fa fa-bolt fa-fw"></i><a href="/user/ideas"> Ideas</a>
           <ul class="side-nav-dropdown">
-            <li><a href="#">Lorem ipsum</a></li>
-            <li><a href="#">ipsum dolor</a></li>
-            <li><a href="#">dolor ipsum</a></li>
-            <li><a href="#">amet consectetur</a></li>
-            <li><a href="#">ipsum dolor sit</a></li>
+            <li><a href="/user/ideas/strategies-and-indicators#">Strategies & Indicators</a></li>
+            <li><a href="#">Job Listing</a></li>
+            <li><a href="#">Financial Literacy</a></li>
+            <li><a href="#">Inventions</a></li>
           </ul>
         </li>
-        <li><i class="fa fa-bolt fa-fw"></i><a href="#"> Testimonials</a>
+
+        <li><i class="fa fa-plus-square fa-fw"></i><a href="#"> Create</a>
           <ul class="side-nav-dropdown">
-            <li><a href="#">Lorem ipsum</a></li>
-            <li><a href="#">ipsum dolor</a></li>
-            <li><a href="#">dolor ipsum</a></li>
-            <li><a href="#">amet consectetur</a></li>
-            <li><a href="#">ipsum dolor sit</a></li>
+            <li><a href="#">Event</a></li>
+            <li><a href="#">Company</a></li>
+            <li><a href="#">Service</a></li>
           </ul>
         </li>
+
         <p>Example:</p>
         <li><i class="fa fa-envelope-open-o fa-fw"></i><a href="#"> Messages <span class="num dang">56</span></a></li>
         <li><i class="fa fa-wrench fa-fw"></i><a href="#"> Settings <span class="num prim">6</span></a>
@@ -87,8 +103,6 @@
             <li><a href="#">ipsum dolor sit</a></li>
           </ul>
         </li>
-        <li><i class="fa fa-laptop fa-fw"></i><a href="#"> About UI &amp; UX <span class="num succ">43</span></a></li>
-        <li><i class="fa fa-comments-o fa-fw"></i><a href="#"> Something else</a></li>
       </ul>
     </aside>
     <section id="contents">
@@ -98,18 +112,6 @@
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
               <i class="fa fa-align-right"></i>
             </button>
-            <a class="navbar-brand" href="#">
-
-
-                    <span style="letter-spacing: 3px;color: rgba(190,184,184,0.9); color: white;">Following: 365 <!-- $FollowingCount --></span>
-            </a>
-            <br/>
-            <a class="navbar-brand" href="#">
-
-            <span style="letter-spacing: 3px;color: rgba(190,184,184,0.9); color: white;">Followers: 544 <!-- $FollowerCount --></span>
-            </span>
-            </a>
-
 
 
           </div>
@@ -158,6 +160,7 @@
         </ul>
 
             <ul class="nav navbar-nav">
+
 
               <li><a  id="MessageCenterCount" class="dropdown-toggle nav-link" data-toggle="dropdown"
                         aria-expanded="false" href="#"><i class="fa fa-comments" onclick="AlertCenter_(0)">
@@ -223,6 +226,10 @@
                 </a>
                 </li>
                 <li class="dropdown">
+
+
+              <li class="dropdown">
+
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">My profile <span class="caret"></span></a>
                 <ul class="dropdown-menu">
                   <li><a href="#"><i class="fa fa-user-o fw"></i> My account</a></li>
