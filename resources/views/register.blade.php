@@ -40,7 +40,7 @@
               <label>Confirm Password:</label>
               <input placeholder="*******" type="password" class="form-control" id="log-password"><br>
               <input type="checkbox"><span>Remember me</span>
-              <button id="loginBTN"  onclick="AppLogin()">log in</button>
+              <button id="loginBTN"  onclick="AppLogin()"> Register me </button>
 
 
               <div class="clearfix"></div>
@@ -52,7 +52,9 @@
               <i class="fas fa-user-plus fa-5x"></i>
               <h2>Welcome to Plugin!</h2>
               <p>Enter your personal details and start journey with us</p>
-              <button href="./login">Login in <i class="fas fa-arrow-circle-right"></i></button>
+
+
+              <button onclick="location.href='/user/login'">Login <i class="fas fa-arrow-circle-right"></i></button>
           </div>
       </div>
 </div>
