@@ -4,7 +4,7 @@
 <head>
 
     <!-- Start: Header Content -->
-    @include('/user/layout/header-style-1')
+
     <!-- End: Header Content -->
 
     <link rel="stylesheet" href="/assets1/fonts/fontawesome5-overrides.min.css">
@@ -39,7 +39,7 @@
     @include('/user/layout/side-nav')
     <!-- End: Vertical Left-SideBar by Jigar Mistry -->
     <!-- Start: Top Navbar -->
-    @include('/user/layout/top-nav')
+
     <!-- End: Top Navbar -->
 
     <div class="container">

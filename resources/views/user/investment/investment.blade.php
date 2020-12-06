@@ -4,7 +4,7 @@
 <head>
 
     <!-- Start: Header Content -->
-    @include('/user/layout/header-style-1')
+
     <!-- End: Header Content -->
 
     <link rel="stylesheet" href="/assets/fonts/fontawesome5-overrides.min.css">
@@ -25,6 +25,7 @@
     <link rel="stylesheet" href="/assets1/css/Minimal-tabs.css">
     <link rel="stylesheet" href="/assets1/css/Navbar-with-menu-and-login.css">
     <link rel="stylesheet" href="/assets1/css/Vertical-Left-SideBar-by-Jigar-Mistry.css">
+    <link rel="stylesheet" href="/assets1/css/newSideNav.css">
 </head>
 
 <body style="background-color: rgb(50,46,46);">
@@ -32,7 +33,7 @@
     @include('/user/layout/side-nav')
     <!-- End: Vertical Left-SideBar by Jigar Mistry -->
     <!-- Start: Top Navbar -->
-    @include('/user/layout/top-nav')
+
     <!-- End: Top Navbar -->
     <!--
     <div class="container m-2">
@@ -578,6 +579,89 @@
         </div>
 
     </div>
+    <script>
+
+$(function () {
+
+'use strict';
+
+(function () {
+//부트스트랩 햄버거 클릭시 사이드바 on off
+
+  var aside = $('.side-nav'),
+
+      showAsideBtn = $('.show-side-btn'),
+
+      contents = $('#contents');
+
+  showAsideBtn.on("click", function () {
+
+    $("#" + $(this).data('show')).toggleClass('show-side-nav');
+
+    contents.toggleClass('margin');
+
+  });
+
+  if ($(window).width() <= 767) {
+
+    aside.addClass('show-side-nav');
+
+  }
+  $(window).on('resize', function () {
+
+    if ($(window).width() > 767) {
+
+      aside.removeClass('show-side-nav');
+
+    }
+
+  });
+
+  // dropdown menu in the side nav
+  var slideNavDropdown = $('.side-nav-dropdown');
+
+  $('.side-nav .categories li').on('click', function () {
+
+    $(this).toggleClass('lol').siblings().removeClass('lol');
+
+    if ($(this).hasClass('lol')) {
+
+      $(this).find('.side-nav-dropdown').slideToggle('fast');
+
+      $(this).siblings().find('.side-nav-dropdown').slideUp('fast');
+
+    } else {
+
+      $(this).find('.side-nav-dropdown').slideUp('fast');
+
+    }
+
+  });
+
+  $('.side-nav .close-aside').on('click', function () {
+
+    $('#' + $(this).data('close')).addClass('show-side-nav');
+
+    contents.removeClass('margin');
+
+  });
+
+}());
+
+
+
+
+
+console.log(Chart.defaults.global);
+
+
+
+
+});
+
+
+
+</script>
 
     <!-- Start: Header Content -->
     @include('/user/layout/footer-style-1')
