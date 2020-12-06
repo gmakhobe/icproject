@@ -51,7 +51,7 @@
               <p>Enter your personal details and Continue journey with us</p>
               <button  onclick="location.href='/user/register'" >Register <i class="fas fa-arrow-circle-right"></i></button>
 
-              <button  onclick="location.href='user'"  style="background-color:black">Home <i class="fas fa-arrow-circle-right"></i></button>
+              <button  onclick="location.href='/'"  style="background-color:black">Home <i class="fas fa-arrow-circle-right"></i></button>
           </div>
       </div>
 </div>

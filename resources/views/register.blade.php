@@ -26,21 +26,21 @@
 
     <div class="container">
       <div class="login">
-         <div class="container">
+         <div class="container"  id="reg-container">
               <h1> Register </h1>
 
               <label>Name:</label>
-              <input  placeholder="john" type="text" class="form-control" id="log-email">
+              <input  placeholder="john" type="text" class="form-control" id="reg-name">
               <label>Surname:</label>
-              <input  placeholder="Doe" type="text" class="form-control" id="log-email">
+              <input  placeholder="Doe" type="text" class="form-control" id="reg-surname">
               <label>Email:</label>
-              <input  placeholder="john.Doe@gmail.com" type="email" class="form-control" id="log-email">
+              <input  placeholder="john.Doe@gmail.com" type="email" class="form-control" id="reg-email">
               <label>Password:</label>
-              <input placeholder="*******" type="password" class="form-control" id="log-password">
+              <input placeholder="*******" type="password" class="form-control" id="reg-password">
               <label>Confirm Password:</label>
-              <input placeholder="*******" type="password" class="form-control" id="log-password"><br>
+              <input placeholder="*******" type="password" class="form-control" id="reg-confirm-password"><br>
               <input type="checkbox"><span>Remember me</span>
-              <button id="loginBTN"  onclick="AppLogin()"> Register me </button>
+              <button id="registerBTN"  onclick="AppRegister()"> Register me </button>
 
 
               <div class="clearfix"></div>
@@ -55,7 +55,8 @@
 
 
               <button onclick="location.href='/user/login'">Login <i class="fas fa-arrow-circle-right"></i></button>
-          </div>
+              <button  onclick="location.href='/'"  style="background-color:black">Home <i class="fas fa-arrow-circle-right"></i></button>
+            </div>
       </div>
 </div>
 
