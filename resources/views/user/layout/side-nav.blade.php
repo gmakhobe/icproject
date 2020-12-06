@@ -198,7 +198,7 @@ console.log(Chart.defaults.global);
 
           <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
 
-            <!-- End : Alert Messages -->
+
 
             <script>
                 AlertCenterCall(1);
@@ -241,8 +241,6 @@ console.log(Chart.defaults.global);
         </ul>
 
             <ul class="nav navbar-nav">
-
-
               <li class="dropdown">
 
               <li><a  id="MessageCenterCount" class="dropdown-toggle nav-link" data-toggle="dropdown"
@@ -281,7 +279,6 @@ console.log(Chart.defaults.global);
                 <div  class="nav-item dropdown no-arrow">
 
 
-                    <!-- Start : Alert Center -->
                     <div class="dropdown-menu dropdown-menu-right dropdown-list dropdown-menu-right animated--grow-in"
                         role="menu">
                         <h6 class="dropdown-header">Alerts Center</h6>
@@ -301,7 +298,6 @@ console.log(Chart.defaults.global);
 
                         </div>
                     </div>
-                    <!-- End : Alert Center -->
 
                 </div>
                 </i>
