@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="/assets1/css/styles.css">
     <link rel="stylesheet" href="/assets1/css/Vertical-Left-SideBar-by-Jigar-Mistry.css">
     <link rel="stylesheet" href="/assets1/css/ideas.css">
+    <link rel="stylesheet" href="/assets1/css/indicatorsAndStrategies.css">
 
 </head>
 
@@ -25,6 +26,16 @@
      <!-- End: Top Navbar -->
 
 <div class="wrapper" style="width: 100%; display: table;">
+
+<nav> <!-- The nav link semantically marks your main site navigation -->
+        <ul>
+            <li><a href="#block1">Trending</a></li>
+            <li><a href="#block2">Financial Literacy</a></li>
+            <li><a href="#block3">Startegies and Indicators</a></li>
+            <li><a href="#block3"  style="color: rgb(245,67,67); font-size: 15px;">POST YOUR IDEA</a></li>
+        </ul>
+    </nav>
+
 <div style="display: table-row">
   <div class="item item--clip" style="padding-left: 150px; width: 600px; display: table-cell;">
     <div class="demo">
