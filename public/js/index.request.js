@@ -256,10 +256,12 @@ const AppRegister = () => {
 
 // User Login
 const AppLogin = () => {
+
     document.getElementById("loginBTN").style.display = "none";
     const email = document.getElementById("log-email").value;
     const password = document.getElementById("log-password").value;
     const csrf = document.getElementById("index-csrf").value;
+
 
     if (!email || !password || !csrf){
         swal("Login Alert", "All fields required!");
@@ -279,6 +281,7 @@ const AppLogin = () => {
     })
     .catch(error => swal("Login Alert", `An error occured: Email or Password is incorrect!`));
     document.getElementById("loginBTN").style.display = "block";
+    
 }
 // End User Login
 // News

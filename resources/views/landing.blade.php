@@ -102,7 +102,7 @@
 <div class="row">
   <div class="large-12 columns">
     <hgroup style="color:black;padding-left:40%">
-      <h1 style="text-shadow: 2px 2px purple;"> system features</h1>
+      <h1 style="text-shadow: 2px 2px purple;">System Features</h1>
 
     </hgroup>
 
