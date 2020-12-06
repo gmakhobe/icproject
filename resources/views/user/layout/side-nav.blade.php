@@ -116,21 +116,128 @@
 
           <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
 
+            <!-- End : Alert Messages -->
+
+            <script>
+                AlertCenterCall(1);
+                AlertCenterCall(0);
+
+                const AlertCenter_ = (param) => {
+
+                    let url = (param ? '/alert/alertcenter/off' : '/alert/messagecenter/off');
+
+                    fetch(url, {
+                            method: "get",
+                            headers: {
+                                'X-CSRF-TOKEN': "dasdsafc"
+                            }
+                        })
+                        .then(res => {
+                            if (res.status == 200)
+                                return res.text();
+                            else
+                                swal("Alert Center", "Could not remove alerts!");
+                        })
+                        .then(text => {
+
+                            (param ? AlertCenterCall(1) : AlertCenterCall(0))
+
+                        })
+                        .catch(res => {
+                            //Print any error related to sending request
+                            swal("Alert Center", `Failed to send a request for Alert Center -> ${res}`);
+                        });
+
+
+                }
+
+            </script>
+
+            <div class="d-none d-sm-block topbar-divider"></div>
+
+        </ul>
+
             <ul class="nav navbar-nav">
-              <li class="dropdown">
+
+              <li><a  id="MessageCenterCount" class="dropdown-toggle nav-link" data-toggle="dropdown"
+                        aria-expanded="false" href="#"><i class="fa fa-comments" onclick="AlertCenter_(0)">
+                        <div  class="nav-item dropdown no-arrow">
+
+                 <div class="dropdown-menu dropdown-menu-right dropdown-list dropdown-menu-right animated--grow-in"
+                     role="menu">
+                     <h6 class="dropdown-header">Message Alerts</h6>
+                     <div id="MessageCenter">
+                         <a class="d-flex align-items-center dropdown-item" href="#">
+                             <div class="font-weight-bold">
+                                 <div class="text-truncate">
+                                     <span>No messages!
+                                     </span>
+                                 </div>
+                                 <p class="small text-gray-500 mb-0">Plugin - Today</p>
+                             </div>
+                         </a>
+                     </div>
+
+                 </div>
+             </div>
+             <div class="shadow dropdown-list dropdown-menu dropdown-menu-right" aria-labelledby="alertsDropdown">
+             </div>
+
+                        </i>
+
+
+              </a></li>
+
+              <li>
+              <a id="AlertCenterCount" class="dropdown-toggle nav-link" data-toggle="dropdown"
+                        aria-expanded="false" href="#">
+                 <i class="fa fa-bell-o dropdown-toggle nav-link"  onclick="AlertCenter_(1)">
+                <div  class="nav-item dropdown no-arrow">
+
+
+                    <!-- Start : Alert Center -->
+                    <div class="dropdown-menu dropdown-menu-right dropdown-list dropdown-menu-right animated--grow-in"
+                        role="menu">
+                        <h6 class="dropdown-header">Alerts Center</h6>
+                        <div id="AlertCenter">
+
+                            <a class="d-flex align-items-center dropdown-item" href="#">
+                                <div class="mr-3">
+                                    <div class="bg-primary icon-circle">
+                                        <i class="fas fa-file-alt text-white"></i>
+                                    </div>
+                                </div>
+                                <div>
+                                    <span class="small text-gray-500">Today</span>
+                                    <p>No Notifications Today!</p>
+                                </div>
+                            </a>
+
+                        </div>
+                    </div>
+                    <!-- End : Alert Center -->
+
+                </div>
+                </i>
+
+                </a>
+                </li>
+                <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">My profile <span class="caret"></span></a>
                 <ul class="dropdown-menu">
                   <li><a href="#"><i class="fa fa-user-o fw"></i> My account</a></li>
-                  <li><a href="#"><i class="fa fa-envelope-o fw"></i> My inbox</a></li>
+                  <li><a href="#"><i class="fa fa-envelope-o fw"></i>Activity log</a></li>
                   <li><a href="#"><i class="fa fa-question-circle-o fw"></i> Help</a></li>
+                  <li><a href="#"><i class="fa fa-sign-out"></i> Settings</a></li
                   <li role="separator" class="divider"></li>
                   <li><a href="#"><i class="fa fa-sign-out"></i> Log out</a></li>
                 </ul>
               </li>
-              <li><a href="#"><i class="fa fa-comments"></i><span>23</span></a></li>
-              <li><a href="#"><i class="fa fa-bell-o"></i><span>98</span></a></li>
               <li><a href="#"><i data-show="show-side-navigation1" class="fa fa-bars show-side-btn"></i></a></li>
+
             </ul>
+
+            <
           </div>
         </div>
       </nav>
