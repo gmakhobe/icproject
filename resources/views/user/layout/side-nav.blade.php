@@ -104,15 +104,19 @@ console.log(Chart.defaults.global);
                   <img src="https://media.salon.com/2013/01/Facebook-no-profile-picture-icon-620x389.jpg" class="border rounded-circle img-profile">
                 @endif
         <div class="info">
-
-          <h3><a href="#"  style="letter-spacing: 3px;color: rgba(190,184,184,0.9); color: white;">{{ $NameAndSurname }}</a></h3>
-
-
-
-                  </div>
+          <h3><a href="#"  style="letter-spacing: 4px;color: rgba(190,184,184,0.9); color: white; font-size: 20px;">{{ $NameAndSurname }}</a></h3>
+      </div>
+      
       </div>
 
       <ul class="categories">
+      <div style="padding-left: 30px;">
+                    <i class="fab fa-laravel"></i>
+                    <span style="letter-spacing: 4px; color: rgba(190,184,184,0.9); color: white; font-size: 20px;">Following: 365 <!-- $FollowingCount --></span><br>
+                    <i class="fab fa-laravel"></i>
+                    <span style="letter-spacing: 4px; color: rgba(190,184,184,0.9); color: white; font-size: 20px;">Followers: 544 <!-- $FollowerCount --></span>
+            </div>
+
         <li><i class="fa fa-home fa-fw" aria-hidden="true"></i>
           <a href="/user/dashboard">Home</a>
         </li>
@@ -240,7 +244,11 @@ console.log(Chart.defaults.global);
 
         </ul>
 
+
             <ul class="nav navbar-nav">
+         
+
+
               <li class="dropdown">
 
               <li><a  id="MessageCenterCount" class="dropdown-toggle nav-link" data-toggle="dropdown"
