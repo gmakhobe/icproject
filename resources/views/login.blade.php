@@ -26,13 +26,14 @@
 
     <div class="container">
       <div class="login">
-         <div class="container">
+         <div class="container" id="reg-container">
+         
               <h1>Log in</h1>
               <input  placeholder="john255" type="text" class="form-control" id="log-email">login
               <input placeholder="*******" type="password" class="form-control" id="log-password"><br>
               <input type="checkbox"><span>Remember me</span>
               <a href="/forgotpassword">Forgot password?</a>
-              <button id="loginBTN"  onclick="AppLogin()">log in</button>
+              <button id="loginBTN" type="submit" onclick="AppLogin()">Log in</button>
 
               <hr><p>Or Connect With</p><hr>
               <ul>
@@ -69,7 +70,7 @@
         <script src="js/jquery.parallax.js"></script>
         <script src="js/smoothscroll.js"></script>
         <script src="js/wow.min.js"></script>
-<script src="js/custom.js"></script>
+        <script src="js/custom.js"></script>
     <!-- Register Modal -->
 
     <!-- End Register Modal -->
