@@ -4,7 +4,7 @@
 <head>
 
     <!-- Start: Header Content -->
-    @include('/user/layout/header-style-1')
+
     <!-- End: Header Content -->
 
     <link rel="stylesheet" href="/assets1/fonts/fontawesome5-overrides.min.css">
@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="/assets1/css/Pretty-Table.css">
     <link rel="stylesheet" href="/assets1/css/styles.css">
     <link rel="stylesheet" href="/assets1/css/Vertical-Left-SideBar-by-Jigar-Mistry.css">
+    <link rel="stylesheet" href="/assets1/css/newSideNav.css">
 </head>
 
 <body style="background-color: rgb(33,31,31);margin-top: 2px;height: 201px;">
@@ -28,7 +29,7 @@
     @include('/user/layout/side-nav')
     <!-- End: Vertical Left-SideBar by Jigar Mistry -->
     <!-- Start: Top Navbar -->
-    @include('/user/layout/top-nav')
+
     <!-- End: Top Navbar -->
 
     <div class="container m-2">
@@ -101,7 +102,7 @@
 
                     </div>
                     <div class="tab-pane fade" id="unprocessed">
-                        
+
                         <div class="row my-bg-color-grey">
 
                             <div class="col-md-12 col-sm-12 card my-bg-color-grey p-3">
@@ -139,7 +140,7 @@
                                             <p class="my-text-color-white"><strong>({{ $URM["ProductCurrency"] }}) {{ $URM["ProductPrice"] }}</strong><br/>
                                                 Per <i>{{ $URM["ProductMeasurement"] }}</i>
                                             </p>
-                                            
+
                                         </a>
                                     </div>
                                 </div>

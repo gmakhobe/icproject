@@ -4,7 +4,7 @@
 <head>
 
     <!-- Start: Header Content -->
-    @include('/user/layout/header-style-1')
+
     <!-- End: Header Content -->
 
     <link rel="stylesheet" href="/assets1/fonts/fontawesome5-overrides.min.css">
@@ -24,6 +24,7 @@
     <link rel="stylesheet" href="/assets1/css/Minimal-tabs.css">
     <link rel="stylesheet" href="/assets1/css/Navbar-with-menu-and-login.css">
     <link rel="stylesheet" href="/assets1/css/Vertical-Left-SideBar-by-Jigar-Mistry.css">
+    <link rel="stylesheet" href="/assets1/css/newSideNav.css">
 
 </head>
 
@@ -33,7 +34,7 @@
     @include('/user/layout/side-nav')
     <!-- End: Vertical Left-SideBar by Jigar Mistry -->
     <!-- Start: Top Navbar -->
-    @include('/user/layout/top-nav')
+
     <!-- End: Top Navbar -->
 
     <div class="container m-2">
@@ -56,7 +57,7 @@
                             </center>
 
                             <img class="my-news-card-img-news-view p-3" src="{{ $GetNewsBlogPost[0]["Image"] }}" alt="{{ $GetNewsBlogPost[0]["Heading"] }} image">
-                            
+
                             <center>
                             <i>
                                 <p class="my-text-color-white p-3">
@@ -68,7 +69,7 @@
                             </center>
 
                             <p class="card-text my-text-color-white  p-3">
-                                {{ $GetNewsBlogPost[0]["Post"] }}    
+                                {{ $GetNewsBlogPost[0]["Post"] }}
                             </p>
                         </div>
                         <br />

@@ -4,7 +4,7 @@
 <head>
 
     <!-- Start: Header Content -->
-    @include('/user/layout/header-style-1')
+
     <!-- End: Header Content -->
     <link rel="stylesheet" href="/assets1/fonts/fontawesome5-overrides.min.css">
     <link rel="stylesheet" href="/assets1/css/Article-List.css">
@@ -12,16 +12,17 @@
     <link rel="stylesheet" href="/assets1/css/styles.css">
     <link rel="stylesheet" href="/assets1/css/Vertical-Left-SideBar-by-Jigar-Mistry.css">
     <link rel="stylesheet" href="/assets1/css/ideas.css">
+    <link rel="stylesheet" href="/assets1/css/newSideNav.css">
 
 </head>
 
 <body>
-    
+
      <!-- Start: Vertical Left-SideBar by Jigar Mistry -->
      @include('/user/layout/side-nav')
      <!-- End: Vertical Left-SideBar by Jigar Mistry -->
      <!-- Start: Top Navbar -->
-     @include('/user/layout/top-nav')
+
      <!-- End: Top Navbar -->
 
 <div class="wrapper" style="width: 100%; display: table;">
@@ -33,7 +34,7 @@
       <button class="follow"><span>FOLLOW</span></button>
     </div>
     <div class="text">
-      
+
      <h3 style="letter-spacing: 3px;color: rgba(190,184,184,0.9); color: purple;">John Williams</h3>
       <p  style="font-size:15px;">2 December 2020, 07:34 AM</p>
       <br/>
@@ -46,7 +47,7 @@
             </p>
       </div>
       <br>
-     
+
                 <i style="font-size:24px; color:red;">❤</i>&nbsp;&nbsp;&nbsp;&nbsp;
                 <i class="fa fa-comments" style="font-size:24px; color:lightblue;"></i>&nbsp;&nbsp;&nbsp;&nbsp;
                 <i style="font-size:24px">&#128392;</i>&nbsp;&nbsp;&nbsp;&nbsp;
@@ -62,7 +63,7 @@
             <div class="card-body" style="display: table-cell; width: 300px">
                 <h4 class="card-title" style="color: rgb(245,67,67);">Related Posts</h4>
 
-                <div class="col" style="color: grey"><i class="fa fa-arrow-circle-right"></i>     
+                <div class="col" style="color: grey"><i class="fa fa-arrow-circle-right"></i>
                 <p class="description" style="color: grey"><strong>Worlds best strategy created by one of the memebers ...</strong></p>
                 </div>
                 <div class="col" style="color: grey"><i class="fa fa-arrow-circle-right"></i>
@@ -84,13 +85,13 @@
 
 
 
-  </div> 
+  </div>
 </div>
 
 
 
 
-  </div> 
+  </div>
 </div>
 
 

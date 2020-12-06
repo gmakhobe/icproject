@@ -4,9 +4,9 @@
 <head>
 
     <!-- Start: Header Content -->
-    @include('/user/layout/header-style-1')
+
     <!-- End: Header Content -->
-    
+
     <link rel="stylesheet" href="/assets1/fonts/fontawesome5-overrides.min.css">
     <link rel="stylesheet" href="/assets1/css/Dark-Footer-1.css">
     <link rel="stylesheet" href="/assets1/css/Dark-Footer-2.css">
@@ -20,15 +20,16 @@
     <link rel="stylesheet" href="/assets1/css/Pretty-Table.css">
     <link rel="stylesheet" href="/assets1/css/styles.css">
     <link rel="stylesheet" href="/assets1/css/Vertical-Left-SideBar-by-Jigar-Mistry.css">
+    <link rel="stylesheet" href="/assets1/css/newSideNav.css">
 </head>
 
 <body style="background-color: rgb(50,46,46);margin-top: 2px;">
-    
+
     <!-- Start: Vertical Left-SideBar by Jigar Mistry -->
     @include('/user/layout/side-nav')
     <!-- End: Vertical Left-SideBar by Jigar Mistry -->
     <!-- Start: Top Navbar -->
-    @include('/user/layout/top-nav')
+
     <!-- End: Top Navbar -->
 
     <div class="card border-danger shadow" style="height: 900px;background-color: rgb(33,31,31);width: 1147px;margin-left: 125px;">

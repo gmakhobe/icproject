@@ -4,7 +4,7 @@
 <head>
 
     <!-- Start: Header Content -->
-    @include('/user/layout/header-style-1')
+
     <!-- End: Header Content -->
 
     <link rel="stylesheet" href="/assets1/fonts/fontawesome5-overrides.min.css">
@@ -24,7 +24,7 @@
     <link rel="stylesheet" href="/assets1/css/Minimal-tabs.css">
     <link rel="stylesheet" href="/assets1/css/Navbar-with-menu-and-login.css">
     <link rel="stylesheet" href="/assets1/css/Vertical-Left-SideBar-by-Jigar-Mistry.css">
-
+    <link rel="stylesheet" href="/assets1/css/newSideNav.css">
 </head>
 
 <body>
@@ -33,7 +33,7 @@
     @include('/user/layout/side-nav')
     <!-- End: Vertical Left-SideBar by Jigar Mistry -->
     <!-- Start: Top Navbar -->
-    @include('/user/layout/top-nav')
+
     <!-- End: Top Navbar -->
 
     <div class="">
