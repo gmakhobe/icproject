@@ -58,7 +58,7 @@
 
 
             </style>
-          
+
           <ul class="nav navbar-nav text-dark flex-nowrap ml-auto" style="background-color: linear-gradient(to right,#a889e6 0%, #53005e 100%);">
             <li class="nav-item dropdown no-arrow mx-1" role="presentation">
                 <div onclick="AlertCenter_(1)" class="nav-item dropdown no-arrow">
@@ -177,7 +177,7 @@
                 </div>
             </li>
         </ul>
-  
+
         @if ($IsBase64)
             <img class="border rounded-circle img-profile" src="{{ $ProfilePicture }}">
         @else
@@ -190,7 +190,7 @@
                 {{ $NameAndSurname }}
             </span>
         </strong>
-  
+
     </nav>
 
 <!-- <nav class="navbar navbar-light navbar-expand bg-dark shadow mb-4 topbar static-top"
@@ -365,4 +365,4 @@
             <i class="fas fa-angle-up"></i>
         </a>
     </div>
-</nav> -->
+</nav> --> -->
