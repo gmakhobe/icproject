@@ -34,17 +34,12 @@
                     <span style="letter-spacing: 3px;color: rgba(190,184,184,0.9); color: white;">Followers: 544 <!-- $FollowerCount --></span>
             </div>
 
-            <!-- <div style="align-content: center;">
-                <a class="navbar-brand d-flex justify-content-center align-items-center sidebar-brand m-0"
-                    href="#">
-
-                    <div class="sidebar-brand-icon rotate-n-15">
-                        <i class="fab fa-laravel" style="color: rgba(231,213,213,0.9); color: white;"></i>
-                    </div>
-                    <div class="sidebar-brand-text mx-3">
-                        <span style="letter-spacing: 3px;color: rgba(190,184,184,0.9); color: white;">PLUG-IN</span></div>
-                </a>
-            </div> -->
+            <div style="padding-top: 75px; padding-left: 200px;">
+                <form class="search-container"> 
+                    <input type="text" id="search-bar" placeholder="What can we help you with today?">
+                    <a href="#"><img class="search-icon" src="http://www.endlessicons.com/wp-content/uploads/2012/12/search-icon.png"></a>
+                </form>
+            </div>
            
             <div class="collapse navbar-collapse" id="navcol-1"></div>
             <div class="dropdown no-arrow" style="color: rgb(186,40,180);"><a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false" href="#" style="color: rgb(172,52,183);">
@@ -67,14 +62,14 @@
     </nav>
 
     <!-- Start: Side By Side Section -->
-    <section class="main-dashboard">       
+    <section class="main-dashboard" >       
             <hgroup class="heading">
             <br>
                 <h1>Welcome Back, {{ $NameAndSurname }}</h1>
                 <h3>Just keep learning. Make new opportunities.</h3>
             </hgroup>
 
-            <div class="psd-line pos-rel" style="position: relative;width: 1003px;">
+            <div class="psd-line pos-rel" style="position: relative;width: 1003px; padding-left: 250px;">
                 <!-- Start: Circle Nav -->
                 <section class="iq-features">
                <div class="row align-items-center">
