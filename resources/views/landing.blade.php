@@ -53,8 +53,8 @@
 
                <ul class="nav navbar-nav navbar-right">
 
-               <a href="#about" class="wow fadeInUp smoothScroll section-btn btn btn-success" data-wow-delay="1.4s"  data-toggle="modal" data-target="#loginModal" data-backdrop="static">Login</a>
-                              <a href="#about" class="wow fadeInUp smoothScroll section-btn btn btn-success" data-wow-delay="1.4s"  data-toggle="modal" data-target="#registerModal" data-backdrop="static">Register</a>
+               <a onclick="location.href='/user/login'" class="wow fadeInUp smoothScroll section-btn btn btn-success" data-wow-delay="1.4s" >Login</a>
+                              <a onclick="location.href='/user/register'" class="wow fadeInUp smoothScroll section-btn btn btn-success" >Register</a>
 
                </ul>
           </div>
@@ -76,7 +76,7 @@
                          <div class="section-title">
 
                               <h1 class="wow fadeInUp" data-wow-delay="0.6s" style="color:white">Welcome to  <strong style="color:white" >Plugin</strong> </h1>
-                              <p class="wow fadeInUp" data-wow-delay="0.9s"> "slogan or phrase goes here".</p>
+                              <p class="wow fadeInUp" data-wow-delay="0.9s"> <i>A HYBRID SOFTWARE </i></p>
 
 
                          </div>
@@ -102,7 +102,7 @@
 <div class="row">
   <div class="large-12 columns">
     <hgroup style="color:black;padding-left:40%">
-      <h1 style="text-shadow: 2px 2px purple;"> system features</h1>
+      <h1 style="text-shadow: 2px 2px purple;">System Features</h1>
 
     </hgroup>
 

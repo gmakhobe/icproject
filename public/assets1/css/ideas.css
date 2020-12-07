@@ -1,0 +1,226 @@
+
+  .heading{
+    padding-left: 2.5%;
+  }
+  
+  .iq-features{
+    padding-left: 25%;
+  }
+  
+  
+  
+ 
+  
+  h1,
+  h3 {
+    margin-top: -0.5rem;
+    margin-bottom: 0;
+    color: purple;
+    /* text-shadow: 2px 2px black; */
+  }
+  
+  
+  .title-box .title {
+    font-weight: 600;
+    letter-spacing: 2px;
+    position: relative;
+    z-index: -1;
+  }
+  
+  .title-box span {
+    text-shadow: 0 10px 10px rgba(0, 0, 0, .15);
+    font-weight: 800;
+    color: purple;
+  }
+  
+  .title-box p {
+    font-size: 17px;
+    line-height: 2em;
+  }
+  
+  b {
+    font-weight: bold; }
+  
+  i {
+    font-style: italic; }
+  
+  
+  
+  /* Common 
+  ------------------------------------------- */
+  .follow {
+    border-radius: 50px;
+    background: -moz-linear-gradient(left, #a889e6 0%, #53005e 100%);
+    background: -webkit-linear-gradient(left, #a889e6 0%, #53005e 100%);
+    background: linear-gradient(to right,#a889e6 0%, #53005e 100%);
+  
+    background-color: #f4511e;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    font-size: 16px;
+    margin: 4px 14px;
+    opacity: 0.6;
+    transition: 0.3s;
+    display: inline-block;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .follow:hover {opacity: 1}
+    
+  .checked {
+    color: orange;
+  }
+  
+  .button4 {
+    height: 40px;
+    weight: 40px;
+    background-color: white;
+    color: black;
+    border: 2px solid purple;
+  }
+  
+  .button4:hover {
+    background-color: #e7e7e7;
+  }
+  
+  
+  code {
+    display: block;
+    position: relative;
+    margin-bottom: 1rem;
+    overflow: auto;
+    max-width: 90%;
+    padding: 35px 10px 7px;
+    border-radius: 5px; }
+    .comment code {
+      display: inline-block;
+      margin: 0;
+      padding: 2px 5px;
+      vertical-align: middle;
+      background: #EEE;
+      color: #777; }
+    code:before {
+      left: 0;
+      right: 0;
+      top: 0;
+      height: 25px;
+      line-height: 25.2px;
+      padding-left: 10px;
+      position: absolute;
+      font-weight: bold;
+      font-style: italic; }
+    .comment code:before {
+      content: none; }
+  
+  .code--css {
+    background: -moz-linear-gradient(left, #a889e6 0%, #53005e 100%);
+    background: -webkit-linear-gradient(left, #a889e6 0%, #53005e 100%);
+    background: linear-gradient(to right,#a889e6 0%, #53005e 100%);
+    border-radius: 10px 10px 10px 10px;
+    
+  }
+    .code--css:before {
+      /* background: purple; */
+      color: black; }
+  
+  .code--svg {
+    background: #e6f4be; }
+    .code--svg:before {
+      content: "SVG";
+      background: #d6ec93;
+      color: #678217; }
+  
+  .svg-defs {
+    position: absolute;
+    width: 0;
+    height: 0; }
+  
+  .wrapper {
+    width: 90%;
+    min-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem 0;
+  }
+    .wrapper:after {
+      content: '';
+      display: table;
+      width: 100%;
+      clear: both; }
+  
+  .item {
+    position: relative;
+    margin-bottom: 2em;
+    padding-bottom: 2em;
+    padding-right: 3em;
+    border-bottom: 1px solid #DDD;
+  }
+    .item:before {
+      position: absolute;
+      right: 0;
+      top: 0;
+      font: 2rem/1 Georgia, serif;
+      color: #EEE; }
+    .item:after {
+      content: '';
+      display: table;
+      width: 100%; }
+  
+  .demo {
+    position: relative;
+    float: left;
+    margin-right: 30px; }
+  
+  .text {
+    padding-left: 230px; }
+  
+  /* Browsers
+  ------------------------------- */
+  .browsers {
+    margin-top: 1.5rem; }
+  
+  .browser {
+    display: inline-block;
+    opacity: .2; }
+  
+  .has-support {
+    opacity: 1; }
+  
+  .browser:before {
+    content: "";
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    margin-right: 7px;
+    background: url(https://yoksel.github.io/assets/img/sprite-browsers.png) 0 0 no-repeat;
+    vertical-align: middle; }
+  
+  .firefox:before {
+    background-position: 0 0; }
+  
+  .chrome:before {
+    background-position: -30px 0; }
+  
+  .safari:before {
+    background-position: -60px 0; }
+  
+  .ie8:before {
+    background-position: -90px 0; }
+  
+  .ie9:before {
+    background-position: -90px 0; }
+  
+  .opera-13:before {
+    background-position: -120px 0; }
+  
+  .opera-12:before {
+    background-position: -150px 0; }
+  
+  .opera-mob:before {
+    background-position: -150px 0; }
+  
+  .opera-mini:before {
+    background-position: -150px 0; }
+  

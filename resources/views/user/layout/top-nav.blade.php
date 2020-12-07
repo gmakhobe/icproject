@@ -5,12 +5,6 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
 
-            <div>
-                    <i class="fab fa-laravel"></i>
-                    <span style="letter-spacing: 3px;color: rgba(190,184,184,0.9); color: white;">Following: 365 <!-- $FollowingCount --></span><br>
-                    <i class="fab fa-laravel"></i>
-                    <span style="letter-spacing: 3px;color: rgba(190,184,184,0.9); color: white;">Followers: 544 <!-- $FollowerCount --></span>
-            </div>
             <div style=" padding-left: 100px;">
                 <form class="search-container">
                     <input type="text" id="search-bar" placeholder="What can we help you with today?">
@@ -58,8 +52,9 @@
 
 
             </style>
-          
+
           <ul class="nav navbar-nav text-dark flex-nowrap ml-auto" style="background-color: linear-gradient(to right,#a889e6 0%, #53005e 100%);">
+          
             <li class="nav-item dropdown no-arrow mx-1" role="presentation">
                 <div onclick="AlertCenter_(1)" class="nav-item dropdown no-arrow">
                     <a id="AlertCenterCount" class="dropdown-toggle nav-link" data-toggle="dropdown"
@@ -177,7 +172,7 @@
                 </div>
             </li>
         </ul>
-  
+
         @if ($IsBase64)
             <img class="border rounded-circle img-profile" src="{{ $ProfilePicture }}">
         @else
@@ -190,7 +185,7 @@
                 {{ $NameAndSurname }}
             </span>
         </strong>
-  
+
     </nav>
 
 <!-- <nav class="navbar navbar-light navbar-expand bg-dark shadow mb-4 topbar static-top"
@@ -365,4 +360,4 @@
             <i class="fas fa-angle-up"></i>
         </a>
     </div>
-</nav> -->
+</nav> --> -->

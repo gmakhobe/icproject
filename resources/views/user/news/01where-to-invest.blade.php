@@ -4,7 +4,7 @@
 <head>
 
     <!-- Start: Header Content -->
-    @include('/user/layout/header-style-1')
+
     <!-- End: Header Content -->
 
     <link rel="stylesheet" href="/assets1/fonts/fontawesome5-overrides.min.css">
@@ -33,7 +33,7 @@
     @include('/user/layout/side-nav')
     <!-- End: Vertical Left-SideBar by Jigar Mistry -->
     <!-- Start: Top Navbar -->
-    @include('/user/layout/top-nav')
+
     <!-- End: Top Navbar -->
 
     <div class="container m-2">
@@ -49,7 +49,7 @@
                 <!-- End: Jumbotron -->
 
                 <!-- End: Nav -->
-                    
+
                         <div class="row">
 
                             <div class="col-md-12 card">
@@ -79,7 +79,7 @@
                                             </p>
                                         </center>
                                         <p class="my-text-color-white">
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris dictum lectus lectus, in gravida metus efficitur consequat. Donec consectetur maximus nunc at sollicitudin. Vestibulum sit amet molestie diam, in semper purus. Nulla pharetra enim sit amet eros condimentum, sed elementum erat porta. Sed ligula eros, viverra et libero eget, interdum placerat purus. Ut elementum enim in quam dapibus, porta fermentum dui malesuada. Nullam suscipit quam non luctus scelerisque. Suspendisse ac purus in diam malesuada hendrerit ut ac orci. Cras eu nunc ac arcu egestas egestas. In dolor nibh, laoreet ac efficitur non, lobortis non nunc. Fusce accumsan interdum ligula a tincidunt. 
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris dictum lectus lectus, in gravida metus efficitur consequat. Donec consectetur maximus nunc at sollicitudin. Vestibulum sit amet molestie diam, in semper purus. Nulla pharetra enim sit amet eros condimentum, sed elementum erat porta. Sed ligula eros, viverra et libero eget, interdum placerat purus. Ut elementum enim in quam dapibus, porta fermentum dui malesuada. Nullam suscipit quam non luctus scelerisque. Suspendisse ac purus in diam malesuada hendrerit ut ac orci. Cras eu nunc ac arcu egestas egestas. In dolor nibh, laoreet ac efficitur non, lobortis non nunc. Fusce accumsan interdum ligula a tincidunt.
                                         </p>
                                     </div>
                                     <div class="col-md-4">

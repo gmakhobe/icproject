@@ -4,225 +4,193 @@
 <head>
 
     <!-- Start: Header Content -->
-    @include('/user/layout/header-style-1')
+
     <!-- End: Header Content -->
     <link rel="stylesheet" href="/assets1/fonts/fontawesome5-overrides.min.css">
     <link rel="stylesheet" href="/assets1/css/Article-List.css">
     <link rel="stylesheet" href="/assets1/css/Profile-Card-1.css">
     <link rel="stylesheet" href="/assets1/css/styles.css">
     <link rel="stylesheet" href="/assets1/css/Vertical-Left-SideBar-by-Jigar-Mistry.css">
+    <link rel="stylesheet" href="/assets1/css/ideas.css">
+
+    <link rel="stylesheet" href="/assets1/css/newSideNav.css">
+
+    <link rel="stylesheet" href="/assets1/css/indicatorsAndStrategies.css">
+
+
 </head>
 
-<body style="background-color: rgb(50,46,46);">
-    
+<body>
+
      <!-- Start: Vertical Left-SideBar by Jigar Mistry -->
      @include('/user/layout/side-nav')
      <!-- End: Vertical Left-SideBar by Jigar Mistry -->
      <!-- Start: Top Navbar -->
-     @include('/user/layout/top-nav')
+
      <!-- End: Top Navbar -->
 
-    <div class="card-group" style="margin-left: 75px;background-color: #545d67;">
-        <div class="card">
-            <div class="card-body" style="background-color: #545d67;">
-                <h4 class="card-title" style="color: rgb(245,67,67);">FOLLOW</h4>
-                <!-- Start: Profile Card-1 -->
-                <div class="text-center profile-card" style="margin: 15px;background-color: #545d67;height: 349px;">
-                    <div class="profile-card-img" style="background-image: url(&quot;iceland.jpg&quot;);height: 150px;background-size: cover;background-color: #545d67;"></div>
-                    <div style="background-color: #545d67;"><img class="rounded-circle" style="margin-top:-70px;" src="/images/user-icon.svg" height="150px">
-                        <h3 style="color: rgb(245,67,67);">Joseph Mancuso</h3>
-                    </div>
-                    <div class="row" style="padding: 0;padding-bottom: 10px;padding-top: 20px;background-color: #545d67;color: rgb(244,247,251);">
-                        <div class="col-md-6">
-                            <p class="text-nowrap text-right">Friends</p>
-                            <p class="text-right" style="color: rgb(245,67,67);"><strong>12M</strong> </p>
-                        </div>
-                        <div class="col-md-6">
-                            <p class="text-left">Shares </p>
-                            <p class="text-left" style="color: rgb(245,67,67);"><strong>1M</strong> </p>
-                        </div>
-                    </div>
-                </div>
-                <!-- End: Profile Card-1 -->
+<div class="wrapper" style="width: 100%; display: table;">
+
+<nav> <!-- The nav link semantically marks your main site navigation -->
+        <ul>
+            <li><a href="#block1">Trending</a></li>
+            <li><a href="#block2">Financial Literacy</a></li>
+            <li><a href="#block3">Startegies and Indicators</a></li>
+            <li><a href="#block3"  style="color: rgb(245,67,67); font-size: 15px;">POST YOUR IDEA</a></li>
+        </ul>
+    </nav>
+
+<div style="display: table-row">
+  <div class="item item--clip" style="padding-left: 150px; width: 600px; display: table-cell;">
+    <div class="demo">
+      <img src="https://www.jamf.com/jamf-nation/img/default-avatars/generic-user-purple.png" alt="" style="width:150px; height:150px; align-content: center;"/><br><br>
+      <h4 class="card-title" style="color: rgb(245,67,67); font-size: 15px;">Friends: 4M | Shares: 1M</h4>
+      <button class="follow"><span>FOLLOW</span></button>
+    </div>
+    <div class="text">
+
+     <h3 style="letter-spacing: 3px;color: rgba(190,184,184,0.9); color: purple;">John Williams</h3>
+      <p  style="font-size:15px;">2 December 2020, 07:34 AM</p>
+      <br/>
+      <div class="code--css" style="font-size:15px;">
+            <p style="padding: 5%; color:white; letter-spacing: 1px;">
+                Consider a few stats about how the typical American handles money:
+                Nearly four out of every five U.S. workers live paycheck to paycheck.
+                Over a quarter never save any money from month to month.
+                Almost 75% are in some form of debt, and most assume they always will be.
+            </p>
+      </div>
+      <br>
+
+                <i style="font-size:24px; color:red;">❤</i>&nbsp;&nbsp;&nbsp;&nbsp;
+                <i class="fa fa-comments" style="font-size:24px; color:lightblue;"></i>&nbsp;&nbsp;&nbsp;&nbsp;
+                <i style="font-size:24px">&#128392;</i>&nbsp;&nbsp;&nbsp;&nbsp;
+                <span class="fa fa-star checked" style="font-size:15px;"></span>
+                <span class="fa fa-star checked" style="font-size:15px;"></span>
+                <span class="fa fa-star checked" style="font-size:15px;"></span>
+                <span class="fa fa-star" style="font-size:15px;"></span>
+                <span class="fa fa-star" style="font-size:15px;"></span> &nbsp;&nbsp;&nbsp;&nbsp;
+                <i class="fa fa-thumbs-up" style="font-size:24px; color:purple;">Invite </i>
             </div>
         </div>
-        <div class="card" style="margin-left: 17px;margin-right: 50px;">
-            <div class="card-body" style="background-color: #545d67;margin-left: 0px;margin-right: 0px;">
-                <h4 class="card-title" style="color: rgb(245,67,67);">Joseph Mancuso<br></h4>
-                <p class="card-text" style="margin-top: 112px;color: rgb(241,247,254);">I have managed to secure $50 Million investement for one of the Angel Investors.</p>
-                <!-- Start: Profile Card-1 -->
-                <div class="text-center profile-card" style="margin: 15px;background-color: #545d67;margin-top: 125px;margin-bottom: 20px;margin-left: 44px;">
-                    <div class="row" style="padding: 0;padding-bottom: 10px;padding-top: 20px;background-color: #545d67;margin-left: -61px;width: 373px;height: 85px;">
-                        <!-- Start: Media - Icon & Content + Font Awesome Link List -->
-                        <div class="media text-center" style="height: 88px;width: 268px;margin-left: 82px;">
-                            <div style="margin-left: -34px;"><span class="fa-stack fa-lg fa-2x"><i class="fa fa-eye fa-stack-1x fa-inverse"></i></span></div>
-                            <div><span class="fa-stack fa-lg fa-2x"><i class="fa fa-comment-o fa-stack-1x fa-inverse"></i></span></div>
-                            <div><span class="fa-stack fa-lg fa-2x"><i class="fab fa-pinterest-p fa-stack-1x fa-inverse"></i></span></div>
-                            <div><span class="fa-stack fa-lg fa-2x" style="color: rgb(249,250,251);"><i class="fa fa-star fa-star-o" style="height: 40px;width: 37px;"></i></span></div>
-                            <div><span class="fa-stack fa-lg fa-2x"><i class="fa fa-thumbs-o-up fa-star-o" style="height: 40px;width: 37px;color: rgb(249,250,251);"></i></span></div>
-                            <div></div>
-                        </div>
-                        <!-- End: Media - Icon & Content + Font Awesome Link List -->
-                    </div>
-                </div>
-                <!-- End: Profile Card-1 -->
-            </div>
-        </div>
-        <div class="card" style="background-color: #545d67;">
-            <div class="card-body" style="background-color: #545d67;margin-right: 0px;margin-left: 0px;">
+
+            <div class="card-body" style="display: table-cell; width: 300px">
                 <h4 class="card-title" style="color: rgb(245,67,67);">Related Posts</h4>
-                <div class="col" style="color: rgb(218,225,231);"><i class="fa fa-arrow-circle-right"></i>
-                    <p class="description" style="color: rgb(218,225,231);"><strong>Covid-19&nbsp; promises $50 Billion .......</strong></p>
-                </div><i class="fa fa-arrow-circle-right" style="color: rgb(218,225,231);"></i>
-                <div class="col">
-                    <p class="description" style="color: rgb(218,225,231);"><strong>Worlds best strategy created by one of the memebers....</strong></p>
+
+                <div class="col" style="color: grey"><i class="fa fa-arrow-circle-right"></i>
+                <p class="description" style="color: grey"><strong>Worlds best strategy created by one of the memebers ...</strong></p>
                 </div>
-                <div class="col" style="color: rgb(218,225,231);"><i class="fa fa-arrow-circle-right"></i>
-                    <p class="description"><strong>Top start up reaches finals in Finland....</strong></p>
+                <div class="col" style="color: grey"><i class="fa fa-arrow-circle-right"></i>
+                    <p class="description"><strong>Top start up reaches finals in Finland ...</strong></p>
                 </div>
-                <div class="col" style="color: rgb(218,225,231);"><i class="fa fa-arrow-circle-right"></i>
-                    <p class="description"><strong>Investors look forward to new tech.....</strong></p>
+                <div class="col" style="color: grey"><i class="fa fa-arrow-circle-right"></i>
+                    <p class="description"><strong>Investors look forward to new tech ...</strong></p>
                 </div>
-                <div class="col" style="color: rgb(218,225,231);"><i class="fa fa-arrow-circle-right"></i>
-                    <p class="description"><strong>How I made my First $1 Million in......</strong></p>
+                <div class="col" style="color: grey"><i class="fa fa-arrow-circle-right"></i>
+                    <p class="description"><strong>How I made my First $1 Million in ...</strong></p>
                 </div>
             </div>
         </div>
     </div>
-    <div class="card-group" style="margin-left: 75px;background-color: #545d67;">
-        <div class="card">
-            <div class="card-body" style="background-color: #545d67;">
-                <h4 class="card-title" style="color: rgb(245,67,67);">FOLLOW</h4>
-                <!-- Start: Profile Card-1 -->
-                <div class="text-center profile-card" style="margin: 15px;background-color: #545d67;height: 349px;">
-                    <div class="profile-card-img" style="background-image: url(&quot;iceland.jpg&quot;);height: 150px;background-size: cover;background-color: #545d67;"></div>
-                    <div style="background-color: #545d67;"><img class="rounded-circle" style="margin-top:-70px;" src="/images/user-icon.svg" height="150px">
-                        <h3 style="color: rgb(245,67,67);">Pasco Smith</h3>
-                    </div>
-                    <div class="row" style="padding: 0;padding-bottom: 10px;padding-top: 20px;background-color: #545d67;color: rgb(244,247,251);">
-                        <div class="col-md-6">
-                            <p class="text-nowrap text-right">Friends</p>
-                            <p class="text-right" style="color: rgb(245,67,67);"><strong>12M</strong> </p>
-                        </div>
-                        <div class="col-md-6">
-                            <p class="text-left">Shares </p>
-                            <p class="text-left" style="color: rgb(245,67,67);"><strong>1M</strong> </p>
-                        </div>
-                    </div>
-                </div>
-                <!-- End: Profile Card-1 -->
-            </div>
-        </div>
-        <div class="card" style="margin-left: 17px;margin-right: 50px;">
-            <div class="card-body" style="background-color: #545d67;margin-left: 0px;margin-right: 0px;">
-                <h4 class="card-title" style="color: rgb(245,67,67);">Pasco Smith<br></h4>
-                <p class="card-text" style="margin-top: 112px;color: rgb(241,247,254);">I have managed to secure $50 Million investement for one of the Angel Investors.</p>
-                <!-- Start: Profile Card-1 -->
-                <div class="text-center profile-card" style="margin: 15px;background-color: #545d67;margin-top: 125px;margin-bottom: 20px;margin-left: 44px;">
-                    <div class="row" style="padding: 0;padding-bottom: 10px;padding-top: 20px;background-color: #545d67;margin-left: -61px;width: 373px;height: 85px;">
-                        <!-- Start: Media - Icon & Content + Font Awesome Link List -->
-                        <div class="media text-center" style="height: 88px;width: 268px;margin-left: 82px;">
-                            <div style="margin-left: -34px;"><span class="fa-stack fa-lg fa-2x"><i class="fa fa-eye fa-stack-1x fa-inverse"></i></span></div>
-                            <div><span class="fa-stack fa-lg fa-2x"><i class="fa fa-comment-o fa-stack-1x fa-inverse"></i></span></div>
-                            <div><span class="fa-stack fa-lg fa-2x"><i class="fab fa-pinterest-p fa-stack-1x fa-inverse"></i></span></div>
-                            <div><span class="fa-stack fa-lg fa-2x" style="color: rgb(249,250,251);"><i class="fa fa-star fa-star-o" style="height: 40px;width: 37px;"></i></span></div>
-                            <div><span class="fa-stack fa-lg fa-2x"><i class="fa fa-thumbs-o-up fa-star-o" style="height: 40px;width: 37px;color: rgb(249,250,251);"></i></span></div>
-                            <div></div>
-                        </div>
-                        <!-- End: Media - Icon & Content + Font Awesome Link List -->
-                    </div>
-                </div>
-                <!-- End: Profile Card-1 -->
-            </div>
-        </div>
-        <div class="card" style="background-color: #545d67;">
-            <div class="card-body" style="background-color: #545d67;margin-right: 0px;margin-left: 0px;">
-                <h4 class="card-title" style="color: rgb(245,67,67);">Related Posts</h4>
-                <div class="col" style="color: rgb(218,225,231);"><i class="fa fa-arrow-circle-right"></i>
-                    <p class="description" style="color: rgb(218,225,231);"><strong>Covid-19&nbsp; promises $50 Billion .......</strong></p>
-                </div><i class="fa fa-arrow-circle-right" style="color: rgb(218,225,231);"></i>
-                <div class="col">
-                    <p class="description" style="color: rgb(218,225,231);"><strong>Worlds best strategy created by one of the memebers....</strong></p>
-                </div>
-                <div class="col" style="color: rgb(218,225,231);"><i class="fa fa-arrow-circle-right"></i>
-                    <p class="description"><strong>Top start up reaches finals in Finland....</strong></p>
-                </div>
-                <div class="col" style="color: rgb(218,225,231);"><i class="fa fa-arrow-circle-right"></i>
-                    <p class="description"><strong>Investors look forward to new tech.....</strong></p>
-                </div>
-                <div class="col" style="color: rgb(218,225,231);"><i class="fa fa-arrow-circle-right"></i>
-                    <p class="description"><strong>How I made my First $1 Million in......</strong></p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="card-group" style="margin-left: 75px;background-color: #545d67;">
-        <div class="card">
-            <div class="card-body" style="background-color: #545d67;">
-                <h4 class="card-title" style="color: rgb(245,67,67);">FOLLOW</h4>
-                <!-- Start: Profile Card-1 -->
-                <div class="text-center profile-card" style="margin: 15px;background-color: #545d67;height: 349px;">
-                    <div class="profile-card-img" style="background-image: url(&quot;iceland.jpg&quot;);height: 150px;background-size: cover;background-color: #545d67;"></div>
-                    <div style="background-color: #545d67;"><img class="rounded-circle" style="margin-top:-70px;" src="/images/user-icon.svg" height="150px">
-                        <h3 style="color: rgb(245,67,67);">Warren Buffet</h3>
-                    </div>
-                    <div class="row" style="padding: 0;padding-bottom: 10px;padding-top: 20px;background-color: #545d67;color: rgb(244,247,251);">
-                        <div class="col-md-6">
-                            <p class="text-nowrap text-right">Friends</p>
-                            <p class="text-right" style="color: rgb(245,67,67);"><strong>12M</strong> </p>
-                        </div>
-                        <div class="col-md-6">
-                            <p class="text-left">Shares </p>
-                            <p class="text-left" style="color: rgb(245,67,67);"><strong>1M</strong> </p>
-                        </div>
-                    </div>
-                </div>
-                <!-- End: Profile Card-1 -->
-            </div>
-        </div>
-        <div class="card" style="margin-left: 17px;margin-right: 50px;">
-            <div class="card-body" style="background-color: #545d67;margin-left: 0px;margin-right: 0px;">
-                <h4 class="card-title" style="color: rgb(245,67,67);">Warren Buffet<br></h4>
-                <p class="card-text" style="margin-top: 112px;color: rgb(241,247,254);">I have managed to secure $50 Million investement for one of the Angel Investors.</p>
-                <!-- Start: Profile Card-1 -->
-                <div class="text-center profile-card" style="margin: 15px;background-color: #545d67;margin-top: 125px;margin-bottom: 20px;margin-left: 44px;">
-                    <div class="row" style="padding: 0;padding-bottom: 10px;padding-top: 20px;background-color: #545d67;margin-left: -61px;width: 373px;height: 85px;">
-                        <!-- Start: Media - Icon & Content + Font Awesome Link List -->
-                        <div class="media text-center" style="height: 88px;width: 268px;margin-left: 82px;">
-                            <div style="margin-left: -34px;"><span class="fa-stack fa-lg fa-2x"><i class="fa fa-eye fa-stack-1x fa-inverse"></i></span></div>
-                            <div><span class="fa-stack fa-lg fa-2x"><i class="fa fa-comment-o fa-stack-1x fa-inverse"></i></span></div>
-                            <div><span class="fa-stack fa-lg fa-2x"><i class="fab fa-pinterest-p fa-stack-1x fa-inverse"></i></span></div>
-                            <div><span class="fa-stack fa-lg fa-2x" style="color: rgb(249,250,251);"><i class="fa fa-star fa-star-o" style="height: 40px;width: 37px;"></i></span></div>
-                            <div><span class="fa-stack fa-lg fa-2x"><i class="fa fa-thumbs-o-up fa-star-o" style="height: 40px;width: 37px;color: rgb(249,250,251);"></i></span></div>
-                            <div></div>
-                        </div>
-                        <!-- End: Media - Icon & Content + Font Awesome Link List -->
-                    </div>
-                </div>
-                <!-- End: Profile Card-1 -->
-            </div>
-        </div>
-        <div class="card" style="background-color: #545d67;">
-            <div class="card-body" style="background-color: #545d67;margin-right: 0px;margin-left: 0px;">
-                <h4 class="card-title" style="color: rgb(245,67,67);">Related Posts</h4>
-                <div class="col" style="color: rgb(218,225,231);"><i class="fa fa-arrow-circle-right"></i>
-                    <p class="description" style="color: rgb(218,225,231);"><strong>Covid-19&nbsp; promises $50 Billion .......</strong></p>
-                </div><i class="fa fa-arrow-circle-right" style="color: rgb(218,225,231);"></i>
-                <div class="col">
-                    <p class="description" style="color: rgb(218,225,231);"><strong>Worlds best strategy created by one of the memebers....</strong></p>
-                </div>
-                <div class="col" style="color: rgb(218,225,231);"><i class="fa fa-arrow-circle-right"></i>
-                    <p class="description"><strong>Top start up reaches finals in Finland....</strong></p>
-                </div>
-                <div class="col" style="color: rgb(218,225,231);"><i class="fa fa-arrow-circle-right"></i>
-                    <p class="description"><strong>Investors look forward to new tech.....</strong></p>
-                </div>
-                <div class="col" style="color: rgb(218,225,231);"><i class="fa fa-arrow-circle-right"></i>
-                    <p class="description"><strong>How I made my First $1 Million in......</strong></p>
-                </div>
-            </div>
-        </div>
-    </div>
+
+  </div>
+  </div>
+      <!-- Other POST -->
+
+
+
+  </div>
+</div>
+
+
+
+
+  </div>
+</div>
+
+<script>
+
+$(function () {
+
+'use strict';
+
+(function () {
+//부트스트랩 햄버거 클릭시 사이드바 on off
+
+  var aside = $('.side-nav'),
+
+      showAsideBtn = $('.show-side-btn'),
+
+      contents = $('#contents');
+
+  showAsideBtn.on("click", function () {
+
+    $("#" + $(this).data('show')).toggleClass('show-side-nav');
+
+    contents.toggleClass('margin');
+
+  });
+
+  if ($(window).width() <= 767) {
+
+    aside.addClass('show-side-nav');
+
+  }
+  $(window).on('resize', function () {
+
+    if ($(window).width() > 767) {
+
+      aside.removeClass('show-side-nav');
+
+    }
+
+  });
+
+  // dropdown menu in the side nav
+  var slideNavDropdown = $('.side-nav-dropdown');
+
+  $('.side-nav .categories li').on('click', function () {
+
+    $(this).toggleClass('lol').siblings().removeClass('lol');
+
+    if ($(this).hasClass('lol')) {
+
+      $(this).find('.side-nav-dropdown').slideToggle('fast');
+
+      $(this).siblings().find('.side-nav-dropdown').slideUp('fast');
+
+    } else {
+
+      $(this).find('.side-nav-dropdown').slideUp('fast');
+
+    }
+
+  });
+
+  $('.side-nav .close-aside').on('click', function () {
+
+    $('#' + $(this).data('close')).addClass('show-side-nav');
+
+    contents.removeClass('margin');
+
+  });
+
+}());
+
+
+
+
+
+console.log(Chart.defaults.global);
+
+
+
+
+});
+
+
+
+</script>
      <!-- Start: Header Content -->
      @include('/user/layout/footer-style-1')
      <!-- End: Header Content -->
