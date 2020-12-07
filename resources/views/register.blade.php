@@ -30,11 +30,11 @@
               <h1> Register </h1>
 
               <label>Name:</label>
-              <input  placeholder="john" type="text" class="form-control" id="reg-name">
+              <input  placeholder="John" type="text" class="form-control" id="reg-name">
               <label>Surname:</label>
               <input  placeholder="Doe" type="text" class="form-control" id="reg-surname">
               <label>Email:</label>
-              <input  placeholder="john.Doe@gmail.com" type="email" class="form-control" id="reg-email">
+              <input  placeholder="John.Doe@gmail.com" type="email" class="form-control" id="reg-email">
               <label>Password:</label>
               <input placeholder="*******" type="password" class="form-control" id="reg-password">
               <label>Confirm Password:</label>
