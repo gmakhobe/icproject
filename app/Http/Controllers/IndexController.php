@@ -82,12 +82,14 @@ class IndexController extends Controller
         $User = DB::select('select * from users where ActivationHash = ?', [$code]);
 
         if ($code == 1){
-            return view('landing', ["Title" => "IC Application", "ActivationVal"=> 1]);
+            //return view('landing', ["Title" => "IC Application", "ActivationVal"=> 1]);
+            return redirect("/user/login");
         }
 
         if (isset($User[0]->UserId)){
             DB::update('update users set AccountActive = ?, ActivationHash = ? where ActivationHash = ?', ['Yes',"$code-Used", $code]);
-            return view('landing', ["Title" => "IC Application", "ActivationVal"=> 1]);
+            //return view('landing', ["Title" => "IC Application", "ActivationVal"=> 1]);
+            return redirect("/user/login");
         }else{
             return redirect('/');
         }
