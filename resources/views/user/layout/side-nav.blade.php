@@ -163,7 +163,7 @@ console.log(Chart.defaults.global);
           <ul class="side-nav-dropdown">
             <li><a href="/user/ideas/strategies-and-indicators#">Strategies & Indicators</a></li>
             <li><a href="#">Job Listing</a></li>
-            <li><a href="#">Financial Literacy</a></li>
+            <li><a href="/user/ideas/financial-literacy#">Financial Literacy</a></li>
             <li><a href="#">Inventions</a></li>
           </ul>
         </li>
