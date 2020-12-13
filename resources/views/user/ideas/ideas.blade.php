@@ -34,8 +34,8 @@
 <nav> <!-- The nav link semantically marks your main site navigation -->
         <ul>
             <li><a href="#block1">Trending</a></li>
-            <li><a href="#block2">Financial Literacy</a></li>
-            <li><a href="#block3">Startegies and Indicators</a></li>
+            <li><a href="/user/ideas/financial-literacy#">Financial Literacy</a></li>
+            <li><a href="/user/ideas/strategies-and-indicators#">Startegies and Indicators</a></li>
             <li><a href="#block3"  style="color: rgb(245,67,67); font-size: 15px;">POST YOUR IDEA</a></li>
         </ul>
     </nav>
@@ -47,8 +47,8 @@
       <h4 class="card-title" style="color: rgb(245,67,67); font-size: 15px;">Friends: 4M | Shares: 1M</h4>
       <button class="follow"><span>FOLLOW</span></button>
     </div>
-    <div class="text">
 
+    <div class="text">
      <h3 style="letter-spacing: 3px;color: rgba(190,184,184,0.9); color: purple;">John Williams</h3>
       <p  style="font-size:15px;">2 December 2020, 07:34 AM</p>
       <br/>

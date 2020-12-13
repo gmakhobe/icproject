@@ -103,3 +103,4 @@ Route::get('/user/register', 'IndexController@RegisterView');
 //User Ideas
 Route::get('/user/ideas', 'IdeasController@IndexView')->middleware('IsSessionValid');
 Route::get('/user/ideas/strategies-and-indicators', 'IdeasController@StrategiesIndicatorsView')->middleware('IsSessionValid');
+Route::get('/user/ideas/financial-literacy', 'IdeasController@FinancialLiteracy')->middleware('IsSessionValid');

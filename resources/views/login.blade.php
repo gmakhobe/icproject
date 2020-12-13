@@ -31,7 +31,7 @@
               <h1>Log in</h1>
 
               <label>Username/Email</label>
-              <input  placeholder="john255" type="text" class="form-control" id="log-email">
+              <input  placeholder="JohnDoe" type="text" class="form-control" id="log-email">
 
               <label>Password</label>
               <input placeholder="*******" type="password" class="form-control" id="log-password"><br>
@@ -41,7 +41,7 @@
 
 
               <div class="clearfix"></div>
-              <span class="copyright">&copy;2019</span>
+              <span class="copyright">&copy;PLUGIN</span>
          </div>
       </div>
       <div class="register">

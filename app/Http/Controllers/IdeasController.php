@@ -26,4 +26,14 @@ class IdeasController extends Controller
         //Return view injected with a ass array
         return view('user/ideas/strategies-indicators', $properties);
     }
+
+    public function FinancialLiteracy(){
+        //Set session info
+        $UserInformation = AppSession::sessionGetUserInfo();
+        $UserProfilePicture = AppSession::sessionGetUserProfilePicture();
+        //Properties to inject
+        $properties = ["Name" => $GLOBALS['AppTitle'], "Title" => "Ideas", "NameAndSurname"=> $UserInformation["Name"]." ".$UserInformation["Surname"], "ProfilePicture"=> $UserProfilePicture["Base64"], "IsBase64"=> $UserProfilePicture["IsBase64"]];
+        //Return view injected with a ass array
+        return view('user/ideas/financial-literacy', $properties);
+    }
 }
