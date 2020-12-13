@@ -153,10 +153,7 @@ console.log(Chart.defaults.global);
           </ul>
         </li>
 
-        <li><i class="fa fa-upload fa-fw"></i><a href="#"> Store-Room</a>
-          <ul class="side-nav-dropdown">
-            <li><a href="#">Dashboard</a></li>
-          </ul>
+        <li><i class="fa fa-upload fa-fw"></i><a href="/user/storeroom"> Store-Room</a>
         </li>
 
         <li><i class="fa fa-bolt fa-fw"></i><a href="/user/ideas"> Ideas</a>
