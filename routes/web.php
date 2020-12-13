@@ -42,6 +42,9 @@ Route::get('/user/profile/SaveUserAddressInfo/{address}/{city}/{country}', 'User
 // /User/Create
 Route::get('/user/create', 'CreateController@Index')->middleware('IsSessionValid');
 
+// /User/Store-Room
+Route::get('/user/storeroom', 'UserController@Storeroom')->middleware('IsSessionValid');
+
 // /User/News /user/news/  
 Route::get('/user/news', 'NewsController@NewsView')->middleware('IsSessionValid');
 Route::get('/user/news/read/{heading}/{id}', 'NewsController@NewsViewRead')->middleware('IsSessionValid');
@@ -81,6 +84,7 @@ Route::get('/user/rawmate/seller/{name}/{id}', 'RawmateterialController@RawmateS
 
 // /User/profile
 Route::get('/user/profile', 'ProfileController@ProfileView')->middleware('IsSessionValid');
+Route::get('/user/profile/awards', 'ProfileController@AwardsView')->middleware('IsSessionValid');
 
 // /User/Create
 Route::get('/user/create', 'CreateController@CreateView')->middleware('IsSessionValid');

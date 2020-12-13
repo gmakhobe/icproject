@@ -16,4 +16,14 @@ class ProfileController extends Controller
          //Return view injected with a ass array
          return view('user/profile/profile', $properties);
     }
+
+    public function AwardsView(){
+        //Set session info
+        $UserInformation = AppSession::sessionGetUserInfo();
+        $UserProfilePicture = AppSession::sessionGetUserProfilePicture();
+        //Properties to inject
+        $properties = ["Name" => $GLOBALS['AppTitle'], "Title" => "Profile", "NameAndSurname"=> $UserInformation["Name"]." ".$UserInformation["Surname"], "ProfilePicture"=> $UserProfilePicture["Base64"], "IsBase64"=> $UserProfilePicture["IsBase64"]];
+        //Return view injected with a ass array
+        return view('user/profile/awards', $properties);
+   }
 }

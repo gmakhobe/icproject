@@ -22,6 +22,16 @@ class UserController extends Controller
         return view("user/dashboard", $properties);
     }
 
+    public function Storeroom(Request $request){
+        //Properties to be injected
+        $userInfo = AppSession::sessionGetUserInfo();
+        $userProfilePicture = AppSession::sessionGetUserProfilePicture();
+
+        $properties = ["Name" => $GLOBALS['AppTitle'], "Title" => "Dashboard", "NameAndSurname"=> $userInfo["Name"]." ".$userInfo["Surname"], "ProfilePicture"=> $userProfilePicture["Base64"], "IsBase64"=> $userProfilePicture["IsBase64"]];
+        
+        return view("user/storeroom", $properties);
+    }
+
     public function Profile(Request $request){
         
     }

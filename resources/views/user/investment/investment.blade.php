@@ -28,7 +28,7 @@
     <link rel="stylesheet" href="/assets1/css/newSideNav.css">
 </head>
 
-<body style="background-color: rgb(50,46,46);">
+<body>
     <!-- Start: Vertical Left-SideBar by Jigar Mistry -->
     @include('/user/layout/side-nav')
     <!-- End: Vertical Left-SideBar by Jigar Mistry -->
@@ -132,7 +132,7 @@
         <div class="row">
 
             <div class="col-md-1"></div>
-            <div class="col-md-11 card my-bg-color-grey">
+            <div class="col-md-11 card">
 
                 <div class="card-body">
 

@@ -102,7 +102,7 @@
                                     <span class="forActive"></span>
                                 </span>
                             </a>
-                            <a href="">
+                            <a href="/user/storeroom">
                             <span class="itemDot itemDot5" data-tab="5">
                                 <i class="fa fa-upload"></i>
                                 <span class="forActive"></span>
