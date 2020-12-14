@@ -48,27 +48,27 @@
                         <div class="card-body my-bg-color-grey">
 
                             <center>
-                            <h1 class="p-3 my-text-color-white">
+                            <h1 class="p-3 my-text-color-white" style="color: purple;">
                                 {{ $GetNewsBlogPost[0]["Heading"] }}
                             </h1>
-                            <p class="p-3 my-text-color-white">
+                            <h3 class="p-3 my-text-color-white">
                                 {{ $GetNewsBlogPost[0]["SubHeading"] }}
-                            </p>
+</h3>
                             </center>
 
-                            <img class="my-news-card-img-news-view p-3" src="{{ $GetNewsBlogPost[0]["Image"] }}" alt="{{ $GetNewsBlogPost[0]["Heading"] }} image">
+                            <img class="my-news-card-img-news-view p-3" src="https://www.nav.com/wp-content/uploads/2014/12/generic_hro_6.jpg" alt="{{ $GetNewsBlogPost[0]["Heading"] }} image" style="padding-left: 15%;">
 
                             <center>
                             <i>
-                                <p class="my-text-color-white p-3">
+                                <h5 class="my-text-color-white p-3">
                                     <a href="/user/news/blog/author/{{ $GetNewsBlogPost[0]["Username"] }}/{{ $GetNewsBlogPost[0]["BlogId"] }}"><span class="my-text-color-white">{{ $GetNewsBlogPost[0]["Username"] }}</span></a> /
                                     {{ $GetNewsBlogPost[0]["TimeSpan"] }} Min /
                                     {{ $GetNewsBlogPost[0]["Date"] }} / {{ $GetNewsBlogPost[0]["Views"] }} Views
-                                </p>
+                                </h5>
                             </i>
                             </center>
 
-                            <p class="card-text my-text-color-white  p-3">
+                            <p style="font-size: 20px;" class="card-text my-text-color-white  p-3">
                                 {{ $GetNewsBlogPost[0]["Post"] }}
                             </p>
                         </div>
@@ -90,7 +90,7 @@
                                 @foreach ($ChannelNewsComments as $CNC)
 
                                     <div class="media border p-3">
-                                        <img src="{{ $CNC['Image'] }}" alt="{{ $CNC['Name'] }} Image"
+                                        <img src="https://www.nav.com/wp-content/uploads/2014/12/generic_hro_6.jpg" alt="{{ $CNC['Name'] }} Image"
                                             class="mr-3 mt-3 rounded-circle" style="width:60px;">
 
                                         <div class="media-body">
@@ -117,7 +117,7 @@
                             <textarea class="form-control" id="newsComment" rows="3" id="comment"></textarea>
                         </div>
 
-                        <button class="btn btn-primary" onclick="UserPostComment()"> Submit Comment</button>
+                        <button class="btn btn-light" onclick="UserPostComment()"> Submit Comment</button>
 
                     </div>
 

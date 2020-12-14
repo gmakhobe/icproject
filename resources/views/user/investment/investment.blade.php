@@ -26,106 +26,16 @@
     <link rel="stylesheet" href="/assets1/css/Navbar-with-menu-and-login.css">
     <link rel="stylesheet" href="/assets1/css/Vertical-Left-SideBar-by-Jigar-Mistry.css">
     <link rel="stylesheet" href="/assets1/css/newSideNav.css">
+    <link rel="stylesheet" href="/assets1/css/awards.less">
+    <link rel="stylesheet" href="/assets1/css/awardsNav.css">
+    <link rel="stylesheet/less" type="text/css" href="/assets1/css/awards.less" />
 </head>
 
-<body>
+<body onload="onload">
     <!-- Start: Vertical Left-SideBar by Jigar Mistry -->
     @include('/user/layout/side-nav')
     <!-- End: Vertical Left-SideBar by Jigar Mistry -->
     <!-- Start: Top Navbar -->
-
-    <!-- End: Top Navbar -->
-    <!--
-    <div class="container m-2">
-        <div class="row">
-            <div class="col-md-1"></div>
-            <div class="col-md-10">
-
-                <div class="row">
-                    <div class="col-md-4">
-                        <center>
-                            <button type="button" class="btn btn-danger"><strong>MOST TRADED</strong></button>
-                        </center>
-                    </div>
-                    <div class="col-md-4">
-                        <center>
-                            <button type="button" class="btn btn-danger"><strong>PORTFOLIO</strong></button>
-                        </center>
-                    </div>
-                    <div class="col-md-4">
-                        <center>
-                            <button type="button" class="btn btn-danger"><strong>MOST POPULAR</strong></button>
-                        </center>
-                    </div>
-                </div>
-
-            </div>
-            <div class="col-md-1"></div>
-        </div>
-    </div>
--->
-    <!--
-    <div class="container m-2">
-        <div class="row">
-            <div class="col-md-1"></div>
-            <div class="col-md-10">
-
-                <div class="row">
-                    <div class="col-md-4">
-                        <center>
-                            <div class="dropdown">
-                                <button
-                                    class="my-invest-second-nav-btn btn btn-primary dropdown-toggle border-danger shadow-sm"
-                                    data-toggle="dropdown" aria-expanded="false">
-                                    <strong>MARKETS</strong>
-                                </button>
-                                <div class="dropdown-menu" role="menu">
-                                    <a class="dropdown-item" role="presentation" href="#">First Item</a>
-                                    <a class="dropdown-item" role="presentation" href="#">Second Item</a>
-                                    <a class="dropdown-item" role="presentation" href="#">Third Item</a>
-                                </div>
-                            </div>
-                        </center>
-                    </div>
-                    <div class="col-md-4">
-                        <center>
-                            <div class="dropdown">
-                                <button
-                                    class="my-invest-second-nav-btn btn btn-primary dropdown-toggle border-danger shadow-lg"
-                                    data-toggle="dropdown" aria-expanded="false">
-                                    <strong>CAREER</strong>
-                                </button>
-                                <div class="dropdown-menu" role="menu">
-                                    <a class="dropdown-item" role="presentation" href="#">First Item</a>
-                                    <a class="dropdown-item" role="presentation" href="#">Second Item</a>
-                                    <a class="dropdown-item" role="presentation" href="#">Third Item</a>
-                                </div>
-                            </div>
-                        </center>
-                    </div>
-                    <div class="col-md-4">
-                        <center>
-                            <div class="dropdown" style="margin: 0px;margin-top: 0px;">
-                                <button
-                                    class="my-invest-second-nav-btn btn btn-primary dropdown-toggle border-danger shadow"
-                                    data-toggle="dropdown" aria-expanded="false">
-                                    <strong>COUNTRY</strong>
-                                </button>
-                                <div class="dropdown-menu" role="menu">
-                                    <a class="dropdown-item" role="presentation" href="#">First Item</a>
-                                    <a class="dropdown-item" role="presentation" href="#">Second Item</a>
-                                    <a class="dropdown-item" role="presentation" href="#">Third Item</a>
-                                </div>
-                            </div>
-                        </center>
-                    </div>
-                </div>
-
-            </div>
-            <div class="col-md-1"></div>
-        </div>
-    </div>
--->
 
     <div class="container">
 
@@ -136,20 +46,114 @@
 
                 <div class="card-body">
 
-                    <h2>Industries</h2>
-                    <p class="text-white">Select Industry</p>
+                    <h1>Industries</h1>
+                    <h2 class="text-white">Select Industry</h2>
+
+                    <div class="containerr">
+                        <div class="tabs">
+                            <input type="radio" id="radio-1" name="tabs" checked />
+                            <label class="tab" for="radio-1" style="font-size: 20px;">Company</label>
+                            
+                            <input type="radio" id="radio-2" name="tabs" />
+                            <label class="tab" for="radio-2" style="font-size: 20px;">Services</label>
+
+                            <input type="radio" id="radio-3" name="tabs" />
+                            <label class="tab" for="radio-3" style="font-size: 20px;">Event</label>
+
+                            <input type="radio" id="radio-4" name="tabs" />
+                            <label class="tab" for="radio-4" style="font-size: 20px;">Hedge Fund</label>
+                            
+                            <input type="radio" id="radio-5" name="tabs" />
+                            <label class="tab" for="radio-5" style="font-size: 20px;">Start-up Index</label>
+
+                            <input type="radio" id="radio-6" name="tabs" />
+                            <label class="tab" for="radio-6" style="font-size: 20px;">News Channel</label>
+                            <span class="glider"></span>
+                        </div>
+                        <script>
+                            window.onload = function onload() {
+                                console.log('onload');
+                                $("#company").show();
+                                    $("#services").hide();
+                                        $("#event").hide();
+                                            $("#hedgefund").hide();
+                                                $("#start-up").hide();
+                                                     $("#newschannel").hide();
+                                    }
+
+                            $(document).ready(function(){
+
+                                $("#radio-1").click(function(){
+                                    $("#company").show();
+                                    $("#services").hide();
+                                        $("#event").hide();
+                                            $("#hedgefund").hide();
+                                                $("#start-up").hide();
+                                                     $("#newschannel").hide();                                
+                                                     });       
+
+                                $("#radio-2").click(function(){
+                                    $("#company").hide();
+                                    $("#services").show();
+                                        $("#event").hide();
+                                            $("#hedgefund").hide();
+                                                $("#start-up").hide();
+                                                     $("#newschannel").hide();                                
+                                                     });
+
+                                $("#radio-3").click(function(){
+                                    $("#company").hide();
+                                    $("#services").hide();
+                                        $("#event").show();
+                                            $("#hedgefund").hide();
+                                                $("#start-up").hide();
+                                                     $("#newschannel").hide();                                
+                                                     });
+
+                                $("#radio-4").click(function(){
+                                    $("#company").hide();
+                                    $("#services").hide();
+                                        $("#event").hide();
+                                            $("#hedgefund").show();
+                                                $("#start-up").hide();
+                                                     $("#newschannel").hide();                                
+                                                     });
+
+                                $("#radio-5").click(function(){
+                                $("#company").hide();
+                                    $("#services").hide();
+                                        $("#event").hide();
+                                            $("#hedgefund").hide();
+                                                $("#start-up").show();
+                                                     $("#newschannel").hide();                                
+                                                     });
+
+                                $("#radio-6").click(function(){
+                                    $("#company").hide();
+                                    $("#services").hide();
+                                        $("#event").hide();
+                                            $("#hedgefund").hide();
+                                                $("#start-up").hide();
+                                                     $("#newschannel").show();                                
+                                                     });
+                            });        
+                        </script>
+
+
+                    </div>
+                    <br><br>
 
                     <div class="row my-text-color-white">
 
-                        <div class="col-md-3">
-                            <table class="table table-bordered table-dark table-hover">
+                        <div class="col-md-12"  id="company">
+                            <table class="table table-sm table-hover">
                                 <thead>
-                                    <th>Company</th>
+                                    <th style="font-size: 18px;">Company</th>
                                 </thead>
                                 <tbody>
                                     @foreach ($ListOfCompanyInd as $CompanyInd)
                                         <tr>
-                                            <td data-toggle="modal" data-target="#{{ $CompanyInd['Name'] }}">
+                                            <td data-toggle="modal" data-target="#{{ $CompanyInd['Name'] }}" style="font-size: 15px;">
                                                 {{ $CompanyInd['Name'] }}
                                             </td>
 
@@ -230,16 +234,16 @@
                             </table>
                         </div>
 
-                        <div class="col-md-3">
-                            <table class="table table-bordered table-dark table-hover my-text-color-white">
+                        <div class="col-md-12"  id="services">
+                            <table class="table table-sm table-hover">
                                 <thead>
-                                    <th>Services</th>
+                                    <th style="font-size: 18px;">Services</th>
                                 </thead>
                                 <tbody>
 
                                     @foreach ($ListOfServiceInd as $ServiceInd)
                                         <tr>
-                                            <td data-toggle="modal" data-target="#Service{{ $ServiceInd['Id'] }}">
+                                            <td data-toggle="modal" data-target="#Service{{ $ServiceInd['Id'] }}" style="font-size: 15px;">
                                                 {{ $ServiceInd['Name'] }}
                                             </td>
 
@@ -296,16 +300,16 @@
                             </table>
                         </div>
 
-                        <div class="col-md-3">
-                            <table class="table table-bordered table-dark table-hover">
+                        <div class="col-md-12"  id="event">
+                            <table class="table table-sm table-hover">
                                 <thead>
-                                    <th>Event</th>
+                                    <th style="font-size: 18px;">Event</th>
                                 </thead>
                                 <tbody>
 
                                     @foreach ($ListOfEventInd as $EventInd)
                                         <tr>
-                                            <td data-toggle="modal" data-target="#Event{{ $EventInd['Id'] }}">
+                                            <td data-toggle="modal" data-target="#Event{{ $EventInd['Id'] }}" style="font-size: 15px;">
                                                 {{ $EventInd['Name'] }}
                                             </td>
 
@@ -361,16 +365,16 @@
                             </table>
                         </div>
 
-                        <div class="col-md-3">
-                            <table class="table table-bordered table-dark table-hover">
+                        <div class="col-md-12" id="hedgefund">
+                            <table class="table table-sm table-hover">
                                 <thead>
-                                    <th>Hedge Fund</th>
+                                    <th style="font-size: 18px;">Hedge Fund</th>
                                 </thead>
                                 <tbody>
 
                                     @foreach ($ListOfHedgeFundInd as $HedgeFundInd)
                                         <tr>
-                                            <td data-toggle="modal" data-target="#HedgeFund{{ $HedgeFundInd['Id'] }}">
+                                            <td data-toggle="modal" data-target="#HedgeFund{{ $HedgeFundInd['Id'] }}" style="font-size: 15px;">
                                                 {{ $HedgeFundInd['Name'] }}
                                             </td>
 
@@ -436,17 +440,17 @@
 
                     <div class="row my-text-color-black">
 
-                        <div class="col-md-3">
-                            <table class="table table-bordered table-dark table-hover">
+                        <div class="col-md-12" id="start-up">
+                            <table class="table table-sm table-hover">
                                 <thead>
-                                    <th>Start-Up Index</th>
+                                    <th style="font-size: 18px;">Start-Up Index</th>
                                 </thead>
                                 <tbody>
 
                                     @foreach ($ListOfStartUpIndexInd as $StartUpIndexInd)
                                         <tr>
                                             <td data-toggle="modal"
-                                                data-target="#StartUpIndex{{ $StartUpIndexInd['Id'] }}">
+                                                data-target="#StartUpIndex{{ $StartUpIndexInd['Id'] }}" style="font-size: 15px;">
                                                 {{ $StartUpIndexInd['Name'] }}
                                             </td>
 
@@ -503,16 +507,16 @@
                             </table>
                         </div>
 
-                        <div class="col-md-3">
-                            <table class="table table-bordered table-dark table-hover">
+                        <div class="col-md-12" id="newschannel">
+                            <table class="table table-sm table-hover">
                                 <thead>
-                                    <th>News Channel</th>
+                                    <th style="font-size: 18px;">News Channel</th>
                                 </thead>
                                 <tbody>
 
                                     @foreach ($ListOfNewsChannelsInd as $NewsChannelsInd)
                                         <tr>
-                                            <td data-toggle="modal" data-target="#News{{ $NewsChannelsInd['Id'] }}">
+                                            <td data-toggle="modal" data-target="#News{{ $NewsChannelsInd['Id'] }}" style="font-size: 15px;">
                                                 {{ $NewsChannelsInd['Name'] }}
                                             </td>
 

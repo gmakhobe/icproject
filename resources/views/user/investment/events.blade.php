@@ -33,7 +33,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 
-<body style="background-color: rgb(50,46,46);">
+<body>
 
     <!-- Start: Vertical Left-SideBar by Jigar Mistry -->
     @include('/user/layout/side-nav')
@@ -54,34 +54,36 @@
 
                 </style>
 
-                <div class="jumbotron m-3 my-bg-color-grey">
+                <div class="code--css">
+                <div style="padding: 2%">
                     <h1>{{ $EventInformation['Name'] }}</h1>
                     <p>{{ $EventInformation['IndustryName'] }} Event.</p>
                     <p>Scheduled Date: {{ $EventInformation['Date'] }}.</p>
                 </div>
+                </div>
 
                 <!-- Nav pills -->
-                <ul class="nav nav-pills nav-justified">
+                <ul class="nav nav-tabs">
                     <li class="nav-item">
-                        <a class="nav-link active" data-toggle="pill" href="#profile">Profile</a>
+                        <a class="nav-link active" data-toggle="pill" href="#profile" style="color:purple; font-size: 20px;">Profile</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" data-toggle="pill" href="#history">Event History</a>
+                        <a class="nav-link" data-toggle="pill" href="#history" style="color:purple; font-size: 20px;">Event History</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" data-toggle="pill" href="#pitch">Pitch</a>
+                        <a class="nav-link" data-toggle="pill" href="#pitch" style="color:purple; font-size: 20px;">Pitch</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" data-toggle="pill" href="#investors">Investors</a>
+                        <a class="nav-link" data-toggle="pill" href="#investors" style="color:purple; font-size: 20px;">Investors</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" data-toggle="pill" href="#reports">Reports</a>
+                        <a class="nav-link" data-toggle="pill" href="#reports" style="color:purple; font-size: 20px;">Reports</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" data-toggle="pill" href="#news">News</a>
+                        <a class="nav-link" data-toggle="pill" href="#news" style="color:purple; font-size: 20px;">News</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" data-toggle="pill" href="#earnings">Event Earnigs</a>
+                        <a class="nav-link" data-toggle="pill" href="#earnings" style="color:purple; font-size: 20px;">Event Earnigs</a>
                     </li>
                 </ul>
 
@@ -89,12 +91,12 @@
                 <div class="tab-content">
                     <div class="tab-pane container active my-text-color-white" id="profile">
 
-                        <h3>Nature of Business</h3>
+                        <h2>Nature of Business</h2>
                         <p>
                             {{ $EventInformation['Description'] }}
                         </p>
 
-                        <h3>Management</h3>
+                        <h2>Management</h2>
                         <table class="table table-dark">
                             <thead>
                                 <th>Title</th>
@@ -112,7 +114,7 @@
 
                         <div class="row my-text-center">
                             <div class="col-md-6">
-                                <h3>Company Address</h3>
+                                <h2>Company Address</h2>
 
                                 <p>{{ $EventInformation['Address'] }}</p>
                                 <p>{{ $EventInformation['Country'] }}</p>
@@ -122,7 +124,7 @@
                             </div>
 
                             <div class="col-md-6">
-                                <h3>Event Information</h3>
+                                <h2>Event Information</h2>
                                 <p>Type: Event</p>
                                 <p>Industry: {{ $EventInformation['IndustryName'] }}</p>
 
@@ -132,7 +134,7 @@
                     </div>
                     <div class="tab-pane container fade" id="history">
 
-                        <h3>Event History</h3>
+                        <h2>Event History</h3>
                         <p>
                             {{ $EventInformation['History'] }}
                         </p>
@@ -140,13 +142,13 @@
                     </div>
                     <div class="tab-pane container fade" id="pitch">
 
-                        <h3>Pitch</h3>
-                        <h5>Video Pitch</h5>
+                        <h2>Pitch</h2>
+                        <h3>Video Pitch</h3>
                         <video controls style="height:350px;">
                             <source src="{{ $EventPitch['Video'] }}" type="video/mp4" />
                         </video>
 
-                        <h5>Document</h5>
+                        <h4>Document</h4>
                         <div class="list-group">
                             <a target="_black" href="{{ $EventPitch['Document'] }}"
                                 class="list-group-item list-group-item-action  my-bg-color-grey">
@@ -158,7 +160,7 @@
                     </div>
                     <div class="tab-pane container fade" id="investors">
 
-                        <h3>Investors</h3>
+                        <h2>Investors</h2>
                         <table class="table table-dark">
                             <thead>
                                 <th>Investor's Name</th>
@@ -177,12 +179,12 @@
                     </div>
                     <div class="tab-pane container fade" id="reports">
 
-                        <h3>Reports</h3>
+                        <h2>Reports</h2>
                         <div class="list-group">
                             @foreach ($EventReports as $er)
                                 <a target="_black" href="{{ $er['Link'] }}"
                                     class="list-group-item list-group-item-action  my-bg-color-grey">
-                                    <h4 class="my-text-color-white">{{ $er['Name'] }}</h4>
+                                    <h3 class="my-text-color-white">{{ $er['Name'] }}</h3>
                                     <p class="my-text-color-white">View Report</p>
                                 </a>
                             @endforeach
@@ -191,12 +193,12 @@
                     </div>
                     <div class="tab-pane container fade" id="news">
 
-                        <h3>News</h3>
+                        <h2>News</h2>
                         <div class="list-group">
                             @foreach ($EventNews as $en)
                                 <a data-toggle="modal" data-target="#mod{{ $en['NewsId'] }}" href="#"
                                     class="list-group-item list-group-item-action  my-bg-color-grey">
-                                    <h4 class="my-text-color-white">{{ $en['Heading'] }}</h4>
+                                    <h3 class="my-text-color-white">{{ $en['Heading'] }}</h3>
                                     <p class="my-text-color-white">{{ $en['Date'] }} / {{ $en['Author'] }}</p>
                                     <p class="my-text-color-white">{{ $en['Snippet'] }}</p>
                                 </a>
@@ -238,7 +240,7 @@
 
                     </div>
                     <div class="tab-pane container fade" id="earnings">
-                        <h3>Event Earnings</h3>
+                        <h2>Event Earnings</h2>
                         <table class="table table-dark">
                             <thead>
                                 <th>Date and Time</th>

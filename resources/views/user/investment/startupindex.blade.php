@@ -34,7 +34,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 
-<body style="background-color: rgb(50,46,46);">
+<body>
 
     <!-- Start: Vertical Left-SideBar by Jigar Mistry -->
     @include('/user/layout/side-nav')
@@ -54,50 +54,52 @@
 
                 </style>
 
-                <div class="jumbotron m-3 my-bg-color-grey">
+                <div class="code--css" style="height: 200px;">
+                <div style="padding: 2%">
                     <h1>{{ $ServiceInfo['Name'] }}</h1>
                     <p>Service Company, {{ $ServiceInfo['IndustryName'] }} Industry.</p>
                 </div>
+                </div>
 
                 <!-- Nav pills -->
-                <ul class="nav nav-pills nav-justified">
+                <ul class="nav nav-tabs">
                     <li class="nav-item">
-                        <a class="nav-link active" data-toggle="pill" href="#profile">Profile</a>
+                        <a class="nav-link active" data-toggle="pill" href="#profile" style="color:purple; font-size: 20px;">Profile</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" data-toggle="pill" href="#pitch">Pitch</a>
+                        <a class="nav-link" data-toggle="pill" href="#pitch" style="color:purple; font-size: 20px;">Pitch</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" data-toggle="pill" href="#reports">Reports</a>
+                        <a class="nav-link" data-toggle="pill" href="#reports" style="color:purple; font-size: 20px;">Reports</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" data-toggle="pill" href="#earnings">Earnings</a>
+                        <a class="nav-link" data-toggle="pill" href="#earnings" style="color:purple; font-size: 20px;">Earnings</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" data-toggle="pill" href="#indicator">Indicators and Strategy</a>
+                        <a class="nav-link" data-toggle="pill" href="#indicator" style="color:purple; font-size: 20px;">Indicators and Strategy</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" data-toggle="pill" href="#assets">Assets</a>
+                        <a class="nav-link" data-toggle="pill" href="#assets" style="color:purple; font-size: 20px;">Assets</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" data-toggle="pill" href="#calendar">Calendar</a>
+                        <a class="nav-link" data-toggle="pill" href="#calendar" style="color:purple; font-size: 20px;">Calendar</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" data-toggle="pill" href="#news">News</a>
+                        <a class="nav-link" data-toggle="pill" href="#news" style="color:purple; font-size: 20px;">News</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" data-toggle="pill" href="#visuals">Visuals</a>
+                        <a class="nav-link" data-toggle="pill" href="#visuals" style="color:purple; font-size: 20px;">Visuals</a>
                     </li>
                 </ul>
 
                 <div class="tab-content">
                     <div class="tab-pane container active my-text-color-white" id="profile">
-                        <h3>Nature of Business</h3>
+                        <h2>Nature of Business</h2>
                         <p>
                             {{ $ServiceInfo['Description'] }}
                         </p>
 
-                        <h3>Management</h3>
+                        <h2>Management</h2>
                         <table class="table table-dark">
                             <thead>
                                 <th>Title</th>
@@ -115,7 +117,7 @@
 
                         <div class="row my-text-center">
                             <div class="col-md-6">
-                                <h3>Company Address</h3>
+                                <h2>Company Address</h2>
 
                                 <p>{{ $ServiceInfo['Address'] }}</p>
                                 <p>{{ $ServiceInfo['Country'] }}</p>
@@ -125,7 +127,7 @@
                             </div>
                             <div class="col-md-6">
 
-                                <h3>Company Information</h3>
+                                <h2>Company Information</h2>
                                 <p>Type: Company</p>
                                 <p>Industry: {{ $ServiceInfo['IndustryName'] }}</p>
 
@@ -134,8 +136,8 @@
                     </div>
                     <div class="tab-pane container fade my-text-color-white" id="pitch">
 
-                        <h3>Pitch</h3>
-                        <h5>Video Pitch</h5>
+                        <h2>Pitch</h2>
+                        <h4>Video Pitch</h4>
                         <video controls style="height:350px;">
                             <source src="{{ $ServicePitch['Video'] }}" type="video/mp4" />
                         </video>
@@ -152,12 +154,12 @@
                     </div>
                     <div class="tab-pane container fade my-text-color-white" id="reports">
 
-                        <h3>Reports</h3>
+                        <h2>Reports</h2>
                         <div class="list-group">
                             @foreach ($ServiceReports as $sr)
                                 <a target="_black" href="{{ $sr['Link'] }}"
                                     class="list-group-item list-group-item-action  my-bg-color-grey">
-                                    <h4 class="my-text-color-white">{{ $sr['Name'] }}</h4>
+                                    <h3 class="my-text-color-white">{{ $sr['Name'] }}</h3>
                                     <p class="my-text-color-white">View Report</p>
                                 </a>
                             @endforeach
@@ -166,7 +168,7 @@
                     </div>
                     <div class="tab-pane container fade my-text-color-white" id="earnings">
 
-                        <h3>Earnings</h3>
+                        <h2>Earnings</h2>
                         <table class="table table-dark">
                             <thead>
                                 <th>Date and Time</th>
@@ -185,16 +187,16 @@
                     </div>
                     <div class="tab-pane container fade my-text-color-white" id="indicator">
 
-                        <h3>Indicators and Strategy</h3>
+                        <h2>Indicators and Strategy</h2>
                         @foreach ($ServiceIS as $indStr)
-                            <h5>Name: {{ $indStr['Name'] }}</h5>
-                            <p>Description: {{ $indStr['Description'] }}</p>
+                            <h3>Name: {{ $indStr['Name'] }}</h3>
+                            <h4>Description: {{ $indStr['Description'] }}</h4>
                         @endforeach
 
                     </div>
                     <div class="tab-pane container fade my-text-color-white" id="assets">
 
-                        <h3>Assets</h3>
+                        <h2>Assets</h2>
                         <p>A Summary of company assests and if they are insured or not</p>
 
                         <table class="table table-dark">
@@ -217,7 +219,7 @@
                     </div>
                     <div class="tab-pane container fade my-text-color-white" id="calendar">
 
-                        <h3>Calendar</h3>
+                        <h2>Calendar</h2>
                         <p>Company up coming events</p>
                         <table class="table table-dark">
                             <thead>
@@ -229,7 +231,7 @@
                                     <tr>
                                         <td>{{ $sc['Date'] }}</td>
                                         <td>
-                                            <h6>{{ $sc['Title'] }}</h6>
+                                            <h4>{{ $sc['Title'] }}</h4>
                                             <p>{{ $sc['Description'] }}</p>
                                         </td>
                                     </tr>
@@ -240,14 +242,14 @@
                     </div>
                     <div class="tab-pane container fade my-text-color-white" id="news">
 
-                        <h3>News</h3>
+                        <h2>News</h2>
                         <div class="list-group">
                             @foreach ($ServiceNews as $cm)
                                 <a data-toggle="modal" data-target="#mod{{ $cm['NewsId'] }}" href="#"
                                     class="list-group-item list-group-item-action  my-bg-color-grey">
                                     <h4 class="my-text-color-white">{{ $cm['Heading'] }}</h4>
-                                    <p class="my-text-color-white">{{ $cm['Date'] }} / {{ $cm['Author'] }}</p>
-                                    <p class="my-text-color-white">{{ $cm['Snippet'] }}</p>
+                                    <h5 class="my-text-color-white">{{ $cm['Date'] }} / {{ $cm['Author'] }}</h5>
+                                    <h5 class="my-text-color-white">{{ $cm['Snippet'] }}</h5>
                                 </a>
 
                                 <!-- The Modal -->
@@ -257,7 +259,7 @@
 
                                             <!-- Modal Header -->
                                             <div class="modal-header">
-                                                <h4 class="modal-title text-center">{{ $cm['Heading'] }}</h4>
+                                                <h2 class="modal-title text-center">{{ $cm['Heading'] }}</h2>
                                                 <button type="button" class="close"
                                                     data-dismiss="modal">&times;</button>
                                             </div>
@@ -288,7 +290,7 @@
                     </div>
                     <div class="tab-pane container fade my-text-color-white" id="visuals">
 
-                        <h3>Visuals</h3>
+                        <h2>Visuals</h2>
                         <div class="row">
                             @foreach ($ServiceVisuals as $cv)
                                 <div class="col-md-4">

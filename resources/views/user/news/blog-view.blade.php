@@ -39,16 +39,21 @@
         <div class="row">
             <div class="col-md-1"></div>
             <div class="col-md-11">
+            <br>
 
                 <!-- Start: Jumbotron -->
-                <div class="container jumbotron m-3 my-bg-color-grey">
-                    <h3>Plugin Blogs</h3>
+                <div class="code--css" style="height: 150px;">
+                <div style="padding: 2%">                    
+                <h3>Plugin Blogs</h3>
                     <p class="my-text-color-white">Go through Blogs and Blog Posts</p>
                 </div>
+                </div>
+                <br>
+
                 <!-- End: Jumbotron -->
 
                 <!-- Start: Nav -->
-                <ul class="nav nav-justified nav-pills">
+                <ul class="nav nav-tabs">
                     <li class="nav-item">
                         <a data-toggle="pill" class="nav-link active" href="#blogposts"><span
                                 class="my-text-color-white">Blog Posts
@@ -75,15 +80,15 @@
                                             <div class="col-md-6 my-bg-color-grey">
 
                                                 <h5 class="my-text-color-white"><img
-                                                        src="{{ $NewsBlogPost['ProfileLink'] }}"
+                                                        src="https://www.iconsdb.com/icons/preview/purple/user-4-xxl.png"
                                                         alt="{{ $NewsBlogPost['Username'] }} Image"
                                                         style="width:30px !important;" class="img-profile" /> &sdot;
                                                     {{ $NewsBlogPost['Username'] }}
                                                 </h5>
                                                 <a
                                                     href="/user/news/blog/read/{{ $NewsBlogPost['Heading'] }}/{{ $NewsBlogPost['NewsBlogId'] }}">
-                                                    <h2 class="my-text-color-white">
-                                                        <strong>{{ $NewsBlogPost['Heading'] }}</strong>
+                                                    <h2 class="my-text-color-white" style="color:purple;">
+                                                        {{ $NewsBlogPost['Heading'] }}
                                                     </h2>
                                                     <p class="my-text-color-white">{{ $NewsBlogPost['SubHeading'] }}</p>
                                                     <p class="my-text-color-white"><i>{{ $NewsBlogPost['Date'] }} &sdot;
@@ -95,10 +100,12 @@
                                                     <a
                                                         href="/user/news/blog/read/{{ $NewsBlogPost['Heading'] }}/{{ $NewsBlogPost['NewsBlogId'] }}">
                                                         <img class="my-blog-blog-post-thumbnail"
-                                                            src="https://via.placeholder.com/350x200"
-                                                            alt="{{ $NewsBlogPost['Image'] }} Image" />
+                                                            src="http://www.dolmanbateman.com.au/wp-content/uploads/2012/09/Financial-Newspapers.jpg"
+                                                            alt="{{ $NewsBlogPost['Image'] }} Image"
+                                                            style="width: 100%; height: 250px; border-radius: 5%" />
                                                     </a>
                                                 </center>
+                                                <br>
                                             </div>
                                         </div>
                                     </div>
@@ -127,7 +134,7 @@
                                         </div>
                                         <div class="col-md-3">
                                             <button onclick="NewsBlogSearch()"
-                                                class="btn btn-primary">Search</button>
+                                                class="btn btn-light">Search</button>
                                         </div>
                                     </div>
                                 </div>
@@ -135,14 +142,14 @@
 
                             <div class="col-md-12 card my-bg-color-grey">
                                 <div id="newsBloSearchdes" class="row">
-
+                                    <br>
                                     @foreach ($GetLatestNewsBlogs as $NewsBlogs)
 
                                         <div class="col-md-3 card my-bg-transparent-grey">
                                             <div class="card-body">
                                                 <a href="/user/news/blog/author/{{ $NewsBlogs["Username"] }}/{{ $NewsBlogs["UserId"] }}">
                                                     <img class="my-news-card-channel-list-image"
-                                                        src="{{ $NewsBlogs["ProfileLink"] }}" alt="{{ $NewsBlogs["Username"] }} - Image">
+                                                        src="https://www.iconsdb.com/icons/preview/purple/user-4-xxl.png" alt="{{ $NewsBlogs["Username"] }} - Image" style="width: 100px; height: 100px;">
                                                     <h6 class="newsChannels p-1 my-text-center my-text-color-white">
                                                         {{ $NewsBlogs["Username"] }}
                                                     </h6>

@@ -29,12 +29,15 @@
     <link rel="stylesheet" href="/assets1/css/Vertical-Left-SideBar-by-Jigar-Mistry.css">
     <link rel="stylesheet" href="/assets1/css/x-editable.css">
     <link rel="stylesheet" href="/assets1/css/newSideNav.css">
+    <link rel="stylesheet" href="/assets1/css/awards.less">
+    <link rel="stylesheet" href="/assets1/css/awardsNav.css">
+    <link rel="stylesheet/less" type="text/css" href="/assets1/css/awards.less" />
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 
-<body style="background-color: rgb(50,46,46);">
+<body>
 
     <!-- Start: Vertical Left-SideBar by Jigar Mistry -->
     @include('/user/layout/side-nav')
@@ -44,7 +47,9 @@
     <!-- End: Top Navbar -->
 
     <div class="container">
+
         <div class="row">
+            
             <div class="col-md-1"></div>
             <div class="col-md-10 card my-bg-color-grey">
 
@@ -54,59 +59,61 @@
                     }
 
                 </style>
-
-                <div class="jumbotron m-3 my-bg-color-grey my-text-color-white">
+                <div class="code--css" style="height: 150px;">
+                <div style="padding: 2%">
                     <h1>{{ $ServiceInfo['Name'] }}</h1>
-                    <p>Service Company, {{ $ServiceInfo['IndustryName'] }} Industry.</p>
+                    <h2>Service Company, {{ $ServiceInfo['IndustryName'] }} Industry.</h2>
                 </div>
+                </div>
+<!-- 
+                    <div class="tabs">               -->
+                            <!-- Nav pills -->
+                            <ul class="nav nav-tabs">
+                                <li class="nav-item">
+                                    <a class="nav-link active" data-toggle="profile" href="#home" style="color:purple; font-size: 20px;">Profile</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" data-toggle="pill" href="#pitch" style="color:purple; font-size: 20px;">Pitch</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" data-toggle="pill" href="#reports" style="color:purple; font-size: 20px;">Reports</a>
+                                </li>
 
+                                <li class="nav-item">
+                                    <a class="nav-link" data-toggle="pill" href="#strategyandindicators" style="color:purple; font-size: 20px;">Strategy and Indicators</a>
+                                </li>
 
-                <!-- Nav pills -->
-                <ul class="nav nav-pills nav-justified">
-                    <li class="nav-item">
-                        <a class="nav-link active" data-toggle="profile" href="#home">Profile</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" data-toggle="pill" href="#pitch">Pitch</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" data-toggle="pill" href="#reports">Reports</a>
-                    </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" data-toggle="pill" href="#calendar" style="color:purple; font-size: 20px;">Calendar</a>
+                                </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link" data-toggle="pill" href="#strategyandindicators">Strategy and Indicators</a>
-                    </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" data-toggle="pill" href="#visuals" style="color:purple; font-size: 20px;">Visuals</a>
+                                </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link" data-toggle="pill" href="#calendar">Calendar</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" data-toggle="pill" href="#visuals">Visuals</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" data-toggle="pill" href="#service-earnings">Service Earnings</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" data-toggle="pill" href="#assets">Assets</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" data-toggle="pill" href="#news">News</a>
-                    </li>
-
-                </ul>
+                                <li class="nav-item">
+                                    <a class="nav-link" data-toggle="pill" href="#service-earnings" style="color:purple; font-size: 20px;">Service Earnings</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" data-toggle="pill" href="#assets" style="color:purple; font-size: 20px;">Assets</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" data-toggle="pill" href="#news" style="color:purple; font-size: 20px;">News</a>
+                                </li>
+                            </ul>
+                    <!-- </div>
+                </div> -->
 
                 <!-- Tab panes -->
                 <div class="tab-content  my-text-color-white">
                     <div class="tab-pane container active" id="profile">
 
-                        <h3>Nature of Business</h3>
+                        <h2>Nature of Business</h2>
                         <p>
                             {{ $ServiceInfo['Description'] }}
                         </p>
 
-                        <h3>Management</h3>
+                        <h2>Management</h2>
                         <table class="table table-dark">
                             <thead>
                                 <th>Title</th>
@@ -124,7 +131,7 @@
 
                         <div class="row my-text-center">
                             <div class="col-md-6">
-                                <h3>Company Address</h3>
+                                <h2>Company Address</h2>
 
                                 <p>{{ $ServiceInfo['Address'] }}</p>
                                 <p>{{ $ServiceInfo['Country'] }}</p>
@@ -134,7 +141,7 @@
                             </div>
                             <div class="col-md-6">
 
-                                <h3>Company Information</h3>
+                                <h2>Company Information</h2>
                                 <p>Type: Company</p>
                                 <p>Industry: {{ $ServiceInfo['IndustryName'] }}</p>
 
@@ -145,13 +152,13 @@
                     </div>
                     <div class="tab-pane container fade" id="pitch">
 
-                        <h3>Pitch</h3>
-                        <h5>Video Pitch</h5>
+                        <h2>Pitch</h2>
+                        <h3>Video Pitch</h3>
                         <video controls style="height:350px;">
                             <source src="{{ $ServicePitch['Video'] }}" type="video/mp4" />
                         </video>
 
-                        <h5>Document</h5>
+                        <h4>Document</h4>
                         <div class="list-group">
                             <a target="_black" href="{{ $ServicePitch['Document'] }}"
                                 class="list-group-item list-group-item-action  my-bg-color-grey">
@@ -178,17 +185,17 @@
                     </div>
                     <div class="tab-pane container fade" id="strategyandindicators">
 
-                        <h3>Indicators and Strategies</h3>
+                        <h2>Indicators and Strategies</h2>
                         @foreach ($ServiceIS as $indStr)
-                            <h5>Name: {{ $indStr['Name'] }}</h5>
-                            <p>Description: {{ $indStr['Description'] }}</p>
+                            <h3>Name: {{ $indStr['Name'] }}</h3>
+                            <h4>Description: {{ $indStr['Description'] }}</h4>
                         @endforeach
 
 
                     </div>
                     <div class="tab-pane container fade" id="calendar">
 
-                        <h3>Calendar</h3>
+                        <h2>Calendar</h2>
                         <p>Company up coming events</p>
                         <table class="table table-dark">
                             <thead>
@@ -213,7 +220,7 @@
                     <div class="tab-pane container fade" id="visuals">
 
 
-                        <h3>Visuals</h3>
+                        <h2>Visuals</h2>
                         <div class="row">
                             @foreach ($ServiceVisuals as $cv)
                                 <div class="col-md-4">
@@ -226,7 +233,7 @@
 
                     <div class="tab-pane container fade" id="service-earnings">
 
-                        <h3>Service Earnings</h3>
+                        <h2>Service Earnings</h2>
                         <table class="table table-dark">
                             <thead>
                                 <th>Date and Time</th>
@@ -245,7 +252,7 @@
                     </div>
                     <div class="tab-pane container fade" id="assets">
 
-                        <h3>Assets</h3>
+                        <h2>Assets</h2>
                         <p>A Summary of company assests and if tghey are insured or not</p>
 
                         <table class="table table-dark">
@@ -268,7 +275,7 @@
                     </div>
                     <div class="tab-pane container fade" id="news">
 
-                        <h3>News</h3>
+                        <h2>News</h2>
                         <div class="list-group">
                             @foreach ($ServiceNews as $cm)
                                 <a data-toggle="modal" data-target="#mod{{ $cm['NewsId'] }}" href="#"

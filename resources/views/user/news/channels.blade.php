@@ -38,16 +38,18 @@
         <div class="row">
             <div class="col-md-1"></div>
             <div class="col-md-11">
-
+            <br>
                 <!-- Start: Jumbotron -->
-                <div class="container jumbotron m-3 my-bg-color-grey">
-                    <h3>Plugin Channels</h3>
+                <div class="code--css" style="height: 150px;">
+                    <div style="padding: 2%">                    <h3>Plugin Channels</h3>
                     <p class="my-text-color-white">News news and TV Channels</p>
                 </div>
+                </div>
+                <br>
                 <!-- End: Jumbotron -->
 
                 <!-- Start: Nav -->
-                <ul class="nav nav-justified nav-pills">
+                <ul class="nav nav-tabs">
                     <li class="nav-item">
                         <a data-toggle="pill" class="nav-link active" href="#newsChannel"><span
                                 class="my-text-color-white">News Channels
@@ -79,10 +81,10 @@
                                         </div>
                                         <div class="col-md-3">
                                             <button onclick="NewsChannelSearch('newsChannelSearch', 0)"
-                                                class="btn btn-primary">Search</button>
+                                                class="btn btn-light">Search</button>
                                         </div>
                                     </div>
-
+                                    <br>
                                 </div>
 
                             </div>
@@ -103,12 +105,13 @@
                                                     href="/user/news/channel/name/{{ $ChannelItem['Name'] }}/{{ $ChannelItem['Id'] }}/0">
 
                                                     <img class="my-news-card-channel-list-image"
-                                                        src="{{ $ChannelItem['Logo'] }}"
-                                                        alt="{{ $ChannelItem['Name'] }} - Image">
-                                                    <h6 class="newsChannels p-1 my-text-center my-text-color-white">
-                                                        {{ $ChannelItem['Name'] }}</h6>
-                                                    <p class="p-1 my-text-color-white">Published Date:
-                                                        {{ $ChannelItem['Date'] }}</p>
+                                                        src="http://supportmaxb.com/blog/wp-content/uploads/2016/09/max-b-breaking-news.jpeg"
+                                                        alt="{{ $ChannelItem['Name'] }} - Image"
+                                                        style="width: 100%; height: 100%; border-radius: 5%">
+                                                    <h4 class="newsChannels p-1 my-text-center my-text-color-white" style="color:purple;">
+                                                        {{ $ChannelItem['Name'] }}</h4>
+                                                    <h6 class="p-1 my-text-color-white">Published Date:
+                                                        {{ $ChannelItem['Date'] }}</h6>
 
                                                 </a>
                                             </div>
@@ -140,13 +143,13 @@
                                             </div>
                                             <div class="col-md-3">
                                                 <button onclick="NewsChannelSearch('tvChannelSearch', 1)"
-                                                    class="btn btn-primary">Search</button>
+                                                    class="btn btn-light">Search</button>
                                             </div>
                                         </div>
 
                                 </div>
 
-
+                                <br>
                             </div>
 
                             <div class="col-md-12 card my-bg-color-grey">
@@ -163,12 +166,13 @@
                                                     href="/user/news/channel/name/{{ $ChannelItem['Name'] }}/{{ $ChannelItem['Id'] }}/1">
 
                                                     <img class="my-news-card-channel-list-image"
-                                                        src="{{ $ChannelItem['Logo'] }}"
-                                                        alt="{{ $ChannelItem['Name'] }} - Image">
-                                                    <h6 class="newsChannels p-1 my-text-center my-text-color-white">
-                                                        {{ $ChannelItem['Name'] }}</h6>
-                                                    <p class="p-1 my-text-color-white">Published Date:
-                                                        {{ $ChannelItem['Date'] }}</p>
+                                                        src="https://images.theconversation.com/files/124978/original/image-20160602-23293-16gnzi5.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=926&fit=clip"
+                                                        alt="{{ $ChannelItem['Name'] }} - Image"
+                                                        style="width: 100%; height: 100%; border-radius: 5%">
+                                                    <h4 class="newsChannels p-1 my-text-center my-text-color-white" style="color:purple;">
+                                                        {{ $ChannelItem['Name'] }}</h4>
+                                                    <h6 class="p-1 my-text-color-white">Published Date:
+                                                        {{ $ChannelItem['Date'] }}</h6>
 
                                                 </a>
                                             </div>
