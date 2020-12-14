@@ -23,6 +23,7 @@
     <link rel="stylesheet" href="/assets1/css/newSideNav.css">
     <link rel="stylesheet" href="/assets1/css/awards.less">
     <link rel="stylesheet" href="/assets1/css/awardsNav.css">
+    <link rel="stylesheet" href="/assets1/css/awards-modal.css">
     <link rel="stylesheet/less" type="text/css" href="/assets1/css/awards.less" />
     <script src="//cdn.jsdelivr.net/npm/less@3.11">
 
@@ -69,7 +70,8 @@ $(document).ready(function() {
       <div class='blue-column'>
             <ul class="menu">
         <li>
-            <a href="#">PROFILE</a>
+            <a data-toggle="modal"  data-target="StartUpIndex"  >PROFILE</a>
+
         </li>
         <li>
             <a href="#">NOMINEES</a>
@@ -100,8 +102,8 @@ $(document).ready(function() {
 		<label class="tab" for="radio-3">Country/Region</label>
 		<span class="glider"></span>
 	</div>
-</div>
-    <div class="page-header">
+    </div>
+<div class="page-header">
         <h1>The highest growth of the year</h1>
     </div>
     <div class="row active-with-click">
@@ -200,8 +202,111 @@ $(document).ready(function() {
         </div>
 
     </div>
+
+    <!-- second roww -->
       <div class="page-header">
         <h1>The trader  of the year</h1>
+    </div>
+    <div class="row active-with-click">
+        <div class="col-md-4 col-sm-6 col-xs-12">
+            <article class="material-card Red">
+                <h2>
+                    <span>Christopher Walken</span>
+                    <strong>
+                        <i class="fa fa-fw fa-star"></i>
+                        The Deer Hunter
+                    </strong>
+                </h2>
+                <div class="mc-content">
+                    <div class="img-container">
+                        <img class="img-responsive" src="https://material-cards.s3-eu-west-1.amazonaws.com/thumb-christopher-walken.jpg">
+                    </div>
+                    <div class="mc-description">
+                        He has appeared in more than 100 films and television shows, including The Deer Hunter, Annie Hall, The Prophecy trilogy, The Dogs of War ...
+                    </div>
+                </div>
+                <a class="mc-btn-action">
+                    <i class="fa fa-bars"></i>
+                </a>
+                <div class="mc-footer">
+                    <h4>
+                        Social
+                    </h4>
+                    <a class="fa fa-fw fa-facebook"></a>
+                    <a class="fa fa-fw fa-twitter"></a>
+                    <a class="fa fa-fw fa-linkedin"></a>
+                    <a class="fa fa-fw fa-google-plus"></a>
+                </div>
+            </article>
+        </div>
+        <div class="col-md-4 col-sm-6 col-xs-12">
+            <article class="material-card Pink">
+                <h2>
+                    <span>Sean Penn</span>
+                    <strong>
+                        <i class="fa fa-fw fa-star"></i>
+                        Mystic River
+                    </strong>
+                </h2>
+                <div class="mc-content">
+                    <div class="img-container">
+                        <img class="img-responsive" src="https://material-cards.s3-eu-west-1.amazonaws.com/thumb-sean-penn.jpg">
+                    </div>
+                    <div class="mc-description">
+                        He has won two Academy Awards, for his roles in the mystery drama Mystic River (2003) and the biopic Milk (2008). Penn began his acting career in television with a brief appearance in a 1974 episode of Little House on the Prairie ...
+                    </div>
+                </div>
+                <a class="mc-btn-action">
+                    <i class="fa fa-bars"></i>
+                </a>
+                <div class="mc-footer">
+                    <h4>
+                        Social
+                    </h4>
+                    <a class="fa fa-fw fa-facebook"></a>
+                    <a class="fa fa-fw fa-twitter"></a>
+                    <a class="fa fa-fw fa-linkedin"></a>
+                    <a class="fa fa-fw fa-google-plus"></a>
+                </div>
+            </article>
+        </div>
+        <div class="col-md-4 col-sm-6 col-xs-12">
+            <article class="material-card Purple">
+                <h2>
+                    <span>Clint Eastwood</span>
+                    <strong>
+                        <i class="fa fa-fw fa-star"></i>
+                        Million Dollar Baby
+                    </strong>
+                </h2>
+                <div class="mc-content">
+                    <div class="img-container">
+                        <img class="img-responsive" src="https://material-cards.s3-eu-west-1.amazonaws.com/thumb-clint-eastwood.jpg">
+                    </div>
+                    <div class="mc-description">
+                        He rose to international fame with his role as the Man with No Name in Sergio Leone's Dollars trilogy of spaghetti Westerns during the 1960s ...
+                    </div>
+                </div>
+                <a class="mc-btn-action">
+                    <i class="fa fa-bars"></i>
+                </a>
+                <div class="mc-footer">
+                    <h4>
+                        Social
+                    </h4>
+                    <a class="fa fa-fw fa-facebook"></a>
+                    <a class="fa fa-fw fa-twitter"></a>
+                    <a class="fa fa-fw fa-linkedin"></a>
+                    <a class="fa fa-fw fa-google-plus"></a>
+                </div>
+            </article>
+        </div>
+
+    </div>
+
+<!-- Third row -->
+    <div class="page-header">
+        <h1>The Invention  of the year</h1>
     </div>
     <div class="row active-with-click">
         <div class="col-md-4 col-sm-6 col-xs-12">
@@ -305,8 +410,35 @@ $(document).ready(function() {
   </div>
 </div>
     <!-- Start: Top Navbar -->
+    <!-- Modal  -->
+<!-- large modal -->
+<div class="modal fade my-bg-color-grey"  id="StartUpIndex">
+                                                <div class="modal-dialog modal-xl my-bg-color-grey">
+                                                    <div class="modal-content my-bg-color-grey">
 
+                                                        <!-- Modal Header -->
+                                                        <div class="modal-header">
+                                                            <h4 class="modal-title text-center my-text-color-white">
+                                                               Sector Start-Up Index
+                                                            </h4>
+                                                            <button type="button" class="close"
+                                                                data-dismiss="modal">&times;</button>
+                                                        </div>
 
+                                                        <!-- Modal body -->
+                                                        <div class="modal-body ">
+
+                                                        </div>
+
+                                                        <!-- Modal footer -->
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-secondary"
+                                                                data-dismiss="modal">Close</button>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
 
     <!-- End: Top Navbar -->
 

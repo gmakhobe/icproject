@@ -99,6 +99,12 @@ padding-top: 5%;
  input[id="radio-3"]:checked ~ .glider {
 	 transform: translateX(200%);
 }
+input[id="radio-4"]:checked ~ .glider {
+    transform: translateX(300%);
+}
+input[id="radio-5"]:checked ~ .glider {
+    transform: translateX(400%);
+}
  .glider {
 	 position: absolute;
 	 display: flex;
