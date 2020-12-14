@@ -446,7 +446,7 @@
       <h4 style="padding-left: 1%;"> Financial Literacy: All Schools<h4>
       <hr>
 
-      <h4 style="padding-left: 5%;"> Trading School Sandton<h4>
+      <h4 style="padding-left: 5%; font-size:30px;"> Trading School Sandton<h4>
             <div style="padding-left: 5%;">
                   <span class="fa fa-star checked" style="font-size:15px;"></span>
                   <span class="fa fa-star checked" style="font-size:15px;"></span>
@@ -458,7 +458,7 @@
       <div class="book-cards">
          <div class="book-card">
               <div class="content-wrapper">
-                <img src="https://www.wikihow.com/images/d/da/FinanceChartNumbersFontColour.png" alt="" class="book-card-img">
+                <img src="https://www.wikihow.com/images/d/da/FinanceChartNumbersFontColour.png" alt="" class="book-card-img2">
 
                 </div>
                 <div class="likes">
@@ -471,13 +471,13 @@
                 <div class="like-profile">
                 <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1400&q=80" alt="" class="like-img">
               </div>
-                <div class="like-name"><span>Mark Red</span> and<span> 3 other friends</span> like this</div>
+                <div class="like-name"><span>James Blue</span> and<span> 3 other friends</span> like this</div>
             </div>
           </div>
 
           <div class="book-card">
               <div class="content-wrapper">
-                <img src="https://www.wikihow.com/images/d/da/FinanceChartNumbersFontColour.png" alt="" class="book-card-img">
+                <img src="https://i.ytimg.com/vi/9phqDzH1rJE/maxresdefault.jpg" alt="" class="book-card-img2">
 
                 </div>
                 <div class="likes">
@@ -490,13 +490,13 @@
                 <div class="like-profile">
                 <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1400&q=80" alt="" class="like-img">
               </div>
-                <div class="like-name"><span>Mark Red</span> and<span> 3 other friends</span> like this</div>
+                <div class="like-name"><span>Thabo Maluleke</span> and<span> 5 other friends</span> like this</div>
             </div>
           </div>
 
           <div class="book-card">
               <div class="content-wrapper">
-                <img src="https://www.wikihow.com/images/d/da/FinanceChartNumbersFontColour.png" alt="" class="book-card-img">
+                <img src="https://i.ytimg.com/vi/jcfVIHH_3Ho/maxresdefault.jpg" alt="" class="book-card-img2">
 
                 </div>
                 <div class="likes">
@@ -509,7 +509,7 @@
                 <div class="like-profile">
                 <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1400&q=80" alt="" class="like-img">
               </div>
-                <div class="like-name"><span>Mark Red</span> and<span> 3 other friends</span> like this</div>
+                <div class="like-name"><span>Justin Black</span> and<span> 9 other friends</span> like this</div>
             </div>
           </div>
 
@@ -520,6 +520,75 @@
 
     <div id="MyClasses">
       <h4 style="padding-left: 1%;"> Financial Literacy: My Classes<h4>
+      <hr>
+      <h4 style="padding-left: 1%;"> Pendulum College<h4>
+            <div style="padding-left: 5%;">
+                  <span class="fa fa-star checked" style="font-size:15px;"></span>
+                  <span class="fa fa-star checked" style="font-size:15px;"></span>
+                  <span class="fa fa-star checked" style="font-size:15px;"></span>
+                  <span class="fa fa-star checked" style="font-size:15px;"></span>
+                  <span class="fa fa-star" style="font-size:15px;"></span>
+                  <span class="fa fa-star" style="font-size:15px;"></span>
+            </div>
+      <div class="book-cards">
+         <div class="book-card">
+              <div class="content-wrapper">
+                <img src="http://www.omtglobal.com/wp-content/uploads/2013/07/Finance-for-non-financial-mgrs.jpg" alt="" class="book-card-img2">
+
+                </div>
+                <div class="likes">
+                <div class="like-profile">
+                <img src="https://english.cdn.zeenews.com/sites/default/files/2017/11/17/639329-indian-men.jpg" alt="" class="like-img">
+              </div>
+                <div class="like-profile">
+                <img src="https://pbs.twimg.com/profile_images/2452384114/noplz47r59v1uxvyg8ku.png" alt="" class="like-img">
+              </div>
+                <div class="like-profile">
+                <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1400&q=80" alt="" class="like-img">
+              </div>
+                <div class="like-name"><span>John Yullo</span> and<span> 11 other friends</span> like this</div>
+            </div>
+          </div>
+
+          <div class="book-card">
+              <div class="content-wrapper">
+                <img src="http://www.financeplaza.org/wp-content/uploads/2017/11/Financial-Management.jpg" alt="" class="book-card-img2">
+
+                </div>
+                <div class="likes">
+                <div class="like-profile">
+                <img src="https://english.cdn.zeenews.com/sites/default/files/2017/11/17/639329-indian-men.jpg" alt="" class="like-img">
+              </div>
+                <div class="like-profile">
+                <img src="https://pbs.twimg.com/profile_images/2452384114/noplz47r59v1uxvyg8ku.png" alt="" class="like-img">
+              </div>
+                <div class="like-profile">
+                <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1400&q=80" alt="" class="like-img">
+              </div>
+                <div class="like-name"><span>Mark Red</span> and<span> 3 other friends</span> like this</div>
+            </div>
+          </div>
+
+          <div class="book-card">
+              <div class="content-wrapper">
+                <img src="http://apps.pittsburghpa.gov/redtail/images/236_City_Pittsburgh_Finance.png" alt="" class="book-card-img2">
+
+                </div>
+                <div class="likes">
+                <div class="like-profile">
+                <img src="https://english.cdn.zeenews.com/sites/default/files/2017/11/17/639329-indian-men.jpg" alt="" class="like-img">
+              </div>
+                <div class="like-profile">
+                <img src="https://pbs.twimg.com/profile_images/2452384114/noplz47r59v1uxvyg8ku.png" alt="" class="like-img">
+              </div>
+                <div class="like-profile">
+                <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1400&q=80" alt="" class="like-img">
+              </div>
+                <div class="like-name"><span>Hayley Williams</span> and<span> 5 other friends</span> like this</div>
+            </div>
+          </div>
+
+      </div>
     </div>
 
     <div id="HowToUseIC">

@@ -19,8 +19,8 @@
 <body>
     <!-- Start: SectionContainerRowColumn -->
     <section></section>
-    <!-- End: SectionContainerRowColumn -->
-    <nav class="navbar navbar-light navbar-expand-md sticky-top bounce animated navigation-clean-button" style="height: 80px;background: linear-gradient(to right,#a889e6 0%, #53005e 100%);; color: #ffffff;">
+    <!-- End: SectionContainerRowColumn-->
+    <nav class="navbar navbar-light navbar-expand-md sticky-top bounce animated navigation-clean-button" style="height: 80px;background: linear-gradient(135deg,#9526a9 5% ,#23212f 95%); color: #ffffff;">
         <div class="container-fluid">
             <button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1">
                 <span class="sr-only">Toggle navigation</span>

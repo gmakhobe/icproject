@@ -39,27 +39,30 @@
         <div class="row">
             <div class="col-md-1"></div>
             <div class="col-md-11">
-
+            <br><br>
                 <!-- Start: Jumbotron -->
-                <div class="container jumbotron m-3 my-bg-color-grey">
-                    <h3>Plugin Podcasts and Radio</h3>
-                    <p class="my-text-color-white">Plugin Podcast and Radio for users!</p>
+                <div class="code--css" style="height: 150px;">
+                    <div style="padding: 2%">
+                        <h3>Plugin Podcasts and Radio</h3>
+                        <p class="my-text-color-white">Plugin Podcast and Radio for users!</p>
+                    </div>
                 </div>
+                <br>
                 <!-- End: Jumbotron -->
 
                 <!-- Start: Nav -->
-                <ul class="nav nav-justified nav-pills">
+                <ul class="nav nav-tabs">
                     <li class="nav-item">
                         <a class="nav-link" data-toggle="pill" href="#favourates"><span
-                                class="my-text-color-white">Favourates</span></a>
+                                class="my-text-color-white" style="color:purple; font-size: 20px;">Favourites</span></a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link active" data-toggle="pill" href="#podcasts"><span
-                                class="my-text-color-white">Podcasts</span></a>
+                                class="my-text-color-white" style="color:purple; font-size: 20px;">Podcasts</span></a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" data-toggle="pill" href="#top-20-podcasts"><span
-                                class="my-text-color-white">Top 20 Podcasts</span></a>
+                                class="my-text-color-white" style="color:purple; font-size: 20px;">Top 20 Podcasts</span></a>
                     </li>
 
                 </ul>
@@ -77,13 +80,13 @@
                                     <div class="p-3  card-body my-text-color-white">
                                         <center>
                                             <img onclick="PlayPodcast('{{ $TopPodcasts['Name'] }}', '{{ $TopPodcasts['Subject'] }}', '{{ $TopPodcasts['Rating'] }}', '{{ $TopPodcasts['Link'] }}', '{{ $TopPodcasts['Id'] }}')"
-                                                style="width:100%; height: auto;"
-                                                src="https://via.placeholder.com/500x500" alt=" - Image" />
+                                                style="width:100%; height: auto; border-radius: 5%"
+                                                src="https://img1.s3wfg.com/web/img/images_uploaded/b/7/financedata620_test_10.jpg"/>
                                             <p class="my-text-color-white">
                                                 <strong>
                                                     <span id="Title{{ $index }}">{{ $TopPodcasts['Name'] }}</span>
                                                 </strong>
-                                                <button class="btn btn-primary" data-toggle="popover"
+                                                <button class="btn btn-light" data-toggle="popover"
                                                     title="{{ $TopPodcasts['Username'] }}"
                                                     data-content="{{ $TopPodcasts['Description'] }}">
                                                     <i class="fa fa-bars" aria-hidden="true"></i>
@@ -116,13 +119,13 @@
                                     <div class="p-3  card-body my-text-color-white">
                                         <center>
                                             <img onclick="PlayPodcast('{{ $TopPodcasts['Name'] }}', '{{ $TopPodcasts['Subject'] }}', '{{ $TopPodcasts['Rating'] }}', '{{ $TopPodcasts['Link'] }}', '{{ $TopPodcasts['Id'] }}')"
-                                                style="width:100%; height: auto;"
-                                                src="https://via.placeholder.com/500x500" alt=" - Image" />
+                                                style="width:100%; height: auto; border-radius: 5%"
+                                                src="http://www.dolmanbateman.com.au/wp-content/uploads/2012/09/Financial-Newspapers.jpg" alt=" - Image" />
                                             <p class="my-text-color-white">
                                                 <strong>
                                                     <span id="Title{{ $index }}">{{ $TopPodcasts['Name'] }}</span>
                                                 </strong>
-                                                <button class="btn btn-primary" data-toggle="popover"
+                                                <button class="btn btn-light" data-toggle="popover"
                                                     title="{{ $TopPodcasts['Username'] }}"
                                                     data-content="{{ $TopPodcasts['Description'] }}">
                                                     <i class="fa fa-bars" aria-hidden="true"></i>
@@ -158,10 +161,12 @@
                                         </div>
                                         <div class="col-md-3">
                                             <button onclick="NewsChannelSearch('newsChannelSearch', 0)"
-                                                class="btn btn-primary">Search</button>
+                                                class="btn btn-light">Search</button>
                                         </div>
                                     </div>
+                                    
                                 </div>
+                                <br>
                             </div>
 
                             <div id="PodcastDesplay" class="col-md-12 row my-bg-color-grey">
@@ -173,17 +178,17 @@
                                         <div class="p-3  card-body my-text-color-white">
                                             <center>
                                                 <img onclick="PlayPodcast('{{ $TopPodcasts['Name'] }}', '{{ $TopPodcasts['Subject'] }}', '{{ $TopPodcasts['Rating'] }}', '{{ $TopPodcasts['Link'] }}', '{{ $TopPodcasts['Id'] }}')"
-                                                    style="width:100%; height: auto;"
-                                                    src="https://via.placeholder.com/500x500" alt=" - Image" />
+                                                    style="width:100%; height: auto; border-radius: 5%"
+                                                    src="https://www.york.ac.uk/media/study/courses/postgraduate/management/msc-mbf-hero-1200.jpg" alt=" - Image" />
                                                 <p class="my-text-color-white">
                                                     <strong>
                                                         <span id="Title{{ $index }}">{{ $TopPodcasts['Name'] }}</span>
                                                     </strong>
-                                                    <button class="btn btn-primary" data-toggle="popover"
+                                                    <button class="btn btn-light" data-toggle="popover"
                                                         title="{{ $TopPodcasts['Username'] }}"
                                                         data-content="{{ $TopPodcasts['Description'] }}">
                                                         <i class="fa fa-bars" aria-hidden="true"></i>
-
+                                                        
                                                     </button>
                                                     <br />
                                                     <span id="Subject{{ $index }}">{{ $TopPodcasts['Subject'] }}</span>
@@ -208,7 +213,7 @@
                        <center>
                             <p id="AudioInfo" class=" my-text-color-white"><strong>Title</strong> &sdot;
                                 Topic &sdot;
-                                Rating &sdot; <button class="btn btn-primary"><i class="fa fa-thumbs-up" aria-hidden="true"></i></button>
+                                Rating &sdot; <button class="btn btn-light"><i class="fa fa-thumbs-up" aria-hidden="true"></i></button>
                                 </p>
                         </center>
                         <audio id="AudioPlayer" controls style="width:100%;">

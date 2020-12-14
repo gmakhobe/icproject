@@ -42,25 +42,34 @@
             <div class="col-md-11">
 
                 <div class="row">
-
+                <br>
                     <div class="col-md-12 card my-bg-color-grey">
                         <div class="card-body my-bg-color-grey">
 
-                            <img class="my-news-card-img-news-view p-3" src="{{ $ChannelNewsContent[0]['Banner'] }}"
-                                alt="Card image">
+                            <img class="my-news-card-img-news-view p-3" src="https://www.nav.com/wp-content/uploads/2018/04/fast-business-loans-750x343.jpg"
+                                alt="Card image"
+                                style="width:100%; border-radius: 5%sssssssssssssssss">
                             <center>
-                                <h4 class="card-title my-text-color-white  p-3 text-align-center">
-                                    {{ $ChannelNewsContent[0]['Headline'] }}</h4>
+                                <h2 class="card-title my-text-color-white  p-3 text-align-center" style="color:purple;">
+                                Are EIDL or Paycheck Protection Program Loans Taxable Income?</h2>
                             </center>
                             <i>
-                                <p class="my-text-color-white p-3">{{ $ChannelNewsContent[0]['Author'] }} /
-                                    {{ $ChannelNewsContent[0]['Date'] }} / {{ $ChannelNewsContent[0]['Views'] }} Views</p>
+                                <h3 class="my-text-color-white p-3">{{ $ChannelNewsContent[0]['Author'] }} /
+                                    {{ $ChannelNewsContent[0]['Date'] }} / {{ $ChannelNewsContent[0]['Views'] }} Views</h3>
                             </i>
 
-                            <p class="my-text-color-white p-3">Topic:
-                                <strong>{{ $ChannelNewsContent[0]['Subject'] }}</strong></p>
+                            <h4 class="my-text-color-white p-3">Topic:
+                                <strong>{{ $ChannelNewsContent[0]['Subject'] }}</strong></h4>
 
-                            <p class="card-text my-text-color-white  p-3">{{ $ChannelNewsContent[0]['News'] }}</p>
+                            <p class="card-text my-text-color-white  p-3" style="font-size:15px;">
+                                If you’re like most small business owners wading your way through the EIDL and PPP loans and the regulations and requirements that go with them, welcome to the club. As we see more entrepreneurs receiving funds from these two SBA programs, we’re also seeing more questions about what comes next.
+
+                                One big question? Whether or not the funds from these two loan programs will be taxed on a business’ annual income tax return. Whether you’ve got just one business or are applying for PPP with multiple businesses, you need to know what to expect down the road.
+
+                                For many sole proprietors and other entrepreneurs, filing taxes for 2020 seems a far-off worry they don’t want to think about right now, but the truth is: knowing what to expect can help you plan ahead once we get back to the new normal.
+
+                                Please note, the material contained in this article is for informational purposes only, is general in nature, and should not be relied upon or construed as a legal opinion or legal advice. Please keep in mind this information is changing rapidly and is based on our current understanding of the programs. It can and likely will change. Although we will be monitoring and updating this as new information becomes available, please do not rely solely on this for your financial decisions. We encourage you to consult with your lawyers, CPAs and Financial Advisors. To review your real-time funding options with one of Nav’s lending experts, please contact us.
+                            </p>
                         </div>
                         <br />
                     </div>
@@ -107,7 +116,7 @@
                             <textarea class="form-control" id="newsComment" rows="3" id="comment"></textarea>
                         </div>
 
-                        <button class="btn btn-primary" onclick="UserPostComment()"> Submit Comment</button>
+                        <button class="btn btn-light" onclick="UserPostComment()"> Submit Comment</button>
 
                     </div>
 

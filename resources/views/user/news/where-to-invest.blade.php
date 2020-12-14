@@ -6,396 +6,675 @@
     <!-- Start: Header Content -->
 
     <!-- End: Header Content -->
-
     <link rel="stylesheet" href="/assets1/fonts/fontawesome5-overrides.min.css">
-    <link rel="stylesheet" href="/assets1/css/Dark-Footer-1.css">
-    <link rel="stylesheet" href="/assets1/css/Dark-Footer-2.css">
-    <link rel="stylesheet" href="/assets1/css/Dark-Footer.css">
-    <link rel="stylesheet" href="/assets1/css/Dark-NavBar-1.css">
-    <link rel="stylesheet" href="/assets1/css/Dark-NavBar-2.css">
-    <link rel="stylesheet" href="/assets1/css/Dark-NavBar.css">
-    <link rel="stylesheet" href="/assets1/css/Data-Table-with-Search-Sort-Filter-and-Zoom-using-TableSorter.css">
-    <link rel="stylesheet" href="/assets1/css/Footer-with-social-media-icons.css">
-    <link rel="stylesheet" href="/assets1/css/Pretty-Table-1.css">
-    <link rel="stylesheet" href="/assets1/css/Pretty-Table.css">
+    <link rel="stylesheet" href="/assets1/css/Article-List.css">
+    <link rel="stylesheet" href="/assets1/css/Profile-Card-1.css">
     <link rel="stylesheet" href="/assets1/css/styles.css">
     <link rel="stylesheet" href="/assets1/css/Vertical-Left-SideBar-by-Jigar-Mistry.css">
+    <link rel="stylesheet" href="/assets1/css/ideas.css">
+
     <link rel="stylesheet" href="/assets1/css/newSideNav.css">
+
+    <link rel="stylesheet" href="/assets1/css/indicatorsAndStrategies.css">
+    <link rel="stylesheet" href="/assets1/css/financialliteracy.css">
+
+
 </head>
 
-<body style="background-color: rgb(50,46,46);margin-top: 2px;">
+<body onload="onload">
 
-    <!-- Start: Vertical Left-SideBar by Jigar Mistry -->
-    @include('/user/layout/side-nav')
-    <!-- End: Vertical Left-SideBar by Jigar Mistry -->
-    <!-- Start: Top Navbar -->
+     <!-- Start: Vertical Left-SideBar by Jigar Mistry -->
+     @include('/user/layout/side-nav')
+     <!-- End: Vertical Left-SideBar by Jigar Mistry -->
+     <!-- Start: Top Navbar -->
 
-    <!-- End: Top Navbar -->
+     <!-- End: Top Navbar -->
 
-    <div class="card border-danger shadow" style="height: 900px;background-color: rgb(33,31,31);width: 1147px;margin-left: 125px;">
-        <div class="card-body" style="background-color: #545d67;height: 680px;">
-            <div id="wrapper" style="height: 812px;margin: 0px;padding: 0px;">
-                <div class="container" style="width: 1025px;height: 853px;">
-                    <div class="d-flex flex-column" id="content-wrapper">
-                        <div id="content" style="margin-left: 0px;width: 100%;margin-right: 0px;height: 100%;">
-                            <!-- Start: Data Table with Search Sort Filter and Zoom using -->
-                            <div class="container" data-aos="fade-up" data-aos-delay="50" style="background-color: #545d67;width: 1020px;margin-left: 0px;max-width: 1170px;">
-                                <!-- Start: TableSorter -->
-                                <div class="card" id="TableSorterCard" style="width: 1025px;">
-                                    <div class="row table-topper align-items-center" style="background-color: rgb(31,33,40);margin-left: -1px;height: 67px;margin-top: -1px;width: 1025px;">
-                                        <div class="col-4 text-left" style="margin: 0px;padding: 5px 15px;background-color: rgb(31,33,40);margin-left: 4px;"><span style="font-size: 22px;color: rgb(255,33,85);"><strong>WHERE TO INVEST</strong></span></div>
-                                        <div class="col-4 text-center" style="margin: 0px;padding: 5px 10px;background-color: rgb(31,33,40);">
-                                            <h6 id="counter" style="color: rgb(250,251,255);">Showing: <strong id="rowCount">ALL</strong>&nbsp;</h6>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-12" style="background-color: #545d67;width: 1025px;">
-                                            <div>
-                                                <table class="table table tablesorter" id="ipi-table">
-                                                    <thead class="thead-dark">
-                                                        <tr>
-                                                            <th style="background-color: rgb(31,33,40);filter: saturate(200%);color: rgb(255,33,85);">NAME OF INVESTMENT</th>
-                                                            <th class="sorter-false" style="background-color: rgb(31,33,40);filter: saturate(200%);color: rgb(255,33,85);">NOTES BY AUTHOR</th>
-                                                            <th class="filter-false" style="background-color: rgb(31,33,40);filter: saturate(200%);color: rgb(255,33,85);">ANALYSIS</th>
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                        <tr>
-                                                            <td style="background-color: rgb(52,58,64);color: rgb(251,252,252);">PROJECTED RETURNS</td>
-                                                            <td style="background-color: rgb(52,58,64);color: rgb(251,252,252);">Notes from author</td>
-                                                            <td style="background-color: rgb(52,58,64);color: rgb(251,252,252);">TECHNICAL</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td style="background-color: rgb(52,58,64);color: rgb(251,252,252);">PRICES, QUOTES</td>
-                                                            <td style="background-color: rgb(52,58,64);">-</td>
-                                                            <td style="background-color: rgb(52,58,64);color: rgb(251,252,252);">FUNDAMENTAL</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td style="background-color: rgb(52,58,64);color: rgb(251,252,252);">PREVIOUS INVESTSMENTS</td>
-                                                            <td style="background-color: rgb(52,58,64);">-</td>
-                                                            <td style="background-color: rgb(52,58,64);color: rgb(251,252,252);">INVESTOR SENTIMENT</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td style="background-color: rgb(52,58,64);">-</td>
-                                                            <td style="background-color: rgb(52,58,64);">-</td>
-                                                            <td style="background-color: rgb(52,58,64);color: rgb(251,252,252);">ESG</td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="modal fade" role="dialog" tabindex="-1" id="tablehelpModal" aria-labeledby="tablehelpModal" aria-hidden="true">
-                                        <div class="modal-dialog modal-lg" role="document">
-                                            <div class="modal-content">
-                                                <div class="modal-header">
-                                                    <h4 class="modal-title">Table Filtering Options</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button></div>
-                                                <div class="modal-body">
-                                                    <div class="table-responsive">
-                                                        <table class="table">
-                                                            <thead>
-                                                                <tr>
-                                                                    <th style="width:1%">Priority</th>
-                                                                    <th style="width:9%">Operator</th>
-                                                                    <th style="width:30%">Description</th>
-                                                                    <th style="width:60%">Examples</th>
-                                                                </tr>
-                                                            </thead>
-                                                            <tbody>
-                                                                <tr>
-                                                                    <td>1</td>
-                                                                    <td><code>|</code>&nbsp;or&nbsp;&nbsp;<code>OR</code><br></td>
-                                                                    <td>Logical "or" (Vertical bar). Filter the column for content that matches text from either side of the bar.<br></td>
-                                                                    <td><code>&lt;20 | &gt;40</code>&nbsp;(matches a column cell with either "&lt;20" or "&gt;40")<br></td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td>2</td>
-                                                                    <td><code>&amp;&amp;</code>&nbsp;or <code>AND</code><br></td>
-                                                                    <td>Logical "and". Filter the column for content that matches text from either side of the operator.<br></td>
-                                                                    <td><code>&gt;20 &amp;&amp; &gt;40</code>&nbsp;(matches a column cell that contains both "&gt;20" and "&lt;40")<br></td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td>3</td>
-                                                                    <td><code>/\d/</code><br></td>
-                                                                    <td>Add any regex to the query to use in the query ("mig" flags can be included&nbsp;<code>/\w/mig</code>)<br></td>
-                                                                    <td><code>/b[aeiou]g/i</code>&nbsp;(finds "bag", "beg", "BIG", "Bug", etc);<code>&gt;/r$/</code>&nbsp;(matches text that ends with an "r")<br></td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td>4</td>
-                                                                    <td><code>&lt; &lt;= &gt;= &gt;</code><br></td>
-                                                                    <td>Find alphabetical or numerical values less than or greater than or equal to the filtered query .<br></td>
-                                                                    <td><code>&lt;=10</code>&nbsp;(find values greater than or equal to 10)<br></td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td>5</td>
-                                                                    <td><code>!</code>&nbsp;or&nbsp;<code>!=</code><br></td>
-                                                                    <td>Not operator, or not exactly match. Filter the column with content that&nbsp;<strong>do not</strong>&nbsp;match the query. Include an equal (<code>=</code>), single (<code>'</code>) or
-                                                                        double quote (<code>"</code>) to exactly&nbsp;<em>not</em>&nbsp;match a filter.<br><br><br></td>
-                                                                    <td><code>!e</code>&nbsp;(find text that doesn't contain an "e");<code>!"ELISA"</code>&nbsp;(find content that does not exactly match "ELISA")<br></td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td>6</td>
-                                                                    <td><code>"</code>&nbsp;or&nbsp;<code>=</code><br></td>
-                                                                    <td>To exactly match the search query, add a quote, apostrophe or equal sign to the beginning and/or end of the query<br></td>
-                                                                    <td><code>abc"</code>&nbsp;or&nbsp;<code>abc=</code>&nbsp;(exactly match "abc")<br></td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td>7</td>
-                                                                    <td><code>-</code>&nbsp;or <code>to</code><br></td>
-                                                                    <td>Find a range of values. Make sure there is a space before and after the dash (or the word "to").<br></td>
-                                                                    <td><code>10 - 30</code>&nbsp;or&nbsp;<code>10 to 30</code>&nbsp;(match values between 10 and 30)<br></td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td>8</td>
-                                                                    <td><code>?</code><br></td>
-                                                                    <td>Wildcard for a single, non-space character.<br></td>
-                                                                    <td><code>S?c</code>&nbsp;(finds "Sec" and "Soc", but not "Seec")<br></td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td>8</td>
-                                                                    <td><code>*</code><br></td>
-                                                                    <td>Wildcard for zero or more non-space characters.<br></td>
-                                                                    <td><code>B*k</code>&nbsp;(matches "Black" and "Book")<br></td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td>9</td>
-                                                                    <td><code>~</code><br></td>
-                                                                    <td>Perform a fuzzy search (matches sequential characters) by adding a tilde to the beginning of the query<br></td>
-                                                                    <td><code>~bee</code>&nbsp;(matches "Bruce Lee" and "Brenda Dexter"), or&nbsp;<code>~piano</code>&nbsp;(matches "Philip Aaron Wong")<br></td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td>10</td>
-                                                                    <td>text<br></td>
-                                                                    <td>Any text entered in the filter will&nbsp;<strong>match</strong>&nbsp;text found within the column<br></td>
-                                                                    <td><code>abc</code>&nbsp;(finds "abc", "abcd", "abcde", etc);<code>SEC</code>&nbsp;(finds "SEC" and "Analytical SEC")<br></td>
-                                                                </tr>
-                                                            </tbody>
-                                                        </table>
-                                                    </div>
-                                                </div>
-                                                <div class="modal-footer"><button class="btn btn-danger" type="button" data-dismiss="modal">Close</button></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- End: TableSorter -->
-                            </div>
-                            <!-- End: Data Table with Search Sort Filter and Zoom using -->
-                            <!-- Start: Data Table with Search Sort Filter and Zoom using -->
-                            <div class="container bounce animated" style="background-color: #545d67;min-width: 0px;max-width: 1170px;width: 1025px;margin-left: 0px;">
-                                <!-- Start: TableSorter -->
-                                <div class="card" id="TableSorterCard" style="width: 1025px;">
-                                    <div class="row">
-                                        <div class="col-12" style="background-color: #545d67;">
-                                            <div>
-                                                <table class="table table tablesorter" id="ipi-table">
-                                                    <thead class="thead-dark">
-                                                        <tr>
-                                                            <th style="background-color: rgb(31,33,40);filter: saturate(200%);color: rgb(255,33,85);">NAME OF INVESTMENT</th>
-                                                            <th class="sorter-false" style="filter: saturate(200%);background-color: rgb(31,33,40);color: rgb(255,33,85);">NOTES BY AUTHOR</th>
-                                                            <th class="filter-false" style="background-color: rgb(31,33,40);filter: saturate(200%);color: rgb(255,33,85);">ANALYSIS</th>
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                        <tr>
-                                                            <td style="background-color: rgb(52,58,64);color: rgb(251,252,252);">PROJECTED RETURNS</td>
-                                                            <td style="background-color: rgb(52,58,64);">-</td>
-                                                            <td style="background-color: rgb(52,58,64);color: rgb(251,252,252);">TECHNICAL</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td style="background-color: rgb(52,58,64);color: rgb(251,252,252);">PRICES, QUOTES</td>
-                                                            <td style="background-color: rgb(52,58,64);">-</td>
-                                                            <td style="background-color: rgb(52,58,64);color: rgb(251,252,252);">FUNDAMENTAL</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td style="background-color: rgb(52,58,64);color: rgb(251,252,252);">PREVIOUS INVESTSMENTS</td>
-                                                            <td style="background-color: rgb(52,58,64);">-</td>
-                                                            <td style="background-color: rgb(52,58,64);color: rgb(251,252,252);">INVESTOR SENTIMENT</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td style="background-color: rgb(52,58,64);">-</td>
-                                                            <td style="background-color: rgb(52,58,64);">-</td>
-                                                            <td style="background-color: rgb(52,58,64);color: rgb(251,252,252);">ESG</td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </div>
-                                        </div>
-                                        <div class="col-12" style="background-color: #545d67;width: 0px;min-width: none;max-width: none;">
-                                            <div>
-                                                <table class="table table tablesorter" id="ipi-table">
-                                                    <thead class="thead-dark">
-                                                        <tr>
-                                                            <th style="background-color: rgb(31,33,40);filter: saturate(200%);color: rgb(255,33,85);">NAME OF INVESTMENT</th>
-                                                            <th class="sorter-false" style="filter: saturate(200%);background-color: rgb(31,33,40);color: rgb(255,33,85);">NOTES BY AUTHOR</th>
-                                                            <th class="filter-false" style="background-color: rgb(31,33,40);filter: saturate(200%);color: rgb(255,33,85);">ANALYSIS</th>
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                        <tr>
-                                                            <td style="background-color: rgb(52,58,64);color: rgb(251,252,252);">PROJECTED RETURNS</td>
-                                                            <td style="background-color: rgb(52,58,64);">-</td>
-                                                            <td style="background-color: rgb(52,58,64);width: 376px;color: rgb(251,252,252);">TECHNICAL</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td style="background-color: rgb(52,58,64);color: rgb(251,252,252);">PRICES, QUOTES</td>
-                                                            <td style="background-color: rgb(52,58,64);">-</td>
-                                                            <td style="background-color: rgb(52,58,64);color: rgb(251,252,252);">FUNDAMENTAL</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td style="background-color: rgb(52,58,64);color: rgb(251,252,252);">PREVIOUS INVESTSMENTS</td>
-                                                            <td style="background-color: rgb(52,58,64);">-</td>
-                                                            <td style="background-color: rgb(52,58,64);color: rgb(251,252,252);">INVESTOR SENTIMENT</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td style="background-color: rgb(52,58,64);">-</td>
-                                                            <td style="background-color: rgb(52,58,64);">-</td>
-                                                            <td style="background-color: rgb(52,58,64);color: rgb(251,252,252);">ESG</td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="modal fade" role="dialog" tabindex="-1" id="tablehelpModal" aria-labeledby="tablehelpModal" aria-hidden="true">
-                                        <div class="modal-dialog modal-lg" role="document">
-                                            <div class="modal-content">
-                                                <div class="modal-header">
-                                                    <h4 class="modal-title">Table Filtering Options</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button></div>
-                                                <div class="modal-body">
-                                                    <div class="table-responsive">
-                                                        <table class="table">
-                                                            <thead>
-                                                                <tr>
-                                                                    <th style="width:1%">Priority</th>
-                                                                    <th style="width:9%">Operator</th>
-                                                                    <th style="width:30%">Description</th>
-                                                                    <th style="width:60%">Examples</th>
-                                                                </tr>
-                                                            </thead>
-                                                            <tbody>
-                                                                <tr>
-                                                                    <td>1</td>
-                                                                    <td><code>|</code>&nbsp;or&nbsp;&nbsp;<code>OR</code><br></td>
-                                                                    <td>Logical "or" (Vertical bar). Filter the column for content that matches text from either side of the bar.<br></td>
-                                                                    <td><code>&lt;20 | &gt;40</code>&nbsp;(matches a column cell with either "&lt;20" or "&gt;40")<br></td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td>2</td>
-                                                                    <td><code>&amp;&amp;</code>&nbsp;or <code>AND</code><br></td>
-                                                                    <td>Logical "and". Filter the column for content that matches text from either side of the operator.<br></td>
-                                                                    <td><code>&gt;20 &amp;&amp; &gt;40</code>&nbsp;(matches a column cell that contains both "&gt;20" and "&lt;40")<br></td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td>3</td>
-                                                                    <td><code>/\d/</code><br></td>
-                                                                    <td>Add any regex to the query to use in the query ("mig" flags can be included&nbsp;<code>/\w/mig</code>)<br></td>
-                                                                    <td><code>/b[aeiou]g/i</code>&nbsp;(finds "bag", "beg", "BIG", "Bug", etc);<code>&gt;/r$/</code>&nbsp;(matches text that ends with an "r")<br></td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td>4</td>
-                                                                    <td><code>&lt; &lt;= &gt;= &gt;</code><br></td>
-                                                                    <td>Find alphabetical or numerical values less than or greater than or equal to the filtered query .<br></td>
-                                                                    <td><code>&lt;=10</code>&nbsp;(find values greater than or equal to 10)<br></td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td>5</td>
-                                                                    <td><code>!</code>&nbsp;or&nbsp;<code>!=</code><br></td>
-                                                                    <td>Not operator, or not exactly match. Filter the column with content that&nbsp;<strong>do not</strong>&nbsp;match the query. Include an equal (<code>=</code>), single (<code>'</code>) or
-                                                                        double quote (<code>"</code>) to exactly&nbsp;<em>not</em>&nbsp;match a filter.<br><br><br></td>
-                                                                    <td><code>!e</code>&nbsp;(find text that doesn't contain an "e");<code>!"ELISA"</code>&nbsp;(find content that does not exactly match "ELISA")<br></td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td>6</td>
-                                                                    <td><code>"</code>&nbsp;or&nbsp;<code>=</code><br></td>
-                                                                    <td>To exactly match the search query, add a quote, apostrophe or equal sign to the beginning and/or end of the query<br></td>
-                                                                    <td><code>abc"</code>&nbsp;or&nbsp;<code>abc=</code>&nbsp;(exactly match "abc")<br></td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td>7</td>
-                                                                    <td><code>-</code>&nbsp;or <code>to</code><br></td>
-                                                                    <td>Find a range of values. Make sure there is a space before and after the dash (or the word "to").<br></td>
-                                                                    <td><code>10 - 30</code>&nbsp;or&nbsp;<code>10 to 30</code>&nbsp;(match values between 10 and 30)<br></td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td>8</td>
-                                                                    <td><code>?</code><br></td>
-                                                                    <td>Wildcard for a single, non-space character.<br></td>
-                                                                    <td><code>S?c</code>&nbsp;(finds "Sec" and "Soc", but not "Seec")<br></td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td>8</td>
-                                                                    <td><code>*</code><br></td>
-                                                                    <td>Wildcard for zero or more non-space characters.<br></td>
-                                                                    <td><code>B*k</code>&nbsp;(matches "Black" and "Book")<br></td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td>9</td>
-                                                                    <td><code>~</code><br></td>
-                                                                    <td>Perform a fuzzy search (matches sequential characters) by adding a tilde to the beginning of the query<br></td>
-                                                                    <td><code>~bee</code>&nbsp;(matches "Bruce Lee" and "Brenda Dexter"), or&nbsp;<code>~piano</code>&nbsp;(matches "Philip Aaron Wong")<br></td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td>10</td>
-                                                                    <td>text<br></td>
-                                                                    <td>Any text entered in the filter will&nbsp;<strong>match</strong>&nbsp;text found within the column<br></td>
-                                                                    <td><code>abc</code>&nbsp;(finds "abc", "abcd", "abcde", etc);<code>SEC</code>&nbsp;(finds "SEC" and "Analytical SEC")<br></td>
-                                                                </tr>
-                                                            </tbody>
-                                                        </table>
-                                                    </div>
-                                                </div>
-                                                <div class="modal-footer"><button class="btn btn-danger" type="button" data-dismiss="modal">Close</button></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- End: TableSorter -->
-                            </div>
-                            <!-- End: Data Table with Search Sort Filter and Zoom using -->
-                            <div class="collapse navbar-collapse" id="navcol-2">
-                                <ul class="nav nav-tabs ml-auto">
-                                    <li class="nav-item"><a class="nav-link active" style="color:#ffffff;" href="#"><i class="fa fa-home"></i>&nbsp;Home</a></li>
-                                    <li class="nav-item"><a class="nav-link" style="color:#ffffff;" href="#"><i class="fa fa-wpexplorer"></i>&nbsp;Explore</a></li>
-                                    <li class="nav-item"><a class="nav-link" style="color:#ffffff;" href="#"><i class="fa fa-star-o"></i>&nbsp;Features</a></li>
-                                    <li class="nav-item"><a class="nav-link" style="color:#ffffff;" href="#"><i class="fa fa-user-circle-o"></i>&nbsp;Portfolio</a></li>
-                                    <li class="nav-item"><a class="nav-link" style="color:#ffffff;" href="#"><i class="fa fa-sign-in"></i>&nbsp;Sign In</a></li>
-                                </ul>
-                            </div>
-                            <div class="collapse navbar-collapse" id="navcol-1">
-                                <ul class="nav nav-tabs ml-auto">
-                                    <li class="nav-item"><a class="nav-link active" style="color:#ffffff;" href="#"><i class="fa fa-home"></i>&nbsp;Home</a></li>
-                                    <li class="nav-item"><a class="nav-link" style="color:#ffffff;" href="#"><i class="fa fa-wpexplorer"></i>&nbsp;Explore</a></li>
-                                    <li class="nav-item"><a class="nav-link" style="color:#ffffff;" href="#"><i class="fa fa-star-o"></i>&nbsp;Features</a></li>
-                                    <li class="nav-item"><a class="nav-link" style="color:#ffffff;" href="#"><i class="fa fa-user-circle-o"></i>&nbsp;Portfolio</a></li>
-                                    <li class="nav-item"><a class="nav-link" style="color:#ffffff;" href="#"><i class="fa fa-sign-in"></i>&nbsp;Sign In</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div><a class="border rounded d-inline scroll-to-top" href="#page-top"></a></div>
-        </div>
+    <div class="book-store">
+ <div class="header">
+  <div class="browse">
+  </div>
+ </div>
+ <div class="main-wrapper">
+  <div class="popular-books">
+   <div class="main-menu">
+     
+  <div style="padding-right: 50px;" class="genre">Where To Invest</div>
+
+  <select name="assess" class="assess">
+    <option value="1">Default</option>
+    <option value="1">IC Exmas and Certifications</option>
+    <option value="2">Excercises and Exmaples</option>
+    <option value="3">Tutorials</option>
+  </select>
+  
+    <div class="book-types">
+     <a href="#" id="namesid" class="book-type active">Names</a>
+     <a href="#" id="pricesid" class="book-type"> Prices</a>
+     <a href="#" id="notesid" class="book-type">Notes</a>
+     <a href="#" id="strategiesandanalysisid" class="book-type">Strategies and Analysis</a>
     </div>
-    <!-- Start: Dark footer with social media icons -->
-    <footer id="footerpad-1" style="margin-top: 334px;width: 1349px;background-color: #343a40;">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 col-lg-8 mx-auto">
-                    <ul class="list-inline text-center">
-                        <li class="list-inline-item"><a href="#"><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-facebook fa-stack-1x fa-inverse"></i></span></a></li>
-                        <li class="list-inline-item"><a href="#"><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-twitter fa-stack-1x fa-inverse"></i></span></a></li>
-                        <li class="list-inline-item"><a href="#"><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-instagram fa-stack-1x fa-inverse"></i></span></a></li>
-                        <li class="list-inline-item"><a href="#"><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-pinterest fa-stack-1x fa-inverse"></i></span></a></li>
-                    </ul>
-                    <!-- Start: paragraph --><b><p class="copyright text-muted text-center">Copyright &copy; Plugin 2020 </p></b>
-                    <!-- End: paragraph -->
+   </div>
+
+   <script>
+          window.onload = function onload() {
+            console.log('onload');
+              $("#names").show();
+                $("#prices").hide();
+                  $("#notes").hide();
+                    $("#strategiesandanalysis").hide();
+                }
+
+          $(document).ready(function(){
+
+            $("#namesid").click(function(){
+                $("#names").show();
+                $("#prices").hide();
+                  $("#notes").hide();
+                    $("#strategiesandanalysis").hide(); 
+            });       
+
+            $("#pricesid").click(function(){
+                $("#names").hide();
+                $("#prices").show();
+                  $("#notes").hide();
+                    $("#strategiesandanalysis").hide(); 
+            }); 
+
+            $("#notesid").click(function(){
+                $("#names").hide();
+                $("#prices").hide();
+                  $("#notes").show();
+                    $("#strategiesandanalysis").hide(); 
+            }); 
+
+            $("#strategiesandanalysisid").click(function(){
+                $("#names").hide();
+                $("#prices").hide();
+                  $("#notes").hide();
+                    $("#strategiesandanalysis").show(); 
+            }); 
+          });        
+    </script>
+
+<div class="book-store">
+ <div class="main-wrapper">
+
+    <div id="names">
+      <h4 style="padding-left: 1%;"> Financial Literacy: All Lessons<h4>
+
+              <div class="book-cards">
+                <div class="book-card">
+                <div class="content-wrapper">
+                <img src="https://i.pinimg.com/originals/d5/2e/97/d52e97c2007c0ebd0a34aeebc043b5ec.jpg" alt="" class="book-card-img">
+                <div class="card-content">
+                <div class="book-name">Trading Lessons</div>
+                  <div class="book-by">by Plugin</div>
+                  <div class="rate">
+            <fieldset class="rating book-rate">
+            <input type="checkbox" id="star-c1" name="rating" value="5">
+            <label class="full" for="star-c1"></label>
+            <input type="checkbox" id="star-c2" name="rating" value="4">
+            <label class="full" for="star-c2"></label>
+            <input type="checkbox" id="star-c3" name="rating" value="3">
+            <label class="full" for="star-c3"></label>
+            <input type="checkbox" id="star-c4" name="rating" value="2">
+            <label class="full" for="star-c4"></label>
+            <input type="checkbox" id="star-c5" name="rating" value="1">
+            <label class="full" for="star-c5"></label>
+            </fieldset>
+            <span class="book-voters card-vote">1.987 voters</span>
+            </div>
+                  <div class="book-sum card-sum">Traders have to learn these lessons  the easy way or they can learn them the hard way by losing their money. </div>
+                  </div>
+                </div>
+                <div class="likes">
+                <div class="like-profile">
+                <img src="https://randomuser.me/api/portraits/women/63.jpg" alt="" class="like-img">
+              </div>
+                <div class="like-profile">
+                <img src="https://pbs.twimg.com/profile_images/2452384114/noplz47r59v1uxvyg8ku.png" alt="" class="like-img">
+              </div>
+                <div class="like-profile">
+                <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1400&q=80" alt="" class="like-img">
+              </div>
+                <div class="like-name"><span>Samantha William</span> and<span> 2 other friends</span> like this</div>
+              </div>
+                </div>
+
+                <div class="book-card">
+                <div class="content-wrapper">
+                <img src="https://i0.wp.com/farm8.staticflickr.com/7115/7038139465_7f4c52e748_o.jpg" alt="" class="book-card-img">
+                <div class="card-content">
+                <div class="book-name">Journalism and Analysts</div>
+                  <div class="book-by">by Plugin</div>
+                  <div class="rate">
+            <fieldset class="rating book-rate">
+            <input type="checkbox" id="star-c6" name="rating" value="5">
+            <label class="full" for="star-c6"></label>
+            <input type="checkbox" id="star-c7" name="rating" value="4">
+            <label class="full" for="star-c7"></label>
+            <input type="checkbox" id="star-c8" name="rating" value="3">
+            <label class="full" for="star-c8"></label>
+            <input type="checkbox" id="star-c9" name="rating" value="2">
+            <label class="full" for="star-c9"></label>
+            <input type="checkbox" id="star-c10" name="rating" value="1">
+            <label class="full" for="star-c10"></label>
+            </fieldset>
+            <span class="book-voters card-vote">1.087 voters</span>
+            </div>
+                  <div class="book-sum card-sum">Traders have to learn these lessons  the easy way or they can learn them the hard way by losing their money.  </div>
+                  </div>
+                </div>
+                <div class="likes">
+                <div class="like-profile">
+                <img src="https://randomuser.me/api/portraits/women/63.jpg" alt="" class="like-img">
+              </div>
+                <div class="like-name"><span>Kimberly Jones</span> like this</div>
+              </div>
+                </div>
+
+                <div class="book-card">
+                <div class="content-wrapper">
+                <img src="http://www.queensu.ca/partnershipsandinnovation/sites/webpublish.queensu.ca.indwww/files/images/Build-business.jpg" alt="" class="book-card-img">
+                <div class="card-content">
+                <div class="book-name">Building a Company</div>
+                  <div class="book-by">by Plugin</div>
+                  <div class="rate">
+            <fieldset class="rating book-rate">
+            <input type="checkbox" id="star-c11" name="rating" value="5">
+            <label class="full" for="star-c11"></label>
+            <input type="checkbox" id="star-c12" name="rating" value="4">
+            <label class="full" for="star-c12"></label>
+            <input type="checkbox" id="star-c13" name="rating" value="3">
+            <label class="full" for="star-c13"></label>
+            <input type="checkbox" id="star-c14" name="rating" value="2">
+            <label class="full" for="star-c14"></label>
+            <input type="checkbox" id="star-c15" name="rating" value="1">
+            <label class="full" for="star-c15"></label>
+            </fieldset>
+            <span class="book-voters card-vote">997 voters</span>
+            </div>
+                  <div class="book-sum card-sum">Traders have to learn these lessons  the easy way or they can learn them the hard way by losing their money. </div>
+                  </div>
+                </div>
+                <div class="likes">
+                <div class="like-profile">
+                <img src="https://randomuser.me/api/portraits/women/63.jpg" alt="" class="like-img">
+              </div>
+                <div class="like-profile">
+                <img src="https://pbs.twimg.com/profile_images/2452384114/noplz47r59v1uxvyg8ku.png" alt="" class="like-img">
+              </div>
+                <div class="like-name"><span>Adam</span> and<span> Kimberly</span> like this</div>
+              </div>
+                </div>
+
+                <div class="book-card">
+                <div class="content-wrapper">
+                <img src="https://prod-discovery.edx-cdn.org/media/course/image/9d7084e9-a451-4f1e-a254-77824a48ccc4-1ec60f0b7178.small.jpeg" alt="" class="book-card-img">
+                <div class="card-content">
+                <div class="book-name">International Investing</div>
+                  <div class="book-by">by Plugin</div>
+                  <div class="rate">
+            <fieldset class="rating book-rate">
+            <input type="checkbox" id="star-c16" name="rating" value="5">
+            <label class="full" for="star-c16"></label>
+            <input type="checkbox" id="star-c17" name="rating" value="4">
+            <label class="full" for="star-c17"></label>
+            <input type="checkbox" id="star-18" name="rating" value="3">
+            <label class="full" for="star-c18"></label>
+            <input type="checkbox" id="star-c19" name="rating" value="2">
+            <label class="full" for="star-c19"></label>
+            <input type="checkbox" id="star-c20" name="rating" value="1">
+            <label class="full" for="star-c20"></label>
+            </fieldset>
+            <span class="book-voters card-vote">187 voters</span>
+            </div>
+                  <div class="book-sum card-sum">Traders have to learn these lessons  the easy way or they can learn them the hard way by losing their money. </div>
+                  </div>
+                </div>
+                <div class="likes">
+                <div class="like-profile">
+                <img src="https://randomuser.me/api/portraits/women/63.jpg" alt="" class="like-img">
+              </div>
+                <div class="like-profile">
+                <img src="https://pbs.twimg.com/profile_images/2452384114/noplz47r59v1uxvyg8ku.png" alt="" class="like-img">
+              </div>
+                <div class="like-profile">
+                <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1400&q=80" alt="" class="like-img">
+              </div>
+                <div class="like-name"><span>Samantha William</span> and<span> 2 other friends</span> like this</div>
+              </div>
+                </div>
+
+                <div class="book-card">
+                <div class="content-wrapper">
+                <img src="https://www.nuwireinvestor.com/wp-content/uploads/2018/11/Forex-chart.jpg" alt="" class="book-card-img">
+                <div class="card-content">
+                <div class="book-name">Strategies and Inidcator Creation</div>
+                  <div class="book-by">by Plugin</div>
+                  <div class="rate">
+            <fieldset class="rating book-rate">
+            <input type="checkbox" id="star-c21" name="rating" value="5">
+            <label class="full" for="star-c21"></label>
+            <input type="checkbox" id="star-c22" name="rating" value="4">
+            <label class="full" for="star-c22"></label>
+            <input type="checkbox" id="star-c23" name="rating" value="3">
+            <label class="full" for="star-c23"></label>
+            <input type="checkbox" id="star-c24" name="rating" value="2">
+            <label class="full" for="star-c24"></label>
+            <input type="checkbox" id="star-c25" name="rating" value="1">
+            <label class="full" for="star-c25"></label>
+            </fieldset>
+            <span class="book-voters card-vote">2.817 voters</span>
+            </div>
+                  <div class="book-sum card-sum">Traders have to learn these lessons  the easy way or they can learn them the hard way by losing their money. </div>
+                  </div>
+                </div>
+                <div class="likes">
+                <div class="like-profile">
+                <img src="https://randomuser.me/api/portraits/women/63.jpg" alt="" class="like-img">
+              </div>
+                <div class="like-profile">
+                <img src="https://pbs.twimg.com/profile_images/2452384114/noplz47r59v1uxvyg8ku.png" alt="" class="like-img">
+              </div>
+                <div class="like-profile">
+                <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1400&q=80" alt="" class="like-img">
+              </div>
+                <div class="like-name"><span>Angelina Stone</span> and<span> 2 other friends</span> like this</div>
+              </div>
                 </div>
             </div>
+
+
+      </div>
+    </div>
+
+    <div id="prices">
+      <h4 style="padding-left: 1%;"> Financial Literacy: Testimonies<h4>
+      <div class="book-cards">
+        <div class="book-card">
+        <div class="content-wrapper">
+        <img src="https://randomuser.me/api/portraits/women/63.jpg" alt="" class="book-card-img">
+        <div class="card-content">
+        <div class="book-name">Samantha Williams</div>
+          <div class="book-by">17 February 2020 08:34am</div>
+          <div class="book-sum card-sum">Traders have to learn these lessons  the easy way or they can learn them the hard way by losing their money. </div>
+          </div>
         </div>
-    </footer>
+        <div class="likes">
+        <div class="like-profile">
+        <img src="https://randomuser.me/api/portraits/women/63.jpg" alt="" class="like-img">
+      </div>
+        <div class="like-profile">
+        <img src="https://pbs.twimg.com/profile_images/2452384114/noplz47r59v1uxvyg8ku.png" alt="" class="like-img">
+      </div>
+        <div class="like-profile">
+        <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1400&q=80" alt="" class="like-img">
+      </div>
+        <div class="like-name"><span>Jane Hayley</span> and<span> 5 other friends</span> like this</div>
+      </div>
+        </div>
+
+        <div class="book-card">
+        <div class="content-wrapper">
+        <img src="https://pbs.twimg.com/profile_images/2452384114/noplz47r59v1uxvyg8ku.png" alt="" class="book-card-img">
+        <div class="card-content">
+        <div class="book-name">Jane Hayley</div>
+          <div class="book-by">19 February 2020 11:08am</div>
+          <div class="book-sum card-sum">Day trading books can teach you about strategy, risk management, psychology, and a great deal about technical analysis.  </div>
+          </div>
+        </div>
+        <div class="likes">
+        <div class="like-profile">
+        <img src="https://english.cdn.zeenews.com/sites/default/files/2017/11/17/639329-indian-men.jpg" alt="" class="like-img">
+      </div>
+        <div class="like-profile">
+        <img src="https://pbs.twimg.com/profile_images/2452384114/noplz47r59v1uxvyg8ku.png" alt="" class="like-img">
+      </div>
+        <div class="like-profile">
+        <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1400&q=80" alt="" class="like-img">
+      </div>
+        <div class="like-name"><span>Shivah Maharaj</span> and<span> 6 other friends</span> like this</div>
+      </div>
+        </div>
 
 
-    <script>
+        <div class="book-card">
+        <div class="content-wrapper">
+        <img src="https://goodasiangirl.files.wordpress.com/2011/05/prettybeautifulasianmodelwomeninschooluniform2528182529.jpg" alt="" class="book-card-img">
+        <div class="card-content">
+        <div class="book-name">Britney Tsu</div>
+          <div class="book-by">28 February 2020 06:40am</div>
+          <div class="book-sum card-sum">Complacency is the antithesis of success. And no one becomes rich by doing 'just enough.' </div>
+          </div>
+        </div>
+        <div class="likes">
+        <div class="like-profile">
+        <img src="https://randomuser.me/api/portraits/women/63.jpg" alt="" class="like-img">
+      </div>
+        <div class="like-profile">
+        <img src="https://pbs.twimg.com/profile_images/2452384114/noplz47r59v1uxvyg8ku.png" alt="" class="like-img">
+      </div>
+        <div class="like-profile">
+        <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1400&q=80" alt="" class="like-img">
+      </div>
+        <div class="like-name"><span>Samantha Williams</span> and<span> 3 other friends</span> like this</div>
+      </div>
+        </div>
+
+
+        <div class="book-card">
+        <div class="content-wrapper">
+        <img src="https://www.singleblackmale.org/wp-content/uploads/2013/08/black-man1.jpg" alt="" class="book-card-img">
+        <div class="card-content">
+        <div class="book-name">Thabo Sehume</div>
+          <div class="book-by">15 March 2020 15:34pm</div>
+          <div class="book-sum card-sum">Jack Schwager has put together two very popular books on trading: "Market Wizards" and "The New Market Wizards."</div>
+          </div>
+        </div>
+        <div class="likes">
+        <div class="like-profile">
+        <img src="https://randomuser.me/api/portraits/women/63.jpg" alt="" class="like-img">
+      </div>
+        <div class="like-profile">
+        <img src="https://pbs.twimg.com/profile_images/2452384114/noplz47r59v1uxvyg8ku.png" alt="" class="like-img">
+      </div>
+        <div class="like-profile">
+        <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1400&q=80" alt="" class="like-img">
+      </div>
+        <div class="like-name"><span>Michaela Jackson</span> and<span> 11 other friends</span> like this</div>
+      </div>
+        </div>
+
+
+        <div class="book-card">
+        <div class="content-wrapper">
+        <img src="https://english.cdn.zeenews.com/sites/default/files/2017/11/17/639329-indian-men.jpg" alt="" class="book-card-img">
+        <div class="card-content">
+        <div class="book-name">Shivah Maharaj</div>
+          <div class="book-by">20 March 2020 19:34pm</div>
+          <div class="book-sum card-sum">In financial markets, it's no different.If you want to become a successful trader - or take your day trading from a beginner to the professional level</div>
+          </div>
+        </div>
+        <div class="likes">
+        <div class="like-profile">
+        <img src="https://www.singleblackmale.org/wp-content/uploads/2013/08/black-man1.jpg" alt="" class="like-img">
+      </div>
+        <div class="like-profile">
+        <img src="https://pbs.twimg.com/profile_images/2452384114/noplz47r59v1uxvyg8ku.png" alt="" class="like-img">
+      </div>
+        <div class="like-profile">
+        <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1400&q=80" alt="" class="like-img">
+      </div>
+        <div class="like-name"><span>Thabo Sehume</span> and<span> 3 other friends</span> like this</div>
+      </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div id="notes">
+      <h4 style="padding-left: 1%;"> Financial Literacy: How To Use IC<h4>
+      <div class="book-cards">
+
+        <div class="book-card">
+        <div class="content-wrapper">
+        <img src="https://cdn.dnaindia.com/sites/default/files/styles/full/public/2018/02/12/650737-investment-01.jpg" alt="" class="book-card-img">
+        <div class="card-content">
+        <div class="book-name">Investment</div>
+          <div class="book-sum card-sum">This section of the system has lessons the easy way or they can learn them the hard way by losing their money. </div>
+          </div>
+        </div>
+        </div>
+
+        <div class="book-card">
+        <div class="content-wrapper">
+        <img src="https://investor-square.com/wp-content/uploads/2017/04/investment-1.jpg" alt="" class="book-card-img">
+        <div class="card-content">
+        <div class="book-name">Raw-Mate</div>
+          <div class="book-sum card-sum">This section of the system has lessons the easy way or they can learn them the hard way by losing their money. </div>
+          </div>
+        </div>
+        </div>
+
+        <div class="book-card">
+        <div class="content-wrapper">
+        <img src="http://images.clipartpanda.com/light-bulb-idea-clip-art-w-light-bulb-isolated-over-white-background-idea-vector.jpg" alt="" class="book-card-img">
+        <div class="card-content">
+        <div class="book-name">Ideas</div>
+          <div class="book-sum card-sum">This section of the system has lessons the easy way or they can learn them the hard way by losing their money. </div>
+          </div>
+          </div>
+        </div>
+
+        <div class="book-card">
+        <div class="content-wrapper">
+        <img src="https://static.vecteezy.com/system/resources/previews/000/366/953/original/edit-profile-vector-icon.jpg" alt="" class="book-card-img">
+        <div class="card-content">
+        <div class="book-name">Profile</div>
+          <div class="book-sum card-sum">This section of the system has lessons the easy way or they can learn them the hard way by losing their money. </div>
+          </div>
+        </div>
+        </div>
+
+        <div class="book-card">
+        <div class="content-wrapper">
+        <img src="https://www.storeplan.net.au/wp-content/uploads/2017/04/Pallet-Racking-in-Sydney_edited_website.jpg" alt="" class="book-card-img">
+        <div class="card-content">
+        <div class="book-name">Store-Room</div>
+          <div class="book-sum card-sum">This section of the system has lessons the easy way or they can learn them the hard way by losing their money. </div>
+          </div>
+        </div>
+        </div>
+
+        <div class="book-card">
+        <div class="content-wrapper">
+        <img src="https://c1.sfdcstatic.com/content/dam/blogs/ca/Blog%20Posts/more-than-a-blog-how-to-create-your-content-strategy-open-graph.png" alt="" class="book-card-img">
+        <div class="card-content">
+        <div class="book-name">Create</div>
+          <div class="book-sum card-sum">This section of the system has lessons the easy way or they can learn them the hard way by losing their money. </div>
+          </div>
+          </div>
+        </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div id="strategiesandanalysis">
+      <h4 style="padding-left: 1%;"> Financial Literacy: All Lessons<h4>
+
+              <div class="book-cards">
+                <div class="book-card">
+                <div class="content-wrapper">
+                <img src="https://i.pinimg.com/originals/d5/2e/97/d52e97c2007c0ebd0a34aeebc043b5ec.jpg" alt="" class="book-card-img">
+                <div class="card-content">
+                <div class="book-name">Trading Lessons</div>
+                  <div class="book-by">by Plugin</div>
+                  <div class="rate">
+            <fieldset class="rating book-rate">
+            <input type="checkbox" id="star-c1" name="rating" value="5">
+            <label class="full" for="star-c1"></label>
+            <input type="checkbox" id="star-c2" name="rating" value="4">
+            <label class="full" for="star-c2"></label>
+            <input type="checkbox" id="star-c3" name="rating" value="3">
+            <label class="full" for="star-c3"></label>
+            <input type="checkbox" id="star-c4" name="rating" value="2">
+            <label class="full" for="star-c4"></label>
+            <input type="checkbox" id="star-c5" name="rating" value="1">
+            <label class="full" for="star-c5"></label>
+            </fieldset>
+            <span class="book-voters card-vote">1.987 voters</span>
+            </div>
+                  <div class="book-sum card-sum">Traders have to learn these lessons  the easy way or they can learn them the hard way by losing their money. </div>
+                  </div>
+                </div>
+                <div class="likes">
+                <div class="like-profile">
+                <img src="https://randomuser.me/api/portraits/women/63.jpg" alt="" class="like-img">
+              </div>
+                <div class="like-profile">
+                <img src="https://pbs.twimg.com/profile_images/2452384114/noplz47r59v1uxvyg8ku.png" alt="" class="like-img">
+              </div>
+                <div class="like-profile">
+                <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1400&q=80" alt="" class="like-img">
+              </div>
+                <div class="like-name"><span>Samantha William</span> and<span> 2 other friends</span> like this</div>
+              </div>
+                </div>
+
+                <div class="book-card">
+                <div class="content-wrapper">
+                <img src="https://i0.wp.com/farm8.staticflickr.com/7115/7038139465_7f4c52e748_o.jpg" alt="" class="book-card-img">
+                <div class="card-content">
+                <div class="book-name">Journalism and Analysts</div>
+                  <div class="book-by">by Plugin</div>
+                  <div class="rate">
+            <fieldset class="rating book-rate">
+            <input type="checkbox" id="star-c6" name="rating" value="5">
+            <label class="full" for="star-c6"></label>
+            <input type="checkbox" id="star-c7" name="rating" value="4">
+            <label class="full" for="star-c7"></label>
+            <input type="checkbox" id="star-c8" name="rating" value="3">
+            <label class="full" for="star-c8"></label>
+            <input type="checkbox" id="star-c9" name="rating" value="2">
+            <label class="full" for="star-c9"></label>
+            <input type="checkbox" id="star-c10" name="rating" value="1">
+            <label class="full" for="star-c10"></label>
+            </fieldset>
+            <span class="book-voters card-vote">1.087 voters</span>
+            </div>
+                  <div class="book-sum card-sum">Traders have to learn these lessons  the easy way or they can learn them the hard way by losing their money.  </div>
+                  </div>
+                </div>
+                <div class="likes">
+                <div class="like-profile">
+                <img src="https://randomuser.me/api/portraits/women/63.jpg" alt="" class="like-img">
+              </div>
+                <div class="like-name"><span>Kimberly Jones</span> like this</div>
+              </div>
+                </div>
+
+                <div class="book-card">
+                <div class="content-wrapper">
+                <img src="http://www.queensu.ca/partnershipsandinnovation/sites/webpublish.queensu.ca.indwww/files/images/Build-business.jpg" alt="" class="book-card-img">
+                <div class="card-content">
+                <div class="book-name">Building a Company</div>
+                  <div class="book-by">by Plugin</div>
+                  <div class="rate">
+            <fieldset class="rating book-rate">
+            <input type="checkbox" id="star-c11" name="rating" value="5">
+            <label class="full" for="star-c11"></label>
+            <input type="checkbox" id="star-c12" name="rating" value="4">
+            <label class="full" for="star-c12"></label>
+            <input type="checkbox" id="star-c13" name="rating" value="3">
+            <label class="full" for="star-c13"></label>
+            <input type="checkbox" id="star-c14" name="rating" value="2">
+            <label class="full" for="star-c14"></label>
+            <input type="checkbox" id="star-c15" name="rating" value="1">
+            <label class="full" for="star-c15"></label>
+            </fieldset>
+            <span class="book-voters card-vote">997 voters</span>
+            </div>
+                  <div class="book-sum card-sum">Traders have to learn these lessons  the easy way or they can learn them the hard way by losing their money. </div>
+                  </div>
+                </div>
+                <div class="likes">
+                <div class="like-profile">
+                <img src="https://randomuser.me/api/portraits/women/63.jpg" alt="" class="like-img">
+              </div>
+                <div class="like-profile">
+                <img src="https://pbs.twimg.com/profile_images/2452384114/noplz47r59v1uxvyg8ku.png" alt="" class="like-img">
+              </div>
+                <div class="like-name"><span>Adam</span> and<span> Kimberly</span> like this</div>
+              </div>
+                </div>
+
+                <div class="book-card">
+                <div class="content-wrapper">
+                <img src="https://prod-discovery.edx-cdn.org/media/course/image/9d7084e9-a451-4f1e-a254-77824a48ccc4-1ec60f0b7178.small.jpeg" alt="" class="book-card-img">
+                <div class="card-content">
+                <div class="book-name">International Investing</div>
+                  <div class="book-by">by Plugin</div>
+                  <div class="rate">
+            <fieldset class="rating book-rate">
+            <input type="checkbox" id="star-c16" name="rating" value="5">
+            <label class="full" for="star-c16"></label>
+            <input type="checkbox" id="star-c17" name="rating" value="4">
+            <label class="full" for="star-c17"></label>
+            <input type="checkbox" id="star-18" name="rating" value="3">
+            <label class="full" for="star-c18"></label>
+            <input type="checkbox" id="star-c19" name="rating" value="2">
+            <label class="full" for="star-c19"></label>
+            <input type="checkbox" id="star-c20" name="rating" value="1">
+            <label class="full" for="star-c20"></label>
+            </fieldset>
+            <span class="book-voters card-vote">187 voters</span>
+            </div>
+                  <div class="book-sum card-sum">Traders have to learn these lessons  the easy way or they can learn them the hard way by losing their money. </div>
+                  </div>
+                </div>
+                <div class="likes">
+                <div class="like-profile">
+                <img src="https://randomuser.me/api/portraits/women/63.jpg" alt="" class="like-img">
+              </div>
+                <div class="like-profile">
+                <img src="https://pbs.twimg.com/profile_images/2452384114/noplz47r59v1uxvyg8ku.png" alt="" class="like-img">
+              </div>
+                <div class="like-profile">
+                <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1400&q=80" alt="" class="like-img">
+              </div>
+                <div class="like-name"><span>Samantha William</span> and<span> 2 other friends</span> like this</div>
+              </div>
+                </div>
+
+                <div class="book-card">
+                <div class="content-wrapper">
+                <img src="https://www.nuwireinvestor.com/wp-content/uploads/2018/11/Forex-chart.jpg" alt="" class="book-card-img">
+                <div class="card-content">
+                <div class="book-name">Strategies and Inidcator Creation</div>
+                  <div class="book-by">by Plugin</div>
+                  <div class="rate">
+            <fieldset class="rating book-rate">
+            <input type="checkbox" id="star-c21" name="rating" value="5">
+            <label class="full" for="star-c21"></label>
+            <input type="checkbox" id="star-c22" name="rating" value="4">
+            <label class="full" for="star-c22"></label>
+            <input type="checkbox" id="star-c23" name="rating" value="3">
+            <label class="full" for="star-c23"></label>
+            <input type="checkbox" id="star-c24" name="rating" value="2">
+            <label class="full" for="star-c24"></label>
+            <input type="checkbox" id="star-c25" name="rating" value="1">
+            <label class="full" for="star-c25"></label>
+            </fieldset>
+            <span class="book-voters card-vote">2.817 voters</span>
+            </div>
+                  <div class="book-sum card-sum">Traders have to learn these lessons  the easy way or they can learn them the hard way by losing their money. </div>
+                  </div>
+                </div>
+                <div class="likes">
+                <div class="like-profile">
+                <img src="https://randomuser.me/api/portraits/women/63.jpg" alt="" class="like-img">
+              </div>
+                <div class="like-profile">
+                <img src="https://pbs.twimg.com/profile_images/2452384114/noplz47r59v1uxvyg8ku.png" alt="" class="like-img">
+              </div>
+                <div class="like-profile">
+                <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1400&q=80" alt="" class="like-img">
+              </div>
+                <div class="like-name"><span>Angelina Stone</span> and<span> 2 other friends</span> like this</div>
+              </div>
+                </div>
+            </div>
+
+
+      </div>
+    </div>
+
+    </div>
+    </div>
+<script>
 
 $(function () {
 
@@ -478,14 +757,9 @@ console.log(Chart.defaults.global);
 
 
 </script>
-    <!-- Start: Header Content -->
-    @include('/user/layout/footer-style-1')
-    <!-- End: Header Content -->
-
-    <!-- End: Dark footer with social media icons -->
-    <script src="/assets1/js/bs-init.js"></script>
-    <script src="/assets1/js/Data-Table-with-Search-Sort-Filter-and-Zoom-using-TableSorter.js"></script>
-    <script src="/assets1/js/theme.js"></script>
+     <!-- Start: Header Content -->
+     @include('/user/layout/footer-style-1')
+     <!-- End: Header Content -->
 </body>
 
 </html>
