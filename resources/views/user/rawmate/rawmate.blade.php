@@ -21,143 +21,173 @@
     <link rel="stylesheet" href="/assets1/css/styles.css">
     <link rel="stylesheet" href="/assets1/css/Vertical-Left-SideBar-by-Jigar-Mistry.css">
     <link rel="stylesheet" href="/assets1/css/newSideNav.css">
+    <link rel="stylesheet" href="/assets1/css/awardsNav.css">
+    <link rel="stylesheet" href="/assets1/css/Rawmat-cards.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </head>
 
-<body style="background-color: rgb(33,31,31);margin-top: 2px;height: 201px;">
+<body>
 
     <!-- Start: Vertical Left-SideBar by Jigar Mistry -->
     @include('/user/layout/side-nav')
     <!-- End: Vertical Left-SideBar by Jigar Mistry -->
+
+<div class='column'>
+<div class='green-column'>
+<section class="container">
+<div class="containerr">
+   <div class="tabs">
+      <input type="radio" id="radio-1" name="tabs" checked />
+      <label class="tab" for="radio-1">Timeline</label>
+      <input type="radio" id="radio-2" name="tabs" />
+      <label class="tab" for="radio-2">Trending</label>
+      <input type="radio" id="radio-3" name="tabs" />
+      <label class="tab" for="radio-3">Share Investment</label>
+      <span class="glider"></span>
+   </div>
+</div>
     <!-- Start: Top Navbar -->
+    <main style="padding-top:10%">
+	<section>
+		<div class="rad-body-wrapper rad-nav-min">
+			<div class="container-fluid">
 
-    <!-- End: Top Navbar -->
+				<div class="row">
+					<div class="col-lg-3 col-xs-6">
+						<div class="rad-info-box rad-txt-success">
+							<i class="fas fa-globe-europe"></i>
+							<span class="heading">REGIONAL</span>
+							<span class="value"><span>R</span></span>
+						</div>
+					</div>
+					<div class="col-lg-3 col-xs-6">
+						<div class="rad-info-box rad-txt-primary">
+							<i class="fab fa-product-hunt"></i>
+							<span class="heading">NAME OF PRODUCT</span>
+							<span class="value"><span>N</span></span>
+						</div>
+					</div>
+					<div class="col-lg-3 col-xs-6">
+						<div class="rad-info-box rad-txt-danger">
+							<i class="fas fa-hand-holding-usd"></i>
+							<span class="heading">BUDGET</span>
+							<span class="value"><span>B</span></span>
+						</div>
+					</div>
+					<div class="col-lg-3 col-xs-6">
+						<div class="rad-info-box">
+							<i class="fas fa-microchip"></i>
+							<span class="heading">PROCESSOR</span>
+							<span class="value"><span>P</span></span>
+						</div>
+					</div>
+				</div>
 
-    <div class="container m-2">
-        <div class="row">
-            <div class="col-md-2"></div>
-            <div class="col-md-10">
-
-                <!-- Start: Nav -->
-                <ul class="nav nav-justified nav-pills">
-                    <li class="nav-item">
-                        <a data-toggle="pill" class="nav-link active" href="#processed"><span
-                                class="my-text-color-white">Processed
-                            </span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a data-toggle="pill" class="nav-link" href="#unprocessed"><span class="my-text-color-white">
-                                Unprocessed</span></a>
-                    </li>
-                </ul>
-                <!-- End: Nav -->
-
-                <!-- Start: Tab Content -->
-                <div class="tab-content">
-                    <div class="tab-pane active" id="processed">
-
-                        <div class="row my-bg-color-grey">
-
-                            <div class="col-md-12 col-sm-12 card my-bg-color-grey p-3">
-
-
-                                <div class="card-body">
-
-                                    <div class="row">
-                                        <div class="col-md-2">
-                                        </div>
-                                        <div class="col-md-7">
-                                            <input type="text" class="form-control"
-                                                placeholder="Search by name, country and seller"
-                                                id="newsChannelSearch" />
-                                        </div>
-                                        <div class="col-md-3">
-                                            <button onclick="" class="btn btn-primary">Search</button>
-                                        </div>
-                                    </div>
-
+				<div class="row">
+					<div class="col-xs-12 col-md-6">
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<h3 class="panel-title">Processed<ul class="rad-panel-action">
+																	<li><i class="fa fa-chevron-down"></i></li>
+																	<li><i class="fa fa-rotate-right"></i></li>
+																	<li><i class="fa fa-cog"></i>
+																	<li><i class="fa fa-close"></i>
+																	</li>
+																</ul></h3>
+							</div>
+							<div class="panel-body">
+                                <div class="rad-info-box rad-txt-success">
+                                MINES
                                 </div>
-
-                            </div>
-
-                            @foreach ($ProceesedRawMat as $PRM)
-
-                                <div class="col-md-3 card my-bg-color-grey p-3">
-                                    <div class="card-body">
-                                        <a href="/user/rawmate/product/{{ $PRM["ProductName"] }}/{{ $PRM["ProductId"] }}">
-                                            <img class="my-rawmate-main-thumbnail"
-                                                src="{{ $PRM["ProductImage"] }}" alt="{{ $PRM["ProductName"] }} image" />
-                                            <p class="my-text-color-white"><strong>{{ $PRM["ProductName"] }}</strong>
-                                            </p>
-                                            <p class="my-text-color-white">{{ $PRM["SellerName"] }}</p>
-                                            <p class="my-text-color-white"><strong>({{ $PRM["ProductCurrency"] }}) {{ $PRM["ProductPrice"] }}</strong><br/>
-                                                Per <i>{{ $PRM["ProductMeasurement"] }}</i>
-                                            </p>
-                                        </a>
-                                    </div>
+                                <div class="rad-info-box rad-txt-success">
+                                PLANTS
                                 </div>
-
-                            @endforeach
-
-                        </div>
-
-                    </div>
-                    <div class="tab-pane fade" id="unprocessed">
-
-                        <div class="row my-bg-color-grey">
-
-                            <div class="col-md-12 col-sm-12 card my-bg-color-grey p-3">
-
-
-                                <div class="card-body">
-
-                                    <div class="row">
-                                        <div class="col-md-2">
-                                        </div>
-                                        <div class="col-md-7">
-                                            <input type="text" class="form-control"
-                                                placeholder="Search by name, country and seller"
-                                                id="newsChannelSearch" />
-                                        </div>
-                                        <div class="col-md-3">
-                                            <button onclick="" class="btn btn-primary">Search</button>
-                                        </div>
-                                    </div>
-
+                                <div class="rad-info-box rad-txt-success">
+                                ANIMALS
                                 </div>
-
-                            </div>
-
-                            @foreach ($UnproceesedRawMat as $URM)
-
-                                <div class="col-md-3 card my-bg-color-grey p-3">
-                                    <div class="card-body">
-                                        <a href="/user/rawmate/product/{{ $URM["ProductName"] }}/{{ $URM["ProductId"] }}">
-                                            <img class="my-rawmate-main-thumbnail"
-                                                src="{{ $URM["ProductImage"] }}" alt="{{ $URM["ProductName"] }} image" />
-                                            <p class="my-text-color-white"><strong>{{ $URM["ProductName"] }}</strong>
-                                            </p>
-                                            <p class="my-text-color-white">{{ $URM["SellerName"] }}</p>
-                                            <p class="my-text-color-white"><strong>({{ $URM["ProductCurrency"] }}) {{ $URM["ProductPrice"] }}</strong><br/>
-                                                Per <i>{{ $URM["ProductMeasurement"] }}</i>
-                                            </p>
-
-                                        </a>
-                                    </div>
+                                <div class="rad-info-box rad-txt-success">
+                                REAL ESTATE
                                 </div>
+							</div>
+						</div>
+					</div>
+					<div class="col-xs-12 col-md-6">
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<h3 class="panel-title">UNPROCESSED<ul class="rad-panel-action">
+																	<li><i class="fa fa-chevron-down"></i></li>
+																	<li><i class="fa fa-rotate-right"></i></li>
+																	<li><i class="fa fa-cog"></i>
+																	<li><i class="fa fa-close"></i>
+																	</li>
+																</ul></h3>
+							</div>
+							<div class="panel-body">
+                            <div class="rad-info-box rad-txt-success">
+                                MINES
+                                </div>
+                                <div class="rad-info-box rad-txt-success">
+                                PLANTS
+                                </div>
+                                <div class="rad-info-box rad-txt-success">
+                                ANIMALS
+                                </div>
+                                <div class="rad-info-box rad-txt-success">
+                                REAL ESTATE
+                                </div>
+							</div>
 
-                            @endforeach
+						</div>
+					</div>
+				</div>
 
-                        </div>
+			</div>
+		</div>
+    </section>
 
-                    </div>
-                </div>
-                <!-- End: Tab Content -->
-            </div>
-            <div class="col-md-1"></div>
+<div style="padding-bottom: 5%;">
+    <div class="menu">
+
+        <div class="menu__body">
+        <ul class="nav">
+            <li class="nav__item">
+            <a href="#" class="nav__item-link is-active">
+                <i class="fa fa-envelope nav__item-icon"></i>
+                <span class="nav__item-text">REGIONAL POLICY</span>
+
+            </a>
+            </li>
+            <li class="nav__item">
+            <a href="#" class="nav__item-link is-active">
+                <i class="fa fa-envelope nav__item-icon"></i>
+                <span class="nav__item-text">ENVIRONMENTAL</span>
+
+            </a>
+            </li>
+            <li class="nav__item">
+            <a href="#" class="nav__item-link is-active">
+                <i class="fa fa-envelope nav__item-icon"></i>
+                <span class="nav__item-text">NATIONAL</span>
+
+            </a>
+            </li>
+            <li class="nav__item">
+            <a href="#" class="nav__item-link is-active">
+                <i class="fa fa-envelope nav__item-icon"></i>
+                <span class="nav__item-text">HELP</span>
+
+            </a>
+            </li>
+        </ul>
         </div>
     </div>
+</div>
+</main>
+    <!-- End: Top Navbar -->
 
-    <script>
+
+
+    <script >
 
 $(function () {
 

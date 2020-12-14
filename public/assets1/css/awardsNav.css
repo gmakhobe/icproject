@@ -100,10 +100,11 @@ padding-top: 5%;
 	 transform: translateX(200%);
 }
 input[id="radio-4"]:checked ~ .glider {
-	transform: translateX(300%);
+
+    transform: translateX(300%);
 }
 input[id="radio-5"]:checked ~ .glider {
-	transform: translateX(400%);
+    transform: translateX(400%);
 }
 input[id="radio-6"]:checked ~ .glider {
 	transform: translateX(500%);
