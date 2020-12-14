@@ -106,7 +106,7 @@ console.log(Chart.defaults.global);
         <div class="info">
           <h3><a href="#"  style="letter-spacing: 4px;color: rgba(190,184,184,0.9); color: white; font-size: 20px;">{{ $NameAndSurname }}</a></h3>
       </div>
-      
+
       </div>
 
       <ul class="categories">
@@ -130,7 +130,7 @@ console.log(Chart.defaults.global);
           <a href="/user/profile"> Profile</a>
           <ul class="side-nav-dropdown">
               <li><a href="#">Portfolio</a></li>
-              <li><a href="#">Awards</a></li>
+              <li><a href="/user/profile/awards">Awards</a></li>
             </ul>
         </li>
 
@@ -243,7 +243,7 @@ console.log(Chart.defaults.global);
 
 
             <ul class="nav navbar-nav">
-         
+
 
 
               <li class="dropdown">
