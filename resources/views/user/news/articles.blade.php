@@ -46,30 +46,31 @@
 
                     <div class="col-md-12 card my-bg-color-grey">
                         <div class="card-body my-bg-color-grey">
-                            <a href="/user/news/article/read/{{ $GetMainArticle[0]['Headline'] }}/{{ $GetMainArticle[0]['NewsId'] }}">
-                                <img class="my-news-card-img-left" src="{{ $GetMainArticle[0]['Banner'] }}"
-                                    alt="Card image" style="width:100%">
+                            <br>
+                                <img class="my-news-card-img-left" src="http://bgfons.com/upload/newspaper_texture2824.jpg"
+                                    alt="Card image" style="width:100%; height: 50%; border-radius: 5%">
                                 <div class="card-body">
-                                    <h4 class="card-title my-text-color-white">{{ $GetMainArticle[0]['Headline'] }}</h4>
-                                    <p class="my-text-color-white">{{ $GetMainArticle[0]['Author'] }} /
-                                        {{ $GetMainArticle[0]['Date'] }}  /
-                                        {{ $GetMainArticle[0]['Subject'] }}</p>
+                                    <h2 class="card-title my-text-color-white" style="color:purple;">Fast Business Loans – Working Capital—What You Need to Know</h2>
+                                    <p class="my-text-color-white">Thabo Sehume /
+                                        2019-11-18 13:15:15 /
+                                        Economics </p>
                                     <p class="card-text my-text-color-white">
-                                        {{ $GetMainArticle[0]['News'] }}
+                                    This article was reviewed and updated on June 15, 2020 Nowhere is the saying "you need money to make money" more true than in the crowded, competitive, fast-moving world of small business. As you seek to establish and grow your enterprise, access to capital (or the lack thereof) will be one of your biggest hurdles. For small business owners facing expenses that just can't wait, traditional approaches—SBA loans from banks, for example—can be burdensome, inconvenient, and ultimately disappointing.  
                                     </p>
 
                                 </div>
                             </a>
                         </div>
                         <br />
-                    </div>
+                    </div> 
+
 
                     @foreach ($GetSubtArticles as $GSA)
 
                         <div class="col-md-4 card my-bg-color-grey">
                             <div class="card-body my-bg-color-grey">
                                 <a href="/user/news/article/read/{{ $GSA['Headline'] }}/{{ $GSA['NewsId'] }}">
-                                    <img class="my-news-card-img-left" src="{{ $GSA['Banner'] }}"
+                                    <img class="my-news-card-img-left" src="http://i.investopedia.com/dimages/graphics/top_6_apps_for_financial_news.jpg"
                                         alt="{{ $GSA['Headline'] }} image" style="width:100%">
                                     <div class="card-body">
                                         <h4 class="card-title my-text-color-white">{{ $GSA['Headline'] }}</h4>
@@ -93,35 +94,35 @@
             <div class="row">
 
                 @foreach ($GetLatestArticles as $GLA)
-
-                    <div class="col-md-6 my-bg-color-grey">
-                        <a href="/user/news/article/read/{{ $GLA['Headline'] }}/{{ $GLA['NewsId'] }}">
-                            <img class="my-news-card-img-left p-3" src="{{ $GLA['Banner'] }}"
-                                alt="{{ $GLA['Headline'] }} image" style="width:100%">
-                        </a>
-
-                    </div>
+                <div>
 
                     <div class="col-sm-6 my-bg-color-grey">
-                        <a href="/user/news/article/read/{{ $GLA['Headline'] }}/{{ $GLA['NewsId'] }}">
-                            <h4 class="card-title my-text-color-white p-3">{{ $GLA['Headline'] }}</h4>
-                            <p class="my-text-color-white p-3">{{ $GLA['Author'] }} / {{ $GLA['Date'] }}
-                                <br />
-                                <span class="my-text-color-white">
-                                    {{ $GLA['Subject'] }}
-                                </span>
-                            </p>
-                            <p class="card-text my-text-color-white p-3">
-                                {{ $GLA['News'] }}
-                            </p>
-                        </a>
+                            <a href="/user/news/article/read/{{ $GLA['Headline'] }}/{{ $GLA['NewsId'] }}">
+                                <h3 class="card-title my-text-color-white p-3" style="color:purple;">{{ $GLA['Headline'] }}</h3>
+                                <p class="my-text-color-white p-3">{{ $GLA['Author'] }} / {{ $GLA['Date'] }}
+                                    <br />
+                                    <span class="my-text-color-white">
+                                        {{ $GLA['Subject'] }}
+                                    </span>
+                                </p>
+                                <p class="card-text my-text-color-white p-3">
+                                    {{ $GLA['News'] }}
+                                </p>
+                            </a>
+                    </div>   
 
+                    <div class="col-md-6 my-bg-color-grey">
+                            <a href="/user/news/article/read/{{ $GLA['Headline'] }}/{{ $GLA['NewsId'] }}">
+                                <img class="my-news-card-img-left p-3" src="http://www.dolmanbateman.com.au/wp-content/uploads/2012/09/Financial-Newspapers.jpg"
+                                    alt="{{ $GLA['Headline'] }} image"  style="width:400px; height: 150px; border-radius: 5%">
+                            </a>
                     </div>
 
+                </div>
                 @endforeach
-
-
+                <br><br><br><br><br><br>
             </div>
+
 
             <div class="row">
                 <div class="col-md-4 my-bg-color-grey p-3">

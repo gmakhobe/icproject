@@ -36,7 +36,7 @@
     float: left;
     height: 100%;
     width: 290px;
-    background:  #a889e6;
+    background:  #9526a9;
     color: #CCC;
     -webkit-transform: translateX(0);
     -moz-transform: translateX(0);
@@ -52,7 +52,7 @@
   }
 
   .side-nav .heading {
-    background-color: #a889e6;
+    background-color: #9526a9;
     padding: 15px 15px 15px 30px;
     overflow: hidden;
   }
@@ -224,11 +224,10 @@
     right: auto !important;
     left: 0 !important;
   }
+
   .navbar-default {
 
-    background: -moz-linear-gradient(left, #a889e6 0%, #53005e 100%);
-  background: -webkit-linear-gradient(left, #a889e6 0%, #53005e 100%);
-  background: linear-gradient(to right,#a889e6 0%, #53005e 100%);
+    background: linear-gradient(135deg,#9526a9 5% ,#23212f 95%);
     border: none !important;
     border-radius: 0 !important;
     margin: 0 !important
@@ -359,3 +358,10 @@
     right: -45px;
  }
   
+ .code--css {
+  background: -moz-linear-gradient(left, #a889e6 0%, #53005e 100%);
+  background: -webkit-linear-gradient(left, #a889e6 0%, #53005e 100%);
+  background: linear-gradient(to right,#a889e6 0%, #53005e 100%);
+  border-radius: 10px 10px 10px 10px;
+  
+}

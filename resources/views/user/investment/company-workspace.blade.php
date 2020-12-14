@@ -60,7 +60,7 @@
                 </div>
 
                 <!-- Nav pills -->
-                <ul class="nav nav-pills nav-justified">
+                <ul class="nav nav-tabs">
                     <li class="nav-item">
                         <a class="nav-link active" data-toggle="pill" href="#profile">Profile</a>
                     </li>
