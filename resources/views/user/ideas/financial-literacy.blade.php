@@ -34,6 +34,14 @@
  <div class="header">
   <div class="browse">
   </div>
+  <nav> <!-- The nav link semantically marks your main site navigation -->
+        <ul>
+            <li><a href="#block1">Trending</a></li>
+            <li><a href="/user/ideas/financial-literacy#">Financial Literacy</a></li>
+            <li><a href="/user/ideas/strategies-and-indicators#">Startegies and Indicators</a></li>
+            <li><a href="#block3"  style="color: rgb(245,67,67); font-size: 15px;">POST YOUR IDEA</a></li>
+        </ul>
+    </nav>
  </div>
  <div class="main-wrapper">
   <div class="popular-books">
@@ -455,12 +463,12 @@
                   <span class="fa fa-star" style="font-size:15px;"></span>
                   <span class="fa fa-star" style="font-size:15px;"></span>
             </div>
-      <div class="book-cards">
+      <div class="book-cards">      
          <div class="book-card">
               <div class="content-wrapper">
                 <img src="https://www.wikihow.com/images/d/da/FinanceChartNumbersFontColour.png" alt="" class="book-card-img2">
-
                 </div>
+                <h3>Analyzing derivatives and charts</h3>
                 <div class="likes">
                 <div class="like-profile">
                 <img src="https://english.cdn.zeenews.com/sites/default/files/2017/11/17/639329-indian-men.jpg" alt="" class="like-img">
@@ -478,8 +486,8 @@
           <div class="book-card">
               <div class="content-wrapper">
                 <img src="https://i.ytimg.com/vi/9phqDzH1rJE/maxresdefault.jpg" alt="" class="book-card-img2">
-
                 </div>
+                <h3>Bullish and Bearish Movement</h3>
                 <div class="likes">
                 <div class="like-profile">
                 <img src="https://english.cdn.zeenews.com/sites/default/files/2017/11/17/639329-indian-men.jpg" alt="" class="like-img">
@@ -497,8 +505,8 @@
           <div class="book-card">
               <div class="content-wrapper">
                 <img src="https://i.ytimg.com/vi/jcfVIHH_3Ho/maxresdefault.jpg" alt="" class="book-card-img2">
-
                 </div>
+                <h3>Introduction to Finance (L1)</h3>
                 <div class="likes">
                 <div class="like-profile">
                 <img src="https://english.cdn.zeenews.com/sites/default/files/2017/11/17/639329-indian-men.jpg" alt="" class="like-img">
@@ -516,8 +524,6 @@
       </div>
     </div>
 
-  
-
     <div id="MyClasses">
       <h4 style="padding-left: 1%;"> Financial Literacy: My Classes<h4>
       <hr>
@@ -534,8 +540,8 @@
          <div class="book-card">
               <div class="content-wrapper">
                 <img src="http://www.omtglobal.com/wp-content/uploads/2013/07/Finance-for-non-financial-mgrs.jpg" alt="" class="book-card-img2">
-
                 </div>
+                <h3>Finance 101</h3>
                 <div class="likes">
                 <div class="like-profile">
                 <img src="https://english.cdn.zeenews.com/sites/default/files/2017/11/17/639329-indian-men.jpg" alt="" class="like-img">
@@ -553,8 +559,8 @@
           <div class="book-card">
               <div class="content-wrapper">
                 <img src="http://www.financeplaza.org/wp-content/uploads/2017/11/Financial-Management.jpg" alt="" class="book-card-img2">
-
                 </div>
+                <h3>How to Budget</h3>
                 <div class="likes">
                 <div class="like-profile">
                 <img src="https://english.cdn.zeenews.com/sites/default/files/2017/11/17/639329-indian-men.jpg" alt="" class="like-img">
@@ -572,8 +578,8 @@
           <div class="book-card">
               <div class="content-wrapper">
                 <img src="http://apps.pittsburghpa.gov/redtail/images/236_City_Pittsburgh_Finance.png" alt="" class="book-card-img2">
-
                 </div>
+                <h3>Financial Statements</h3>
                 <div class="likes">
                 <div class="like-profile">
                 <img src="https://english.cdn.zeenews.com/sites/default/files/2017/11/17/639329-indian-men.jpg" alt="" class="like-img">

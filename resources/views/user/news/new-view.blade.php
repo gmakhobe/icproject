@@ -46,7 +46,7 @@
                     <div class="col-md-12 card my-bg-color-grey">
                         <div class="card-body my-bg-color-grey">
 
-                            <img class="my-news-card-img-news-view p-3" src="{{ $ChannelNewsContent[0]['Banner'] }}"
+                            <img class="my-news-card-img-news-view p-3" src="https://i.investopedia.com/content/short_article/how_to_use_mint/accounting_budgeting_shutterstock_57516148.jpg"
                                 alt="Card image">
                             <center>
                                 <h4 class="card-title my-text-color-white  p-3 text-align-center">

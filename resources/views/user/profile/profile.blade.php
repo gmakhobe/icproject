@@ -21,10 +21,10 @@
     <link rel="stylesheet" href="/assets1/css/styles.css">
     <link rel="stylesheet" href="/assets1/css/Vertical-Left-SideBar-by-Jigar-Mistry.css">
     <link rel="stylesheet" href="/assets1/css/newSideNav.css">
-    <link rel="stylesheet" href="/assets1/css/profile.css"
+    <link rel="stylesheet" href="/assets1/css/profile.css">
 </head>
 
-<body style="background-color: rgb(50,46,46);margin-top: 2px;">
+<body>
 
     <!-- Start: Vertical Left-SideBar by Jigar Mistry -->
     @include('/user/layout/side-nav')

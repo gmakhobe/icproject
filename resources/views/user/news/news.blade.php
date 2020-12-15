@@ -41,26 +41,30 @@
         <div class="row">
             <div class="col-md-1"></div>
             <div class="col-md-11">
-
+                <br>
                 <!-- Start: Jumbotron -->
-                <div class="container jumbotron m-3 my-bg-color-grey">
+                <div class="code--css" style="height: 150px;">
+                <div style="padding: 2%"> 
                     <h3>Plugin News</h3>
                     <p class="my-text-color-white">Daily news</p>
                 </div>
+                </div>
+
                 <!-- End: Jumbotron -->
 
                 <!-- Start: Nav -->
+                <br>
                 <ul class="nav nav-justified nav-pills">
                     @for ($index = 0; $index < count($NewsSubjects); $index++)
                         @if ($index == 0)
                             <li class="nav-item">
                                 <a class="nav-link active" data-toggle="pill" href="#news{{ $index }}"><span
-                                        class="my-text-color-white">{{ $NewsSubjects[$index] }}</span></a>
+                                        class="my-text-color-white" style="color:purple;">{{ $NewsSubjects[$index] }}</span></a>
                             </li>
                         @else
                             <li class="nav-item">
                                 <a class="nav-link" data-toggle="pill" href="#news{{ $index }}"><span
-                                        class="my-text-color-white">{{ $NewsSubjects[$index] }}</span></a>
+                                        class="my-text-color-white" style="color:purple;">{{ $NewsSubjects[$index] }}</span></a>
                             </li>
                         @endif
                     @endfor
@@ -76,21 +80,21 @@
 
                                 <div class="col-md-6 card my-bg-color-grey">
                                     <div class="card-body my-bg-color-grey">
-                                        <img class="my-news-card-img-left" src="{{ $News['Banner'] }}"
-                                            alt="{{ $News['Headline'] }} News" style="width:100%">
-                                        <div class="card-body">
-                                            <h4 class="card-title my-text-color-white">{{ $News['Headline'] }}</h4>
-                                            <p class="card-text my-text-color-white">
+                                        <img class="my-news-card-img-left" src="https://a.abcnews.com/images/Business/GTY_woman_finance_tk_131022_16x9_992.jpg"
+                                            alt="{{ $News['Headline'] }} News" style="width:100%; height: 200px;">
+                                            <div class="card-body">
+                                            <h2 class="card-title my-text-color-white" style="color:purple;">{{ $News['Headline'] }}</h4>
+                                            <h3 class="card-text my-text-color-white">
                                                 <strong><a
                                                         href="/user/news/channel/name/{{ $News['ChannelName'] }}/{{ $News['ChannelId'] }}/0"><span
                                                             class="my-text-color-white">{{ $News['ChannelName'] }}</span></a></strong>
-                                            </p>
-                                            <p class="my-text-color-white">{{ $News['Author'] }} / {{ $News['Date'] }}
-                                            </p>
-                                            <p class="card-text my-text-color-white">{{ $News['News'] }}</p>
+                                            </h3>
+                                            <h4 class="my-text-color-white">{{ $News['Author'] }} / {{ $News['Date'] }}
+                                            </h4>
+                                            <h5 class="card-text my-text-color-white">{{ $News['News'] }}</h5>
 
                                             <a href="/user/news/read/{{ $News['Headline'] }}/{{ $News['Id'] }}"
-                                                class="btn btn-block btn-primary my-text-color-white">Read
+                                                class="btn btn-light my-text-color-white">Read
                                                 more...</a>
                                         </div>
                                     </div>
@@ -110,21 +114,21 @@
 
                                 <div class="col-md-6 card my-bg-color-grey">
                                     <div class="card-body my-bg-color-grey">
-                                        <img class="my-news-card-img-left" src="{{ $News['Banner'] }}"
-                                            alt="{{ $News['Headline'] }} News" style="width:100%">
-                                        <div class="card-body">
-                                            <h4 class="card-title my-text-color-white">{{ $News['Headline'] }}</h4>
-                                            <p class="card-text my-text-color-white">
+                                    <img class="my-news-card-img-left" src="https://www.investors.com/wp-content/uploads/2019/02/Stock-dataQuest-03-adobe.jpg"
+                                            alt="{{ $News['Headline'] }} News" style="width:100%; height: 200px;">
+                                            <div class="card-body">
+                                            <h2 class="card-title my-text-color-white" style="color:purple;">{{ $News['Headline'] }}</h4>
+                                            <h3 class="card-text my-text-color-white">
                                                 <strong><a
                                                         href="/user/news/channel/name/{{ $News['ChannelName'] }}/{{ $News['ChannelId'] }}/0"><span
                                                             class="my-text-color-white">{{ $News['ChannelName'] }}</span></a></strong>
-                                            </p>
-                                            <p class="my-text-color-white">{{ $News['Author'] }} / {{ $News['Date'] }}
-                                            </p>
-                                            <p class="card-text my-text-color-white">{{ $News['News'] }}</p>
+                                            </h3>
+                                            <h4 class="my-text-color-white">{{ $News['Author'] }} / {{ $News['Date'] }}
+                                            </h4>
+                                            <h5 class="card-text my-text-color-white">{{ $News['News'] }}</h5>
 
                                             <a href="/user/news/read/{{ $News['Headline'] }}/{{ $News['Id'] }}"
-                                                class="btn btn-block btn-primary my-text-color-white">Read
+                                                class="btn btn-light my-text-color-white">Read
                                                 more...</a>
                                         </div>
                                     </div>
@@ -144,21 +148,21 @@
 
                                 <div class="col-md-6 card my-bg-color-grey">
                                     <div class="card-body my-bg-color-grey">
-                                        <img class="my-news-card-img-left" src="{{ $News['Banner'] }}"
-                                            alt="{{ $News['Headline'] }} News" style="width:100%">
-                                        <div class="card-body">
-                                            <h4 class="card-title my-text-color-white">{{ $News['Headline'] }}</h4>
-                                            <p class="card-text my-text-color-white">
+                                    <img class="my-news-card-img-left" src="https://news.efinancialcareers.com/binaries/content/gallery/efinancial-careers/articles/2018/03/banking-to-fintech_jamesteohart_GettyImages.jpg"
+                                            alt="{{ $News['Headline'] }} News" style="width:100%; height: 200px;">
+                                            <div class="card-body">
+                                            <h2 class="card-title my-text-color-white" style="color:purple;">{{ $News['Headline'] }}</h4>
+                                            <h3 class="card-text my-text-color-white">
                                                 <strong><a
                                                         href="/user/news/channel/name/{{ $News['ChannelName'] }}/{{ $News['ChannelId'] }}/0"><span
                                                             class="my-text-color-white">{{ $News['ChannelName'] }}</span></a></strong>
-                                            </p>
-                                            <p class="my-text-color-white">{{ $News['Author'] }} / {{ $News['Date'] }}
-                                            </p>
-                                            <p class="card-text my-text-color-white">{{ $News['News'] }}</p>
+                                            </h3>
+                                            <h4 class="my-text-color-white">{{ $News['Author'] }} / {{ $News['Date'] }}
+                                            </h4>
+                                            <h5 class="card-text my-text-color-white">{{ $News['News'] }}</h5>
 
                                             <a href="/user/news/read/{{ $News['Headline'] }}/{{ $News['Id'] }}"
-                                                class="btn btn-block btn-primary my-text-color-white">Read
+                                                class="btn btn-light my-text-color-white">Read
                                                 more...</a>
                                         </div>
                                     </div>
@@ -178,21 +182,21 @@
 
                                 <div class="col-md-6 card my-bg-color-grey">
                                     <div class="card-body my-bg-color-grey">
-                                        <img class="my-news-card-img-left" src="{{ $News['Banner'] }}"
-                                            alt="{{ $News['Headline'] }} News" style="width:100%">
+                                    <img class="my-news-card-img-left" src="https://thumbs.dreamstime.com/z/review-financial-news-blue-toned-15287879.jpg"
+                                            alt="{{ $News['Headline'] }} News" style="width:100%; height: 200px;">
                                         <div class="card-body">
-                                            <h4 class="card-title my-text-color-white">{{ $News['Headline'] }}</h4>
-                                            <p class="card-text my-text-color-white">
+                                            <h2 class="card-title my-text-color-white" style="color:purple;">{{ $News['Headline'] }}</h4>
+                                            <h3 class="card-text my-text-color-white">
                                                 <strong><a
                                                         href="/user/news/channel/name/{{ $News['ChannelName'] }}/{{ $News['ChannelId'] }}/0"><span
                                                             class="my-text-color-white">{{ $News['ChannelName'] }}</span></a></strong>
-                                            </p>
-                                            <p class="my-text-color-white">{{ $News['Author'] }} / {{ $News['Date'] }}
-                                            </p>
-                                            <p class="card-text my-text-color-white">{{ $News['News'] }}</p>
+                                            </h3>
+                                            <h4 class="my-text-color-white">{{ $News['Author'] }} / {{ $News['Date'] }}
+                                            </h4>
+                                            <h5 class="card-text my-text-color-white">{{ $News['News'] }}</h5>
 
                                             <a href="/user/news/read/{{ $News['Headline'] }}/{{ $News['Id'] }}"
-                                                class="btn btn-block btn-primary my-text-color-white">Read
+                                                class="btn btn-light my-text-color-white">Read
                                                 more...</a>
                                         </div>
                                     </div>
@@ -212,21 +216,21 @@
 
                                 <div class="col-md-6 card my-bg-color-grey">
                                     <div class="card-body my-bg-color-grey">
-                                        <img class="my-news-card-img-left" src="{{ $News['Banner'] }}"
-                                            alt="{{ $News['Headline'] }} News" style="width:100%">
-                                        <div class="card-body">
-                                            <h4 class="card-title my-text-color-white">{{ $News['Headline'] }}</h4>
-                                            <p class="card-text my-text-color-white">
+                                    <img class="my-news-card-img-left" src="https://www.ifin.usi.ch/assets/images/news/phd.jpg"
+                                            alt="{{ $News['Headline'] }} News" style="width:100%; height: 200px;">
+                                            <div class="card-body">
+                                            <h2 class="card-title my-text-color-white" style="color:purple;">{{ $News['Headline'] }}</h4>
+                                            <h3 class="card-text my-text-color-white">
                                                 <strong><a
                                                         href="/user/news/channel/name/{{ $News['ChannelName'] }}/{{ $News['ChannelId'] }}/0"><span
                                                             class="my-text-color-white">{{ $News['ChannelName'] }}</span></a></strong>
-                                            </p>
-                                            <p class="my-text-color-white">{{ $News['Author'] }} / {{ $News['Date'] }}
-                                            </p>
-                                            <p class="card-text my-text-color-white">{{ $News['News'] }}</p>
+                                            </h3>
+                                            <h4 class="my-text-color-white">{{ $News['Author'] }} / {{ $News['Date'] }}
+                                            </h4>
+                                            <h5 class="card-text my-text-color-white">{{ $News['News'] }}</h5>
 
                                             <a href="/user/news/read/{{ $News['Headline'] }}/{{ $News['Id'] }}"
-                                                class="btn btn-block btn-primary my-text-color-white">Read
+                                                class="btn btn-light my-text-color-white">Read
                                                 more...</a>
                                         </div>
                                     </div>
@@ -241,21 +245,25 @@
                 </div>
 
                 <!-- Start: Jumbotron -->
-                <div class="container jumbotron m-3 my-bg-color-grey">
-                    <h3>My TV News</h3>
+                <div class="code--css" style="height: 150px;">
+                <div style="padding: 2%">                    <h3>My TV News</h3>
                     <p class="my-text-color-white">More TV news Channels > </p>
                 </div>
+                </div>
+                <br>
+
                 <!-- End: Jumbotron -->
 
                 <div class="row">
 
                     @foreach ($NewsVideos as $NV)
 
-                        <div class="col-md-3 card my-bg-color-grey">
+                        <div class="col-md-12 card my-bg-color-grey">
                             <div class="card-body my-bg-color-grey">
                                 <a href="/user/news/video/{{ $NV['Title'] }}/{{ $NV['Id'] }}">
                                     <video controls class="
-                                    my-news-video" poster="{{ $NV['Banner'] }}">
+                                    my-news-video" poster="http://www.luiss.edu/sites/www.luiss.it/files/images/news/53/HSE_lecture.jpg"
+                                    style="width: 100%;">
                                         <source src="{{ $NV['Video'] }}" type="video/mp4">
                                     </video>
 
