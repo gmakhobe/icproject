@@ -31,7 +31,14 @@
      <!-- End: Top Navbar -->
      <!-- Start: Vertical Left-SideBar by Jigar Mistry -->
 
-
+     <nav> <!-- The nav link semantically marks your main site navigation -->
+        <ul>
+            <li><a href="#block1">Trending</a></li>
+            <li><a href="/user/ideas/financial-literacy#">Financial Literacy</a></li>
+            <li><a href="/user/ideas/strategies-and-indicators#">Startegies and Indicators</a></li>
+            <li><a href="#block3"  style="color: rgb(245,67,67); font-size: 15px;">POST YOUR IDEA</a></li>
+        </ul>
+    </nav>
      <section class="page-wrap">
 
 

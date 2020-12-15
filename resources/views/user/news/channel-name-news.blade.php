@@ -41,12 +41,13 @@
         <div class="row">
             <div class="col-md-1"></div>
             <div class="col-md-11">
-
+                <br>
                 <!-- Start: Jumbotron -->
-                <div class="container jumbotron m-3"
-                    style="background: url('{{ $ChannelInformation[0]['Banner'] }}') no-repeat center;">
+                <div class="code--css" style="height: 150px;">
+                <div style="padding: 2%">                  
                     <h3 class="my-text-color-white">{{ $ChannelInformation[0]['Name'] }}</h3>
                     <p class="my-text-color-white">{{ $ChannelInformation[0]['Description'] }}</p>
+                </div>
                 </div>
                 <!-- End: Jumbotron -->
                 <!-- Economics-->
@@ -59,9 +60,9 @@
                     <div class="col-md-4 card my-bg-color-grey">
                         <div class="card-body my-bg-color-grey">
                             <a href="/user/news/read/{{ $CN['Headline'] }}/{{ $CN['Id'] }}">
-                                <img class="my-news-card-img-channel-name" src="{{ $CN['Banner'] }}"
+                                <img class="my-news-card-img-channel-name" src="https://blog.feedspot.com/wp-content/uploads/2019/01/financial-education-youtube.jpg"
                                     alt="Card image" style="width:100%">
-                                <h4 class="card-title my-text-color-white">{{ $CN['Headline'] }}</h4>
+                                <h4 class="card-title my-text-color-white" style="color:purple;">{{ $CN['Headline'] }}</h4>
                                 <p class="my-text-color-white">{{ $CN['Author'] }} / {{ $CN['Date'] }}</p>
                                 <p class="my-text-color-white">Topic: {{ $CN['Subject'] }}</p>
                                 <p class="card-text my-text-color-white">{{ $CN['News'] }}</p>
@@ -85,9 +86,9 @@
                     <div class="col-md-4 card my-bg-color-grey">
                         <div class="card-body my-bg-color-grey">
                             <a href="/user/news/read/{{ $CN['Headline'] }}/{{ $CN['Id'] }}">
-                                <img class="my-news-card-img-channel-name" src="{{ $CN['Banner'] }}"
+                                <img class="my-news-card-img-channel-name" src="https://2.bp.blogspot.com/-qSheCYstuac/Uk2jzMDh8cI/AAAAAAAAMEA/u89Ge50HZwU/s1600/fun.jpg"
                                     alt="Card image" style="width:100%">
-                                <h4 class="card-title my-text-color-white">{{ $CN['Headline'] }}</h4>
+                                <h4 class="card-title my-text-color-white" style="color:purple;">{{ $CN['Headline'] }}</h4>
                                 <p class="my-text-color-white">{{ $CN['Author'] }} / {{ $CN['Date'] }}</p>
                                 <p class="my-text-color-white">Topic: {{ $CN['Subject'] }}</p>
                                 <p class="card-text my-text-color-white">{{ $CN['News'] }}</p>
@@ -111,9 +112,9 @@
                     <div class="col-md-4 card my-bg-color-grey">
                         <div class="card-body my-bg-color-grey">
                             <a href="/user/news/read/{{ $CN['Headline'] }}/{{ $CN['Id'] }}">
-                                <img class="my-news-card-img-channel-name" src="{{ $CN['Banner'] }}"
+                                <img class="my-news-card-img-channel-name" src="https://papersoft-dms.com/wp-content/uploads/2018/01/PaperSoft_Blog_Financialinclusion_v2_2-1030x541.png"
                                     alt="Card image" style="width:100%">
-                                <h4 class="card-title my-text-color-white">{{ $CN['Headline'] }}</h4>
+                                <h4 class="card-title my-text-color-white" style="color:purple;">{{ $CN['Headline'] }}</h4>
                                 <p class="my-text-color-white">{{ $CN['Author'] }} / {{ $CN['Date'] }}</p>
                                 <p class="my-text-color-white">Topic: {{ $CN['Subject'] }}</p>
                                 <p class="card-text my-text-color-white">{{ $CN['News'] }}</p>
@@ -138,9 +139,9 @@
                     <div class="col-md-4 card my-bg-color-grey">
                         <div class="card-body my-bg-color-grey">
                             <a href="/user/news/read/{{ $CN['Headline'] }}/{{ $CN['Id'] }}">
-                                <img class="my-news-card-img-channel-name" src="{{ $CN['Banner'] }}"
+                                <img class="my-news-card-img-channel-name" src="https://i.ytimg.com/vi/RoqANQu9K3Y/maxresdefault.jpg"
                                     alt="Card image" style="width:100%">
-                                <h4 class="card-title my-text-color-white">{{ $CN['Headline'] }}</h4>
+                                <h4 class="card-title my-text-color-white" style="color:purple;">{{ $CN['Headline'] }}</h4>
                                 <p class="my-text-color-white">{{ $CN['Author'] }} / {{ $CN['Date'] }}</p>
                                 <p class="my-text-color-white">Topic: {{ $CN['Subject'] }}</p>
                                 <p class="card-text my-text-color-white">{{ $CN['News'] }}</p>
@@ -162,22 +163,22 @@
 
                     @foreach ($ChannelNewsFinance as $CN)
 
-                        <div class="col-md-4 card my-bg-color-grey">
-                            <div class="card-body my-bg-color-grey">
-                                <a href="/user/news/read/{{ $CN['Headline'] }}/{{ $CN['Id'] }}">
-                                    <img class="my-news-card-img-channel-name" src="{{ $CN['Banner'] }}"
-                                        alt="Card image" style="width:100%">
-                                    <h4 class="card-title my-text-color-white">{{ $CN['Headline'] }}</h4>
-                                    <p class="my-text-color-white">{{ $CN['Author'] }} / {{ $CN['Date'] }}</p>
-                                    <p class="my-text-color-white">Topic: {{ $CN['Subject'] }}</p>
-                                    <p class="card-text my-text-color-white">{{ $CN['News'] }}</p>
-                                    <a href="/user/news/read/{{ $CN['Headline'] }}/{{ $CN['Id'] }}"
-                                        class="btn btn-block btn-primary my-text-color-white"><span
-                                            class="my-text-color-white">Read more...</span></a>
-                                </a>
-                            </div>
-                            <br />
+                    <div class="col-md-4 card my-bg-color-grey">
+                        <div class="card-body my-bg-color-grey">
+                            <a href="/user/news/read/{{ $CN['Headline'] }}/{{ $CN['Id'] }}">
+                                <img class="my-news-card-img-channel-name" src="https://static3.seekingalpha.com/images/marketing_images/numbers_words_signs/signs/finance.jpeg"
+                                    alt="Card image" style="width:100%">
+                                <h4 class="card-title my-text-color-white" style="color:purple;">{{ $CN['Headline'] }}</h4>
+                                <p class="my-text-color-white">{{ $CN['Author'] }} / {{ $CN['Date'] }}</p>
+                                <p class="my-text-color-white">Topic: {{ $CN['Subject'] }}</p>
+                                <p class="card-text my-text-color-white">{{ $CN['News'] }}</p>
+                                <a href="/user/news/read/{{ $CN['Headline'] }}/{{ $CN['Id'] }}"
+                                    class="btn btn-block btn-primary my-text-color-white"><span
+                                        class="my-text-color-white">Read more...</span></a>
+                            </a>
                         </div>
+                        <br />
+                    </div>
 
                     @endforeach
 
@@ -189,22 +190,22 @@
 
                     @foreach ($ChannelArticles as $CA)
 
-                        <div class="col-md-4 card my-bg-color-grey">
-                            <div class="card-body my-bg-color-grey">
-                                <a href="/user/news/article/read/{{ $CA['Headline'] }}/{{ $CA['Id'] }}">
-                                    <img class="my-news-card-img-channel-name" src="{{ $CA['Banner'] }}"
-                                        alt="Card image" style="width:100%">
-                                    <h4 class="card-title my-text-color-white">{{ $CA['Headline'] }}</h4>
-                                    <p class="my-text-color-white">{{ $CA['Author'] }} / {{ $CA['Date'] }}</p>
-                                    <p class="my-text-color-white">Topic: {{ $CA['Subject'] }}</p>
-                                    <p class="card-text my-text-color-white">{{ $CA['News'] }}</p>
-                                    <a href="/user/news/article/read/{{ $CA['Headline'] }}/{{ $CA['Id'] }}"
-                                        class="btn btn-block btn-primary my-text-color-white"><span
-                                            class="my-text-color-white">Read more...</span></a>
-                                </a>
-                            </div>
-                            <br />
+                    <div class="col-md-4 card my-bg-color-grey">
+                        <div class="card-body my-bg-color-grey">
+                            <a href="/user/news/read/{{ $CN['Headline'] }}/{{ $CN['Id'] }}">
+                                <img class="my-news-card-img-channel-name" src="https://www.york.ac.uk/media/study/courses/postgraduate/management/msc-mbf-hero-1200.jpg"
+                                    alt="Card image" style="width:100%">
+                                <h4 class="card-title my-text-color-white" style="color:purple;">{{ $CN['Headline'] }}</h4>
+                                <p class="my-text-color-white">{{ $CN['Author'] }} / {{ $CN['Date'] }}</p>
+                                <p class="my-text-color-white">Topic: {{ $CN['Subject'] }}</p>
+                                <p class="card-text my-text-color-white">{{ $CN['News'] }}</p>
+                                <a href="/user/news/read/{{ $CN['Headline'] }}/{{ $CN['Id'] }}"
+                                    class="btn btn-block btn-primary my-text-color-white"><span
+                                        class="my-text-color-white">Read more...</span></a>
+                            </a>
                         </div>
+                        <br />
+                    </div>
 
                     @endforeach
 

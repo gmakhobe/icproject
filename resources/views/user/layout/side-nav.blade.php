@@ -142,7 +142,7 @@ console.log(Chart.defaults.global);
           </ul>
         </li>
 
-        <li><i class="fa fa-users fa-fw"></i><a href="#">News & Events</a>
+        <li><i class="fa fa-users fa-fw"></i><a href="/user/news">News & Events</a>
           <ul class="side-nav-dropdown">
             <li><a href="/user/news/articles">Articles</a></li>
             <li><a href="/user/news/where-to-invest">Where to Invest</a></li>
@@ -173,7 +173,6 @@ console.log(Chart.defaults.global);
           </ul>
         </li>
 
-        <p>Example:</p>
         <li><i class="fa fa-envelope-open-o fa-fw"></i><a href="#"> Messages <span class="num dang">56</span></a></li>
         <li><i class="fa fa-wrench fa-fw"></i><a href="#"> Settings <span class="num prim">6</span></a>
           <ul class="side-nav-dropdown">
