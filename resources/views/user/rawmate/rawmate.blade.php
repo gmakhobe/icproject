@@ -23,10 +23,13 @@
     <link rel="stylesheet" href="/assets1/css/newSideNav.css">
     <link rel="stylesheet" href="/assets1/css/awardsNav.css">
     <link rel="stylesheet" href="/assets1/css/Rawmat-cards.css">
+    <link rel="stylesheet" href="/assets1/css/rawmat-card(Timeline).css">
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+
 </head>
 
-<body>
+<body onload="onload">
 
     <!-- Start: Vertical Left-SideBar by Jigar Mistry -->
     @include('/user/layout/side-nav')
@@ -37,18 +40,47 @@
 <section class="container">
 <div class="containerr">
    <div class="tabs">
-      <input type="radio" id="radio-1" name="tabs" checked />
+      <input type="radio" id="radio-1" name="tabs"  />
       <label class="tab" for="radio-1">Timeline</label>
-      <input type="radio" id="radio-2" name="tabs" />
+      <input type="radio" id="radio-2" name="tabs" checked />
       <label class="tab" for="radio-2">Trending</label>
       <input type="radio" id="radio-3" name="tabs" />
-      <label class="tab" for="radio-3">Share Investment</label>
+      <label class="tab" for="radio-3" >Share Investment</label>
       <span class="glider"></span>
    </div>
 </div>
+<script>
+          window.onload = function onload() {
+            console.log('onload');
+            $("#Timeline").hide();
+                $("#Trending").show();
+                $("#ShareInvestment").hide();
+
+          }
+          $(document).ready(function(){
+
+            $("#radio-1").click(function(){
+               $("#Timeline").show();
+                $("#Trending").hide();
+                $("#ShareInvestment").hide();
+                });
+
+                $("#radio-2").click(function(){
+               $("#Timeline").hide();
+                $("#Trending").show();
+                $("#ShareInvestment").hide();
+                });
+
+                $("#radio-3").click(function(){
+               $("#Timeline").hide();
+                $("#Trending").hide();
+                $("#ShareInvestment").show();
+                });
+          })
+</script>
     <!-- Start: Top Navbar -->
     <main style="padding-top:10%">
-	<section>
+	<section id="Trending" >
 		<div class="rad-body-wrapper rad-nav-min">
 			<div class="container-fluid">
 
@@ -145,43 +177,132 @@
 		</div>
     </section>
 
-<div style="padding-bottom: 5%;">
-    <div class="menu">
+<!-- TIME LINE SECTIONPO -->
+    <section id="Timeline" >
+		<div class="rad-body-wrapper rad-nav-min">
+			<div class="container-fluid">
+            <div class="container">
+                    <div class="card">
+                        <h2> Post </h2>
+                        <div class="card-color">
+                        <div class="info">
+                            <button class="create-by btn btn-secondary" style="color:maroon; font-weight:strong;">Sullivan sullivan (sullivan@gmail.com)</button>
+                            <p class="create-by"> <strong style="color:red">Location:</strong> HATFIELD,PRETORIA</p>
+                            <p class="date"> <strong style="color:red">Bio:</strong>I took an entry-level position at Oswald Tech directly after graduation and was promoted to my current position in May of 2018. "</p>
+                        </div>
+                        </div>
+                        <div class="side-info">
+                        <p class="date">Data: 31/02/2020</p>
+                        <p class="date">Price: R2000</p>
+                        <dl style="width: 600px; text-align: justify;">
+                            <dt>Bio:</dt>
+                            <dd>I took an entry-level position at Oswald Tech directly after graduation and was promoted to my current position in May of 2018. I am obsessed with all things tech-related and I spend my free time building computers and developing my own software. I enjoy watching sci-fi movies, walking my Great Dane on Newport Beach and eating seafood tacos at local California Mexican restaurants."</dd>
+                            <dt>Obteve a venda:</dt>
+                            <dd>Sim</dd>
+                        </dl>
 
-        <div class="menu__body">
-        <ul class="nav">
-            <li class="nav__item">
-            <a href="#" class="nav__item-link is-active">
-                <i class="fa fa-envelope nav__item-icon"></i>
-                <span class="nav__item-text">REGIONAL POLICY</span>
 
-            </a>
-            </li>
-            <li class="nav__item">
-            <a href="#" class="nav__item-link is-active">
-                <i class="fa fa-envelope nav__item-icon"></i>
-                <span class="nav__item-text">ENVIRONMENTAL</span>
+                        <div class="links">
+                                <a href="#" class="btn green">Buy</a>
+                                <a href="#" class="btn blue">Analyse</a>
+                                <a href="#" class="btn red">Negotiate</a>
+                                <a href="#" class="btn red">Share Investment</a>
 
-            </a>
-            </li>
-            <li class="nav__item">
-            <a href="#" class="nav__item-link is-active">
-                <i class="fa fa-envelope nav__item-icon"></i>
-                <span class="nav__item-text">NATIONAL</span>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
 
-            </a>
-            </li>
-            <li class="nav__item">
-            <a href="#" class="nav__item-link is-active">
-                <i class="fa fa-envelope nav__item-icon"></i>
-                <span class="nav__item-text">HELP</span>
+                    <div class="container">
+                    <div class="card" style="padding-bottom:5%">
+                        <h2> Post </h2>
+                        <div class="card-color">
+                        <div class="info">
+                            <button class="create-by btn btn-secondary" style="color:maroon; font-weight:strong;">Shaun gustavo (Gustavo@gmail.com)</button>
+                            <p class="create-by"> <strong style="color:red">Location:</strong> MELROSE,JOHANNESBURG</p>
+                            <p class="date"> <strong style="color:red">Bio:</strong>I took an entry-level position at Oswald Tech directly after graduation and was promoted to my current position in May of 2018. "</p>
+                        </div>
+                        </div>
+                        <div class="side-info">
 
-            </a>
-            </li>
-        </ul>
+                                <div class="col-6">
+                                <p class="date col col-lg-2"">Date: 01/12/2020</p>
+                                <p class="date col col-lg-2"">Price: R2700</p>
+                                </div>
+
+
+                        <dl style="width: 600px; text-align: justify;">
+                            <dt>Bio:</dt>
+                            <dd>I took an entry-level position at Oswald Tech directly after graduation and was promoted to my current position in May of 2018. I am obsessed with all things tech-related and I spend my free time building computers and developing my own software. I enjoy watching sci-fi movies, walking my Great Dane on Newport Beach and eating seafood tacos at local California Mexican restaurants."</dd>
+                            <dt>Obteve a venda:</dt>
+                            <dd>Sim</dd>
+                        </dl>
+
+
+                        <div class="links">
+                                <a href="#" class="btn green">Buy</a>
+                                <a href="#" class="btn blue">Analyse</a>
+                                <a href="#" class="btn red">Negotiate</a>
+                                <a href="#" class="btn red">Share Investment</a>
+
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+
+                    <div class="container">
+                    <div class="card" style="padding-bottom:5%">
+                        <h2> Post </h2>
+                        <div class="card-color">
+                        <div class="info">
+                            <button class="create-by btn btn-secondary" style="color:maroon; font-weight:strong;">Dean Don (Dean@gmail.com)</button>
+                            <p class="create-by"> <strong style="color:red">Location:</strong> RANDBURG,JOHANNESBURG</p>
+                            <p class="date"> <strong style="color:red">Bio:</strong>I took an entry-level position at Oswald Tech directly after graduation and was promoted to my current position in May of 2018. "</p>
+                        </div>
+                        </div>
+                        <div class="side-info">
+
+                                <div class="col-6">
+                                <p class="date col col-lg-2"">Date: 01/10/2020</p>
+                                <p class="date col col-lg-2"">Price: R3700</p>
+                                </div>
+
+
+                        <dl style="width: 600px; text-align: justify;">
+                            <dt>Bio:</dt>
+                            <dd>I took an entry-level position at Oswald Tech directly after graduation and was promoted to my current position in May of 2018. I am obsessed with all things tech-related and I spend my free time building computers and developing my own software. I enjoy watching sci-fi movies, walking my Great Dane on Newport Beach and eating seafood tacos at local California Mexican restaurants."</dd>
+                            <dt>Obteve a venda:</dt>
+                            <dd>Sim</dd>
+                        </dl>
+
+
+                        <div class="links">
+                                <a href="#" class="btn green">Buy</a>
+                                <a href="#" class="btn blue">Analyse</a>
+                                <a href="#" class="btn red">Negotiate</a>
+                                <a href="#" class="btn red">Share Investment</a>
+
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+
+            </div>
         </div>
-    </div>
-</div>
+    </section>
+
+
+    <section id="ShareInvestment" >
+		<div class="rad-body-wrapper rad-nav-min">
+			<div class="container-fluid">
+
+
+
+
+            </div>
+        </div>
+    </section>
+
 </main>
     <!-- End: Top Navbar -->
 
@@ -274,6 +395,9 @@ console.log(Chart.defaults.global);
     @include('/user/layout/footer-style-1')
     <!-- End: Header Content -->
     <!-- End: Dark footer with social media icons -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="/assets1/js/bs-init.js"></script>
     <script src="/assets1/js/Data-Table-with-Search-Sort-Filter-and-Zoom-using-TableSorter.js"></script>
     <script src="/assets1/js/theme.js"></script>
