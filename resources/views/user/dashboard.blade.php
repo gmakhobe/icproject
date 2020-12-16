@@ -108,7 +108,7 @@
                                 <span class="forActive"></span>
                            </span>
                             </a>
-                            <a href="">
+                            <a href="/user/create">
                                 <span class="itemDot itemDot6" data-tab="6">
                                 <i class="fa fa-plus-square"></i>
                                 <span class="forActive"></span>
