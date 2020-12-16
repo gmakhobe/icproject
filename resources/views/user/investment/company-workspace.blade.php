@@ -28,12 +28,16 @@
     <link rel="stylesheet" href="/assets1/css/untitled.css">
     <link rel="stylesheet" href="/assets1/css/Vertical-Left-SideBar-by-Jigar-Mistry.css">
     <link rel="stylesheet" href="/assets1/css/x-editable.css">
+    <link rel="stylesheet" href="/assets1/css/newSideNav.css">
+    <link rel="stylesheet" href="/assets1/css/awards.less">
+    <link rel="stylesheet" href="/assets1/css/awardsNav.css">
+    <link rel="stylesheet/less" type="text/css" href="/assets1/css/awards.less" />
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 
-<body style="background-color: rgb(50,46,46);color: rgb(238,15,15);">
+<body>
 
     <!-- Start: Vertical Left-SideBar by Jigar Mistry -->
     @include('/user/layout/side-nav')
@@ -54,27 +58,29 @@
 
                 </style>
 
-                <div class="jumbotron m-3 my-bg-color-grey my-text-color-white">
+                <div class="code--css" style="height: 150px;">
+                 <div style="padding: 2%">
                     <h1>{{ $CompanyInfo['Name'] }}, {{ $CompanyInfo['Symbol'] }}</h1>
                     <p>Publicly Traded Company.</p>
+                </div>
                 </div>
 
                 <!-- Nav pills -->
                 <ul class="nav nav-tabs">
                     <li class="nav-item">
-                        <a class="nav-link active" data-toggle="pill" href="#profile">Profile</a>
+                        <a class="nav-link active" data-toggle="pill" href="#profile" style="color:purple; font-size: 20px;">Profile</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" data-toggle="pill" href="#statistics">Statistics</a>
+                        <a class="nav-link" data-toggle="pill" href="#statistics" style="color:purple; font-size: 20px;">Statistics</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" data-toggle="pill" href="#news">News</a>
+                        <a class="nav-link" data-toggle="pill" href="#news" style="color:purple; font-size: 20px;">News</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" data-toggle="pill" href="#reports">Reports</a>
+                        <a class="nav-link" data-toggle="pill" href="#reports" style="color:purple; font-size: 20px;">Reports</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" data-toggle="pill" href="#visuals">Visuals</a>
+                        <a class="nav-link" data-toggle="pill" href="#visuals" style="color:purple; font-size: 20px;">Visuals</a>
                     </li>
                 </ul>
 
@@ -82,12 +88,12 @@
                 <div class="tab-content">
                     <div class="tab-pane container active my-text-color-white" id="profile">
 
-                        <h3>Nature of Business</h3>
+                        <h2>Nature of Business</h2>
                         <p>
                             {{ $CompanyInfo['NatureOfBusiness'] }}
                         </p>
 
-                        <h3>Management</h3>
+                        <h2>Management</h2>
                         <table class="table table-dark">
                             <thead>
                                 <th>Title</th>
@@ -105,7 +111,7 @@
 
                         <div class="row my-text-center">
                             <div class="col-md-6">
-                                <h3>Company Address</h3>
+                                <h2>Company Address</h2>
 
                                 <p>{{ $CompanyInfo['Address'] }}</p>
                                 <p>{{ $CompanyInfo['Country'] }}</p>
@@ -115,7 +121,7 @@
                             </div>
                             <div class="col-md-6">
 
-                                <h3>Company Information</h3>
+                                <h2>Company Information</h2>
                                 <p>Type: Company</p>
                                 <p>Industry: {{ $CompanyInfo['IndustryName'] }}</p>
                                 <p>Full time employees: {{ $CompanyInfo['Workers'] }}</p>
@@ -126,7 +132,7 @@
                     </div>
                     <div class="tab-pane container fade my-text-color-white" id="statistics">
 
-                        <h3>Statistics</h3>
+                        <h2>Statistics</h2>
                         <table class="table table-dark ">
                             <thead>
                                 <td>Bid/Ask</td>
@@ -149,7 +155,7 @@
                     </div>
                     <div class="tab-pane container fade my-text-color-white" id="news">
 
-                        <h3>News</h3>
+                        <h2>News</h2>
                         <div class="list-group">
                             @foreach ($CompanyNews as $cm)
                                 <a data-toggle="modal" data-target="#mod{{ $cm['NewsId'] }}" href="#"
@@ -197,7 +203,7 @@
                     </div>
                     <div class="tab-pane container fade my-text-color-white" id="reports">
 
-                        <h3>Reports</h3>
+                        <h2>Reports</h2>
                         <div class="list-group">
                             @foreach ($CompanyReports as $cr)
                                 <a target="_black" href="{{ $cr['Link'] }}"
@@ -211,7 +217,7 @@
                     </div>
                     <div class="tab-pane container fade my-text-color-white" id="visuals">
 
-                        <h3>Visuals</h3>
+                        <h2>Visuals</h2>
                         <div class="row">
                             @foreach ($CompanyVisuals as $cv)
                                 <div class="col-md-4">
