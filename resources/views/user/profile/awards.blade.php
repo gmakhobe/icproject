@@ -67,27 +67,7 @@ $(document).ready(function() {
     <div class='some-page-wrapper'>
   <div class='row'>
     <div class='column'>
-      <div class='blue-column'>
-            <ul class="menu">
-        <li>
-            <a data-toggle="modal"  data-target="StartUpIndex"  >PROFILE</a>
 
-        </li>
-        <li>
-            <a href="#">NOMINEES</a>
-        </li>
-        <li>
-            <a href="#">WINNERS</a>
-        </li>
-        <li>
-            <a href="#">RANKING</a>
-        </li>
-        <li>
-            <a href="#">TIMELINE</a>
-        </li>
-        </ul>
-
-      </div>
     </div>
     <div class='column'>
       <div class='green-column'>
@@ -103,6 +83,22 @@ $(document).ready(function() {
 		<span class="glider"></span>
 	</div>
     </div>
+
+
+    <div class="dropdown">
+  <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">CHOOSE ONE
+  <span class="caret"></span></button>
+  <ul class="dropdown-menu">
+    <li><a href="#">PROFILE</a></li>
+    <li><a href="#">NOMINEES</a></li>
+    <li><a href="#">WINNERS</a></li>
+    <li><a href="#">RANKING </a></li>
+    <li><a href="#">TIMELINE</a></li>
+
+  </ul>
+</div>
+
+
 <div class="page-header">
         <h1>The highest growth of the year</h1>
     </div>
