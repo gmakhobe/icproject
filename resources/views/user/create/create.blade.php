@@ -40,18 +40,20 @@
         <div class="row">
             <div class="col-md-1"></div>
             <div class="col-md-10">
-
+                <br>
                 <!-- Start: Jumbotron -->
-                <div class="container jumbotron my-bg-color-grey">
+                <div class="code--css" style="height: 150px;">
+                 <div style="padding: 2%">
                     <h3>Plugin Create</h3>
                     <p class="my-text-color-white">Create a company, service, event, news chaannel...</p>
+                </div>
                 </div>
                 <!-- End: Jumbotron -->
 
                 <!-- End: Nav -->
 
                 <div class="row">
-
+                <br>
                     <div class="col-md-12 card my-bg-color-grey">
                         <div class="card-body">
                             <!-- Start: Navigation -->
@@ -67,25 +69,25 @@
                                         <div class="panel-body">
 
                                             <!-- Start: Navigation -->
-                                            <ul class="nav nav-pills nav-justified">
+                                            <ul class="nav nav-tabs">
                                                 <li class="nav-item">
                                                     <a class="nav-link active" data-toggle="pill"
-                                                        href="#create-service">
+                                                        href="#create-service" style="color:purple; font-size: 20px;">
                                                         Service
                                                     </a>
                                                 </li>
                                                 <li class="nav-item">
-                                                    <a class="nav-link" data-toggle="pill" href="#">
+                                                    <a class="nav-link" data-toggle="pill" href="#" style="color:purple; font-size: 20px;">
                                                         Event
                                                     </a>
                                                 </li>
                                                 <li class="nav-item">
-                                                    <a class="nav-link" data-toggle="pill" href="#">
+                                                    <a class="nav-link" data-toggle="pill" href="#" style="color:purple; font-size: 20px;">
                                                         Hedge Fund
                                                     </a>
                                                 </li>
                                                 <li class="nav-item">
-                                                    <a class="nav-link" data-toggle="pill" href="#">
+                                                    <a class="nav-link" data-toggle="pill" href="#" style="color:purple; font-size: 20px;">
                                                         Start-Up Index
                                                     </a>
                                                 </li>
@@ -98,7 +100,7 @@
                                                 <div class="tab-pane active my-text-color-white" id="create-service">
                                                     <center>
                                                         <h4 class="my-text-color-white">
-                                                            Create A Service
+                                                            Create An Investment Activity
                                                         </h4>
                                                         <p class="my-text-color-white">
                                                             Need investors? Create a service!
@@ -108,52 +110,39 @@
 
                                                     <div class="service-slide">
 
-                                                        <label>Service Name</label><br />
+                                                        <label>Investment Name</label><br />
                                                         <input type="text" id="service-def-name"
-                                                            class="control-form" /><br />
+                                                            class="form-control" /><br />
 
-                                                        <label>Service Industry</label><br />
+                                                        <label>Investment Industry</label><br />
                                                         <select class="form-control" id="service-def-industry">
                                                             <option>Type 1</option>
                                                             <option>Type 2</option>
                                                         </select><br />
 
-                                                        <label>Nature of Service</label><br />
+                                                        <label>Nature of Investment</label><br />
                                                         <textarea class="form-control" rows="5"
                                                             id="comment"></textarea><br />
-                                                        <center>
-                                                            <button type="button" class="btn btn-primary">
-                                                                Next
-                                                            </button>
-                                                        </center>
+
                                                     </div>
 
                                                     <div class="service-slide">
 
                                                         <label>Address</label><br />
                                                         <input type="text" id="service-def-address"
-                                                            class="control-form" /><br />
+                                                            class="form-control" /><br />
 
                                                         <label>Country</label><br />
                                                         <input type="text" id="service-def-country"
-                                                            class="control-form" /><br />
+                                                            class="form-control" /><br />
 
                                                         <label>Website</label><br />
                                                         <input type="text" id="service-def-website"
-                                                            class="control-form" /><br />
+                                                            class="form-control" /><br />
 
                                                         <label>Telephone</label><br />
                                                         <input type="text" id="service-def-telephone"
-                                                            class="control-form" /><br />
-
-                                                        <center>
-                                                            <button type="button" class="btn btn-danger">
-                                                                Previous
-                                                            </button>
-                                                            <button type="button" class="btn btn-primary">
-                                                                Next
-                                                            </button>
-                                                        </center>
+                                                            class="form-control" /><br />
                                                     </div>
 
                                                     <div class="service-slide">
@@ -165,14 +154,6 @@
                                                         <label>Report Documenation</label><br />
                                                         <input type="file" class="form-control" />
 
-                                                        <center>
-                                                            <button type="button" class="btn btn-danger">
-                                                                Previous
-                                                            </button>
-                                                            <button type="button" class="btn btn-primary">
-                                                                Next
-                                                            </button>
-                                                        </center>
                                                     </div>
 
                                                     <div class="service-slide">
@@ -181,27 +162,11 @@
                                                         </h4>
                                                         <label>Strategy</label><br />
                                                         <input type="text" id="service-def-strategy"
-                                                            class="control-form" /><br />
+                                                            class="form-control" /><br />
                                                         <label>Indicator</label><br />
                                                         <input type="text" id="service-def-indicator"
-                                                            class="control-form" /><br />
+                                                            class="form-control" /><br />
 
-
-
-
-                                                        <center>
-
-                                                            <button type="button" class="btn btn-success">
-                                                                Save
-                                                            </button>
-                                                            <div class="opt-stategy-and-indicator">
-                                                                <button type="button" class="btn btn-danger">
-                                                                    Previous
-                                                                </button>
-                                                                <button type="button" class="btn btn-primary">
-                                                                    Next
-                                                                </button>
-                                                        </center>
                                                     </div>
 
                                                     <div class="service-slide">
@@ -210,84 +175,34 @@
                                                         </h4>
                                                         <label>Strategy</label><br />
                                                         <input type="date" id="service-def-strategy"
-                                                            class="control-form" /><br />
+                                                            class="form-control" /><br />
                                                         <label>Nature of event</label><br />
                                                         <input type="text" id="service-def-indicator"
-                                                            class="control-form" /><br />
-
-
-
-
-                                                        <center>
-
-                                                            <button type="button" class="btn btn-success">
-                                                                Save
-                                                            </button>
-                                                            <div class="opt-stategy-and-indicator">
-                                                                <button type="button" class="btn btn-danger">
-                                                                    Previous
-                                                                </button>
-                                                                <button type="button" class="btn btn-primary">
-                                                                    Next
-                                                                </button>
-                                                        </center>
+                                                            class="cform-control" /><br />
                                                     </div>
 
                                                     <div class="service-slide">
 
-                                                        <h4 class=" my-text-color-white">Add Service Visuals
+                                                        <h4 class=" my-text-color-white">Add Investment Visuals
                                                         </h4>
                                                         <label>Caption</label><br />
-                                                        <input type="date" id="service-def-strategy"
-                                                            class="control-form" /><br />
+                                                        <input type="text" id="service-def-strategy"
+                                                            class="form-control" /><br />
                                                         <label>Upload Image</label><br />
                                                         <input type="file" class="form-control" /><br />
 
-
-
-
-                                                        <center>
-
-                                                            <button type="button" class="btn btn-success">
-                                                                Save
-                                                            </button>
-                                                            <div class="opt-stategy-and-indicator">
-                                                                <button type="button" class="btn btn-danger">
-                                                                    Previous
-                                                                </button>
-                                                                <button type="button" class="btn btn-primary">
-                                                                    Next
-                                                                </button>
-                                                        </center>
                                                     </div>
 
                                                     <div class="service-slide">
 
-                                                        <h4 class=" my-text-color-white">Add Service Earnings
+                                                        <h4 class=" my-text-color-white">Add Investment Earnings
                                                         </h4>
                                                         <label>Date</label><br />
                                                         <input type="date" id="service-def-strategy"
-                                                            class="control-form" /><br />
+                                                            class="form-control" /><br />
                                                         <label>Amount</label><br />
                                                         <input type="text" id="service-def-indicator"
-                                                            class="control-form" /><br />
-
-
-
-
-                                                        <center>
-
-                                                            <button type="button" class="btn btn-success">
-                                                                Save
-                                                            </button>
-                                                            <div class="opt-stategy-and-indicator">
-                                                                <button type="button" class="btn btn-danger">
-                                                                    Previous
-                                                                </button>
-                                                                <button type="button" class="btn btn-primary">
-                                                                    Next
-                                                                </button>
-                                                        </center>
+                                                            class="cform-control" /><br />
                                                     </div>
 
                                                     <div class="service-slide">
@@ -297,10 +212,10 @@
                                                         </h4>
                                                         <label>Asset Name</label><br />
                                                         <input type="text" id="service-def-strategy"
-                                                            class="control-form" /><br />
+                                                            class="form-control" /><br />
                                                         <label>Quantity</label><br />
                                                         <input type="number" id="service-def-indicator"
-                                                            class="control-form" /><br />
+                                                            class="form-control" /><br />
 
                                                         <center>
 
@@ -308,12 +223,6 @@
                                                                 Save
                                                             </button>
                                                             <div class="opt-stategy-and-indicator">
-                                                                <button type="button" class="btn btn-danger">
-                                                                    Previous
-                                                                </button>
-                                                                <button type="button" class="btn btn-primary">
-                                                                    Next
-                                                                </button>
                                                         </center>
                                                     </div>
 
@@ -334,24 +243,24 @@
                                         <div class="panel-body">
 
                                             <!-- Start: Navigation -->
-                                            <ul class="nav nav-pills nav-justified">
+                                            <ul class="nav nav-tabs">
                                                 <li class="nav-item">
-                                                    <a class="nav-link active" data-toggle="pill" href="#">
-                                                        news Channel
+                                                    <a class="nav-link active" data-toggle="pill" href="#" style="color:purple; font-size: 20px;">
+                                                        News Channel
                                                     </a>
                                                 </li>
                                                 <li class="nav-item">
-                                                    <a class="nav-link" data-toggle="pill" href="#">
+                                                    <a class="nav-link" data-toggle="pill" href="#" style="color:purple; font-size: 20px;">
                                                         TV Channel
                                                     </a>
                                                 </li>
                                                 <li class="nav-item">
-                                                    <a class="nav-link" data-toggle="pill" href="#">
+                                                    <a class="nav-link" data-toggle="pill" href="#" style="color:purple; font-size: 20px;">
                                                         Podcast Channel
                                                     </a>
                                                 </li>
                                                 <li class="nav-item">
-                                                    <a class="nav-link" data-toggle="pill" href="#">
+                                                    <a class="nav-link" data-toggle="pill" href="#" style="color:purple; font-size: 20px;">
                                                         Blog
                                                     </a>
                                                 </li>

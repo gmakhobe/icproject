@@ -165,12 +165,7 @@ console.log(Chart.defaults.global);
           </ul>
         </li>
 
-        <li><i class="fa fa-plus-square fa-fw"></i><a href="#"> Create</a>
-          <ul class="side-nav-dropdown">
-            <li><a href="#">Event</a></li>
-            <li><a href="#">Company</a></li>
-            <li><a href="#">Service</a></li>
-          </ul>
+        <li><i class="fa fa-plus-square fa-fw"></i><a href="/user/create"> Create</a>
         </li>
 
         <li><i class="fa fa-envelope-open-o fa-fw"></i><a href="#"> Messages <span class="num dang">56</span></a></li>
