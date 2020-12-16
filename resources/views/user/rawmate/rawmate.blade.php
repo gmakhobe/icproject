@@ -178,8 +178,8 @@
     </section>
 
 <!-- TIME LINE SECTIONPO -->
-    <section id="Timeline" >
-		<div class="rad-body-wrapper rad-nav-min">
+    <section id="Timeline" style="display: none;">
+		<div class="rad-body-wrapper rad-nav-min" align="center">
 			<div class="container-fluid">
             <div class="container">
                     <div class="card">
@@ -199,14 +199,15 @@
                             <dd>I took an entry-level position at Oswald Tech directly after graduation and was promoted to my current position in May of 2018. I am obsessed with all things tech-related and I spend my free time building computers and developing my own software. I enjoy watching sci-fi movies, walking my Great Dane on Newport Beach and eating seafood tacos at local California Mexican restaurants."</dd>
                             <dt>Obteve a venda:</dt>
                             <dd>Sim</dd>
+                            <a href="#" class="btn green">Buy</a>
+                                <a href="#" class="btn blue">Analyse</a>
+                                <a href="#" class="btn red">Negotiate</a>
+                                <a href="#" class="btn red">Share Investment</a>
                         </dl>
 
 
                         <div class="links">
-                                <a href="#" class="btn green">Buy</a>
-                                <a href="#" class="btn blue">Analyse</a>
-                                <a href="#" class="btn red">Negotiate</a>
-                                <a href="#" class="btn red">Share Investment</a>
+
 
                         </div>
                         </div>
@@ -236,14 +237,15 @@
                             <dd>I took an entry-level position at Oswald Tech directly after graduation and was promoted to my current position in May of 2018. I am obsessed with all things tech-related and I spend my free time building computers and developing my own software. I enjoy watching sci-fi movies, walking my Great Dane on Newport Beach and eating seafood tacos at local California Mexican restaurants."</dd>
                             <dt>Obteve a venda:</dt>
                             <dd>Sim</dd>
+                            <a href="#" class="btn green">Buy</a>
+                                <a href="#" class="btn blue">Analyse</a>
+                                <a href="#" class="btn red">Negotiate</a>
+                                <a href="#" class="btn red">Share Investment</a>
                         </dl>
 
 
                         <div class="links">
-                                <a href="#" class="btn green">Buy</a>
-                                <a href="#" class="btn blue">Analyse</a>
-                                <a href="#" class="btn red">Negotiate</a>
-                                <a href="#" class="btn red">Share Investment</a>
+
 
                         </div>
                         </div>
@@ -273,14 +275,15 @@
                             <dd>I took an entry-level position at Oswald Tech directly after graduation and was promoted to my current position in May of 2018. I am obsessed with all things tech-related and I spend my free time building computers and developing my own software. I enjoy watching sci-fi movies, walking my Great Dane on Newport Beach and eating seafood tacos at local California Mexican restaurants."</dd>
                             <dt>Obteve a venda:</dt>
                             <dd>Sim</dd>
+                            <a href="#" class="btn green">Buy</a>
+                                <a href="#" class="btn blue">Analyse</a>
+                                <a href="#" class="btn red">Negotiate</a>
+                                <a href="#" class="btn red">Share Investment</a>
                         </dl>
 
 
                         <div class="links">
-                                <a href="#" class="btn green">Buy</a>
-                                <a href="#" class="btn blue">Analyse</a>
-                                <a href="#" class="btn red">Negotiate</a>
-                                <a href="#" class="btn red">Share Investment</a>
+
 
                         </div>
                         </div>
@@ -292,11 +295,35 @@
     </section>
 
 
-    <section id="ShareInvestment" >
+    <section id="ShareInvestment"  style="display: none;">
 		<div class="rad-body-wrapper rad-nav-min">
 			<div class="container-fluid">
 
+            <h1>Popup/Modal Windows without JavaScript</h1>
+                <div id="wrapper">
+                <p><a class="button" href="#popup1">Click Me</a></p>
+                    <p><a class="button" href="#popup2">Click Me Too</a></p>
+                </div>
 
+                <div id="popup1" class="overlay" style="padding-bottom:10%">
+                    <div class="popup">
+                        <h2>Info box</h2>
+                        <a class="close" href="#">&times;</a>
+                        <div class="content">
+                            <p>This is done totally without JavaScript. Just HTML and CSS.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="popup2" class="overlay light" >
+                    <a class="cancel" href="#"></a>
+                    <div class="popup">
+                        <h2>What the what?</h2>
+                        <div class="content">
+                    <p>Click outside the popup to close.</p>
+                        </div>
+                    </div>
+                </div>
 
 
             </div>
@@ -305,10 +332,14 @@
 
 </main>
     <!-- End: Top Navbar -->
+<!-- Modal -->
 
 
+
+<!-- Mode -->
 
     <script >
+
 
 $(function () {
 

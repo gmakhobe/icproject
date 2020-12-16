@@ -25,7 +25,7 @@ Route::get('/forgotpassword', function () {
 Route::get('/forgotpassword/email/{email}', 'IndexController@ForgotPassword');
 Route::get('/passwordreset/{hash}', 'IndexController@PasswordResetView');
 Route::get('/resetpasswordhard/password/{password}/hash/{hash}/email/{email}', 'IndexController@PasswordResetHard');
-// /User/* 
+// /User/*
 Route::get('/alert/alertcenter', 'AlertsController@AlertGetAlertCenterContent')->middleware('IsSessionValid');
 Route::get('/alert/messagecenter', 'AlertsController@AlertGetMessageCenterContent')->middleware('IsSessionValid');
 Route::get('/alert/alertcenter/off', 'AlertsController@AlertShutAlertCenter')->middleware('IsSessionValid');
@@ -45,7 +45,7 @@ Route::get('/user/create', 'CreateController@Index')->middleware('IsSessionValid
 // /User/Store-Room
 Route::get('/user/storeroom', 'UserController@Storeroom')->middleware('IsSessionValid');
 
-// /User/News /user/news/  
+// /User/News /user/news/
 Route::get('/user/news', 'NewsController@NewsView')->middleware('IsSessionValid');
 Route::get('/user/news/read/{heading}/{id}', 'NewsController@NewsViewRead')->middleware('IsSessionValid');
 Route::get('/user/news/article/read/{heading}/{id}', 'NewsController@NewsViewArticleRead')->middleware('IsSessionValid');
@@ -63,7 +63,7 @@ Route::get('/user/news/blog/read/{heading}/{id}', 'NewsController@NewsBlogReadVi
 Route::get('/user/news/blog/author/{name}/{id}', 'NewsController@NewsBlogAuthorView')->middleware('IsSessionValid');
 Route::get('/user/news/blog/search/{search}', 'NewsController@NewsBlogSearch')->middleware('IsSessionValid');
 
-// /User/News/Subject 
+// /User/News/Subject
 
 // Start /User/Investment
 Route::get('/user/investment', 'InvestmentController@InvestmentView')->middleware('IsSessionValid');
@@ -85,6 +85,7 @@ Route::get('/user/rawmate/seller/{name}/{id}', 'RawmateterialController@RawmateS
 // /User/profile
 Route::get('/user/profile', 'ProfileController@ProfileView')->middleware('IsSessionValid');
 Route::get('/user/profile/awards', 'ProfileController@AwardsView')->middleware('IsSessionValid');
+Route::get('/user/profile/calender', 'ProfileController@CalenderView')->middleware('IsSessionValid');
 
 // /User/Create
 Route::get('/user/create', 'CreateController@CreateView')->middleware('IsSessionValid');
