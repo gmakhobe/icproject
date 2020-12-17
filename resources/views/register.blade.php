@@ -26,7 +26,7 @@
 
     <div class="container">
       <div class="login">
-         <div class="container"  id="reg-container">
+         <div class="container"  style="padding-bottom:10%"  id="reg-container">
               <h1> Register </h1>
 
               <label>Name:</label>
