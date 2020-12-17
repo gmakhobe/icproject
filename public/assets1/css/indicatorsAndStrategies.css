@@ -42,7 +42,7 @@ img {
 
 a {
     color: rgb(255, 255, 255);
-    font-size: x-large;
+
 	text-decoration:none;
 	-webkit-transition: all .3s ease-in-out;
 	-moz-transition: all .3s ease-in-out;

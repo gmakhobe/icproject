@@ -52,7 +52,7 @@
 
                         <div class="line"></div>
 
-                        <p class="sales"><button class="btn">Customize</button></p>
+                        <p class="sales"><button class="btn" style="background-color:grey;color:white">Customize</button></p>
                     </div>
 
                     <div class="card c-2">
@@ -60,7 +60,7 @@
                         <p class="label"></p>
 
                         <div class="line"></div>
-                        <p class="sales"><button class="btn">Activate</button></p>
+                        <p class="sales"><button class="btn"  style="background-color:grey;color:white">Activate</button></p>
                     </div>
 
 

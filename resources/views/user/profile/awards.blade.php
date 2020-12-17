@@ -25,10 +25,20 @@
     <link rel="stylesheet" href="/assets1/css/awardsNav.css">
     <link rel="stylesheet" href="/assets1/css/awards-modal.css">
     <link rel="stylesheet/less" type="text/css" href="/assets1/css/awards.less" />
-    <script src="//cdn.jsdelivr.net/npm/less@3.11">
+    <script src="//cdn.jsdelivr.net/npm/less@3.11"> </script>
 
-$(document).ready(function() {
-        $('.material-card > .mc-btn-action').click(function () {
+</head>
+
+<body onload="onload">
+
+    <!-- Start: Vertical Left-SideBar by Jigar Mistry -->
+    @include('/user/layout/side-nav')
+    <!-- End: Vertical Left-SideBar by Jigar Mistry -->
+
+
+<script>
+          window.onload = function onload() {
+            $('.material-card > .mc-btn-action').click(function () {
             var card = $(this).parent('.material-card');
             var icon = $(this).children('i');
             icon.addClass('fa-spin-fast');
@@ -55,15 +65,11 @@ $(document).ready(function() {
                 }, 800);
             }
         });
-    });
-    </script>
-</head>
+          }
 
-<body >
+</script>
+    <!-- Start: Top Navbar -->
 
-    <!-- Start: Vertical Left-SideBar by Jigar Mistry -->
-    @include('/user/layout/side-nav')
-    <!-- End: Vertical Left-SideBar by Jigar Mistry -->
     <div class='some-page-wrapper'>
   <div class='row'>
     <div class='column'>
@@ -440,7 +446,11 @@ $(document).ready(function() {
 
     <!-- Start: Dark footer with social media icons -->
 
-    <script>
+<!-- Mode -->
+
+    <script >
+
+
 $(function () {
 
 'use strict';
@@ -521,13 +531,15 @@ console.log(Chart.defaults.global);
 
 
 
-</scrip>
+</script>
     <!-- Start: Header Content -->
     @include('/user/layout/footer-style-1')
     <!-- End: Header Content -->
     <!-- End: Dark footer with social media icons -->
-    <script src="assets/js/Data-Table-with-Search-Sort-Filter-and-Zoom-using-TableSorter.js"></script>
-    <script src="assets/js/theme.js"></script>
+
+    <script src="/assets1/js/bs-init.js"></script>
+    <script src="/assets1/js/Data-Table-with-Search-Sort-Filter-and-Zoom-using-TableSorter.js"></script>
+    <script src="/assets1/js/theme.js"></script>
 </body>
 
 </html>
