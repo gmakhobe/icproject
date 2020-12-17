@@ -114,7 +114,8 @@ body {
   color: #343434;
   font-size: 62.5%;
   line-height: 1;
-  background: #cbdbf0 url('https://i.imgur.com/zSX1Hg6.png'); /* source: https://subtlepatterns.com/triangles-2/ */
+  background: #d59fff ;
+  /* url('https://i.imgur.com/zSX1Hg6.png'); source: https://subtlepatterns.com/triangles-2/ */
 }
 
 br { display: block; line-height: 2.6em; }

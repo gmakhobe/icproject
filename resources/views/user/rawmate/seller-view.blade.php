@@ -32,8 +32,9 @@
     <!-- End: Vertical Left-SideBar by Jigar Mistry -->
     <!-- Start: Top Navbar -->
     <br>
+    >
     <!-- End: Top Navbar -->
-    <div class="code--css" style="height: 150px; color:white" align="center">
+    <div class="code--css" style="height: 150px; color:white;" align="center">
                     <div style="padding: 2%">
                     <h2 class="my-text-color-white">Shaun gustavo</h2>
                     <p class="my-text-color-white">Description</p>
