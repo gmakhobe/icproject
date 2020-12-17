@@ -55,6 +55,7 @@
             $("#Timeline").hide();
                 $("#Trending").show();
                 $("#ShareInvestment").hide();
+                $("#exampleFormControlSelect1").hide();
 
           }
           $(document).ready(function(){
@@ -76,6 +77,10 @@
                 $("#Trending").hide();
                 $("#ShareInvestment").show();
                 });
+
+                $("#activate").click(function(){
+                    $("#exampleFormControlSelect1").show();
+                });
           })
 </script>
     <!-- Start: Top Navbar -->
@@ -86,10 +91,28 @@
 
 				<div class="row">
 					<div class="col-lg-3 col-xs-6">
-						<div class="rad-info-box rad-txt-success">
+						<div class="rad-info-box rad-txt-success" >
 							<i class="fas fa-globe-europe"></i>
-							<span class="heading">REGIONAL</span>
-							<span class="value"><span>R</span></span>
+                            <span class="heading">REGIONAL</span>
+
+                            <span class="value"><span>R</span></span>
+                            <button type="button" id="activate" class="btn btn-light">Activate</button>
+                            <div   id="exampleFormControlSelect1" class="form-group">
+                                <label for="exampleFormControlSelect1">Choose one </label>
+                                <select class="form-control">
+                                    <option>America</option>
+                                    <option>South America  </option>
+                                    <option>South Africa  </option>
+                                    <option>West Africa</option>
+                                    <option>East Africa</option>
+                                    <option>Europe</option>
+                                    <option>West Asia</option>
+                                    <option>East Asia</option>
+                                    <option>Australia</option>
+                                </select>
+                            </div>
+
+
 						</div>
 					</div>
 					<div class="col-lg-3 col-xs-6">
@@ -202,7 +225,7 @@
                             <a href="#" class="btn green">Buy</a>
                                 <a href="#" class="btn blue">Analyse</a>
                                 <a href="#" class="btn red">Negotiate</a>
-                                <a href="#" class="btn red">Share Investment</a>
+                                <a href="#popup1" class="btn red">Share Investment</a>
                         </dl>
 
 
@@ -219,7 +242,7 @@
                         <h2> Post </h2>
                         <div class="card-color">
                         <div class="info">
-                            <button class="create-by btn btn-secondary" style="color:maroon; font-weight:strong;">Shaun gustavo (Gustavo@gmail.com)</button>
+                            <button class="create-by btn btn-secondary" style="color:maroon; font-weight:strong;"   onclick="location.href = '/user/rawmate/seller/{name}/{id}';">Shaun gustavo (Gustavo@gmail.com)</button>
                             <p class="create-by"> <strong style="color:red">Location:</strong> MELROSE,JOHANNESBURG</p>
                             <p class="date"> <strong style="color:red">Bio:</strong>I took an entry-level position at Oswald Tech directly after graduation and was promoted to my current position in May of 2018. "</p>
                         </div>
@@ -240,7 +263,7 @@
                             <a href="#" class="btn green">Buy</a>
                                 <a href="#" class="btn blue">Analyse</a>
                                 <a href="#" class="btn red">Negotiate</a>
-                                <a href="#" class="btn red">Share Investment</a>
+                                <a href="#popup2" class="btn red">Share Investment</a>
                         </dl>
 
 
@@ -299,31 +322,19 @@
 		<div class="rad-body-wrapper rad-nav-min">
 			<div class="container-fluid">
 
-            <h1>Popup/Modal Windows without JavaScript</h1>
-                <div id="wrapper">
-                <p><a class="button" href="#popup1">Click Me</a></p>
-                    <p><a class="button" href="#popup2">Click Me Too</a></p>
-                </div>
 
-                <div id="popup1" class="overlay" style="padding-bottom:10%">
-                    <div class="popup">
-                        <h2>Info box</h2>
-                        <a class="close" href="#">&times;</a>
-                        <div class="content">
-                            <p>This is done totally without JavaScript. Just HTML and CSS.</p>
-                        </div>
-                    </div>
-                </div>
 
-                <div id="popup2" class="overlay light" >
-                    <a class="cancel" href="#"></a>
-                    <div class="popup">
-                        <h2>What the what?</h2>
-                        <div class="content">
-                    <p>Click outside the popup to close.</p>
-                        </div>
-                    </div>
-                </div>
+            <div class="list-group">
+  <button type="button" class="list-group-item list-group-item-action active" style="background-color:purple;color:white">
+  <h1>Interested Entities</h1>
+  </button>
+  <button type="button" class="list-group-item list-group-item-action">Dapibus ac facilisis in  <span class="badge badge-dark badge-pill">R20114</span> </button>
+  <button type="button" class="list-group-item list-group-item-action">Morbi leo risus  <span class="badge badge-dark badge-pill">R6714</span></button>
+  <button type="button" class="list-group-item list-group-item-action">Porta ac consectetur ac  <span class="badge badge-dark badge-pill">R2099</span></button>
+  <button type="button" class="list-group-item list-group-item-action" disabled>Vestibulum at eros  <span class="badge badge-dark badge-pill">R5014</span></button>
+</div>
+
+
 
 
             </div>
@@ -334,6 +345,51 @@
     <!-- End: Top Navbar -->
 <!-- Modal -->
 
+                </div>
+
+                <div id="popup1" class="overlay" style="padding-bottom:10%">
+                    <div class="popup">
+                        <h2>Share Investment</h2>
+                        <a class="close" href="#">&times;</a>
+                        <div class="content">
+                        <div class="form-group">
+                        <label for="exampleFormControlSelect1">BUDGET RANGES </label>
+                        <select class="form-control" id="exampleFormControlSelect1">
+                        <option>25000-50000 </option>
+                        <option>60000-100000</option>
+                        <option>110000-160000</option>
+                        <option>170000-200000</option>
+                        <option>200000+</option>
+                        </select>
+
+                        <a class="btn red"> Confirm  Investment  Amount</a>
+                    </div
+                    </div>
+                </div>
+<!-- REGIONS -->
+<div id="popup2" class="overlay" style="padding-bottom:10%">
+                    <div class="popup">
+                        <h2>REGIONS</h2>
+                        <a class="close" href="#">&times;</a>
+                        <div class="content">
+                        <div class="form-group">
+                        <label for="exampleFormControlSelect1">Choose one </label>
+                        <select class="form-control" id="exampleFormControlSelect1">
+                        <option>America</option>
+                        <option>South America  </option>
+                        <option>South Africa  </option>
+                        <option>West Africa</option>
+                        <option>East Africa</option>
+                        <option>Europe</option>
+                        <option>West Asia</option>
+                        <option>East Asia</option>
+                        <option>Australia</option>
+                        </select>
+
+                        <a class="btn red"> Confirm  Investment  Amount</a>
+                        </div>
+                    </div>
+                </div>
 
 
 <!-- Mode -->

@@ -131,6 +131,7 @@ console.log(Chart.defaults.global);
           <ul class="side-nav-dropdown">
               <li><a href="#">Portfolio</a></li>
               <li><a href="/user/profile/awards">Awards</a></li>
+              <li><a href="/user/profile/calender">Calender</a></li>
             </ul>
         </li>
 
