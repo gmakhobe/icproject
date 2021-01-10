@@ -100,3 +100,37 @@ a:visited{
     border-left: solid red 8px;
 
 }
+
+.my-ecom-img {
+    width: 100% !important;
+    height: 250px !important;
+}
+
+.my-ecom-nav{
+    padding:20px !important;
+}
+
+.my-ecom-thumbnail-img{
+    width: 100% !important;
+}
+
+.my-ecom-btn-buy{
+    background-color: #6e217d;
+    color: white;
+}
+
+.my-ecom-btn-quantity{
+    background-color: #9526a9;
+    color: white;
+}
+
+.my-ecom-txtbox-quantity{
+    width:45px !important;
+}
+
+.my-ecom-overview-img{
+
+    width: 100% !important;
+    height: auto !important;
+
+}

@@ -81,6 +81,7 @@ Route::get('/user/investment/newschannel/{name}', 'InvestmentController@NewsChan
 Route::get('/user/rawmate', 'RawmateterialController@RawmateView')->middleware('IsSessionValid');
 Route::get('/user/rawmate/product/{name}/{id}', 'RawmateterialController@RawmateProductView')->middleware('IsSessionValid');
 Route::get('/user/rawmate/seller/{name}/{id}', 'RawmateterialController@RawmateSellerProfileView')->middleware('IsSessionValid');
+Route::get('/user/rawmate/brand/{name}', 'RawmateterialController@RawmateBrandView')->middleware('IsSessionValid');
 
 // /User/profile
 Route::get('/user/profile', 'ProfileController@ProfileView')->middleware('IsSessionValid');

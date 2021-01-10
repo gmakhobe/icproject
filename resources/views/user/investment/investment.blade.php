@@ -6,8 +6,10 @@
     <!-- Start: Header Content -->
 
     <!-- End: Header Content -->
-
-    <link rel="stylesheet" href="/assets/fonts/fontawesome5-overrides.min.css">
+    <title>{{ $Title }} - {{ $Name }}</title>
+    <link rel="stylesheet" href="{{ asset('assets1/fonts/fontawesome-all.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets1/fonts/font-awesome.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets1/fonts/fontawesome5-overrides.min.css') }}">
     <link rel="stylesheet" href="/assets1/css/16-scrollbar-styles-1.css">
     <link rel="stylesheet" href="/assets1/css/16-scrollbar-styles.css">
     <link rel="stylesheet" href="/assets1/css/Animated-CSS-Waves-Background-SVG.css">
@@ -29,6 +31,7 @@
     <link rel="stylesheet" href="/assets1/css/awards.less">
     <link rel="stylesheet" href="/assets1/css/awardsNav.css">
     <link rel="stylesheet/less" type="text/css" href="/assets1/css/awards.less" />
+    
 </head>
 
 <body onload="onload">
@@ -53,7 +56,7 @@
                         <div class="tabs">
                             <input type="radio" id="radio-1" name="tabs" checked />
                             <label class="tab" for="radio-1" style="font-size: 20px;">Company</label>
-                            
+
                             <input type="radio" id="radio-2" name="tabs" />
                             <label class="tab" for="radio-2" style="font-size: 20px;">Services</label>
 
@@ -62,7 +65,7 @@
 
                             <input type="radio" id="radio-4" name="tabs" />
                             <label class="tab" for="radio-4" style="font-size: 20px;">Hedge Fund</label>
-                            
+
                             <input type="radio" id="radio-5" name="tabs" />
                             <label class="tab" for="radio-5" style="font-size: 20px;">Start-up Index</label>
 
@@ -74,69 +77,70 @@
                             window.onload = function onload() {
                                 console.log('onload');
                                 $("#company").show();
-                                    $("#services").hide();
-                                        $("#event").hide();
-                                            $("#hedgefund").hide();
-                                                $("#start-up").hide();
-                                                     $("#newschannel").hide();
-                                    }
+                                $("#services").hide();
+                                $("#event").hide();
+                                $("#hedgefund").hide();
+                                $("#start-up").hide();
+                                $("#newschannel").hide();
+                            }
 
-                            $(document).ready(function(){
+                            $(document).ready(function() {
 
-                                $("#radio-1").click(function(){
+                                $("#radio-1").click(function() {
                                     $("#company").show();
                                     $("#services").hide();
-                                        $("#event").hide();
-                                            $("#hedgefund").hide();
-                                                $("#start-up").hide();
-                                                     $("#newschannel").hide();                                
-                                                     });       
+                                    $("#event").hide();
+                                    $("#hedgefund").hide();
+                                    $("#start-up").hide();
+                                    $("#newschannel").hide();
+                                });
 
-                                $("#radio-2").click(function(){
+                                $("#radio-2").click(function() {
                                     $("#company").hide();
                                     $("#services").show();
-                                        $("#event").hide();
-                                            $("#hedgefund").hide();
-                                                $("#start-up").hide();
-                                                     $("#newschannel").hide();                                
-                                                     });
+                                    $("#event").hide();
+                                    $("#hedgefund").hide();
+                                    $("#start-up").hide();
+                                    $("#newschannel").hide();
+                                });
 
-                                $("#radio-3").click(function(){
+                                $("#radio-3").click(function() {
                                     $("#company").hide();
                                     $("#services").hide();
-                                        $("#event").show();
-                                            $("#hedgefund").hide();
-                                                $("#start-up").hide();
-                                                     $("#newschannel").hide();                                
-                                                     });
+                                    $("#event").show();
+                                    $("#hedgefund").hide();
+                                    $("#start-up").hide();
+                                    $("#newschannel").hide();
+                                });
 
-                                $("#radio-4").click(function(){
+                                $("#radio-4").click(function() {
                                     $("#company").hide();
                                     $("#services").hide();
-                                        $("#event").hide();
-                                            $("#hedgefund").show();
-                                                $("#start-up").hide();
-                                                     $("#newschannel").hide();                                
-                                                     });
+                                    $("#event").hide();
+                                    $("#hedgefund").show();
+                                    $("#start-up").hide();
+                                    $("#newschannel").hide();
+                                });
 
-                                $("#radio-5").click(function(){
-                                $("#company").hide();
-                                    $("#services").hide();
-                                        $("#event").hide();
-                                            $("#hedgefund").hide();
-                                                $("#start-up").show();
-                                                     $("#newschannel").hide();                                
-                                                     });
-
-                                $("#radio-6").click(function(){
+                                $("#radio-5").click(function() {
                                     $("#company").hide();
                                     $("#services").hide();
-                                        $("#event").hide();
-                                            $("#hedgefund").hide();
-                                                $("#start-up").hide();
-                                                     $("#newschannel").show();                                
-                                                     });
-                            });        
+                                    $("#event").hide();
+                                    $("#hedgefund").hide();
+                                    $("#start-up").show();
+                                    $("#newschannel").hide();
+                                });
+
+                                $("#radio-6").click(function() {
+                                    $("#company").hide();
+                                    $("#services").hide();
+                                    $("#event").hide();
+                                    $("#hedgefund").hide();
+                                    $("#start-up").hide();
+                                    $("#newschannel").show();
+                                });
+                            });
+
                         </script>
 
 
@@ -145,7 +149,7 @@
 
                     <div class="row my-text-color-white">
 
-                        <div class="col-md-12"  id="company">
+                        <div class="col-md-12" id="company">
                             <table class="table table-sm table-hover">
                                 <thead>
                                     <th style="font-size: 18px;">Company</th>
@@ -153,7 +157,8 @@
                                 <tbody>
                                     @foreach ($ListOfCompanyInd as $CompanyInd)
                                         <tr>
-                                            <td data-toggle="modal" data-target="#{{ $CompanyInd['Name'] }}" style="font-size: 15px;">
+                                            <td data-toggle="modal" data-target="#{{ $CompanyInd['Name'] }}"
+                                                style="font-size: 15px;">
                                                 {{ $CompanyInd['Name'] }}
                                             </td>
 
@@ -189,23 +194,23 @@
                                                                                     <ul class="pagination">
                                                                                         <li class="page-item">
                                                                                             <strong>Bid/Ask:</strong>
-                                                                                            2.400
-                                                                                            / 2.680,
+                                                                                            Null
+                                                                                            / Null,
                                                                                         </li>
                                                                                         <li class="page-item">
                                                                                             <strong>Change:</strong>
-                                                                                            -0.8%,
+                                                                                            -Null,
                                                                                         </li>
                                                                                         <li class="page-item">
                                                                                             <strong>Market Cap:</strong>
-                                                                                            177.55M,
+                                                                                            Null,
                                                                                         </li>
                                                                                         <li class="page-item">
                                                                                             <strong>Revenue:</strong>
-                                                                                            69.71M,
+                                                                                            Null,
                                                                                         </li>
                                                                                         <li class="page-item">
-                                                                                            <strong>EPS:</strong> -0.71,
+                                                                                            <strong>EPS:</strong> -Null,
                                                                                         </li>
                                                                                     </ul>
                                                                                 </span>
@@ -234,7 +239,7 @@
                             </table>
                         </div>
 
-                        <div class="col-md-12"  id="services">
+                        <div class="col-md-12" id="services">
                             <table class="table table-sm table-hover">
                                 <thead>
                                     <th style="font-size: 18px;">Services</th>
@@ -243,7 +248,8 @@
 
                                     @foreach ($ListOfServiceInd as $ServiceInd)
                                         <tr>
-                                            <td data-toggle="modal" data-target="#Service{{ $ServiceInd['Id'] }}" style="font-size: 15px;">
+                                            <td data-toggle="modal" data-target="#Service{{ $ServiceInd['Id'] }}"
+                                                style="font-size: 15px;">
                                                 {{ $ServiceInd['Name'] }}
                                             </td>
 
@@ -300,7 +306,7 @@
                             </table>
                         </div>
 
-                        <div class="col-md-12"  id="event">
+                        <div class="col-md-12" id="event">
                             <table class="table table-sm table-hover">
                                 <thead>
                                     <th style="font-size: 18px;">Event</th>
@@ -309,7 +315,8 @@
 
                                     @foreach ($ListOfEventInd as $EventInd)
                                         <tr>
-                                            <td data-toggle="modal" data-target="#Event{{ $EventInd['Id'] }}" style="font-size: 15px;">
+                                            <td data-toggle="modal" data-target="#Event{{ $EventInd['Id'] }}"
+                                                style="font-size: 15px;">
                                                 {{ $EventInd['Name'] }}
                                             </td>
 
@@ -322,7 +329,8 @@
                                                         <div class="modal-header">
                                                             <h4 class="modal-title text-center my-text-color-white">
                                                                 {{ $EventInd['Name'] }}
-                                                                Event</h4>
+                                                                Event
+                                                            </h4>
                                                             <button type="button" class="close"
                                                                 data-dismiss="modal">&times;</button>
                                                         </div>
@@ -374,7 +382,8 @@
 
                                     @foreach ($ListOfHedgeFundInd as $HedgeFundInd)
                                         <tr>
-                                            <td data-toggle="modal" data-target="#HedgeFund{{ $HedgeFundInd['Id'] }}" style="font-size: 15px;">
+                                            <td data-toggle="modal" data-target="#HedgeFund{{ $HedgeFundInd['Id'] }}"
+                                                style="font-size: 15px;">
                                                 {{ $HedgeFundInd['Name'] }}
                                             </td>
 
@@ -450,7 +459,8 @@
                                     @foreach ($ListOfStartUpIndexInd as $StartUpIndexInd)
                                         <tr>
                                             <td data-toggle="modal"
-                                                data-target="#StartUpIndex{{ $StartUpIndexInd['Id'] }}" style="font-size: 15px;">
+                                                data-target="#StartUpIndex{{ $StartUpIndexInd['Id'] }}"
+                                                style="font-size: 15px;">
                                                 {{ $StartUpIndexInd['Name'] }}
                                             </td>
 
@@ -516,7 +526,8 @@
 
                                     @foreach ($ListOfNewsChannelsInd as $NewsChannelsInd)
                                         <tr>
-                                            <td data-toggle="modal" data-target="#News{{ $NewsChannelsInd['Id'] }}" style="font-size: 15px;">
+                                            <td data-toggle="modal" data-target="#News{{ $NewsChannelsInd['Id'] }}"
+                                                style="font-size: 15px;">
                                                 {{ $NewsChannelsInd['Name'] }}
                                             </td>
 
@@ -584,88 +595,85 @@
 
     </div>
     <script>
+        $(function() {
 
-$(function () {
+            'use strict';
 
-'use strict';
+            (function() {
+                //부트스트랩 햄버거 클릭시 사이드바 on off
 
-(function () {
-//부트스트랩 햄버거 클릭시 사이드바 on off
+                var aside = $('.side-nav'),
 
-  var aside = $('.side-nav'),
+                    showAsideBtn = $('.show-side-btn'),
 
-      showAsideBtn = $('.show-side-btn'),
+                    contents = $('#contents');
 
-      contents = $('#contents');
+                showAsideBtn.on("click", function() {
 
-  showAsideBtn.on("click", function () {
+                    $("#" + $(this).data('show')).toggleClass('show-side-nav');
 
-    $("#" + $(this).data('show')).toggleClass('show-side-nav');
+                    contents.toggleClass('margin');
 
-    contents.toggleClass('margin');
+                });
 
-  });
+                if ($(window).width() <= 767) {
 
-  if ($(window).width() <= 767) {
+                    aside.addClass('show-side-nav');
 
-    aside.addClass('show-side-nav');
+                }
+                $(window).on('resize', function() {
 
-  }
-  $(window).on('resize', function () {
+                    if ($(window).width() > 767) {
 
-    if ($(window).width() > 767) {
+                        aside.removeClass('show-side-nav');
 
-      aside.removeClass('show-side-nav');
+                    }
 
-    }
+                });
 
-  });
+                // dropdown menu in the side nav
+                var slideNavDropdown = $('.side-nav-dropdown');
 
-  // dropdown menu in the side nav
-  var slideNavDropdown = $('.side-nav-dropdown');
+                $('.side-nav .categories li').on('click', function() {
 
-  $('.side-nav .categories li').on('click', function () {
+                    $(this).toggleClass('lol').siblings().removeClass('lol');
 
-    $(this).toggleClass('lol').siblings().removeClass('lol');
+                    if ($(this).hasClass('lol')) {
 
-    if ($(this).hasClass('lol')) {
+                        $(this).find('.side-nav-dropdown').slideToggle('fast');
 
-      $(this).find('.side-nav-dropdown').slideToggle('fast');
+                        $(this).siblings().find('.side-nav-dropdown').slideUp('fast');
 
-      $(this).siblings().find('.side-nav-dropdown').slideUp('fast');
+                    } else {
 
-    } else {
+                        $(this).find('.side-nav-dropdown').slideUp('fast');
 
-      $(this).find('.side-nav-dropdown').slideUp('fast');
+                    }
 
-    }
+                });
 
-  });
+                $('.side-nav .close-aside').on('click', function() {
 
-  $('.side-nav .close-aside').on('click', function () {
+                    $('#' + $(this).data('close')).addClass('show-side-nav');
 
-    $('#' + $(this).data('close')).addClass('show-side-nav');
+                    contents.removeClass('margin');
 
-    contents.removeClass('margin');
+                });
 
-  });
-
-}());
-
+            }());
 
 
 
 
-console.log(Chart.defaults.global);
+
+            console.log(Chart.defaults.global);
 
 
 
 
-});
+        });
 
-
-
-</script>
+    </script>
 
     <!-- Start: Header Content -->
     @include('/user/layout/footer-style-1')
