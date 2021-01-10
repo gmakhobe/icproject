@@ -33,6 +33,7 @@
 
 <body onload="onload">
     <!-- Start: Vertical Left-SideBar by Jigar Mistry -->
+    @include('/user/layout/header-style-1')
     @include('/user/layout/side-nav')
     <!-- End: Vertical Left-SideBar by Jigar Mistry -->
     <!-- Start: Top Navbar -->
@@ -53,7 +54,7 @@
                         <div class="tabs">
                             <input type="radio" id="radio-1" name="tabs" checked />
                             <label class="tab" for="radio-1" style="font-size: 20px;">Company</label>
-                            
+
                             <input type="radio" id="radio-2" name="tabs" />
                             <label class="tab" for="radio-2" style="font-size: 20px;">Services</label>
 
@@ -62,7 +63,7 @@
 
                             <input type="radio" id="radio-4" name="tabs" />
                             <label class="tab" for="radio-4" style="font-size: 20px;">Hedge Fund</label>
-                            
+
                             <input type="radio" id="radio-5" name="tabs" />
                             <label class="tab" for="radio-5" style="font-size: 20px;">Start-up Index</label>
 
@@ -89,8 +90,8 @@
                                         $("#event").hide();
                                             $("#hedgefund").hide();
                                                 $("#start-up").hide();
-                                                     $("#newschannel").hide();                                
-                                                     });       
+                                                     $("#newschannel").hide();
+                                                     });
 
                                 $("#radio-2").click(function(){
                                     $("#company").hide();
@@ -98,7 +99,7 @@
                                         $("#event").hide();
                                             $("#hedgefund").hide();
                                                 $("#start-up").hide();
-                                                     $("#newschannel").hide();                                
+                                                     $("#newschannel").hide();
                                                      });
 
                                 $("#radio-3").click(function(){
@@ -107,7 +108,7 @@
                                         $("#event").show();
                                             $("#hedgefund").hide();
                                                 $("#start-up").hide();
-                                                     $("#newschannel").hide();                                
+                                                     $("#newschannel").hide();
                                                      });
 
                                 $("#radio-4").click(function(){
@@ -116,7 +117,7 @@
                                         $("#event").hide();
                                             $("#hedgefund").show();
                                                 $("#start-up").hide();
-                                                     $("#newschannel").hide();                                
+                                                     $("#newschannel").hide();
                                                      });
 
                                 $("#radio-5").click(function(){
@@ -125,7 +126,7 @@
                                         $("#event").hide();
                                             $("#hedgefund").hide();
                                                 $("#start-up").show();
-                                                     $("#newschannel").hide();                                
+                                                     $("#newschannel").hide();
                                                      });
 
                                 $("#radio-6").click(function(){
@@ -134,9 +135,9 @@
                                         $("#event").hide();
                                             $("#hedgefund").hide();
                                                 $("#start-up").hide();
-                                                     $("#newschannel").show();                                
+                                                     $("#newschannel").show();
                                                      });
-                            });        
+                            });
                         </script>
 
 

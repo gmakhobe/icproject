@@ -23,16 +23,22 @@
     <link rel="stylesheet" href="/assets1/css/newSideNav.css">
     <link rel="stylesheet" href="/assets1/css/awardsNav.css">
     <link rel="stylesheet" href="/assets1/css/Rawmat-cards.css">
+    <link rel="stylesheet" href="/assets1/css/Rawmat-timeline.css">
+
     <link rel="stylesheet" href="/assets1/css/rawmat-card(Timeline).css">
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-
+    <!-- <link rel="stylesheet" href="/assets1/css/Rawmat-timeline.css"> -->
 
 </head>
 
 <body onload="onload">
 
     <!-- Start: Vertical Left-SideBar by Jigar Mistry -->
+    @include('/user/layout/header-style-1')
+
     @include('/user/layout/side-nav')
+
+
     <!-- End: Vertical Left-SideBar by Jigar Mistry -->
 
 <div class='column'>
@@ -202,117 +208,210 @@
 
 <!-- TIME LINE SECTIONPO -->
     <section id="Timeline" style="display: none;">
-		<div class="rad-body-wrapper rad-nav-min" align="center">
-			<div class="container-fluid">
-            <div class="container">
-                    <div class="card">
-                        <h2> Post </h2>
-                        <div class="card-color">
-                        <div class="info">
-                            <button class="create-by btn btn-secondary" style="color:maroon; font-weight:strong;">Sullivan sullivan (sullivan@gmail.com)</button>
-                            <p class="create-by"> <strong style="color:red">Location:</strong> HATFIELD,PRETORIA</p>
-                            <p class="date"> <strong style="color:red">Bio:</strong>I took an entry-level position at Oswald Tech directly after graduation and was promoted to my current position in May of 2018. "</p>
-                        </div>
-                        </div>
-                        <div class="side-info">
-                        <p class="date">Data: 31/02/2020</p>
-                        <p class="date">Price: R2000</p>
-                        <dl style="width: 600px; text-align: justify;">
-                            <dt>Bio:</dt>
-                            <dd>I took an entry-level position at Oswald Tech directly after graduation and was promoted to my current position in May of 2018. I am obsessed with all things tech-related and I spend my free time building computers and developing my own software. I enjoy watching sci-fi movies, walking my Great Dane on Newport Beach and eating seafood tacos at local California Mexican restaurants."</dd>
-                            <dt>Obteve a venda:</dt>
-                            <dd>Sim</dd>
-                            <a href="#" class="btn green">Buy</a>
-                                <a href="#" class="btn blue">Analyse</a>
-                                <a href="#" class="btn red">Negotiate</a>
-                                <a href="#popup1" class="btn red">Share Investment</a>
-                        </dl>
+            <div class="container gigs">
+            <h3>FEATURED GIGS <sub>®</sub></h3>
+            <p>Noteworthy Services</p>
+            <div class="row">
 
-
-                        <div class="links">
-
-
-                        </div>
-                        </div>
-                    </div>
-                    </div>
-
-                    <div class="container">
-                    <div class="card" style="padding-bottom:5%">
-                        <h2> Post </h2>
-                        <div class="card-color">
-                        <div class="info">
-                            <button class="create-by btn btn-secondary" style="color:maroon; font-weight:strong;"   onclick="location.href = '/user/rawmate/seller/{name}/{id}';">Shaun gustavo (Gustavo@gmail.com)</button>
-                            <p class="create-by"> <strong style="color:red">Location:</strong> MELROSE,JOHANNESBURG</p>
-                            <p class="date"> <strong style="color:red">Bio:</strong>I took an entry-level position at Oswald Tech directly after graduation and was promoted to my current position in May of 2018. "</p>
-                        </div>
-                        </div>
-                        <div class="side-info">
-
-                                <div class="col-6">
-                                <p class="date col col-lg-2"">Date: 01/12/2020</p>
-                                <p class="date col col-lg-2"">Price: R2700</p>
-                                </div>
-
-
-                        <dl style="width: 600px; text-align: justify;">
-                            <dt>Bio:</dt>
-                            <dd>I took an entry-level position at Oswald Tech directly after graduation and was promoted to my current position in May of 2018. I am obsessed with all things tech-related and I spend my free time building computers and developing my own software. I enjoy watching sci-fi movies, walking my Great Dane on Newport Beach and eating seafood tacos at local California Mexican restaurants."</dd>
-                            <dt>Obteve a venda:</dt>
-                            <dd>Sim</dd>
-                            <a href="#" class="btn green">Buy</a>
+            <!-- START  -->
+                <div class="col-md-3">
+                <div class="card" style="width: 25rem;">
+                    <img class="card-img-top" src="https://i.ibb.co/f9pcpYr/featured7.jpg" alt="Card image cap">
+                    <ul>
+                        <li><i class="fas fa-star"></i></li>
+                        <li><i class="fas fa-star"></i></li>
+                        <li><i class="fas fa-star"></i></li>
+                        <li><i class="fas fa-star"></i></li>
+                        <li><i class="fas fa-star"></i></li>
+                        <li><span>(500) </span></li>
+                    </ul>
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn green">Buy</a>
                                 <a href="#" class="btn blue">Analyse</a>
                                 <a href="#" class="btn red">Negotiate</a>
                                 <a href="#popup2" class="btn red">Share Investment</a>
-                        </dl>
 
-
-                        <div class="links">
-
-
-                        </div>
-                        </div>
                     </div>
                     </div>
+                </div>
 
-                    <div class="container">
-                    <div class="card" style="padding-bottom:5%">
-                        <h2> Post </h2>
-                        <div class="card-color">
-                        <div class="info">
-                            <button class="create-by btn btn-secondary" style="color:maroon; font-weight:strong;">Dean Don (Dean@gmail.com)</button>
-                            <p class="create-by"> <strong style="color:red">Location:</strong> RANDBURG,JOHANNESBURG</p>
-                            <p class="date"> <strong style="color:red">Bio:</strong>I took an entry-level position at Oswald Tech directly after graduation and was promoted to my current position in May of 2018. "</p>
-                        </div>
-                        </div>
-                        <div class="side-info">
-
-                                <div class="col-6">
-                                <p class="date col col-lg-2"">Date: 01/10/2020</p>
-                                <p class="date col col-lg-2"">Price: R3700</p>
-                                </div>
-
-
-                        <dl style="width: 600px; text-align: justify;">
-                            <dt>Bio:</dt>
-                            <dd>I took an entry-level position at Oswald Tech directly after graduation and was promoted to my current position in May of 2018. I am obsessed with all things tech-related and I spend my free time building computers and developing my own software. I enjoy watching sci-fi movies, walking my Great Dane on Newport Beach and eating seafood tacos at local California Mexican restaurants."</dd>
-                            <dt>Obteve a venda:</dt>
-                            <dd>Sim</dd>
-                            <a href="#" class="btn green">Buy</a>
+                <div class="col-md-3">
+                <div class="card" style="width: 25rem;">
+                    <img class="card-img-top" src="https://i.ibb.co/wh9mhPb/featured7.jpg" alt="Card image cap">
+                    <ul>
+                        <li><i class="fas fa-star"></i></li>
+                        <li><i class="fas fa-star"></i></li>
+                        <li><i class="fas fa-star"></i></li>
+                        <li><i class="fas fa-star"></i></li>
+                        <li><i class="fas fa-star"></i></li>
+                        <li><span>(500) </span></li>
+                    </ul>
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn green">Buy</a>
                                 <a href="#" class="btn blue">Analyse</a>
                                 <a href="#" class="btn red">Negotiate</a>
                                 <a href="#" class="btn red">Share Investment</a>
-                        </dl>
 
-
-                        <div class="links">
-
-
-                        </div>
-                        </div>
                     </div>
                     </div>
+                </div>
 
+                <!-- start -->
+                <div class="col-md-3">
+                <div class="card" style="width: 25rem;">
+                    <img class="card-img-top" src="https://i.ibb.co/wh9mhPb/featured7.jpg alt="Card image cap">
+                    <ul>
+                        <li><i class="fas fa-star"></i></li>
+                        <li><i class="fas fa-star"></i></li>
+                        <li><i class="fas fa-star"></i></li>
+                        <li><i class="fas fa-star"></i></li>
+                        <li><i class="fas fa-star"></i></li>
+                        <li><span>(500) </span></li>
+                    </ul>
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn green">Buy</a>
+                                <a href="#" class="btn blue">Analyse</a>
+                                <a href="#" class="btn red">Negotiate</a>
+                                <a href="#" class="btn red">Share Investment</a>
+
+                    </div>
+                    </div>
+                </div>
+                <!-- end -->
+
+                <!-- start -->
+                <div class="col-md-3">
+                <div class="card" style="width: 25rem;">
+                    <img class="card-img-top" src="https://i.ibb.co/NVST9V2/featured7.jpg alt="Card image cap">
+                    <ul>
+                        <li><i class="fas fa-star"></i></li>
+                        <li><i class="fas fa-star"></i></li>
+                        <li><i class="fas fa-star"></i></li>
+                        <li><i class="fas fa-star"></i></li>
+                        <li><i class="fas fa-star"></i></li>
+                        <li><span>(500) </span></li>
+                    </ul>
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn green">Buy</a>
+                                <a href="#" class="btn blue">Analyse</a>
+                                <a href="#" class="btn red">Negotiate</a>
+                                <a href="#" class="btn red">Share Investment</a>
+                                <!-- https://i.ibb.co/NVST9V2/featured2.jpg -->
+                    </div>
+                    </div>
+                </div>
+                <!-- start -->
+
+
+                <!-- start -->
+                <div class="col-md-3">
+                <div class="card" style="width: 25rem;">
+                    <img class="card-img-top" src="https://i.ibb.co/wS5zkmc/featured7.jpg alt="Card image cap">
+                    <ul>
+                        <li><i class="fas fa-star"></i></li>
+                        <li><i class="fas fa-star"></i></li>
+                        <li><i class="fas fa-star"></i></li>
+                        <li><i class="fas fa-star"></i></li>
+                        <li><i class="fas fa-star"></i></li>
+                        <li><span>(500) </span></li>
+                    </ul>
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn green">Buy</a>
+                                <a href="#" class="btn blue">Analyse</a>
+                                <a href="#" class="btn red">Negotiate</a>
+                                <a href="#" class="btn red">Share Investment</a>
+                                <!-- https://i.ibb.co/NVST9V2/featured2.jpg -->
+                    </div>
+                    </div>
+                </div>
+
+
+                <!-- start  -->
+                <div class="col-md-3">
+                <div class="card" style="width: 25rem;">
+                    <img class="card-img-top" src="https://i.ibb.co/SXrxVXT/featured7.jpg alt="Card image cap">
+                    <ul>
+                        <li><i class="fas fa-star"></i></li>
+                        <li><i class="fas fa-star"></i></li>
+                        <li><i class="fas fa-star"></i></li>
+                        <li><i class="fas fa-star"></i></li>
+                        <li><i class="fas fa-star"></i></li>
+                        <li><span>(500) </span></li>
+                    </ul>
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn green">Buy</a>
+                                <a href="#" class="btn blue">Analyse</a>
+                                <a href="#" class="btn red">Negotiate</a>
+                                <a href="#" class="btn red">Share Investment</a>
+                                <!-- https://i.ibb.co/NVST9V2/featured2.jpg -->
+                    </div>
+                    </div>
+                </div>
+                <!-- end -->
+
+                    <!-- START wh9mhPb -->
+                <div class="col-md-3">
+                <div class="card" style="width: 25rem;">
+                    <img class="card-img-top" src="https://i.ibb.co/SXrxVXT/featured7.jpg alt="Card image cap">
+                    <ul>
+                        <li><i class="fas fa-star"></i></li>
+                        <li><i class="fas fa-star"></i></li>
+                        <li><i class="fas fa-star"></i></li>
+                        <li><i class="fas fa-star"></i></li>
+                        <li><i class="fas fa-star"></i></li>
+                        <li><span>(500) </span></li>
+                    </ul>
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn green">Buy</a>
+                                <a href="#" class="btn blue">Analyse</a>
+                                <a href="#" class="btn red">Negotiate</a>
+                                <a href="#" class="btn red">Share Investment</a>
+                                <!-- https://i.ibb.co/NVST9V2/featured2.jpg -->
+                    </div>
+                    </div>
+                </div>
+                <!-- END  -->
+
+
+                <!-- START  -->
+                <div class="col-md-3">
+                <div class="card" style="width: 25rem;">
+                    <img class="card-img-top" src="https://i.ibb.co/TW364XT/featured7.jpg alt="Card image cap">
+                    <ul>
+                        <li><i class="fas fa-star"></i></li>
+                        <li><i class="fas fa-star"></i></li>
+                        <li><i class="fas fa-star"></i></li>
+                        <li><i class="fas fa-star"></i></li>
+                        <li><i class="fas fa-star"></i></li>
+                        <li><span>(500) </span></li>
+                    </ul>
+
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn green">Buy</a>
+                                <a href="#" class="btn blue">Analyse</a>
+                                <a href="#" class="btn red">Negotiate</a>
+                                <a href="#" class="btn red">Share Investment</a>
+                                <!-- https://i.ibb.co/NVST9V2/featured2.jpg -->
+                    </div>
+                    </div>
+                </div>
+                <!-- END -->
             </div>
         </div>
     </section>

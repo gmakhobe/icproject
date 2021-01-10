@@ -26,6 +26,7 @@
 <body style="background-color: rgb(33,31,31);margin-top: 2px;height: 201px;">
 
     <!-- Start: Vertical Left-SideBar by Jigar Mistry -->
+    @include('/user/layout/header-style-1')
     @include('/user/layout/side-nav')
     <!-- End: Vertical Left-SideBar by Jigar Mistry -->
     <!-- Start: Top Navbar -->

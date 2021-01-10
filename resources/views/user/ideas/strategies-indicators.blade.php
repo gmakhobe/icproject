@@ -24,6 +24,7 @@
 
 <body style="background-color: white;">
    <!-- Start: Top Navbar -->
+   @include('/user/layout/header-style-1')
    @include('/user/layout/side-nav')
      <!-- End: Vertical Left-SideBar by Jigar Mistry -->
 

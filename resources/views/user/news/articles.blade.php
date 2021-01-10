@@ -31,6 +31,7 @@
 <body>
 
     <!-- Start: Vertical Left-SideBar by Jigar Mistry -->
+    @include('/user/layout/header-style-1')
     @include('/user/layout/side-nav')
     <!-- End: Vertical Left-SideBar by Jigar Mistry -->
     <!-- Start: Top Navbar -->
@@ -55,14 +56,14 @@
                                         2019-11-18 13:15:15 /
                                         Economics </p>
                                     <p class="card-text my-text-color-white">
-                                    This article was reviewed and updated on June 15, 2020 Nowhere is the saying "you need money to make money" more true than in the crowded, competitive, fast-moving world of small business. As you seek to establish and grow your enterprise, access to capital (or the lack thereof) will be one of your biggest hurdles. For small business owners facing expenses that just can't wait, traditional approaches—SBA loans from banks, for example—can be burdensome, inconvenient, and ultimately disappointing.  
+                                    This article was reviewed and updated on June 15, 2020 Nowhere is the saying "you need money to make money" more true than in the crowded, competitive, fast-moving world of small business. As you seek to establish and grow your enterprise, access to capital (or the lack thereof) will be one of your biggest hurdles. For small business owners facing expenses that just can't wait, traditional approaches—SBA loans from banks, for example—can be burdensome, inconvenient, and ultimately disappointing.
                                     </p>
 
                                 </div>
                             </a>
                         </div>
                         <br />
-                    </div> 
+                    </div>
 
 
                     @foreach ($GetSubtArticles as $GSA)
@@ -109,7 +110,7 @@
                                     {{ $GLA['News'] }}
                                 </p>
                             </a>
-                    </div>   
+                    </div>
 
                     <div class="col-md-6 my-bg-color-grey">
                             <a href="/user/news/article/read/{{ $GLA['Headline'] }}/{{ $GLA['NewsId'] }}">

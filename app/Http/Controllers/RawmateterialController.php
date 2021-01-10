@@ -55,4 +55,16 @@ class RawmateterialController extends Controller
         //Return view injected with a ass array
         return view('user/rawmate/seller-view', $properties);
     }
+
+    public function PageInfoView($name, $id)
+    {
+        //Set session info
+        $UserInformation = AppSession::sessionGetUserInfo();
+        $UserProfilePicture = AppSession::sessionGetUserProfilePicture();
+        //Properties to inject
+        $properties = ["Name" => $GLOBALS['AppTitle'], "Title" => "$name - Page info - Raw Material", "NameAndSurname" => $UserInformation["Name"] . " " . $UserInformation["Surname"], "ProfilePicture" => $UserProfilePicture["Base64"], "IsBase64" => $UserProfilePicture["IsBase64"]];
+        //Return view injected with a ass array
+        return view('user/rawmate/InfoPage', $properties);
+    }
 }
+

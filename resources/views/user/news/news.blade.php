@@ -31,6 +31,7 @@
 <body>
 
     <!-- Start: Vertical Left-SideBar by Jigar Mistry -->
+    @include('/user/layout/header-style-1')
     @include('/user/layout/side-nav')
     <!-- End: Vertical Left-SideBar by Jigar Mistry -->
     <!-- Start: Top Navbar -->
@@ -44,7 +45,7 @@
                 <br>
                 <!-- Start: Jumbotron -->
                 <div class="code--css" style="height: 150px;">
-                <div style="padding: 2%"> 
+                <div style="padding: 2%">
                     <h3>Plugin News</h3>
                     <p class="my-text-color-white">Daily news</p>
                 </div>

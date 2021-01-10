@@ -23,7 +23,7 @@
 </head>
 
 <body onload="onload">
-
+@include('/user/layout/header-style-1')
      <!-- Start: Vertical Left-SideBar by Jigar Mistry -->
      @include('/user/layout/side-nav')
      <!-- End: Vertical Left-SideBar by Jigar Mistry -->
@@ -65,7 +65,7 @@
               $("#postsDiv").show();
                   $("#productsDiv").hide();
                       $("#galleryDiv").hide();
-            });       
+            });
 
             $("#products").click(function(){
               $("#productsDiv").show();
@@ -78,11 +78,11 @@
                   $("#productsDiv").hide();
                       $("#postsDiv").hide();
             });
-          });        
+          });
     </script>
 
     </div>
-   </div> 
+   </div>
 
 <div id="postsDiv">
   <h4> Store-Room: Posts<h4>
@@ -302,7 +302,7 @@
     </div>
       </div>
 
-    
+
 
 </div>
 </div>
@@ -433,7 +433,7 @@
     </div>
     </div>
 
-    
+
 
 </div>
 
