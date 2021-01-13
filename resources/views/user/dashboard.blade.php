@@ -29,9 +29,9 @@
 
             <div>
                     <i class="fab fa-laravel"></i>
-                    <span style="letter-spacing: 3px;color: rgba(190,184,184,0.9); color: white;">Following: 365 <!-- $FollowingCount --></span><br>
+                    <span style="letter-spacing: 3px;color: rgba(190,184,184,0.9); color: white;">Icons: 365 <!-- $FollowingCount --></span><br>
                     <i class="fab fa-laravel"></i>
-                    <span style="letter-spacing: 3px;color: rgba(190,184,184,0.9); color: white;">Followers: 544 <!-- $FollowerCount --></span>
+                    <span style="letter-spacing: 3px;color: rgba(190,184,184,0.9); color: white;">Allies: 544 <!-- $FollowerCount --></span>
             </div>
 
             <div style="padding-top: 75px; padding-left: 200px;">
@@ -40,6 +40,14 @@
                     <a href="#"><img class="search-icon" src="http://www.endlessicons.com/wp-content/uploads/2012/12/search-icon.png"></a>
                 </form>
             </div>
+
+            <div>
+                    <span style="letter-spacing: 3px;color: rgba(190,184,184,0.9); color: white;">&nbsp;&nbsp;&nbsp;&nbsp; Our Services |</span>
+                    <span style="letter-spacing: 3px;color: rgba(190,184,184,0.9); color: white;">&nbsp;About Us |</span>
+                    <span style="letter-spacing: 3px;color: rgba(190,184,184,0.9); color: white;">&nbsp;Overview |</span>
+                    <span style="letter-spacing: 3px;color: rgba(190,184,184,0.9); color: white;">&nbsp;Partners</span>
+            </div>
+           
            
             <div class="collapse navbar-collapse" id="navcol-1"></div>
             <div class="dropdown no-arrow" style="color: rgb(186,40,180);"><a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false" href="#" style="color: rgb(172,52,183);">
@@ -164,11 +172,17 @@
     <!-- End: Side By Side Section -->
     <!-- Start: Footer with social media icons -->
     <footer>
-
-                <div class="col-md-6 col-lg-8 mx-auto">
-                    <!-- Start: paragraph --><p class="copyright text-muted text-center">PLUGIN &copy;  2020 </p>
-                    <!-- End: paragraph -->
+        <nav style="height: 80px;background: linear-gradient(135deg,#9526a9 5% ,#23212f 95%); color: #ffffff;">            
+                <div style="padding-top: 1%; padding-left: 25%;">
+                        <span style="letter-spacing: 3px;color: rgba(190,184,184,0.9); color: white;">&nbsp;&nbsp;&nbsp;&nbsp; Legal Aspects |</span>
+                        <span style="letter-spacing: 3px;color: rgba(190,184,184,0.9); color: white;">&nbsp;Disclosure |</span>
+                        <span style="letter-spacing: 3px;color: rgba(190,184,184,0.9); color: white;">&nbsp;Privacy |</span>
+                        <span style="letter-spacing: 3px;color: rgba(190,184,184,0.9); color: white;">&nbsp;Cookie Preference | </span>
+                        <span style="letter-spacing: 3px;color: rgba(190,184,184,0.9); color: white;">&nbsp;Contacts </span>
                 </div>
+            </nav>
+
+
 
     </footer>
     <!-- End: Footer with social media icons -->
