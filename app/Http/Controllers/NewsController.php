@@ -280,7 +280,7 @@ class NewsController extends Controller
             return redirect("/user/dashboard");
         }
     }
-    //View Articles
+    //View Article
     public function ArticlesView()
     {
 
@@ -311,7 +311,7 @@ class NewsController extends Controller
     {
 
         //Properties to be injected
-        $userInfo = AppSession::sessionGetUserInfo();
+        $userInfo = AppSession::sessionGetUserInfo(); 
         $userProfilePicture = AppSession::sessionGetUserProfilePicture();
         //Get date
         $GetTopPodcasts = NewsPodcasts::GetTopPodcasts(20);

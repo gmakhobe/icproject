@@ -196,4 +196,14 @@ class InvestmentController extends Controller
         //Return view injected with a ass array
         return view('user/investment/investment', $properties);
     }
+
+    public function AboutInvestments(){
+        //Properties to be injected
+        $UserInformation = AppSession::sessionGetUserInfo();
+        $UserProfilePicture = AppSession::sessionGetUserProfilePicture();
+
+        $properties = ["Name" => $GLOBALS['AppTitle'], "Title" => "Dashboard", "NameAndSurname"=> $UserInformation["Name"]." ".$UserInformation["Surname"], "ProfilePicture"=> $UserProfilePicture["Base64"], "IsBase64"=> $UserProfilePicture["IsBase64"]];
+        
+        return view("user/investment/aboutinvestments", $properties);
+    }
 }

@@ -73,6 +73,8 @@ Route::get('/user/investment/startupindex/{name}', 'InvestmentController@StartUp
 Route::get('/user/investment/hedgefund/{name}', 'InvestmentController@HedgeFund')->middleware('IsSessionValid');
 Route::get('/user/investment/event/{name}', 'InvestmentController@Event')->middleware('IsSessionValid');
 Route::get('/user/investment/newschannel/{name}', 'InvestmentController@NewsChannel')->middleware('IsSessionValid');
+Route::get('/user/investment/aboutinvestments', 'InvestmentController@AboutInvestments')->middleware('IsSessionValid');
+
 // End /User/Investment
 
 //Route::get('/user/news/podcast', 'NewsController@PodcastView')->middleware('IsSessionValid');

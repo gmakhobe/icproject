@@ -40,9 +40,12 @@
             <div class="col-md-11">
             <br>
                 <!-- Start: Jumbotron -->
-                <div class="code--css" style="height: 150px;">
-                    <div style="padding: 2%">                    <h3>Plugin Channels</h3>
-                    <p class="my-text-color-white">News news and TV Channels</p>
+                <div class="code--css" style="height: 160px;">
+                    <div style="padding: 2%">                    
+                    <h2 style="color:white;">Plugin Channels</h2>
+                    <h3 style="color:white;">News and TV Channels</h3>
+                    <h4 style="color:white;"><i>Substantial and well-presented news to keep you on track with your investments</i></h4><br>
+
                 </div>
                 </div>
                 <br>
@@ -110,8 +113,8 @@
                                                         style="width: 100%; height: 100%; border-radius: 5%">
                                                     <h4 class="newsChannels p-1 my-text-center my-text-color-white" style="color:purple;">
                                                         {{ $ChannelItem['Name'] }}</h4>
-                                                    <h6 class="p-1 my-text-color-white">Published Date:
-                                                        {{ $ChannelItem['Date'] }}</h6>
+                                                    <h5 class="p-1 my-text-color-white">Published Date:
+                                                        {{ $ChannelItem['Date'] }}</h5>
 
                                                 </a>
                                             </div>

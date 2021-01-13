@@ -361,7 +361,7 @@ a:hover, a:active, a:focus {
 }
 
 #home .home-img {
-  background: url('../img/landing/home-img.jpg') no-repeat;
+  background: url('../img/landing/investmentslanding.jpg') no-repeat;
   background-size: cover;
   background-position: 50% 50%;
   width: 100%;
@@ -388,7 +388,7 @@ a:hover, a:active, a:focus {
 -----------------------------------------*/
 
 #about .about-img {
-    background: url('../img/landing/about-img.jpg') no-repeat;
+    background: url('../img/landing/investmentslanding.jpg') no-repeat;
 }
 
 #about .about-thumb,
@@ -445,7 +445,7 @@ a:hover, a:active, a:focus {
 -----------------------------------------*/
 
 #experience .experience-img {
-  background: url('../img/landing/experience-img.jpg') no-repeat;
+  background: url('../img/landing/investmentslanding.jpg') no-repeat;
 }
 
 #experience .media-heading {
@@ -471,7 +471,7 @@ a:hover, a:active, a:focus {
 }
 
 #education .education-img {
-  background: url('../img/landing/education-img.jpg') no-repeat;
+  background: url('../img/landing/investmentslanding.jpg') no-repeat;
 }
 
 #education .media-heading {
@@ -495,7 +495,7 @@ a:hover, a:active, a:focus {
 -----------------------------------------*/
 
 #quotes {
-    background: url('../img/landing/images/quotes-bg.jpg') 50% 0 repeat-y fixed;
+    background: url('../img/landing/images/investmentslanding.jpg') 50% 0 repeat-y fixed;
     background-size: cover;
     background-position: center center;
     color: #ffffff;
@@ -538,7 +538,7 @@ a:hover, a:active, a:focus {
 }
 
 #contact .contact-img {
-  background: url('../img/landing/contact-img.jpg') no-repeat;
+  background: url('../img/landing/investmentslanding.jpg') no-repeat;
   min-height: 75vh;
 }
 
