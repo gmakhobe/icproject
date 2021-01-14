@@ -50,14 +50,12 @@
 <!-- Home Section -->
 
 <section id="home" class="parallax-section">
-
      <div class="container">
           <div class="row">
 
                <div class="col-md-12 col-sm-12">
                     <div class="home-img" style="padding-top: 20%; padding-left: 40%;">    
-                    <h1 style="color:white">INVESTMENTS</h1>
-                    <h3 style="color:white"><i>Open New Doors In Your Financial Life</i></h3>
+                    <h1 style="color:white">TRADING BROKERS</h1>
 
                     </div>
                </div>
@@ -81,7 +79,7 @@
 <div class="row">
   <div class="large-12 columns">
     <hgroup style="color:black;padding-left:40%">
-      <h1 style="text-shadow: 2px 2px purple;">Services We Offer</h1>
+      <h1 style="text-shadow: 2px 2px purple;">OUR BEST BROKERS</h1>
 
     </hgroup>
     <style>
@@ -94,7 +92,7 @@
         float: left;
         width: 33.33%;
         padding: 10px;
-        height: 300px; /* Should be removed. Only for demonstration */
+        height: 90px; /* Should be removed. Only for demonstration */
       }
 
       /* Clear floats after the columns */
@@ -107,131 +105,153 @@
 
 
 <div class="row">
+  <div class="column" style="background-color:#660066; padding-left: 2%;">
+      <h2>EXNESS</h2>
+                </div>
   <div class="column" style="background-color:#3d3d29; padding-left: 2%; ">
-    <h2>EMPOWERMENT</h2>
-    <p style="padding-top: 5%; padding-left: 1%; font-size: 18px; color:white;">We help build Small
+    <h2>JUST2TRADE</h2>
+  </div>
+  <div class="column" style="background-color:#00134d; padding-left: 2%; ">
+    <h2>BDSWISS</h2>
+  </div>
+
+</div>
+
+<div class="row">
+  <div class="column" style="background-color:#3d3d29; padding-left: 2%; ">
+      <h2>FXCM</h2>
+    </div>
+
+    <div class="column" style="background-color:#00134d; padding-left: 2%; ">
+      <h2>PLUS500</h2>
+    </div>
+
+    <div class="column" style="background-color:#660066; padding-left: 2%;">
+      <h2>ETORO</h2>
+
+                </div>
+</div>
+
+<div class="row">
+
+
+    <div class="column" style="background-color:#660066; padding-left: 2%;">
+      <h2>ICMARKETS</h2>
+    </div>
+
+    <div class="column" style="background-color:#3d3d29; padding-left: 2%; ">
+      <h2>INTERACTIVE BROKERS</h2>
+    </div>
+
+  <div class="column" style="background-color:#00134d; padding-left: 2%; ">
+      <h2>ANALYSIS</h2>
+    </div>
+
+</div>
+
+
+    <!-- <ul  class="small-block-grid-2 medium-block-grid-3 flip-cards">
+
+      <li id="investment" ontouchstart="this.classList.toggle('hover');">
+        <div  class="large button card-front">
+          <a href="#">EMPOWERMENT</a>
+          <i class="fa fa-language card-icon"></i>
+        </div>
+        <div class="panel card-back">
+          <i class="fa fa-code card-icon"></i>
+          <div class="hub-info">
+            <p style="padding-top: 5%; font-size: 18px;">We help build Small
               Companies And
               Businesses into leading
               brand and Global
               phermonanols that
               empower peaople and
               enrich the communities.</p>
-  </div>
-  <div class="column" style="background-color:#00134d; padding-left: 2%; ">
-    <h2>ANALYSIS</h2>
-    <p style=" padding-top: 5%; padding-left: 1%; font-size: 18px; color:white;">PLUGIN offfers a depth
+          </div>
+        </div>
+      </li>
+
+      <li ontouchstart="this.classList.toggle('hover');">
+        <div class="large button card-front">
+          <a href="http://www.aaronsnowberger.com">ANALYSIS</a>
+          <i class="fa fa-pencil-square-o card-icon"></i>
+        </div>
+
+        <div class="panel card-back">
+          <i class="fa fa-pencil-square-o card-icon"></i>
+          <div class="hub-info">
+            <p style=" padding-top: 5%; font-size: 18px;">PLUGIN offfers a depth
               Analysis tool that helps 
               investors and traders
               Make Affirmative
               decisions before making
               an investment</p>
-  </div>
-  <div class="column" style="background-color:#660066; padding-left: 2%;">
-    <h2>INVESTING</h2>
-    <p style="padding-top: 5%; padding-left: 1%; font-size: 18px; color:white;">We are a strong advocate
+          </div>
+        </div>
+      </li>
+
+      <li ontouchstart="this.classList.toggle('hover');">
+        <div class="large button card-front">
+          <a href="">INVESTING</a>
+          <i class="fa fa-paper-plane-o card-icon"></i>
+        </div>
+
+        <div class="panel card-back">
+          <i class="fa fa-paper-plane-o card-icon"></i>
+          <div class="hub-info">
+            <p style="padding-top: 5%; font-size: 18px;">We are a strong advocate
               for financial freedom, and
               one of our tools we intend
               to use to achieve our goal
               is help to help spread
               investing solutions
               amongst both ordinary
-              and experts investors</p>  
-              </div>
-</div>
+              and experts investors</p>
+          </div>
+        </div>
+      </li>
+
+    </ul>
+  </div>
+  </div>
+
+</div> 
+</section> -->
 
 
 
 <div class="container-fluid main-content text-align-center bg-color-black text-color-white">
-        <h2 class="main-content-heading text-color-white">EQUITIES</h2>
-        <div class="aboutus-paragraph">
-          <h3>COMPANIES (PUBLIC COMPANIES)</h3>
-          <h3>SERVICES (PRIVATE COMPANIES)</h3>
-          <h3>VIRTUAL HEDGE FUNDS</h3>
-          <h3>START UP INDEX (SME)</h3>
-          <h3>DIGITAL CHANNEL</h3>
-          <h3>EVENTS</h3>
-        </div>
+        <h2 class="main-content-heading text-color-white">LEARN ABOUT STOCK BROKERS</h2>
+        <p class="aboutus-paragraph">Profitable investing requires
+          you use a brokerage service that aligns with your
+          investing goals, educational needs and learning style. Especially for new investors,
+          selecting the best online stock broker that fits your needs can mean the difference
+          between an exciting new income stream and frustrating disappointment.
+          While there’s no sure
+          fire way to guarantee investment returns, there is a way to set
+          yourself up for success by selecting the online brokerage that best suits your needs.
+          In this guide, we’ll break down everything you should look for in your
+          ideal brokerage, from the obvious (like whether or not the platform allows you to
+          trade the securities you’re interested in) to the not so obvious (like how easy it is to
+          get support from an actual human when you need it)</p>
     </div>
 
     <div class="container-fluid main-content text-align-center bg-color-white text-color-black">
-        <h2 class="main-content-heading text-color-black">OVER 150,000 COMPANIES, BOTH BIG AND SMALL, ARE GROWING THEIR BUSINESS WITH PLUGIN.</h2>
+      <h2 class="main-content-heading text-color-black">STOCK BROKERS</h2>
+      <ul>
+        <li class="main-content-heading text-color-black" style="font-size: 25px;">Access to the financial markets is easy and inexpensive thanks to a variety of
+          discount brokers that operate through online platforms.</li>
+        <li class="main-content-heading text-color-black" style="font-size: 25px;">Different online brokers are optimized for a different type of client from long term
+          buy and hold novices to active and sophisticated day traders.</li>
+        <li class="main-content-heading text-color-black" style="font-size: 25px;">Choosing the right online broker requires some due diligence to get the most for
+          your money. Follow the steps and advice in this article to choose right.</li>
+      </ul>
     </div>
-
+</div>
 
 <div class="container-fluid main-content text-align-center bg-color-black text-color-white">
-        <h2 class="main-content-heading text-color-white">SOCKET ANALYSIS</h2>
-
-        <p class="aboutus-paragraph">As an all round Platform. We look for
-        investors clients to make informed
-        decisions and business owners to get
-        good deals. As such, we introduce an
-        innovation like never had before.
-        Socket! Your exclusive platform for in
-        depth analysis of Commodities, SME
-        and Companies with regard to a client's
-        area of interest. With a deliberate
-        policy to serve our clientele diligently
-        and to ensure propelling of financial
-        growth . Socket! Offers one on one
-        takes with our clients at a click of a
-        button.</p>
+        <h2 class="main-content-heading text-color-white">STOCK BROKERS ARTICLES</h2>
     </div>
-
-<!-- Contact Section -->
-
-<section id="contact" class="parallax-section">
-     <div class="container">
-          <div class="row">
-
-               <div class="col-md-6 col-sm-12">
-                    <div class="contact-form">
-                         <div class="wow fadeInUp section-title" data-wow-delay="0.2s">
-                              <h1 class="color-white">WANT TO LEARN MORE ABOUT PLUGIN?</h1>
-                              <div class="wow fadeInUp col-md-6 col-sm-8" data-wow-delay="1.6s">
-                                <input name="submit" type="submit" class="form-control" id="ContactFormSubmit" value="Try PLUGIN free for 30 days.">
-                              </div> 
-                              <br> <br> <br><hr>
-                              <h2 class="color-white">See it in Action</h2>
-                              <p class="color-white">Get an overview of what
-                                PLUGIN for you in our
-                                product demos.</p>
-                                <div class="wow fadeInUp col-md-6 col-sm-8" data-wow-delay="1.6s">
-                                        <input name="submit" type="submit" class="form-control" id="ContactFormSubmit" value="Watch Demos">
-                                   </div>                             
-                         </div>
-                    </div>
-               </div>
-
-               <div class="col-md-3 col-sm-6">
-                    <div class="background-image contact-img"></div>
-
-               </div>
-
-               <div class="bg-dark col-md-3 col-sm-6">
-                    <div class="contact-thumb">
-                         <div class="wow fadeInUp contact-info" data-wow-delay="0.6s">
-                              <h3 class="color-white">Visit my office</h3>
-                              <p>Johannesburg, RSA</p>
-                         </div>
-
-                         <div class="wow fadeInUp contact-info" data-wow-delay="0.8s">
-                              <h3 class="color-white">Contact.</h3>
-                              <p>Contact us and we'll get back to you within 24 hours.</p>
-                              <p><i class="fa fa-phone"></i>+27746101883</p>
-                              <p><i class="fa fa-envelope-o"></i> <a href="mailto:hello@company.co">info@plugin.co.za</a></p>
-                              <p><i class="fa fa-globe"></i> <a href="#">plugin.co</a></p>
-                              <div class="wow fadeInUp col-md-6 col-sm-8" data-wow-delay="1.6s">
-                                        <input name="submit" type="submit" class="form-control" id="ContactFormSubmit" value="Request a call">
-                                   </div>
-                         </div>
-                    </div>
-               </div>
-
-          </div>
-     </div>
-</section>
-<!-- Footer Section -->
-
 
 
 <!-- SCRIPTS -->

@@ -76,6 +76,9 @@ Route::get('/user/investment/newschannel/{name}', 'InvestmentController@NewsChan
 Route::get('/user/investment/aboutinvestments', 'InvestmentController@AboutInvestments')->middleware('IsSessionValid');
 
 // End /User/Investment
+// User /Stock User
+Route::get('/user/stockbrokers', 'UserController@StockBrokers')->middleware('IsSessionValid');
+Route::get('/user/smallcapstock', 'UserController@SmallCapStock')->middleware('IsSessionValid');
 
 //Route::get('/user/news/podcast', 'NewsController@PodcastView')->middleware('IsSessionValid');
 
