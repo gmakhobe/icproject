@@ -73,7 +73,12 @@ Route::get('/user/investment/startupindex/{name}', 'InvestmentController@StartUp
 Route::get('/user/investment/hedgefund/{name}', 'InvestmentController@HedgeFund')->middleware('IsSessionValid');
 Route::get('/user/investment/event/{name}', 'InvestmentController@Event')->middleware('IsSessionValid');
 Route::get('/user/investment/newschannel/{name}', 'InvestmentController@NewsChannel')->middleware('IsSessionValid');
+Route::get('/user/investment/aboutinvestments', 'InvestmentController@AboutInvestments')->middleware('IsSessionValid');
+
 // End /User/Investment
+// User /Stock User
+Route::get('/user/stockbrokers', 'UserController@StockBrokers')->middleware('IsSessionValid');
+Route::get('/user/smallcapstock', 'UserController@SmallCapStock')->middleware('IsSessionValid');
 
 //Route::get('/user/news/podcast', 'NewsController@PodcastView')->middleware('IsSessionValid');
 
@@ -81,11 +86,14 @@ Route::get('/user/investment/newschannel/{name}', 'InvestmentController@NewsChan
 Route::get('/user/rawmate', 'RawmateterialController@RawmateView')->middleware('IsSessionValid');
 Route::get('/user/rawmate/product/{name}/{id}', 'RawmateterialController@RawmateProductView')->middleware('IsSessionValid');
 Route::get('/user/rawmate/seller/{name}/{id}', 'RawmateterialController@RawmateSellerProfileView')->middleware('IsSessionValid');
-Route::get('/user/rawmate/InfoPage', 'RawmateterialController@PageInfoView')->middleware('IsSessionValid');
+// Route::get('/user/rawmate/InfoPage', 'RawmateterialController@PageInfoView')->middleware('IsSessionValid');
 Route::get('/user/rawmate/InfoPage', 'RawmateterialController@PageInfoView')->middleware('IsSessionValid');
 Route::get('/user/rawmate/Partners', 'RawmateterialController@PartnersView')->middleware('IsSessionValid');
 
 
+
+Route::get('/user/rawmate/brand/{name}', 'RawmateterialController@RawmateBrandView')->middleware('IsSessionValid');
+>>>>>>> 5098e72ffcaf1b2aca5ca4b5ae85325bde100bfe
 
 // /User/profile
 Route::get('/user/profile', 'ProfileController@ProfileView')->middleware('IsSessionValid');

@@ -359,9 +359,9 @@
  }
   
  .code--css {
-  background: -moz-linear-gradient(left, #a889e6 0%, #53005e 100%);
-  background: -webkit-linear-gradient(left, #a889e6 0%, #53005e 100%);
-  background: linear-gradient(to right,#a889e6 0%, #53005e 100%);
+  background: -moz-linear-gradient(left, #a889e6 0%, #722ef8 100%);
+  background: -webkit-linear-gradient(left, #a889e6 0%, #722ef8 100%);
+  background: linear-gradient(to right,#a889e6 0%, #722ef8 100%);
   border-radius: 10px 10px 10px 10px;
   
 }

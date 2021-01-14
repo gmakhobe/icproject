@@ -23,6 +23,7 @@
 
 <body onload="onload">
 
+
      <!-- Start: Vertical Left-SideBar by Jigar Mistry -->
      @include('/user/layout/header-style-1')
      @include('/user/layout/side-nav')
@@ -32,6 +33,10 @@
      <!-- End: Top Navbar -->
 
     <div class="book-store">
+    <h1>&nbsp;&nbsp; Where to invest</h1>
+    <h3 class="text-white">&nbsp;&nbsp;&nbsp;&nbsp;<i>Discover promising investing opportunities, by laying out money now to get more money back in the future</i></h3>
+
+
  <div class="header">
   <div class="browse">
   </div>
@@ -92,6 +97,7 @@
     </script>
 
 <div class="book-store">
+
  <div class="main-wrapper">
 
     <div id="names">

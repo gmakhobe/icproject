@@ -52,9 +52,9 @@
                                     alt="Card image" style="width:100%; height: 50%; border-radius: 5%">
                                 <div class="card-body">
                                     <h2 class="card-title my-text-color-white" style="color:purple;">Fast Business Loans – Working Capital—What You Need to Know</h2>
-                                    <p class="my-text-color-white">Thabo Sehume /
+                                    <h3 class="my-text-color-white"><i>Thabo Sehume /
                                         2019-11-18 13:15:15 /
-                                        Economics </p>
+                                        Economics </i></h3>
                                     <p class="card-text my-text-color-white">
                                     This article was reviewed and updated on June 15, 2020 Nowhere is the saying "you need money to make money" more true than in the crowded, competitive, fast-moving world of small business. As you seek to establish and grow your enterprise, access to capital (or the lack thereof) will be one of your biggest hurdles. For small business owners facing expenses that just can't wait, traditional approaches—SBA loans from banks, for example—can be burdensome, inconvenient, and ultimately disappointing.
                                     </p>
