@@ -27,7 +27,20 @@ class UserController extends Controller
         $userInfo = AppSession::sessionGetUserInfo();
         $userProfilePicture = AppSession::sessionGetUserProfilePicture();
 
-        $properties = ["Name" => $GLOBALS['AppTitle'], "Title" => "Dashboard", "NameAndSurname"=> $userInfo["Name"]." ".$userInfo["Surname"], "ProfilePicture"=> $userProfilePicture["Base64"], "IsBase64"=> $userProfilePicture["IsBase64"]];
+        $resutls = DB::select("
+            SELECT RP.ProductName, RP.ProductDescription, RP.ProductImage FROM rawmateseller RS 
+            INNER JOIN rawmateproduct RP 
+            ON RS.RawmateSellerId = RP.SellerId
+            INNER JOIN users U
+            ON U.UserId = RS.UserId
+            WHERE U.UserId = ?
+        ",
+        [$userInfo["UserId"]]
+        );
+
+        //print_r($resutls);
+
+        $properties = ["Name" => $GLOBALS['AppTitle'], "Title" => "Dashboard", "NameAndSurname"=> $userInfo["Name"]." ".$userInfo["Surname"], "ProfilePicture"=> $userProfilePicture["Base64"], "IsBase64"=> $userProfilePicture["IsBase64"], "Products"=> $resutls];
         
         return view("user/storeroom", $properties);
     }
