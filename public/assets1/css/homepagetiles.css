@@ -6,6 +6,8 @@ a:hover {
   .hero-unit {
     height: 680px;
     background: url(https://wallpapercave.com/wp/fKC2TCd.jpg) no-repeat center center;
+    /* background: url(https://img.freepik.com/free-vector/abstract-blue-geometric-shapes-background_1035-17545.jpg?size=626&ext=jpg) no-repeat center center; */
+
     /* background-color: white; */
     background-size: cover;
     -webkit-background-size: cover;

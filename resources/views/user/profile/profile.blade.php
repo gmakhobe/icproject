@@ -25,587 +25,93 @@
     <link rel="stylesheet" href="/assets1/css/Article-List.css">
     <link rel="stylesheet" href="/assets1/css/Profile-Card-1.css">
     <link rel="stylesheet" href="/assets1/css/ideas.css">
-
     <link rel="stylesheet" href="/assets1/css/newSideNav.css">
-
     <link rel="stylesheet" href="/assets1/css/indicatorsAndStrategies.css">
+    <link rel="stylesheet" href="/assets1/css/profilepage.css">
+
 </head>
-
-<body>
-
-    <!-- Start: Vertical Left-SideBar by Jigar Mistry -->
-    @include('/user/layout/side-nav')
-    <!-- End: Vertical Left-SideBar by Jigar Mistry -->
-    <!-- Start: Top Navbar -->
-
-    <nav style="padding-right: 40%;"> <!-- The nav link semantically marks your main site navigation -->
-        <ul>
-            <li><a href="/user/profile/awards#">Awards</a></li>
-            <li><a href="/user/profile/calender#">Calendar</a></li>
-            <li><a style="color: rgb(245,67,67); font-size: 15px;">Search booster</a></li>
-        </ul>
-    </nav>
-
-    
-    <nav style="padding-right: 37.5%;"> <!-- The nav link semantically marks your main site navigation -->
-        <ul>
-            <li><a href="#">Engagement</a></li>
-            <li><a href="#">My World</a></li>
-            <li><a href="#">Message</a></li>
-            <li><a href="#">Group</a></li>
-            <li><a style="color: rgb(245,67,67); font-size: 12px;">POST</a></li>
-        </ul>
-    </nav>
-
-    <nav> <!-- The nav link semantically marks your main site navigation -->
-        <ul>
-            <li><a style="color: blue; font-size: 12px;">TREND</a></li>
-            <li><a style="color: blue; font-size: 12px;">VIEWED</a></li>
-            <li><a style="color: blue; font-size: 12px;">PREVIOUS</a></li>
-        </ul>
-    </nav>
-
-    <div class="book-store">
- <div class="main-wrapper">
-    <div id="allLessons">
-      <h4 style="padding-left: 1%;"> Financial Literacy: All Lessons<h4>
-
-              <div class="book-cards">
-                <div class="book-card">
-                <div class="content-wrapper">
-                <img src="https://i.pinimg.com/originals/d5/2e/97/d52e97c2007c0ebd0a34aeebc043b5ec.jpg" alt="" class="book-card-img">
-                <div class="card-content">
-                <div class="book-name">Trading Lessons</div>
-                  <div class="book-by">by Plugin</div>
-                  <div class="rate">
-            <fieldset class="rating book-rate">
-            <input type="checkbox" id="star-c1" name="rating" value="5">
-            <label class="full" for="star-c1"></label>
-            <input type="checkbox" id="star-c2" name="rating" value="4">
-            <label class="full" for="star-c2"></label>
-            <input type="checkbox" id="star-c3" name="rating" value="3">
-            <label class="full" for="star-c3"></label>
-            <input type="checkbox" id="star-c4" name="rating" value="2">
-            <label class="full" for="star-c4"></label>
-            <input type="checkbox" id="star-c5" name="rating" value="1">
-            <label class="full" for="star-c5"></label>
-            </fieldset>
-            <span class="book-voters card-vote">1.987 voters</span>
-            </div>
-                  <div class="book-sum card-sum">Traders have to learn these lessons  the easy way or they can learn them the hard way by losing their money. </div>
-                  </div>
-                </div>
-                <div class="likes">
-                <div class="like-profile">
-                <img src="https://randomuser.me/api/portraits/women/63.jpg" alt="" class="like-img">
-              </div>
-                <div class="like-profile">
-                <img src="https://pbs.twimg.com/profile_images/2452384114/noplz47r59v1uxvyg8ku.png" alt="" class="like-img">
-              </div>
-                <div class="like-profile">
-                <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1400&q=80" alt="" class="like-img">
-              </div>
-                <div class="like-name"><span>Samantha William</span> and<span> 2 other friends</span> like this</div>
-              </div>
-                </div>
-
-                <div class="book-card">
-                <div class="content-wrapper">
-                <img src="https://i0.wp.com/farm8.staticflickr.com/7115/7038139465_7f4c52e748_o.jpg" alt="" class="book-card-img">
-                <div class="card-content">
-                <div class="book-name">Journalism and Analysts</div>
-                  <div class="book-by">by Plugin</div>
-                  <div class="rate">
-            <fieldset class="rating book-rate">
-            <input type="checkbox" id="star-c6" name="rating" value="5">
-            <label class="full" for="star-c6"></label>
-            <input type="checkbox" id="star-c7" name="rating" value="4">
-            <label class="full" for="star-c7"></label>
-            <input type="checkbox" id="star-c8" name="rating" value="3">
-            <label class="full" for="star-c8"></label>
-            <input type="checkbox" id="star-c9" name="rating" value="2">
-            <label class="full" for="star-c9"></label>
-            <input type="checkbox" id="star-c10" name="rating" value="1">
-            <label class="full" for="star-c10"></label>
-            </fieldset>
-            <span class="book-voters card-vote">1.087 voters</span>
-            </div>
-                  <div class="book-sum card-sum">Traders have to learn these lessons  the easy way or they can learn them the hard way by losing their money.  </div>
-                  </div>
-                </div>
-                <div class="likes">
-                <div class="like-profile">
-                <img src="https://randomuser.me/api/portraits/women/63.jpg" alt="" class="like-img">
-              </div>
-                <div class="like-name"><span>Kimberly Jones</span> like this</div>
-              </div>
-                </div>
-
-                <div class="book-card">
-                <div class="content-wrapper">
-                <img src="http://www.queensu.ca/partnershipsandinnovation/sites/webpublish.queensu.ca.indwww/files/images/Build-business.jpg" alt="" class="book-card-img">
-                <div class="card-content">
-                <div class="book-name">Building a Company</div>
-                  <div class="book-by">by Plugin</div>
-                  <div class="rate">
-            <fieldset class="rating book-rate">
-            <input type="checkbox" id="star-c11" name="rating" value="5">
-            <label class="full" for="star-c11"></label>
-            <input type="checkbox" id="star-c12" name="rating" value="4">
-            <label class="full" for="star-c12"></label>
-            <input type="checkbox" id="star-c13" name="rating" value="3">
-            <label class="full" for="star-c13"></label>
-            <input type="checkbox" id="star-c14" name="rating" value="2">
-            <label class="full" for="star-c14"></label>
-            <input type="checkbox" id="star-c15" name="rating" value="1">
-            <label class="full" for="star-c15"></label>
-            </fieldset>
-            <span class="book-voters card-vote">997 voters</span>
-            </div>
-                  <div class="book-sum card-sum">Traders have to learn these lessons  the easy way or they can learn them the hard way by losing their money. </div>
-                  </div>
-                </div>
-                <div class="likes">
-                <div class="like-profile">
-                <img src="https://randomuser.me/api/portraits/women/63.jpg" alt="" class="like-img">
-              </div>
-                <div class="like-profile">
-                <img src="https://pbs.twimg.com/profile_images/2452384114/noplz47r59v1uxvyg8ku.png" alt="" class="like-img">
-              </div>
-                <div class="like-name"><span>Adam</span> and<span> Kimberly</span> like this</div>
-              </div>
-                </div>
-
-                <div class="book-card">
-                <div class="content-wrapper">
-                <img src="https://prod-discovery.edx-cdn.org/media/course/image/9d7084e9-a451-4f1e-a254-77824a48ccc4-1ec60f0b7178.small.jpeg" alt="" class="book-card-img">
-                <div class="card-content">
-                <div class="book-name">International Investing</div>
-                  <div class="book-by">by Plugin</div>
-                  <div class="rate">
-            <fieldset class="rating book-rate">
-            <input type="checkbox" id="star-c16" name="rating" value="5">
-            <label class="full" for="star-c16"></label>
-            <input type="checkbox" id="star-c17" name="rating" value="4">
-            <label class="full" for="star-c17"></label>
-            <input type="checkbox" id="star-18" name="rating" value="3">
-            <label class="full" for="star-c18"></label>
-            <input type="checkbox" id="star-c19" name="rating" value="2">
-            <label class="full" for="star-c19"></label>
-            <input type="checkbox" id="star-c20" name="rating" value="1">
-            <label class="full" for="star-c20"></label>
-            </fieldset>
-            <span class="book-voters card-vote">187 voters</span>
-            </div>
-                  <div class="book-sum card-sum">Traders have to learn these lessons  the easy way or they can learn them the hard way by losing their money. </div>
-                  </div>
-                </div>
-                <div class="likes">
-                <div class="like-profile">
-                <img src="https://randomuser.me/api/portraits/women/63.jpg" alt="" class="like-img">
-              </div>
-                <div class="like-profile">
-                <img src="https://pbs.twimg.com/profile_images/2452384114/noplz47r59v1uxvyg8ku.png" alt="" class="like-img">
-              </div>
-                <div class="like-profile">
-                <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1400&q=80" alt="" class="like-img">
-              </div>
-                <div class="like-name"><span>Samantha William</span> and<span> 2 other friends</span> like this</div>
-              </div>
-                </div>
-
-                <div class="book-card">
-                <div class="content-wrapper">
-                <img src="https://www.nuwireinvestor.com/wp-content/uploads/2018/11/Forex-chart.jpg" alt="" class="book-card-img">
-                <div class="card-content">
-                <div class="book-name">Strategies and Inidcator Creation</div>
-                  <div class="book-by">by Plugin</div>
-                  <div class="rate">
-            <fieldset class="rating book-rate">
-            <input type="checkbox" id="star-c21" name="rating" value="5">
-            <label class="full" for="star-c21"></label>
-            <input type="checkbox" id="star-c22" name="rating" value="4">
-            <label class="full" for="star-c22"></label>
-            <input type="checkbox" id="star-c23" name="rating" value="3">
-            <label class="full" for="star-c23"></label>
-            <input type="checkbox" id="star-c24" name="rating" value="2">
-            <label class="full" for="star-c24"></label>
-            <input type="checkbox" id="star-c25" name="rating" value="1">
-            <label class="full" for="star-c25"></label>
-            </fieldset>
-            <span class="book-voters card-vote">2.817 voters</span>
-            </div>
-                  <div class="book-sum card-sum">Traders have to learn these lessons  the easy way or they can learn them the hard way by losing their money. </div>
-                  </div>
-                </div>
-                <div class="likes">
-                <div class="like-profile">
-                <img src="https://randomuser.me/api/portraits/women/63.jpg" alt="" class="like-img">
-              </div>
-                <div class="like-profile">
-                <img src="https://pbs.twimg.com/profile_images/2452384114/noplz47r59v1uxvyg8ku.png" alt="" class="like-img">
-              </div>
-                <div class="like-profile">
-                <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1400&q=80" alt="" class="like-img">
-              </div>
-                <div class="like-name"><span>Angelina Stone</span> and<span> 2 other friends</span> like this</div>
-              </div>
-                </div>
-            </div>
-
-
-      </div>
-    </div>
-
-    <div id="Testimonies">
-      <h4 style="padding-left: 1%;"> Financial Literacy: Testimonies<h4>
-      <div class="book-cards">
-        <div class="book-card">
-        <div class="content-wrapper">
-        <img src="https://randomuser.me/api/portraits/women/63.jpg" alt="" class="book-card-img">
-        <div class="card-content">
-        <div class="book-name">Samantha Williams</div>
-          <div class="book-by">17 February 2020 08:34am</div>
-          <div class="book-sum card-sum">Traders have to learn these lessons  the easy way or they can learn them the hard way by losing their money. </div>
-          </div>
-        </div>
-        <div class="likes">
-        <div class="like-profile">
-        <img src="https://randomuser.me/api/portraits/women/63.jpg" alt="" class="like-img">
-      </div>
-        <div class="like-profile">
-        <img src="https://pbs.twimg.com/profile_images/2452384114/noplz47r59v1uxvyg8ku.png" alt="" class="like-img">
-      </div>
-        <div class="like-profile">
-        <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1400&q=80" alt="" class="like-img">
-      </div>
-        <div class="like-name"><span>Jane Hayley</span> and<span> 5 other friends</span> like this</div>
-      </div>
-        </div>
-
-        <div class="book-card">
-        <div class="content-wrapper">
-        <img src="https://pbs.twimg.com/profile_images/2452384114/noplz47r59v1uxvyg8ku.png" alt="" class="book-card-img">
-        <div class="card-content">
-        <div class="book-name">Jane Hayley</div>
-          <div class="book-by">19 February 2020 11:08am</div>
-          <div class="book-sum card-sum">Day trading books can teach you about strategy, risk management, psychology, and a great deal about technical analysis.  </div>
-          </div>
-        </div>
-        <div class="likes">
-        <div class="like-profile">
-        <img src="https://english.cdn.zeenews.com/sites/default/files/2017/11/17/639329-indian-men.jpg" alt="" class="like-img">
-      </div>
-        <div class="like-profile">
-        <img src="https://pbs.twimg.com/profile_images/2452384114/noplz47r59v1uxvyg8ku.png" alt="" class="like-img">
-      </div>
-        <div class="like-profile">
-        <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1400&q=80" alt="" class="like-img">
-      </div>
-        <div class="like-name"><span>Shivah Maharaj</span> and<span> 6 other friends</span> like this</div>
-      </div>
-        </div>
-
-
-        <div class="book-card">
-        <div class="content-wrapper">
-        <img src="https://goodasiangirl.files.wordpress.com/2011/05/prettybeautifulasianmodelwomeninschooluniform2528182529.jpg" alt="" class="book-card-img">
-        <div class="card-content">
-        <div class="book-name">Britney Tsu</div>
-          <div class="book-by">28 February 2020 06:40am</div>
-          <div class="book-sum card-sum">Complacency is the antithesis of success. And no one becomes rich by doing 'just enough.' </div>
-          </div>
-        </div>
-        <div class="likes">
-        <div class="like-profile">
-        <img src="https://randomuser.me/api/portraits/women/63.jpg" alt="" class="like-img">
-      </div>
-        <div class="like-profile">
-        <img src="https://pbs.twimg.com/profile_images/2452384114/noplz47r59v1uxvyg8ku.png" alt="" class="like-img">
-      </div>
-        <div class="like-profile">
-        <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1400&q=80" alt="" class="like-img">
-      </div>
-        <div class="like-name"><span>Samantha Williams</span> and<span> 3 other friends</span> like this</div>
-      </div>
-        </div>
-
-
-        <div class="book-card">
-        <div class="content-wrapper">
-        <img src="https://www.singleblackmale.org/wp-content/uploads/2013/08/black-man1.jpg" alt="" class="book-card-img">
-        <div class="card-content">
-        <div class="book-name">Thabo Sehume</div>
-          <div class="book-by">15 March 2020 15:34pm</div>
-          <div class="book-sum card-sum">Jack Schwager has put together two very popular books on trading: "Market Wizards" and "The New Market Wizards."</div>
-          </div>
-        </div>
-        <div class="likes">
-        <div class="like-profile">
-        <img src="https://randomuser.me/api/portraits/women/63.jpg" alt="" class="like-img">
-      </div>
-        <div class="like-profile">
-        <img src="https://pbs.twimg.com/profile_images/2452384114/noplz47r59v1uxvyg8ku.png" alt="" class="like-img">
-      </div>
-        <div class="like-profile">
-        <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1400&q=80" alt="" class="like-img">
-      </div>
-        <div class="like-name"><span>Michaela Jackson</span> and<span> 11 other friends</span> like this</div>
-      </div>
-        </div>
-
-
-        <div class="book-card">
-        <div class="content-wrapper">
-        <img src="https://english.cdn.zeenews.com/sites/default/files/2017/11/17/639329-indian-men.jpg" alt="" class="book-card-img">
-        <div class="card-content">
-        <div class="book-name">Shivah Maharaj</div>
-          <div class="book-by">20 March 2020 19:34pm</div>
-          <div class="book-sum card-sum">In financial markets, it's no different.If you want to become a successful trader - or take your day trading from a beginner to the professional level</div>
-          </div>
-        </div>
-        <div class="likes">
-        <div class="like-profile">
-        <img src="https://www.singleblackmale.org/wp-content/uploads/2013/08/black-man1.jpg" alt="" class="like-img">
-      </div>
-        <div class="like-profile">
-        <img src="https://pbs.twimg.com/profile_images/2452384114/noplz47r59v1uxvyg8ku.png" alt="" class="like-img">
-      </div>
-        <div class="like-profile">
-        <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1400&q=80" alt="" class="like-img">
-      </div>
-        <div class="like-name"><span>Thabo Sehume</span> and<span> 3 other friends</span> like this</div>
-      </div>
-        </div>
-
-      </div>
-    </div>
-
-
-    <div id="HowToUseIC">
-      <h4 style="padding-left: 1%;"> Financial Literacy: How To Use IC<h4>
-      <div class="book-cards">
-
-        <div class="book-card">
-        <div class="content-wrapper">
-        <img src="https://cdn.dnaindia.com/sites/default/files/styles/full/public/2018/02/12/650737-investment-01.jpg" alt="" class="book-card-img">
-        <div class="card-content">
-        <div class="book-name">Investment</div>
-          <div class="book-sum card-sum">This section of the system has lessons the easy way or they can learn them the hard way by losing their money. </div>
-          </div>
-        </div>
-        </div>
-
-        <div class="book-card">
-        <div class="content-wrapper">
-        <img src="https://investor-square.com/wp-content/uploads/2017/04/investment-1.jpg" alt="" class="book-card-img">
-        <div class="card-content">
-        <div class="book-name">Raw-Mate</div>
-          <div class="book-sum card-sum">This section of the system has lessons the easy way or they can learn them the hard way by losing their money. </div>
-          </div>
-        </div>
-        </div>
-
-        <div class="book-card">
-        <div class="content-wrapper">
-        <img src="http://images.clipartpanda.com/light-bulb-idea-clip-art-w-light-bulb-isolated-over-white-background-idea-vector.jpg" alt="" class="book-card-img">
-        <div class="card-content">
-        <div class="book-name">Ideas</div>
-          <div class="book-sum card-sum">This section of the system has lessons the easy way or they can learn them the hard way by losing their money. </div>
-          </div>
-          </div>
-        </div>
-
-        <div class="book-card">
-        <div class="content-wrapper">
-        <img src="https://static.vecteezy.com/system/resources/previews/000/366/953/original/edit-profile-vector-icon.jpg" alt="" class="book-card-img">
-        <div class="card-content">
-        <div class="book-name">Profile</div>
-          <div class="book-sum card-sum">This section of the system has lessons the easy way or they can learn them the hard way by losing their money. </div>
-          </div>
-        </div>
-        </div>
-
-        <div class="book-card">
-        <div class="content-wrapper">
-        <img src="https://www.storeplan.net.au/wp-content/uploads/2017/04/Pallet-Racking-in-Sydney_edited_website.jpg" alt="" class="book-card-img">
-        <div class="card-content">
-        <div class="book-name">Store-Room</div>
-          <div class="book-sum card-sum">This section of the system has lessons the easy way or they can learn them the hard way by losing their money. </div>
-          </div>
-        </div>
-        </div>
-
-        <div class="book-card">
-        <div class="content-wrapper">
-        <img src="https://c1.sfdcstatic.com/content/dam/blogs/ca/Blog%20Posts/more-than-a-blog-how-to-create-your-content-strategy-open-graph.png" alt="" class="book-card-img">
-        <div class="card-content">
-        <div class="book-name">Create</div>
-          <div class="book-sum card-sum">This section of the system has lessons the easy way or they can learn them the hard way by losing their money. </div>
-          </div>
-          </div>
-        </div>
-
-        </div>
-      </div>
-    </div>
-
-    </div>
-    </div>
-
-
-
-<div class="book">
-
-    <div class="book-of">
-    <div class="week">
-    <audio controls id="song">
-    <source src="last_chance.mp3" type="audio/mpeg">
-  </audio>
-
-
-
-  <div id="player" >
-    <div id="cover"></div>
-
-    <div class="display">
-      <div id="songTitle">
-        <h1 class="info">Radion Station</h1>
-        <h3 class="info">
-        <div class="btn-group" role="group" aria-label="Basic example">
-        <button type="button" class="btn btn-secondary">CHANNELS</button>
-        <button type="button" class="btn btn-secondary">FAVORITES</button>
-        <button type="button" class="btn btn-PRIMARY">MOST LISTENED</button>
-        <button type="button" class="btn btn-secondary">AUTO PLAY</button>
-        </div>
-        </h3>
-
-      </div>
-      <div id="toolBar">
-        <div><i class="tool fa fa-2x fa-share-square-o" aria-hidden="true"></i></div>
-        <div id="star"><i class="tool fa fa-2x fa-star" aria-hidden="true"></i></div>
-        <div id="heart"><i class="tool fa fa-2x fa-heart" aria-hidden="true"></i></div>
-      </div>
-    </div>
-
-    <div id="progressBar">
-      <div class="w3-progress-container">
-        <div id="bar" class="w3-progressbar w3-round w3-green" style="width:0%"></div>
-      </div>
-    </div>
-
-
-    <div id="control">
-      <div id="stop"><i class="fa fa-2x fa-stop" aria-hidden="true"></i></div>
-      <div id="pause"><i class="fa fa-2x fa-pause" aria-hidden="true"></i></div>
-      <div id="play"><i class="fa fa-2x fa-play" aria-hidden="true"></i></div>
-      <div id="backward"><i class="fa fa-lg fa-backward" aria-hidden="true"></i></div>
-      <div id="forward"><i class="fa fa-lg fa-forward" aria-hidden="true"></i></div>
-      <div id="random"><i class="fa fa-random" aria-hidden="true"></i></div>
-    </div>
-
-  </div>
-
-
-  <script src="https://use.fontawesome.com/b4561866ad.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-  <script type="text/javascript" src="app.js"></script>
-    </div>
-
-</div>
-    <!-- End: Top Navbar -->
-
-    <!-- Start: Dark footer with social media icons -->
+@include('/user/layout/side-nav')
 
 <script>
+        $(document).ready(function(){
+            $('.menu-container').hover(
+                function(){
+                    $('.profile-actions').slideDown('fast');
+                  $('.list-icon').addClass('active');
+                },
+                function(){
+                    $('.profile-actions').slideUp('fast');
+                  $('.list-icon').removeClass('active');
+                }
+            );
+            $('.profile-card').mouseleave(function(){
+                $('.profile-actions').slideUp('fast');
+                $('.profile-info').slideUp('fast');
+                $('.profile-map').slideUp('fast');
+            });
 
-  $(function () {
-
-  'use strict';
-
-  (function () {
-  //부트스트랩 햄버거 클릭시 사이드바 on off
-
-    var aside = $('.side-nav'),
-
-        showAsideBtn = $('.show-side-btn'),
-
-        contents = $('#contents');
-
-    showAsideBtn.on("click", function () {
-
-      $("#" + $(this).data('show')).toggleClass('show-side-nav');
-
-      contents.toggleClass('margin');
-
-    });
-
-    if ($(window).width() <= 767) {
-
-      aside.addClass('show-side-nav');
-
-    }
-    $(window).on('resize', function () {
-
-      if ($(window).width() > 767) {
-
-        aside.removeClass('show-side-nav');
-
-      }
-
-    });
-
-    // dropdown menu in the side nav
-    var slideNavDropdown = $('.side-nav-dropdown');
-
-    $('.side-nav .categories li').on('click', function () {
-
-      $(this).toggleClass('lol').siblings().removeClass('lol');
-
-      if ($(this).hasClass('lol')) {
-
-        $(this).find('.side-nav-dropdown').slideToggle('fast');
-
-        $(this).siblings().find('.side-nav-dropdown').slideUp('fast');
-
-      } else {
-
-        $(this).find('.side-nav-dropdown').slideUp('fast');
-
-      }
-
-    });
-
-    $('.side-nav .close-aside').on('click', function () {
-
-      $('#' + $(this).data('close')).addClass('show-side-nav');
-
-      contents.removeClass('margin');
-
-    });
-
-  }());
-
-
-
-
-
-  console.log(Chart.defaults.global);
-
-
-
-
-  });
-
-
-
+            $('.profile-avatar').hover(
+                function(){
+                    $('.profile-links').fadeIn('fast');
+                },
+                function(){
+                    $('.profile-links').hide();
+                }
+            );
+            $('.read-more').click(function(){
+                $('.profile-map').slideUp('fast');
+                $('.profile-info').slideToggle('fast');
+                return false;
+            });
+            $('.view-map').click(function(){
+                $('.profile-info').slideUp('fast');
+                $('.profile-map').slideToggle('fast');
+                return false;
+            });
+        });
 </script>
-    <!-- Start: Header Content -->
-    @include('/user/layout/footer-style-1')
-    <!-- End: Header Content -->
-    <!-- End: Dark footer with social media icons -->
-    <script src="assets/js/Data-Table-with-Search-Sort-Filter-and-Zoom-using-TableSorter.js"></script>
-    <script src="assets/js/theme.js"></script>
+
+<body>
+    <div class="profile-card" style="padding-left:20%; width: 890px;">
+        <div class="profile-cover">
+            <div class="menu-container">
+                <a class="list-icon" title="Expand"></a>          
+            </div>
+            
+            <div class="profile-avatar">
+                <a href="#"><img src="{{ $ProfilePicture }}" /></a>
+            </div>
+
+            <div class="profile-details">
+                <h1>{{ $NameAndSurname }}</h1>
+                <h3>@ {{ $Name }}</h3>
+            </div>
+        </div>
+
+
+        <div class="profile-content">
+        <br><br>
+
+            <div class="row" style="padding-left: 7.5%;">
+
+
+            <div class="column" style="background-color:#00134d; padding-left: 2%; width: 250px;">
+                <p style=" padding-top: 5%; padding-left: 1%; font-size: 25px; color:white;">+27 61 758 2543</p>
+              </div>
+
+
+              <div class="column" style="background-color:#3d3d29; padding-left: 2%; width: 400px;">
+                <p style="padding-top: 5%; padding-left: 1%; font-size: 25px; color:white;">darylnyawasha@gmail.com</p>
+              </div>
+           
+
+              <div class="column" style="background-color:#660066; padding-left: 2%; width: 550px;">
+                <p style="padding-top: 5%; padding-left: 1%; font-size: 25px; color:white;">176 Glenwood Road, Pretoria</p>  
+              </div>
+
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
