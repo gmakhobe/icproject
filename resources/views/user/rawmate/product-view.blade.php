@@ -37,7 +37,7 @@
 
     <div class="container m-2">
         <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-12 p-5" >
 
                 <div class="row">
                     <div class="col-md-6 card p-3">
@@ -49,13 +49,12 @@
                     <div class="col-md-6 card p-3">
                         <div class="card-body">
                             <center>
-                                <input class=""/>
                                 <h2 class="">{{ $ProceesedRawMat[0]['ProductName'] }}</h2>
                                 <h1 class=""><sup>{{ $ProceesedRawMat[0]['ProductCurrency'] }}</sup>
                                     <strong>
-                                      <span id="lblProductPrice1">
-                                        {{ $ProceesedRawMat[0]['ProductPrice'] }}
-                                      </span></strong>
+                                        <span id="lblProductPrice1">
+                                            {{ $ProceesedRawMat[0]['ProductPrice'] }}
+                                        </span></strong>
                                 </h1>
                                 <p class="">{{ $ProceesedRawMat[0]['ProductDescription'] }}</p>
                                 <p class="">
@@ -66,45 +65,24 @@
                                 <p>
                                     <button onclick="quantitySub()" type="button"
                                         class="btn btn-block my-ecom-btn-quantity"> -1 </button>
-                                    <input onkeyup="quantityChange()" id="productId" type="number" placeholder="Product Quanity"
-                                        class="form-control " value="1">
+                                    <input onkeyup="quantityChange()" id="productId" type="number"
+                                        placeholder="Product Quanity" class="form-control " value="1">
                                     <button onclick="quantityAdd()" type="button"
                                         class="btn btn-block my-ecom-btn-quantity"> 1 </button>
                                     <span class="">out of
                                         {{ $ProceesedRawMat[0]['ProductQuantity'] }}
                                     </span>
                                 </p><br /><br />
-                                
+
                                 <h3>
-                                  <sup>{{ $ProceesedRawMat[0]['ProductCurrency'] }}</sup>
-                                  <span id="lblProductPrice2">
-                                    {{ $ProceesedRawMat[0]['ProductPrice'] }}
-                                  </span>
+                                    <sup>{{ $ProceesedRawMat[0]['ProductCurrency'] }}</sup>
+                                    <span id="lblProductPrice2">
+                                        {{ $ProceesedRawMat[0]['ProductPrice'] }}
+                                    </span>
                                 </h3>
 
                                 <script>
-                                    function changePrice() {
-                                      const lblProductPrice = document.getElementById("lblProductPrice1");
-                                      let txtProductId = document.getElementById("productId").value;
-                                      
-                                      
-
-                                      txtProductId = Number(txtProductId);
-
-                                      document.getElementById("lblProductPrice2").innerHTML = (txtProductId * Number(lblProductPrice.textContent));
-
-                                    }
-
-                                    function quantityChange(){
-                                      /*
-
-                                      document.getElementById("lblProductPrice2").innerHTML = (txtProductId * Number(lblProductPrice.textContent));*/
-                                      const lblProductPrice = document.getElementById("lblProductPrice1");
-                                      const txtProductId  = document.getElementById("productId").value;
-
-                                      document.getElementById("lblProductPrice2").innerHTML = ((txtProductId) * Number(lblProductPrice.textContent)); 
-                                    }
-
+                                    //Add Price
                                     function quantityAdd() {
                                         let txtProductId = document.getElementById("productId").value;
                                         txtProductId = Number(txtProductId);
@@ -118,6 +96,7 @@
                                         changePrice();
                                     }
 
+                                    //Subtract Price
                                     function quantitySub() {
                                         let txtProductId = document.getElementById("productId").value;
                                         txtProductId = Number(txtProductId);
@@ -131,17 +110,48 @@
                                         changePrice();
                                     }
 
-                                    function btnAddToCat() {
-                                      const ProductName; 
-                                      const ProductQuantity = document.getElementById("productId").value;
-                                       productId;
+                                    //Change Price
+                                    function changePrice() {
+                                        const lblProductPrice = document.getElementById("lblProductPrice1");
+                                        let txtProductId = document.getElementById("productId").value;
 
-                                      
+
+
+                                        txtProductId = Number(txtProductId);
+
+                                        document.getElementById("lblProductPrice2").innerHTML = (txtProductId * Number(
+                                            lblProductPrice.textContent));
+
                                     }
 
                                 </script>
 
-                                <button onclick="btnAddToCat()" type="button" class="btn btn-block btn-lg my-ecom-btn-buy p-3">Add To Cart</button>
+                                <script>
+                                    function quantityChange() {
+
+                                        ProductsBrand                      const lblProductPrice = document.getElementById("lblProductPrice1");
+                                        const txtProductId = document.getElementById("productId").value;
+
+                                        document.getElementById("lblProductPrice2").innerHTML = ((txtProductId) *
+                                            Number(lblProductPrice.textContent));
+
+                                    }
+
+
+
+
+                                    /*function btnAddToCat() {
+                                        const ProductName;
+                                        const ProductQuantity = document.getElementById("productId").value;
+                                        productId;
+
+
+                                    }*/
+
+                                </script>
+
+                                <button onclick="btnAddToCat()" type="button"
+                                    class="btn btn-block btn-lg my-ecom-btn-buy p-3">Add To Cart</button>
 
                                 <p class="p-3 my-text-color-white">Terms and Conditions of purchasing</p>
 

@@ -28,7 +28,7 @@ class UserController extends Controller
         $userProfilePicture = AppSession::sessionGetUserProfilePicture();
 
         $resutls = DB::select("
-            SELECT RP.ProductName, RP.ProductDescription, RP.ProductImage FROM rawmateseller RS 
+            SELECT RP.ProductName, RP.ProductPrice, RP.ProductCurrency, RP.ProductDescription, RP.ProductQuantity, RP.ProductImage FROM rawmateseller RS 
             INNER JOIN rawmateproduct RP 
             ON RS.RawmateSellerId = RP.SellerId
             INNER JOIN users U

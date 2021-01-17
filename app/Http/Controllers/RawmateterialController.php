@@ -8,6 +8,22 @@ use App\Http\Logic\RawMaterial;
 
 class RawmateterialController extends Controller
 {
+    //Rawmate Type Sector
+    public function RawmateTypeSectorView($type, $sector)
+    {
+        //Set session info
+        $UserInformation = AppSession::sessionGetUserInfo();
+        $UserProfilePicture = AppSession::sessionGetUserProfilePicture();
+        
+        $ProductsTypeSector = RawMaterial::GetSectorName($type, $sector);
+        $PageDescription = ($type == 1 ? "Unprocessed" : "Processed") . " Products In " . $sector;
+        
+        //Properties to inject
+        $properties = ["Name" => $GLOBALS['AppTitle'], "Title" => "Raw Material", "NameAndSurname" => $UserInformation["Name"] . " " . $UserInformation["Surname"], "ProfilePicture" => $UserProfilePicture["Base64"], "IsBase64" => $UserProfilePicture["IsBase64"], "ProductsTypeSector" => $ProductsTypeSector, "PageDescription"=> $PageDescription];
+        //Return view injected with a ass array
+        return view('user/rawmate/typesector', $properties);
+    }
+
 
     //Rawmate view page
     public function RawmateBrandView($name)

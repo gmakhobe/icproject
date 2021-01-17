@@ -143,8 +143,12 @@
             </li>
 
 
-            <li><i class="fa fa-support fa-fw"></i><a href="/user/rawmate"> Raw-Mate</a>
+            <li>
+                <i class="fa fa-support fa-fw"></i>
+                <a href="/user/rawmate">Raw-Mate</a>
+                    
                 <ul class="side-nav-dropdown">
+                    <li><a href="/user/rawmate"> Raw-Mate</a></li>
                     <li><a href="#">Seller Profile</a></li>
                     <li><a href="#">Timeline</a></li>
                 </ul>
