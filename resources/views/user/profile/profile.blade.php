@@ -27,51 +27,7 @@
     <link rel="stylesheet" href="/assets1/css/ideas.css">
     <link rel="stylesheet" href="/assets1/css/newSideNav.css">
     <link rel="stylesheet" href="/assets1/css/indicatorsAndStrategies.css">
-<<<<<<< HEAD
-</head>
-
-<body>
-
-    <!-- Start: Vertical Left-SideBar by Jigar Mistry -->
-    @include('/user/layout/header-style-1')
-    @include('/user/layout/side-nav')
-    <!-- End: Vertical Left-SideBar by Jigar Mistry -->
-    <!-- Start: Top Navbar -->
-
-    <nav style="padding-right: 40%;"> <!-- The nav link semantically marks your main site navigation -->
-        <ul>
-            <li><a href="/user/profile/awards#">Awards</a></li>
-            <li><a href="/user/profile/calender#">Calendar</a></li>
-            <li><a style="color: rgb(245,67,67); font-size: 15px;">Search booster</a></li>
-        </ul>
-    </nav>
-
-    
-    <nav style="padding-right: 37.5%;"> <!-- The nav link semantically marks your main site navigation -->
-        <ul>
-            <li><a href="#">Engagement</a></li>
-            <li><a href="#">My World</a></li>
-            <li><a href="#">Message</a></li>
-            <li><a href="#">Group</a></li>
-            <li><a style="color: rgb(245,67,67); font-size: 12px;">POST</a></li>
-        </ul>
-    </nav>
-
-    <nav> <!-- The nav link semantically marks your main site navigation -->
-        <ul>
-            <li><a style="color: blue; font-size: 12px;">TREND</a></li>
-            <li><a style="color: blue; font-size: 12px;">VIEWED</a></li>
-            <li><a style="color: blue; font-size: 12px;">PREVIOUS</a></li>
-        </ul>
-    </nav>
-
-    <div class="book-store">
- <div class="main-wrapper">
-    <div id="allLessons">
-      <h4 style="padding-left: 1%;"> Financial Literacy: All Lessons<h4>
-=======
     <link rel="stylesheet" href="/assets1/css/profilepage.css">
->>>>>>> 8e2140803e766a20a18eab0e695212bcdfdae3d8
 
 </head>
 @include('/user/layout/side-nav')
@@ -119,9 +75,9 @@
     <div class="profile-card" style="padding-left:20%; width: 890px;">
         <div class="profile-cover">
             <div class="menu-container">
-                <a class="list-icon" title="Expand"></a>          
+                <a class="list-icon" title="Expand"></a>
             </div>
-            
+
             <div class="profile-avatar">
                 <a href="#"><img src="{{ $ProfilePicture }}" /></a>
             </div>
@@ -147,10 +103,10 @@
               <div class="column" style="background-color:#3d3d29; padding-left: 2%; width: 400px;">
                 <p style="padding-top: 5%; padding-left: 1%; font-size: 25px; color:white;">darylnyawasha@gmail.com</p>
               </div>
-           
+
 
               <div class="column" style="background-color:#660066; padding-left: 2%; width: 550px;">
-                <p style="padding-top: 5%; padding-left: 1%; font-size: 25px; color:white;">176 Glenwood Road, Pretoria</p>  
+                <p style="padding-top: 5%; padding-left: 1%; font-size: 25px; color:white;">176 Glenwood Road, Pretoria</p>
               </div>
 
             </div>
