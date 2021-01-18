@@ -18,7 +18,7 @@ class UserController extends Controller
         $userProfilePicture = AppSession::sessionGetUserProfilePicture();
 
         $properties = ["Name" => $GLOBALS['AppTitle'], "Title" => "Dashboard", "NameAndSurname"=> $userInfo["Name"]." ".$userInfo["Surname"], "ProfilePicture"=> $userProfilePicture["Base64"], "IsBase64"=> $userProfilePicture["IsBase64"]];
-        
+
         return view("user/dashboard", $properties);
     }
 
@@ -28,12 +28,12 @@ class UserController extends Controller
         $userProfilePicture = AppSession::sessionGetUserProfilePicture();
 
         $properties = ["Name" => $GLOBALS['AppTitle'], "Title" => "Dashboard", "NameAndSurname"=> $userInfo["Name"]." ".$userInfo["Surname"], "ProfilePicture"=> $userProfilePicture["Base64"], "IsBase64"=> $userProfilePicture["IsBase64"]];
-        
+
         return view("user/storeroom", $properties);
     }
 
     public function Profile(Request $request){
-        
+
     }
 
     public function StockBrokers(){
@@ -42,7 +42,7 @@ class UserController extends Controller
         $UserProfilePicture = AppSession::sessionGetUserProfilePicture();
 
         $properties = ["Name" => $GLOBALS['AppTitle'], "Title" => "Dashboard", "NameAndSurname"=> $UserInformation["Name"]." ".$UserInformation["Surname"], "ProfilePicture"=> $UserProfilePicture["Base64"], "IsBase64"=> $UserProfilePicture["IsBase64"]];
-        
+
         return view("/user/stockbrokers", $properties);
     }
 
@@ -52,7 +52,36 @@ class UserController extends Controller
         $UserProfilePicture = AppSession::sessionGetUserProfilePicture();
 
         $properties = ["Name" => $GLOBALS['AppTitle'], "Title" => "Dashboard", "NameAndSurname"=> $UserInformation["Name"]." ".$UserInformation["Surname"], "ProfilePicture"=> $UserProfilePicture["Base64"], "IsBase64"=> $UserProfilePicture["IsBase64"]];
-        
+
         return view("/user/smallcapstock", $properties);
     }
+
+    public function PartnersView(Request $request){
+        //Properties to be injected
+        $userInfo = AppSession::sessionGetUserInfo();
+        $userProfilePicture = AppSession::sessionGetUserProfilePicture();
+
+        $properties = ["Name" => $GLOBALS['AppTitle'], "Title" => "Dashboard", "NameAndSurname"=> $userInfo["Name"]." ".$userInfo["Surname"], "ProfilePicture"=> $userProfilePicture["Base64"], "IsBase64"=> $userProfilePicture["IsBase64"]];
+
+        return view("user/Partners", $properties);
+    }
+
+    public function ServicesView(Request $request){
+        //Properties to be injected
+        $userInfo = AppSession::sessionGetUserInfo();
+        $userProfilePicture = AppSession::sessionGetUserProfilePicture();
+
+        $properties = ["Name" => $GLOBALS['AppTitle'], "Title" => "Dashboard", "NameAndSurname"=> $userInfo["Name"]." ".$userInfo["Surname"], "ProfilePicture"=> $userProfilePicture["Base64"], "IsBase64"=> $userProfilePicture["IsBase64"]];
+
+        return view("user/services", $properties);
+    }
+
+    // public function PartnersView (){
+    //     //Properties to be injected
+    //     $UserInformation = AppSession::sessionGetUserInfo();
+    //     $UserProfilePicture = AppSession::sessionGetUserProfilePicture();
+
+    //     $properties = ["Name" => $GLOBALS['AppTitle'], "Title" => "Dashboard", "NameAndSurname"=> $UserInformation["Name"]." ".$UserInformation["Surname"], "ProfilePicture"=> $UserProfilePicture["Base64"], "IsBase64"=> $UserProfilePicture["IsBase64"]];
+    //     return view('user/rawmate/Partners', $properties);
+    // }
 }

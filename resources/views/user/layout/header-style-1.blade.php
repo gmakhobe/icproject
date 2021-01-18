@@ -11,7 +11,7 @@
 <!-- side nav -->
 <!-- Start: Javascript
 <script src="/js/validator.js"></script>
-<!-- <script src="/js/navbar-tools.js"></script> -->
+<script src="/js/navbar-tools.js"></script> -->
 <!-- End: Javascript -->
 <!-- JS CDN Assets-->
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>

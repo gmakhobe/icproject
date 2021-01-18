@@ -15,7 +15,7 @@ class RawmateterialController extends Controller
         //Set session info
         $UserInformation = AppSession::sessionGetUserInfo();
         $UserProfilePicture = AppSession::sessionGetUserProfilePicture();
-        
+
         $GetProductsBrand = RawMaterial::GetProductBrand($name);
         //print_r($ProductSort);
         //Properties to inject
@@ -89,13 +89,13 @@ class RawmateterialController extends Controller
         $properties = ["Name" => $GLOBALS['AppTitle'], "Title" => "Dashboard", "NameAndSurname"=> $UserInformation["Name"]." ".$UserInformation["Surname"], "ProfilePicture"=> $UserProfilePicture["Base64"], "IsBase64"=> $UserProfilePicture["IsBase64"]];
         return view('user/rawmate/InfoPage', $properties);
     }
-    public function PartnersView (){
-        //Properties to be injected
-        $UserInformation = AppSession::sessionGetUserInfo();
-        $UserProfilePicture = AppSession::sessionGetUserProfilePicture();
+    // public function PartnersView (){
+    //     //Properties to be injected
+    //     $UserInformation = AppSession::sessionGetUserInfo();
+    //     $UserProfilePicture = AppSession::sessionGetUserProfilePicture();
 
-        $properties = ["Name" => $GLOBALS['AppTitle'], "Title" => "Dashboard", "NameAndSurname"=> $UserInformation["Name"]." ".$UserInformation["Surname"], "ProfilePicture"=> $UserProfilePicture["Base64"], "IsBase64"=> $UserProfilePicture["IsBase64"]];
-        return view('user/rawmate/Partners', $properties);
-    }
+    //     $properties = ["Name" => $GLOBALS['AppTitle'], "Title" => "Dashboard", "NameAndSurname"=> $UserInformation["Name"]." ".$UserInformation["Surname"], "ProfilePicture"=> $UserProfilePicture["Base64"], "IsBase64"=> $UserProfilePicture["IsBase64"]];
+    //     return view('user/rawmate/Partners', $properties);
+    // }
 }
 
