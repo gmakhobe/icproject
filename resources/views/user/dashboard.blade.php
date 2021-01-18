@@ -116,7 +116,7 @@
 
             <li>
                 <div class="large button card-front">
-                    <a href="/user/ideas">RAW-MATE</a>
+                    <a href="/user/rawmate">RAW-MATE</a>
                     <i class="fa fa-pencil-square-o card-icon"></i>
                 </div>
             </li>
@@ -151,7 +151,6 @@
 
         </ul>
     </div>
-
     </div>
       <!-- end .clients -->
     </div>

@@ -12,7 +12,7 @@ class NewsChannel
     {
 
         //Info from Database
-        $Data = DB::select('SELECT * FROM `NewsChannel` WHERE ChannelType = ? LIMIT 20', [$ChannelType, 20]);
+        $Data = DB::select('SELECT * FROM `newschannel` WHERE ChannelType = ? LIMIT 20', [$ChannelType, 20]);
         $myArray = [];
         //Loop through
         for ($index = 0; $index < count($Data); $index++) {
@@ -33,7 +33,7 @@ class NewsChannel
     {
 
         //Info from Database
-        $Data = DB::select('SELECT * FROM `NewsChannel` WHERE `Name` = ? AND `NCId` = ? AND ChannelType = ? LIMIT 20', [$name, $id, $type]);
+        $Data = DB::select('SELECT * FROM `newschannel` WHERE `Name` = ? AND `NCId` = ? AND ChannelType = ? LIMIT 20', [$name, $id, $type]);
         $myArray = [];
         //Loop through
         for ($index = 0; $index < count($Data); $index++) {

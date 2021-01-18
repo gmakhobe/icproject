@@ -88,6 +88,8 @@
             </div>
         </div>
 
+        <div class="profile-content">
+        <br><br>
 
         <div class="profile-content">
         <br><br>
@@ -99,6 +101,9 @@
                 <p style=" padding-top: 5%; padding-left: 1%; font-size: 25px; color:white;">+27 61 758 2543</p>
               </div>
 
+              <div class="column" style="background-color:#3d3d29; padding-left: 2%; width: 400px;">
+                <p style="padding-top: 5%; padding-left: 1%; font-size: 25px; color:white;">darylnyawasha@gmail.com</p>
+              </div>
 
               <div class="column" style="background-color:#3d3d29; padding-left: 2%; width: 400px;">
                 <p style="padding-top: 5%; padding-left: 1%; font-size: 25px; color:white;">darylnyawasha@gmail.com</p>

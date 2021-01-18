@@ -97,6 +97,8 @@ Route::get('/user/rawmate/InfoPage', 'RawmateterialController@PageInfoView')->mi
 Route::get('/user/rawmate/brand/{name}', 'RawmateterialController@RawmateBrandView')->middleware('IsSessionValid');
 // >>>>>>> 5098e72ffcaf1b2aca5ca4b5ae85325bde100bfe
 
+Route::get('/user/rawmate/type/{type}/sector/{sector}', 'RawmateterialController@RawmateTypeSectorView')->middleware('IsSessionValid');
+
 // /User/profile
 Route::get('/user/profile', 'ProfileController@ProfileView')->middleware('IsSessionValid');
 Route::get('/user/profile/awards', 'ProfileController@AwardsView')->middleware('IsSessionValid');

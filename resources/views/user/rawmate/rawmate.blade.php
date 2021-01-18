@@ -56,6 +56,7 @@
                         <label class="tab" for="radio-3">Brands</label>
                         <span class="glider"></span>
                     </div>
+                    
                 </div>
                 <script>
                     window.onload = function onload() {
@@ -99,55 +100,6 @@
                             <div class="container-fluid">
 
                                 <div class="row">
-                                    <div class="col-lg-3 col-xs-6">
-                                        <div class="rad-info-box rad-txt-success">
-                                            <i class="fas fa-globe-europe"></i>
-                                            <span class="heading">REGIONAL</span>
-
-                                            <span class="value"><span>R</span></span>
-                                            <button type="button" id="activate" class="btn btn-light">Activate</button>
-                                            <div id="exampleFormControlSelect1" class="form-group">
-                                                <label for="exampleFormControlSelect1">Choose one </label>
-                                                <select class="form-control">
-                                                    <option>America</option>
-                                                    <option>South America </option>
-                                                    <option>South Africa </option>
-                                                    <option>West Africa</option>
-                                                    <option>East Africa</option>
-                                                    <option>Europe</option>
-                                                    <option>West Asia</option>
-                                                    <option>East Asia</option>
-                                                    <option>Australia</option>
-                                                </select>
-                                            </div>
-
-
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-3 col-xs-6">
-                                        <div class="rad-info-box rad-txt-primary">
-                                            <i class="fab fa-product-hunt"></i>
-                                            <span class="heading">NAME OF PRODUCT</span>
-                                            <span class="value"><span>N</span></span>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-3 col-xs-6">
-                                        <div class="rad-info-box rad-txt-danger">
-                                            <i class="fas fa-hand-holding-usd"></i>
-                                            <span class="heading">BUDGET</span>
-                                            <span class="value"><span>B</span></span>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-3 col-xs-6">
-                                        <div class="rad-info-box">
-                                            <i class="fas fa-microchip"></i>
-                                            <span class="heading">PROCESSOR</span>
-                                            <span class="value"><span>P</span></span>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="row">
                                     <div class="col-xs-12 col-md-6">
                                         <div class="panel panel-default">
                                             <div class="panel-heading">
@@ -161,149 +113,21 @@
                                                 </h3>
                                             </div>
                                             <div class="panel-body">
-                                                <div class="rad-info-box rad-txt-success" data-toggle="collapse"
-                                                    data-target="#ProcessedMine">
+                                                <div class="rad-info-box rad-txt-success"
+                                                    onclick="window.location.assign('/user/rawmate/type/2/sector/Mines');">
                                                     MINES
                                                 </div>
-                                                <div id="ProcessedMine" class="collapse">
-                                                    <p class="lead">List</p>
-                                                    @for ($i_unprocessed_plants = 0; $i_unprocessed_plants < count($GetProducts); $i_unprocessed_plants++)
-
-                                                        @if ($GetProducts[$i_unprocessed_plants]['RawmateIndustryType'] == 'Mines' && $GetProducts[$i_unprocessed_plants]['RawmateProcessType'] == 2)
-                                                            <div class="row"
-                                                                onclick="window.location.assign('/user/rawmate/product/{{ $GetProducts[$i_unprocessed_plants]['ProductName'] }}/{{ $GetProducts[$i_unprocessed_plants]['ProductId'] }}')">
-                                                                <div class="col-sm-6">
-
-                                                                    <img class="lozad my-ecom-overview-img"
-                                                                        data-src='{{ $GetProducts[$i_unprocessed_plants]['ProductImage'] }}'
-                                                                        alt='Product' />
-
-
-                                                                </div>
-                                                                <div class="col-sm-6">
-
-                                                                    <h3>
-                                                                        {{ $GetProducts[$i_unprocessed_plants]['ProductName'] }}
-                                                                    </h3>
-                                                                    <h4> <sup>{{ $GetProducts[$i_unprocessed_plants]['ProductCurrency'] }}</sup>
-                                                                        {{ $GetProducts[$i_unprocessed_plants]['ProductPrice'] }}
-                                                                    </h4>
-                                                                    <p>{{ $GetProducts[$i_unprocessed_plants]['ProductDescription'] }}
-                                                                    </p>
-
-                                                                </div>
-                                                            </div>
-                                                        @endif
-
-                                                    @endfor
-                                                </div>
-                                                <div class="rad-info-box rad-txt-success" data-toggle="collapse"
-                                                    data-target="#ProcessedPlants">
+                                                <div class="rad-info-box rad-txt-success"
+                                                    onclick="window.location.assign('/user/rawmate/type/2/sector/Plants');">
                                                     PLANTS
                                                 </div>
-                                                <div id="ProcessedPlants" class="collapse">
-                                                    <p class="lead">List</p>
-                                                    @for ($i_unprocessed_plants = 0; $i_unprocessed_plants < count($GetProducts); $i_unprocessed_plants++)
-
-                                                        @if ($GetProducts[$i_unprocessed_plants]['RawmateIndustryType'] == 'Plants' && $GetProducts[$i_unprocessed_plants]['RawmateProcessType'] == 2)
-                                                            <div class="row"
-                                                                onclick="window.location.assign('/user/rawmate/product/{{ $GetProducts[$i_unprocessed_plants]['ProductName'] }}/{{ $GetProducts[$i_unprocessed_plants]['ProductId'] }}')">
-                                                                <div class="col-sm-6">
-
-                                                                    <img class="lozad my-ecom-overview-img"
-                                                                        data-src='{{ $GetProducts[$i_unprocessed_plants]['ProductImage'] }}'
-                                                                        alt='Product' />
-
-
-                                                                </div>
-                                                                <div class="col-sm-6">
-
-                                                                    <h3>
-                                                                        {{ $GetProducts[$i_unprocessed_plants]['ProductName'] }}
-                                                                    </h3>
-                                                                    <h4> <sup>{{ $GetProducts[$i_unprocessed_plants]['ProductCurrency'] }}</sup>
-                                                                        {{ $GetProducts[$i_unprocessed_plants]['ProductPrice'] }}
-                                                                    </h4>
-                                                                    <p>{{ $GetProducts[$i_unprocessed_plants]['ProductDescription'] }}
-                                                                    </p>
-
-                                                                </div>
-                                                            </div>
-                                                        @endif
-
-                                                    @endfor
-                                                </div>
-                                                <div class="rad-info-box rad-txt-success" data-toggle="collapse"
-                                                    data-target="#ProcessedAnimals">
+                                                <div class="rad-info-box rad-txt-success"
+                                                    onclick="window.location.assign('/user/rawmate/type/2/sector/Animals');">
                                                     ANIMALS
                                                 </div>
-                                                <div id="ProcessedAnimals" class="collapse">
-                                                    <p class="lead">List</p>
-                                                    @for ($i_unprocessed_plants = 0; $i_unprocessed_plants < count($GetProducts); $i_unprocessed_plants++)
-
-                                                        @if ($GetProducts[$i_unprocessed_plants]['RawmateIndustryType'] == 'Animals' && $GetProducts[$i_unprocessed_plants]['RawmateProcessType'] == 2)
-                                                            <div class="row"
-                                                                onclick="window.location.assign('/user/rawmate/product/{{ $GetProducts[$i_unprocessed_plants]['ProductName'] }}/{{ $GetProducts[$i_unprocessed_plants]['ProductId'] }}')">
-                                                                <div class="col-sm-6">
-
-                                                                    <img class="lozad my-ecom-overview-img"
-                                                                        data-src='{{ $GetProducts[$i_unprocessed_plants]['ProductImage'] }}'
-                                                                        alt='Product' />
-
-
-                                                                </div>
-                                                                <div class="col-sm-6">
-
-                                                                    <h3>
-                                                                        {{ $GetProducts[$i_unprocessed_plants]['ProductName'] }}
-                                                                    </h3>
-                                                                    <h4> <sup>{{ $GetProducts[$i_unprocessed_plants]['ProductCurrency'] }}</sup>
-                                                                        {{ $GetProducts[$i_unprocessed_plants]['ProductPrice'] }}
-                                                                    </h4>
-                                                                    <p>{{ $GetProducts[$i_unprocessed_plants]['ProductDescription'] }}
-                                                                    </p>
-
-                                                                </div>
-                                                            </div>
-                                                        @endif
-
-                                                    @endfor
-                                                </div>
-                                                <div class="rad-info-box rad-txt-success" data-toggle="collapse"
-                                                    data-target="#ProcessedRealEstate">
+                                                <div class="rad-info-box rad-txt-success"
+                                                    onclick="window.location.assign('/user/rawmate/type/2/sector/RealEstate');">
                                                     REAL ESTATE
-                                                </div>
-                                                <div id="ProcessedRealEstate" class="collapse">
-                                                    <p class="lead">List</p>
-                                                    @for ($i_unprocessed_plants = 0; $i_unprocessed_plants < count($GetProducts); $i_unprocessed_plants++)
-
-                                                        @if ($GetProducts[$i_unprocessed_plants]['RawmateIndustryType'] == 'Estate' && $GetProducts[$i_unprocessed_plants]['RawmateProcessType'] == 2)
-                                                            <div class="row"
-                                                                onclick="window.location.assign('/user/rawmate/product/{{ $GetProducts[$i_unprocessed_plants]['ProductName'] }}/{{ $GetProducts[$i_unprocessed_plants]['ProductId'] }}')">
-                                                                <div class="col-sm-6">
-
-                                                                    <img class="lozad my-ecom-overview-img"
-                                                                        data-src='{{ $GetProducts[$i_unprocessed_plants]['ProductImage'] }}'
-                                                                        alt='Product' />
-
-
-                                                                </div>
-                                                                <div class="col-sm-6">
-
-                                                                    <h3>
-                                                                        {{ $GetProducts[$i_unprocessed_plants]['ProductName'] }}
-                                                                    </h3>
-                                                                    <h4> <sup>{{ $GetProducts[$i_unprocessed_plants]['ProductCurrency'] }}</sup>
-                                                                        {{ $GetProducts[$i_unprocessed_plants]['ProductPrice'] }}
-                                                                    </h4>
-                                                                    <p>{{ $GetProducts[$i_unprocessed_plants]['ProductDescription'] }}
-                                                                    </p>
-
-                                                                </div>
-                                                            </div>
-                                                        @endif
-
-                                                    @endfor
                                                 </div>
                                             </div>
                                         </div>
@@ -321,149 +145,23 @@
                                                 </h3>
                                             </div>
                                             <div class="panel-body">
-                                                <div class="rad-info-box rad-txt-success" data-toggle="collapse"
-                                                    data-target="#UnprocessedMine">
-                                                    MINES
-                                                </div>
-                                                <div id="UnprocessedMine" class="collapse">
-                                                    <p class="lead">List</p>
-                                                    @for ($i_unprocessed_plants = 0; $i_unprocessed_plants < count($GetProducts); $i_unprocessed_plants++)
-
-                                                        @if ($GetProducts[$i_unprocessed_plants]['RawmateIndustryType'] == 'Mines' && $GetProducts[$i_unprocessed_plants]['RawmateProcessType'] == 1)
-                                                            <div class="row"
-                                                                onclick="window.location.assign('/user/rawmate/product/{{ $GetProducts[$i_unprocessed_plants]['ProductName'] }}/{{ $GetProducts[$i_unprocessed_plants]['ProductId'] }}')">
-                                                                <div class="col-sm-6">
-
-                                                                    <img class="lozad my-ecom-overview-img"
-                                                                        data-src='{{ $GetProducts[$i_unprocessed_plants]['ProductImage'] }}'
-                                                                        alt='Product' />
-
-
-                                                                </div>
-                                                                <div class="col-sm-6">
-
-                                                                    <h3>
-                                                                        {{ $GetProducts[$i_unprocessed_plants]['ProductName'] }}
-                                                                    </h3>
-                                                                    <h4> <sup>{{ $GetProducts[$i_unprocessed_plants]['ProductCurrency'] }}</sup>
-                                                                        {{ $GetProducts[$i_unprocessed_plants]['ProductPrice'] }}
-                                                                    </h4>
-                                                                    <p>{{ $GetProducts[$i_unprocessed_plants]['ProductDescription'] }}
-                                                                    </p>
-
-                                                                </div>
-                                                            </div>
-                                                        @endif
-
-                                                    @endfor
-                                                </div>
-                                                <div class="rad-info-box rad-txt-success" data-toggle="collapse"
-                                                    data-target="#UnprocessedPlants">
-                                                    PLANTS
-                                                </div>
-                                                <div id="UnprocessedPlants" class="collapse">
-                                                    <p class="lead">List</p>
-                                                    @for ($i_unprocessed_plants = 0; $i_unprocessed_plants < count($GetProducts); $i_unprocessed_plants++)
-
-                                                        @if ($GetProducts[$i_unprocessed_plants]['RawmateIndustryType'] == 'Plants' && $GetProducts[$i_unprocessed_plants]['RawmateProcessType'] == 1)
-                                                            <div class="row"
-                                                                onclick="window.location.assign('/user/rawmate/product/{{ $GetProducts[$i_unprocessed_plants]['ProductName'] }}/{{ $GetProducts[$i_unprocessed_plants]['ProductId'] }}')">
-                                                                <div class="col-sm-6">
-
-                                                                    <img class="lozad my-ecom-overview-img"
-                                                                        data-src='{{ $GetProducts[$i_unprocessed_plants]['ProductImage'] }}'
-                                                                        alt='Product' />
-
-
-                                                                </div>
-                                                                <div class="col-sm-6">
-
-                                                                    <h3>
-                                                                        {{ $GetProducts[$i_unprocessed_plants]['ProductName'] }}
-                                                                    </h3>
-                                                                    <h4> <sup>{{ $GetProducts[$i_unprocessed_plants]['ProductCurrency'] }}</sup>
-                                                                        {{ $GetProducts[$i_unprocessed_plants]['ProductPrice'] }}
-                                                                    </h4>
-                                                                    <p>{{ $GetProducts[$i_unprocessed_plants]['ProductDescription'] }}
-                                                                    </p>
-
-                                                                </div>
-                                                            </div>
-                                                        @endif
-
-                                                    @endfor
-                                                </div>
-                                                <div class="rad-info-box rad-txt-success" data-toggle="collapse"
-                                                    data-target="#UnprocessedAnimals">
-                                                    ANIMALS
-                                                </div>
-                                                <div id="UnprocessedAnimals" class="collapse">
-                                                    <p class="lead">List</p>
-                                                    @for ($i_unprocessed_plants = 0; $i_unprocessed_plants < count($GetProducts); $i_unprocessed_plants++)
-
-                                                        @if ($GetProducts[$i_unprocessed_plants]['RawmateIndustryType'] == 'Animals' && $GetProducts[$i_unprocessed_plants]['RawmateProcessType'] == 1)
-                                                            <div class="row"
-                                                                onclick="window.location.assign('/user/rawmate/product/{{ $GetProducts[$i_unprocessed_plants]['ProductName'] }}/{{ $GetProducts[$i_unprocessed_plants]['ProductId'] }}')">
-                                                                <div class="col-sm-6">
-
-                                                                    <img class="lozad my-ecom-overview-img"
-                                                                        data-src='{{ $GetProducts[$i_unprocessed_plants]['ProductImage'] }}'
-                                                                        alt='Product' />
-
-
-                                                                </div>
-                                                                <div class="col-sm-6">
-
-                                                                    <h3>
-                                                                        {{ $GetProducts[$i_unprocessed_plants]['ProductName'] }}
-                                                                    </h3>
-                                                                    <h4> <sup>{{ $GetProducts[$i_unprocessed_plants]['ProductCurrency'] }}</sup>
-                                                                        {{ $GetProducts[$i_unprocessed_plants]['ProductPrice'] }}
-                                                                    </h4>
-                                                                    <p>{{ $GetProducts[$i_unprocessed_plants]['ProductDescription'] }}
-                                                                    </p>
-
-                                                                </div>
-                                                            </div>
-                                                        @endif
-
-                                                    @endfor
-                                                </div>
-                                                <div class="rad-info-box rad-txt-success" data-toggle="collapse"
-                                                    data-target="#UnprocessedRealEstate">
-                                                    REAL ESTATE
-                                                </div>
-                                                <div id="UnprocessedRealEstate" class="collapse">
-                                                    <p class="lead">List</p>
-                                                    @for ($i_unprocessed_plants = 0; $i_unprocessed_plants < count($GetProducts); $i_unprocessed_plants++)
-
-                                                        @if ($GetProducts[$i_unprocessed_plants]['RawmateIndustryType'] == 'Estate' && $GetProducts[$i_unprocessed_plants]['RawmateProcessType'] == 1)
-                                                            <div class="row"
-                                                                onclick="window.location.assign('/user/rawmate/product/{{ $GetProducts[$i_unprocessed_plants]['ProductName'] }}/{{ $GetProducts[$i_unprocessed_plants]['ProductId'] }}')">
-                                                                <div class="col-sm-6">
-
-                                                                    <img class="lozad my-ecom-overview-img"
-                                                                        data-src='{{ $GetProducts[$i_unprocessed_plants]['ProductImage'] }}'
-                                                                        alt='Product' />
-
-
-                                                                </div>
-                                                                <div class="col-sm-6">
-
-                                                                    <h3>
-                                                                        {{ $GetProducts[$i_unprocessed_plants]['ProductName'] }}
-                                                                    </h3>
-                                                                    <h4> <sup>{{ $GetProducts[$i_unprocessed_plants]['ProductCurrency'] }}</sup>
-                                                                        {{ $GetProducts[$i_unprocessed_plants]['ProductPrice'] }}
-                                                                    </h4>
-                                                                    <p>{{ $GetProducts[$i_unprocessed_plants]['ProductDescription'] }}
-                                                                    </p>
-
-                                                                </div>
-                                                            </div>
-                                                        @endif
-
-                                                    @endfor
+                                                <div class="panel-body">
+                                                    <div class="rad-info-box rad-txt-success"
+                                                        onclick="window.location.assign('/user/rawmate/type/1/sector/Mine');">
+                                                        MINES
+                                                    </div>
+                                                    <div class="rad-info-box rad-txt-success"
+                                                        onclick="window.location.assign('/user/rawmate/type/1/sector/Plants');">
+                                                        PLANTS
+                                                    </div>
+                                                    <div class="rad-info-box rad-txt-success"
+                                                        onclick="window.location.assign('/user/rawmate/type/1/sector/Animals');">
+                                                        ANIMALS
+                                                    </div>
+                                                    <div class="rad-info-box rad-txt-success"
+                                                        onclick="window.location.assign('/user/rawmate/type/1/sector/RealEstate');">
+                                                        REAL ESTATE
+                                                    </div>
                                                 </div>
                                             </div>
 
@@ -495,13 +193,11 @@
 
                                             @for ($index = 2; $index < count($folderScan); $index++)
 
-                                                @if (is_dir($rootFolder . '/' . $folderScan[$index]))
-
-                                                    <option value='{{ $folderScan[$index] }}'>
-                                                        {{ $folderScan[$index] }}
-                                                    </option>
-
-                                                @endif
+                                                @if (is_dir($rootFolder . '/' .
+                                                $folderScan[$index])) <option
+                                                value='{{ $folderScan[$index] }}'>
+                                                {{ $folderScan[$index] }}
+                                                </option> @endif
 
                                             @endfor
 
@@ -524,32 +220,30 @@
                                             @endphp
 
                                             @for ($index = 0; $index < count($ProductSort); $index++)
-                                                @if ($ProductSort[$index]['Category'] === 'Agriculture')
-                                                    @if ($navCounter == 0)
+                                                @if ($ProductSort[$index]['Category'] ===
+                                                'Agriculture') @if ($navCounter == 0)
 
-                                                        <li class="nav-item active">
-                                                            <a class="nav-link active" data-toggle="pill"
-                                                                href="#catgegoryAgriculture{{ $index }}">
-                                                                {{ $ProductSort[$index]['SubCategory'] }}
-                                                            </a>
-                                                        </li>
+                                                    <li class="nav-item active">
+                                                    <a class="nav-link active" data-toggle="pill"
+                                                    href="#catgegoryAgriculture{{ $index }}">
+                                                    {{ $ProductSort[$index]['SubCategory'] }}
+                                                    </a>
+                                                    </li>
 
-                                                        @php
+                                                    @php
 
-                                                        $navCounter = $navCounter + 1;
+                                                    $navCounter = $navCounter + 1;
 
-                                                        @endphp
+                                                    @endphp
 
-                                                    @else
+                                                @else
 
-                                                        <li class="nav-item">
-                                                            <a class="nav-link" data-toggle="pill"
-                                                                href="#catgegoryAgriculture{{ $index }}">
-                                                                {{ $ProductSort[$index]['SubCategory'] }}
-                                                            </a>
-                                                        </li>
-
-                                                    @endif
+                                                    <li class="nav-item">
+                                                    <a class="nav-link" data-toggle="pill"
+                                                    href="#catgegoryAgriculture{{ $index }}">
+                                                    {{ $ProductSort[$index]['SubCategory'] }}
+                                                    </a>
+                                                    </li> @endif
                                                 @endif
                                             @endfor
 
@@ -567,300 +261,296 @@
 
                                             @for ($index = 0; $index < count($ProductSort); $index++)
 
-                                                @if ($ProductSort[$index]['Category'] === 'Agriculture')
+                                                @if ($ProductSort[$index]['Category'] ===
+                                                'Agriculture') @if ($navCounter == 0)
 
-                                                    @if ($navCounter == 0)
+                                                    <div class="tab-pane active"
+                                                    id="catgegoryAgriculture{{ $index }}">
 
-                                                        <div class="tab-pane active"
-                                                            id="catgegoryAgriculture{{ $index }}">
+                                                    <div class="row">
 
-                                                            <div class="row">
+                                                    @for ($index2 = 0; $index2 < count($GetProducts); $index2++)
 
-                                                                @for ($index2 = 0; $index2 < count($GetProducts); $index2++)
+                                                        @if ($GetProducts[$index2]['SubCategory'] == $ProductSort[$index]['SubCategory'])
 
-                                                                    @if ($GetProducts[$index2]['SubCategory'] == $ProductSort[$index]['SubCategory'])
+                                                            <div class='col-sm-3'
+                                                            onclick="window.location.assign('/user/rawmate/product/{{ $GetProducts[$index2]['ProductName'] }}/{{ $GetProducts[$index2]['ProductId'] }}')">
 
-                                                                        <div class='col-sm-3'
-                                                                            onclick="window.location.assign('/user/rawmate/product/{{ $GetProducts[$index2]['ProductName'] }}/{{ $GetProducts[$index2]['ProductId'] }}')">
+                                                            <img class="lozad my-ecom-img"
+                                                            data-src='{{ $GetProducts[$index2]['ProductImage'] }}'
+                                                            alt='Product' />
 
-                                                                            <img class="lozad my-ecom-img"
-                                                                                data-src='{{ $GetProducts[$index2]['ProductImage'] }}'
-                                                                                alt='Product' />
+                                                            <h3>
+                                                            {{ $GetProducts[$index2]['ProductName'] }}
+                                                            </h3>
+                                                            <h4>
+                                                            <sup>{{ $GetProducts[$index2]['ProductCurrency'] }}</sup>
+                                                            {{ $GetProducts[$index2]['ProductPrice'] }}
+                                                            </h4>
+                                                            <p>
+                                                            {{ $GetProducts[$index2]['ProductDescription'] }}
+                                                            </p>
 
-                                                                            <h3>
-                                                                                {{ $GetProducts[$index2]['ProductName'] }}
-                                                                            </h3>
-                                                                            <h4> <sup>{{ $GetProducts[$index2]['ProductCurrency'] }}</sup>
-                                                                                {{ $GetProducts[$index2]['ProductPrice'] }}
-                                                                            </h4>
-                                                                            <p>{{ $GetProducts[$index2]['ProductDescription'] }}
-                                                                            </p>
+                                                            </div> @endif
 
-                                                                        </div>
+                                                        @endfor
 
-                                                                    @endif
-
-                                                                @endfor
-
-                                                            </div>
-
-                                                        </div>
-
-                                                        @php
-
-                                                        $navCounter = $navCounter + 1;
-
-                                                        @endphp
-
-                                                    @else
-
-                                                        <div class="tab-pane fade"
-                                                            id="catgegoryAgriculture{{ $index }}">
-
-                                                            <div class="row">
-
-                                                                @for ($index2 = 0; $index2 < count($GetProducts); $index2++)
-
-                                                                    @if ($GetProducts[$index2]['SubCategory'] == $ProductSort[$index]['SubCategory'])
-
-                                                                        <div class='col-sm-3'>
-
-                                                                            <img class="lozad my-ecom-img"
-                                                                                data-src='{{ $GetProducts[$index2]['ProductImage'] }}'
-                                                                                style='width:100%;height: auto;'
-                                                                                alt='Product' />
-
-                                                                            <h3>
-                                                                                {{ $GetProducts[$index2]['ProductName'] }}
-                                                                            </h3>
-                                                                            <h4> <sup>{{ $GetProducts[$index2]['ProductCurrency'] }}</sup>
-                                                                                {{ $GetProducts[$index2]['ProductPrice'] }}
-                                                                            </h4>
-                                                                            <p>{{ $GetProducts[$index2]['ProductDescription'] }}
-                                                                            </p>
-                                                                        </div>
-
-                                                                    @endif
-
-                                                                @endfor
-
-                                                            </div>
-
-                                                        </div>
-
-                                                    @endif
-                                                @endif
-
-                                            @endfor
                                         </div>
 
                                     </div>
 
-                                    <div id="CategoryMenu2">
+                                    @php
+
+                                    $navCounter = $navCounter + 1;
+
+                                    @endphp
+
+                                @else
+
+                                    <div class="tab-pane fade" id="catgegoryAgriculture{{ $index }}">
+
+                                        <div class="row">
+
+                                            @for ($index2 = 0; $index2 < count($GetProducts); $index2++)
+
+                                                @if ($GetProducts[$index2]['SubCategory'] ==
+                                                $ProductSort[$index]['SubCategory']) <div
+                                                class='col-sm-3'
+                                                onclick="window.location.assign('/user/rawmate/product/{{ $GetProducts[$index2]['ProductName'] }}/{{ $GetProducts[$index2]['ProductId'] }}')">
 
 
 
-                                        <ul class="nav nav-pills my-ecom-nav">
-                                            @php
+                                                <img class="lozad my-ecom-img"
+                                                data-src='{{ $GetProducts[$index2]['ProductImage'] }}'
+                                                style='width:100%;height: auto;'
+                                                alt='Product' />
 
-                                            $navCounter = 0;
-
-                                            @endphp
-
-                                            @for ($index = 0; $index < count($ProductSort); $index++)
-                                                @if ($ProductSort[$index]['Category'] === 'Hardware')
-                                                    @if ($navCounter == 0)
-
-                                                        <li class="nav-item active">
-                                                            <a class="nav-link active" data-toggle="pill"
-                                                                href="#catgegoryHardware{{ $index }}">
-                                                                {{ $ProductSort[$index]['SubCategory'] }}
-                                                            </a>
-                                                        </li>
-
-                                                        @php
-
-                                                        $navCounter = $navCounter + 1;
-
-                                                        @endphp
-
-                                                    @else
-
-                                                        <li class="nav-item">
-                                                            <a class="nav-link" data-toggle="pill"
-                                                                href="#catgegoryHardware{{ $index }}">
-                                                                {{ $ProductSort[$index]['SubCategory'] }}
-                                                            </a>
-                                                        </li>
-
-                                                    @endif
-                                                @endif
-                                            @endfor
-
-                                        </ul>
-
-
-                                        <!-- Tab panes -->
-                                        <div class="tab-content">
-
-                                            @php
-
-                                            $navCounter = 0;
-
-                                            @endphp
-
-                                            @for ($index = 0; $index < count($ProductSort); $index++)
-
-                                                @if ($ProductSort[$index]['Category'] === 'Hardware')
-
-                                                    @if ($navCounter == 0)
-
-                                                        <div class="tab-pane active" id="catgegoryHardware{{ $index }}">
-
-                                                            <div class="row">
-
-                                                                @for ($index2 = 0; $index2 < count($GetProducts); $index2++)
-
-                                                                    @if ($GetProducts[$index2]['SubCategory'] == $ProductSort[$index]['SubCategory'])
-
-                                                                        <div class='col-sm-3'
-                                                                            onclick="window.location.assign('/user/rawmate/product/{{ $GetProducts[$index2]['ProductName'] }}/{{ $GetProducts[$index2]['ProductId'] }}')">
-
-                                                                            <img class="lozad my-ecom-img"
-                                                                                data-src='{{ $GetProducts[$index2]['ProductImage'] }}'
-                                                                                style='width:100%;height: auto;'
-                                                                                alt='Product' />
-
-                                                                            <h3>
-                                                                                {{ $GetProducts[$index2]['ProductName'] }}
-                                                                            </h3>
-                                                                            <h4> <sup>{{ $GetProducts[$index2]['ProductCurrency'] }}</sup>
-                                                                                {{ $GetProducts[$index2]['ProductPrice'] }}
-                                                                            </h4>
-                                                                            <p>{{ $GetProducts[$index2]['ProductDescription'] }}
-                                                                            </p>
-
-                                                                        </div>
-
-                                                                    @endif
-
-                                                                @endfor
-
-                                                            </div>
-
-                                                        </div>
-
-                                                        @php
-
-                                                        $navCounter = $navCounter + 1;
-
-                                                        @endphp
-
-                                                    @else
-
-                                                        <div class="tab-pane fade" id="catgegoryHardware{{ $index }}">
-
-                                                            <div class="row">
-
-                                                                @for ($index2 = 0; $index2 < count($GetProducts); $index2++)
-
-                                                                    @if ($GetProducts[$index2]['SubCategory'] == $ProductSort[$index]['SubCategory'])
-
-                                                                        <div class='col-sm-3'
-                                                                            onclick="window.location.assign('/user/rawmate/product/{{ $GetProducts[$index2]['ProductName'] }}/{{ $GetProducts[$index2]['ProductId'] }}')">
-
-                                                                            <img class="lozad my-ecom-img"
-                                                                                data-src='{{ $GetProducts[$index2]['ProductImage'] }}'
-                                                                                style='width:100%;height: auto;'
-                                                                                alt='Product' />
-
-                                                                            <h3>
-                                                                                {{ $GetProducts[$index2]['ProductName'] }}
-                                                                            </h3>
-                                                                            <h4> <sup>{{ $GetProducts[$index2]['ProductCurrency'] }}</sup>
-                                                                                {{ $GetProducts[$index2]['ProductPrice'] }}
-                                                                            </h4>
-                                                                            <p>{{ $GetProducts[$index2]['ProductDescription'] }}
-                                                                            </p>
-                                                                        </div>
-
-                                                                    @endif
-
-                                                                @endfor
-
-                                                            </div>
-
-                                                        </div>
-
-                                                    @endif
-                                                @endif
+                                                <h3>
+                                                {{ $GetProducts[$index2]['ProductName'] }}
+                                                </h3>
+                                                <h4>
+                                                <sup>{{ $GetProducts[$index2]['ProductCurrency'] }}</sup>
+                                                {{ $GetProducts[$index2]['ProductPrice'] }}
+                                                </h4>
+                                                <p>{{ $GetProducts[$index2]['ProductDescription'] }}
+                                                </p>
+                                                </div> @endif
 
                                             @endfor
+
                                         </div>
-
-
 
                                     </div>
 
-                                    <script>
-                                        function changeEcomCategoryView() {
-                                            const boxCategoryMenu1 = document.getElementById("CategoryMenu1");
-                                            const boxCategoryMenu2 = document.getElementById("CategoryMenu2");
-                                            const ChangeCategory = document.getElementById("selChangeCategory").value;
-
-                                            if (ChangeCategory == "Agriculture") {
-                                                boxCategoryMenu1.style.display = "inline";
-                                                boxCategoryMenu2.style.display = "none";
-                                                //alert("Param:" + ChangeCategory);
-                                            }
-
-                                            if (ChangeCategory == "Hardware") {
-                                                boxCategoryMenu1.style.display = "none";
-                                                boxCategoryMenu2.style.display = "inline";
-                                                //alert("Param:" + ChangeCategory);
-                                            }
-
-                                        }
-
-                                        changeEcomCategoryView();
-                                        //alert("hello");
-
-                                    </script>
-
-                                </div>
-                            </div>
-
-                        </div>
-                    </section>
-
-                    <script>
-                        const observer = lozad();
-                        observer.observe();
-
-                    </script>
-
-
-                    <section id="ShareInvestment" style="display: none;">
-                        <div class="rad-body-wrapper rad-nav-min">
-                            <div class="container-fluid">
-
-
-
-                                <div class="list-group">
-                                    <button type="button" class="list-group-item list-group-item-action active"
-                                        style="background-color:purple;color:white">
-                                        <h1>Raw Material Brands</h1>
-                                    </button>
-
-                                    @for($i_product_sort = 0; $i_product_sort < count($ProductSort); $i_product_sort++)
-
-                                        <button onclick='window.location.assign("/user/rawmate/brand/{{ $ProductSort[$i_product_sort]["SubCategory"] }} ")' type="button" class="list-group-item list-group-item-action">
-                                            {{ $ProductSort[$i_product_sort]["SubCategory"] }}
-                                            <!--<span class="badge badge-dark badge-pill">R20114</span>-->
-                                        </button>    
+                                    @endif
+                                    @endif
 
                                     @endfor
-                                    <!--<button type="button" class="list-group-item list-group-item-action">Dapibus ac
+                                </div>
+
+                            </div>
+
+                            <div id="CategoryMenu2">
+
+
+
+                                <ul class="nav nav-pills my-ecom-nav">
+                                    @php
+
+                                    $navCounter = 0;
+
+                                    @endphp
+
+                                    @for ($index = 0; $index < count($ProductSort); $index++)
+                                        @if ($ProductSort[$index]['Category'] === 'Hardware') @if ($navCounter == 0)
+
+                                            <li class="nav-item active">
+                                            <a class="nav-link active" data-toggle="pill"
+                                            href="#catgegoryHardware{{ $index }}">
+                                            {{ $ProductSort[$index]['SubCategory'] }}
+                                            </a>
+                                            </li>
+
+                                            @php
+
+                                            $navCounter = $navCounter + 1;
+
+                                            @endphp
+
+                                        @else
+
+                                            <li class="nav-item">
+                                            <a class="nav-link" data-toggle="pill"
+                                            href="#catgegoryHardware{{ $index }}">
+                                            {{ $ProductSort[$index]['SubCategory'] }}
+                                            </a>
+                                            </li> @endif
+                                        @endif
+                                    @endfor
+
+                                </ul>
+
+
+                                <!-- Tab panes -->
+                                <div class="tab-content">
+
+                                    @php
+
+                                    $navCounter = 0;
+
+                                    @endphp
+
+                                    @for ($index = 0; $index < count($ProductSort); $index++)
+
+                                        @if ($ProductSort[$index]['Category'] === 'Hardware') @if ($navCounter == 0)
+
+                                            <div class="tab-pane active"
+                                            id="catgegoryHardware{{ $index }}">
+
+                                            <div class="row">
+
+                                            @for ($index2 = 0; $index2 < count($GetProducts); $index2++)
+
+                                                @if ($GetProducts[$index2]['SubCategory'] == $ProductSort[$index]['SubCategory'])
+
+                                                    <div class='col-sm-3'
+                                                    onclick="window.location.assign('/user/rawmate/product/{{ $GetProducts[$index2]['ProductName'] }}/{{ $GetProducts[$index2]['ProductId'] }}')">
+
+                                                    <img class="lozad my-ecom-img"
+                                                    data-src='{{ $GetProducts[$index2]['ProductImage'] }}'
+                                                    style='width:100%;height: auto;'
+                                                    alt='Product' />
+
+                                                    <h3>
+                                                    {{ $GetProducts[$index2]['ProductName'] }}
+                                                    </h3>
+                                                    <h4>
+                                                    <sup>{{ $GetProducts[$index2]['ProductCurrency'] }}</sup>
+                                                    {{ $GetProducts[$index2]['ProductPrice'] }}
+                                                    </h4>
+                                                    <p>{{ $GetProducts[$index2]['ProductDescription'] }}
+                                                    </p>
+
+                                                    </div> @endif
+
+                                                @endfor
+
+                                </div>
+
+                            </div>
+
+                            @php
+
+                            $navCounter = $navCounter + 1;
+
+                            @endphp
+
+                        @else
+
+                            <div class="tab-pane fade" id="catgegoryHardware{{ $index }}">
+
+                                <div class="row">
+
+                                    @for ($index2 = 0; $index2 < count($GetProducts); $index2++)
+
+                                        @if ($GetProducts[$index2]['SubCategory'] ==
+                                        $ProductSort[$index]['SubCategory']) <div
+                                        class='col-sm-3'
+                                        onclick="window.location.assign('/user/rawmate/product/{{ $GetProducts[$index2]['ProductName'] }}/{{ $GetProducts[$index2]['ProductId'] }}')">
+
+                                        <img class="lozad my-ecom-img"
+                                        data-src='{{ $GetProducts[$index2]['ProductImage'] }}'
+                                        style='width:100%;height: auto;'
+                                        alt='Product' />
+
+                                        <h3>
+                                        {{ $GetProducts[$index2]['ProductName'] }}
+                                        </h3>
+                                        <h4>
+                                        <sup>{{ $GetProducts[$index2]['ProductCurrency'] }}</sup>
+                                        {{ $GetProducts[$index2]['ProductPrice'] }}
+                                        </h4>
+                                        <p>{{ $GetProducts[$index2]['ProductDescription'] }}
+                                        </p>
+                                        </div> @endif
+
+                                    @endfor
+
+                                </div>
+
+                            </div>
+
+                            @endif
+                            @endif
+
+                            @endfor
+                        </div>
+
+
+
+        </div>
+
+        <script>
+            function changeEcomCategoryView() {
+                const boxCategoryMenu1 = document.getElementById("CategoryMenu1");
+                const boxCategoryMenu2 = document.getElementById("CategoryMenu2");
+                const ChangeCategory = document.getElementById("selChangeCategory").value;
+
+                if (ChangeCategory == "Agriculture") {
+                    boxCategoryMenu1.style.display = "inline";
+                    boxCategoryMenu2.style.display = "none";
+                    //alert("Param:" + ChangeCategory);
+                }
+
+                if (ChangeCategory == "Hardware") {
+                    boxCategoryMenu1.style.display = "none";
+                    boxCategoryMenu2.style.display = "inline";
+                    //alert("Param:" + ChangeCategory);
+                }
+
+            }
+
+            changeEcomCategoryView();
+            //alert("hello");
+
+        </script>
+
+    </div>
+    </div>
+
+    </div>
+    </section>
+
+    <script>
+        const observer = lozad();
+        observer.observe();
+
+    </script>
+
+
+    <section id="ShareInvestment" style="display: none;">
+        <div class="rad-body-wrapper rad-nav-min">
+            <div class="container-fluid">
+
+
+
+                <div class="list-group">
+                    <button type="button" class="list-group-item list-group-item-action active"
+                        style="background-color:purple;color:white">
+                        <h1>Raw Material Brands</h1>
+                    </button>
+
+                    @for ($i_product_sort = 0; $i_product_sort < count($ProductSort); $i_product_sort++)
+
+                        <button
+                            onclick='window.location.assign("/user/rawmate/brand/{{ $ProductSort[$i_product_sort]['SubCategory'] }} ")'
+                            type="button" class="list-group-item list-group-item-action">
+                            {{ $ProductSort[$i_product_sort]['SubCategory'] }}
+                            <!--<span class="badge badge-dark badge-pill">R20114</span>-->
+                        </button>
+
+                    @endfor
+                    <!--<button type="button" class="list-group-item list-group-item-action">Dapibus ac
                                         facilisis in <span class="badge badge-dark badge-pill">R20114</span> </button>
 
                                     <button type="button" class="list-group-item list-group-item-action">Morbi leo risus
@@ -870,157 +560,157 @@
                                     <button type="button" class="list-group-item list-group-item-action"
                                         disabled>Vestibulum at eros <span
                                             class="badge badge-dark badge-pill">R5014</span></button>-->
-                                </div>
+                </div>
 
 
 
 
-                            </div>
-                        </div>
-                    </section>
-
-                </main>
-                <!-- End: Top Navbar -->
-                <!-- Modal -->
-
+            </div>
         </div>
+    </section>
 
-        <div id="popup1" class="overlay" style="padding-bottom:10%">
+    </main>
+    <!-- End: Top Navbar -->
+    <!-- Modal -->
+
+    </div>
+
+    <div id="popup1" class="overlay" style="padding-bottom:10%">
+        <div class="popup">
+            <h2>Share Investment</h2>
+            <a class="close" href="#">&times;</a>
+            <div class="content">
+                <div class="form-group">
+                    <label for="exampleFormControlSelect1">BUDGET RANGES </label>
+                    <select class="form-control" id="exampleFormControlSelect1">
+                        <option>25000-50000 </option>
+                        <option>60000-100000</option>
+                        <option>110000-160000</option>
+                        <option>170000-200000</option>
+                        <option>200000+</option>
+                    </select>
+
+                    <a class="btn red"> Confirm Investment Amount</a>
+                </div>
+            </div>
+        </div>
+        <!-- REGIONS -->
+        <div id="popup2" class="overlay" style="padding-bottom:10%">
             <div class="popup">
-                <h2>Share Investment</h2>
+                <h2>REGIONS</h2>
                 <a class="close" href="#">&times;</a>
                 <div class="content">
                     <div class="form-group">
-                        <label for="exampleFormControlSelect1">BUDGET RANGES </label>
+                        <label for="exampleFormControlSelect1">Choose one </label>
                         <select class="form-control" id="exampleFormControlSelect1">
-                            <option>25000-50000 </option>
-                            <option>60000-100000</option>
-                            <option>110000-160000</option>
-                            <option>170000-200000</option>
-                            <option>200000+</option>
+                            <option>America</option>
+                            <option>South America </option>
+                            <option>South Africa </option>
+                            <option>West Africa</option>
+                            <option>East Africa</option>
+                            <option>Europe</option>
+                            <option>West Asia</option>
+                            <option>East Asia</option>
+                            <option>Australia</option>
                         </select>
 
                         <a class="btn red"> Confirm Investment Amount</a>
                     </div>
                 </div>
             </div>
-            <!-- REGIONS -->
-            <div id="popup2" class="overlay" style="padding-bottom:10%">
-                <div class="popup">
-                    <h2>REGIONS</h2>
-                    <a class="close" href="#">&times;</a>
-                    <div class="content">
-                        <div class="form-group">
-                            <label for="exampleFormControlSelect1">Choose one </label>
-                            <select class="form-control" id="exampleFormControlSelect1">
-                                <option>America</option>
-                                <option>South America </option>
-                                <option>South Africa </option>
-                                <option>West Africa</option>
-                                <option>East Africa</option>
-                                <option>Europe</option>
-                                <option>West Asia</option>
-                                <option>East Asia</option>
-                                <option>Australia</option>
-                            </select>
-
-                            <a class="btn red"> Confirm Investment Amount</a>
-                        </div>
-                    </div>
-                </div>
 
 
-                <!-- Mode -->
+            <!-- Mode -->
 
-                <script>
-                    $(function() {
+            <script>
+                $(function() {
 
-                        'use strict';
+                    'use strict';
 
-                        (function() {
-                            //부트스트랩 햄버거 클릭시 사이드바 on off
+                    (function() {
+                        //부트스트랩 햄버거 클릭시 사이드바 on off
 
-                            var aside = $('.side-nav'),
+                        var aside = $('.side-nav'),
 
-                                showAsideBtn = $('.show-side-btn'),
+                            showAsideBtn = $('.show-side-btn'),
 
-                                contents = $('#contents');
+                            contents = $('#contents');
 
-                            showAsideBtn.on("click", function() {
+                        showAsideBtn.on("click", function() {
 
-                                $("#" + $(this).data('show')).toggleClass('show-side-nav');
+                            $("#" + $(this).data('show')).toggleClass('show-side-nav');
 
-                                contents.toggleClass('margin');
+                            contents.toggleClass('margin');
 
-                            });
+                        });
 
-                            if ($(window).width() <= 767) {
+                        if ($(window).width() <= 767) {
 
-                                aside.addClass('show-side-nav');
+                            aside.addClass('show-side-nav');
+
+                        }
+                        $(window).on('resize', function() {
+
+                            if ($(window).width() > 767) {
+
+                                aside.removeClass('show-side-nav');
 
                             }
-                            $(window).on('resize', function() {
 
-                                if ($(window).width() > 767) {
+                        });
 
-                                    aside.removeClass('show-side-nav');
+                        // dropdown menu in the side nav
+                        var slideNavDropdown = $('.side-nav-dropdown');
 
-                                }
+                        $('.side-nav .categories li').on('click', function() {
 
-                            });
+                            $(this).toggleClass('lol').siblings().removeClass('lol');
 
-                            // dropdown menu in the side nav
-                            var slideNavDropdown = $('.side-nav-dropdown');
+                            if ($(this).hasClass('lol')) {
 
-                            $('.side-nav .categories li').on('click', function() {
+                                $(this).find('.side-nav-dropdown').slideToggle('fast');
 
-                                $(this).toggleClass('lol').siblings().removeClass('lol');
+                                $(this).siblings().find('.side-nav-dropdown').slideUp(
+                                    'fast');
 
-                                if ($(this).hasClass('lol')) {
+                            } else {
 
-                                    $(this).find('.side-nav-dropdown').slideToggle('fast');
+                                $(this).find('.side-nav-dropdown').slideUp('fast');
 
-                                    $(this).siblings().find('.side-nav-dropdown').slideUp(
-                                        'fast');
+                            }
 
-                                } else {
+                        });
 
-                                    $(this).find('.side-nav-dropdown').slideUp('fast');
+                        $('.side-nav .close-aside').on('click', function() {
 
-                                }
+                            $('#' + $(this).data('close')).addClass('show-side-nav');
 
-                            });
+                            contents.removeClass('margin');
 
-                            $('.side-nav .close-aside').on('click', function() {
+                        });
 
-                                $('#' + $(this).data('close')).addClass('show-side-nav');
-
-                                contents.removeClass('margin');
-
-                            });
-
-                        }());
+                    }());
 
 
 
 
 
-                        console.log(Chart.defaults.global);
+                    console.log(Chart.defaults.global);
 
 
 
 
-                    });
+                });
 
-                </script>
-                <!-- Start: Header Content -->
-                @include('/user/layout/footer-style-1')
-                <!-- End: Header Content -->
-                <!-- End: Dark footer with social media icons -->
+            </script>
+            <!-- Start: Header Content -->
+            @include('/user/layout/footer-style-1')
+            <!-- End: Header Content -->
+            <!-- End: Dark footer with social media icons -->
 
-                <script src="/assets1/js/bs-init.js"></script>
-                <script src="/assets1/js/Data-Table-with-Search-Sort-Filter-and-Zoom-using-TableSorter.js"></script>
-                <script src="/assets1/js/theme.js"></script>
+            <script src="/assets1/js/bs-init.js"></script>
+            <script src="/assets1/js/Data-Table-with-Search-Sort-Filter-and-Zoom-using-TableSorter.js"></script>
+            <script src="/assets1/js/theme.js"></script>
 </body>
 
 </html>
