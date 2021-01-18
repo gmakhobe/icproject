@@ -52,7 +52,7 @@
 
                 <!-- End: Jumbotron -->
 
-                <!-- Start: Nav -->
+             <!-- Start: Nav -->
                 <br>
                 <ul class="nav nav-justified nav-pills">
                     @for ($index = 0; $index < count($NewsSubjects); $index++)
@@ -280,7 +280,7 @@
 
                 </div>
 
-                <div class="row">
+                <!--<div class="row">
                     <div class="col-md-4 my-bg-color-grey p-3">
                         <h4 class="my-text-center">Where To Investment</h4>
                         <p class="my-text-color-white">Link One</p>
@@ -303,6 +303,7 @@
                         <p class="my-text-color-white">Link Four</p>
                     </div>
                 </div>
+            -->
 
             </div>
             <div class="col-md-"></div>
