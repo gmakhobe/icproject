@@ -43,16 +43,17 @@
             <div class="col-md-11">
                 <br>
                 <!-- Start: Jumbotron -->
-                <div class="code--css" style="height: 150px;">
+                <div class="code--css" style="height: 160px;">
                 <div style="padding: 2%"> 
-                    <h3>Plugin News</h3>
-                    <p class="my-text-color-white">Daily news</p>
+                    <h2 style="color:white;">Plugin News</h2>
+                    <h3 style="color:white;">Daily news</h3>
+                    <h4 style="color:white;"><i>Discover promising investing opportunities, by laying out money now to get more money back in the future</i></h4><br>
                 </div>
                 </div>
 
                 <!-- End: Jumbotron -->
 
-             <!-- Start: Nav -->
+                <!-- Start: Nav -->
                 <br>
                 <ul class="nav nav-justified nav-pills">
                     @for ($index = 0; $index < count($NewsSubjects); $index++)
@@ -81,7 +82,7 @@
                                 <div class="col-md-6 card my-bg-color-grey">
                                     <div class="card-body my-bg-color-grey">
                                         <img class="my-news-card-img-left" src="https://a.abcnews.com/images/Business/GTY_woman_finance_tk_131022_16x9_992.jpg"
-                                            alt="{{ $News['Headline'] }} News" style="width:100%; height: 200px;">
+                                            alt="{{ $News['Headline'] }} News" style="width:100%; height: 200px; border-radius: 20px 20px 20px 20px;">
                                             <div class="card-body">
                                             <h2 class="card-title my-text-color-white" style="color:purple;">{{ $News['Headline'] }}</h4>
                                             <h3 class="card-text my-text-color-white">
@@ -115,7 +116,7 @@
                                 <div class="col-md-6 card my-bg-color-grey">
                                     <div class="card-body my-bg-color-grey">
                                     <img class="my-news-card-img-left" src="https://www.investors.com/wp-content/uploads/2019/02/Stock-dataQuest-03-adobe.jpg"
-                                            alt="{{ $News['Headline'] }} News" style="width:100%; height: 200px;">
+                                            alt="{{ $News['Headline'] }} News" style="width:100%; height: 200px; border-radius: 20px 20px 20px 20px;">
                                             <div class="card-body">
                                             <h2 class="card-title my-text-color-white" style="color:purple;">{{ $News['Headline'] }}</h4>
                                             <h3 class="card-text my-text-color-white">
@@ -149,7 +150,7 @@
                                 <div class="col-md-6 card my-bg-color-grey">
                                     <div class="card-body my-bg-color-grey">
                                     <img class="my-news-card-img-left" src="https://news.efinancialcareers.com/binaries/content/gallery/efinancial-careers/articles/2018/03/banking-to-fintech_jamesteohart_GettyImages.jpg"
-                                            alt="{{ $News['Headline'] }} News" style="width:100%; height: 200px;">
+                                            alt="{{ $News['Headline'] }} News" style="width:100%; height: 200px; border-radius: 20px 20px 20px 20px;">
                                             <div class="card-body">
                                             <h2 class="card-title my-text-color-white" style="color:purple;">{{ $News['Headline'] }}</h4>
                                             <h3 class="card-text my-text-color-white">
@@ -183,7 +184,7 @@
                                 <div class="col-md-6 card my-bg-color-grey">
                                     <div class="card-body my-bg-color-grey">
                                     <img class="my-news-card-img-left" src="https://thumbs.dreamstime.com/z/review-financial-news-blue-toned-15287879.jpg"
-                                            alt="{{ $News['Headline'] }} News" style="width:100%; height: 200px;">
+                                            alt="{{ $News['Headline'] }} News" style="width:100%; height: 200px; border-radius: 20px 20px 20px 20px;">
                                         <div class="card-body">
                                             <h2 class="card-title my-text-color-white" style="color:purple;">{{ $News['Headline'] }}</h4>
                                             <h3 class="card-text my-text-color-white">
@@ -217,7 +218,7 @@
                                 <div class="col-md-6 card my-bg-color-grey">
                                     <div class="card-body my-bg-color-grey">
                                     <img class="my-news-card-img-left" src="https://www.ifin.usi.ch/assets/images/news/phd.jpg"
-                                            alt="{{ $News['Headline'] }} News" style="width:100%; height: 200px;">
+                                            alt="{{ $News['Headline'] }} News" style="width:100%; height: 200px; border-radius: 20px 20px 20px 20px;">
                                             <div class="card-body">
                                             <h2 class="card-title my-text-color-white" style="color:purple;">{{ $News['Headline'] }}</h4>
                                             <h3 class="card-text my-text-color-white">
@@ -280,7 +281,7 @@
 
                 </div>
 
-                <!--<div class="row">
+                <div class="row">
                     <div class="col-md-4 my-bg-color-grey p-3">
                         <h4 class="my-text-center">Where To Investment</h4>
                         <p class="my-text-color-white">Link One</p>
@@ -303,7 +304,6 @@
                         <p class="my-text-color-white">Link Four</p>
                     </div>
                 </div>
-            -->
 
             </div>
             <div class="col-md-"></div>

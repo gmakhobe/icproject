@@ -41,10 +41,12 @@
             <div class="col-md-11">
             <br><br>
                 <!-- Start: Jumbotron -->
-                <div class="code--css" style="height: 150px;">
+                <div class="code--css" style="height: 160px;">
                     <div style="padding: 2%">
-                        <h3>Plugin Podcasts and Radio</h3>
-                        <p class="my-text-color-white">Plugin Podcast and Radio for users!</p>
+                        <h2 style="color:white;">Plugin Podcasts and Radio</h2>
+                        <h3 style="color:white;">Plugin Podcast and Radio for users!</h3>
+                        <h4 style="color:white;"><i>Discover promising investing opportunities, by laying out money now to get more money back in the future</i></h4><br>
+                </div>
                     </div>
                 </div>
                 <br>

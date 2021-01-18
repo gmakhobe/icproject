@@ -90,185 +90,114 @@
 
             <div id="postsDiv">
                 <h4> Store-Room: Posts<h4>
-                        <div class="book-cards">
-                            <div class="book-card">
-                                <div class="content-wrapper">
-                                    <img src="https://randomuser.me/api/portraits/women/63.jpg" alt=""
-                                        class="book-card-img">
-                                    <div class="card-content">
-                                        <div class="book-name">Samantha Williams</div>
-                                        <div class="book-by">17 February 2020 08:34am</div>
-                                        <div class="book-sum card-sum">Traders have to learn these lessons the easy way
-                                            or they can learn them the hard way by losing their money. </div>
-                                    </div>
-                                </div>
-                                <div class="likes">
-                                    <div class="like-profile">
-                                        <img src="https://randomuser.me/api/portraits/women/63.jpg" alt=""
-                                            class="like-img">
-                                    </div>
-                                    <div class="like-profile">
-                                        <img src="https://pbs.twimg.com/profile_images/2452384114/noplz47r59v1uxvyg8ku.png"
-                                            alt="" class="like-img">
-                                    </div>
-                                    <div class="like-profile">
-                                        <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1400&q=80"
-                                            alt="" class="like-img">
-                                    </div>
-                                    <div class="like-name"><span>Jane Hayley</span> and<span> 5 other friends</span>
-                                        like this</div>
-                                </div>
-                            </div>
 
-                            <div class="book-card">
-                                <div class="content-wrapper">
-                                    <img src="https://pbs.twimg.com/profile_images/2452384114/noplz47r59v1uxvyg8ku.png"
-                                        alt="" class="book-card-img">
-                                    <div class="card-content">
-                                        <div class="book-name">Jane Hayley</div>
-                                        <div class="book-by">19 February 2020 11:08am</div>
-                                        <div class="book-sum card-sum">Day trading books can teach you about strategy,
-                                            risk management, psychology, and a great deal about technical analysis.
+                        <ul class="nav nav-tabs">
+                            <li class="nav-item">
+                                <a class="nav-link active" data-toggle="tab" href="#my-home">News</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-toggle="tab" href="#my-menu1">TV Channel</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-toggle="tab" href="#my-menu2">Podcast</a>
+                            </li>
+                        </ul>
+
+                        <!-- Tab panes -->
+                        <div class="tab-content">
+                            <div class="tab-pane container active" id="my-home">
+
+                                <div class="row">
+
+                                    @for ($index = 0; $index < count($NewPost); $index++)
+                                        <div class="col-sm-3">
+                                            <img data-src="{{ $NewPost[$index]->MainBunner }}" class="lozad">
+                                            <h3>{{ $NewPost[$index]->Heading }}</h3>
+                                            <p>{{ $NewPost[$index]->Subject }} &sdot;
+                                                {{ substr($NewPost[$index]->News, 0, 80) }}</p>
+                                            <p>{{ $NewPost[$index]->PublishedDate }}</p>
+
+                                            <div class="btn-group-vertical">
+                                                <button type="button" class="btn btn-primary">Edit Post</button>
+                                                <button
+                                                    onclick="window.location.assign('/user/news/read/{{ $NewPost[$index]->Heading }}/{{ $NewPost[$index]->NewsId }}')"
+                                                    type="button" class="btn btn-default">View Post</button>
+                                            </div>
                                         </div>
-                                    </div>
+                                    @endfor
+
                                 </div>
-                                <div class="likes">
-                                    <div class="like-profile">
-                                        <img src="https://english.cdn.zeenews.com/sites/default/files/2017/11/17/639329-indian-men.jpg"
-                                            alt="" class="like-img">
-                                    </div>
-                                    <div class="like-profile">
-                                        <img src="https://pbs.twimg.com/profile_images/2452384114/noplz47r59v1uxvyg8ku.png"
-                                            alt="" class="like-img">
-                                    </div>
-                                    <div class="like-profile">
-                                        <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1400&q=80"
-                                            alt="" class="like-img">
-                                    </div>
-                                    <div class="like-name"><span>Shivah Maharaj</span> and<span> 6 other friends</span>
-                                        like this</div>
-                                </div>
+
                             </div>
+                            <div class="tab-pane container fade" id="my-menu1">
 
+                                <div class="row">
+                                    <div class="col-sm-12">
 
-                            <div class="book-card">
-                                <div class="content-wrapper">
-                                    <img src="https://goodasiangirl.files.wordpress.com/2011/05/prettybeautifulasianmodelwomeninschooluniform2528182529.jpg"
-                                        alt="" class="book-card-img">
-                                    <div class="card-content">
-                                        <div class="book-name">Britney Tsu</div>
-                                        <div class="book-by">28 February 2020 06:40am</div>
-                                        <div class="book-sum card-sum">Complacency is the antithesis of success. And no
-                                            one becomes rich by doing 'just enough.' </div>
+                                        @for ($index = 0; $index < count($VideoPost); $index++)
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                    <video style="width:100%;height: 250px;"
+                                                        class="my-news-card-video-news-view" controls
+                                                        poster="{{ $VideoPost[$index]->VideoBanner }}">
+                                                        <source src="{{ $VideoPost[$index]->VideoLink }}"
+                                                            type="video/mp4" />
+                                                    </video>
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <h3>{{ $VideoPost[$index]->VideoTitle }}</h3>
+                                                    <p>{{ $VideoPost[$index]->Subject }} &sdot;
+                                                        {{ substr($VideoPost[$index]->VideoDescription, 0, 80) }}</p>
+                                                    <p>{{ $VideoPost[$index]->PublishedDate }}</p>
+
+                                                    <div class="btn-group-vertical">
+                                                        <button type="button" class="btn btn-primary">Edit Post</button>
+                                                        <button
+                                                            onclick="window.location.assign('/user/news/video/{{ $VideoPost[$index]->VideoTitle }}/{{ $VideoPost[$index]->NVId }}')"
+                                                            type="button" class="btn btn-default">View Post</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        @endfor
                                     </div>
                                 </div>
-                                <div class="likes">
-                                    <div class="like-profile">
-                                        <img src="https://randomuser.me/api/portraits/women/63.jpg" alt=""
-                                            class="like-img">
-                                    </div>
-                                    <div class="like-profile">
-                                        <img src="https://pbs.twimg.com/profile_images/2452384114/noplz47r59v1uxvyg8ku.png"
-                                            alt="" class="like-img">
-                                    </div>
-                                    <div class="like-profile">
-                                        <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1400&q=80"
-                                            alt="" class="like-img">
-                                    </div>
-                                    <div class="like-name"><span>Samantha Williams</span> and<span> 3 other
-                                            friends</span> like this</div>
-                                </div>
+
                             </div>
-
-
-                            <div class="book-card">
-                                <div class="content-wrapper">
-                                    <img src="https://www.singleblackmale.org/wp-content/uploads/2013/08/black-man1.jpg"
-                                        alt="" class="book-card-img">
-                                    <div class="card-content">
-                                        <div class="book-name">Thabo Sehume</div>
-                                        <div class="book-by">15 March 2020 15:34pm</div>
-                                        <div class="book-sum card-sum">Jack Schwager has put together two very popular
-                                            books on trading: "Market Wizards" and "The New Market Wizards."</div>
-                                    </div>
-                                </div>
-                                <div class="likes">
-                                    <div class="like-profile">
-                                        <img src="https://randomuser.me/api/portraits/women/63.jpg" alt=""
-                                            class="like-img">
-                                    </div>
-                                    <div class="like-profile">
-                                        <img src="https://pbs.twimg.com/profile_images/2452384114/noplz47r59v1uxvyg8ku.png"
-                                            alt="" class="like-img">
-                                    </div>
-                                    <div class="like-profile">
-                                        <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1400&q=80"
-                                            alt="" class="like-img">
-                                    </div>
-                                    <div class="like-name"><span>Michaela Jackson</span> and<span> 11 other
-                                            friends</span> like this</div>
-                                </div>
-                            </div>
-
-
-                            <div class="book-card">
-                                <div class="content-wrapper">
-                                    <img src="https://english.cdn.zeenews.com/sites/default/files/2017/11/17/639329-indian-men.jpg"
-                                        alt="" class="book-card-img">
-                                    <div class="card-content">
-                                        <div class="book-name">Shivah Maharaj</div>
-                                        <div class="book-by">20 March 2020 19:34pm</div>
-                                        <div class="book-sum card-sum">In financial markets, it's no different.If you
-                                            want to become a successful trader - or take your day trading from a
-                                            beginner to the professional level</div>
-                                    </div>
-                                </div>
-                                <div class="likes">
-                                    <div class="like-profile">
-                                        <img src="https://www.singleblackmale.org/wp-content/uploads/2013/08/black-man1.jpg"
-                                            alt="" class="like-img">
-                                    </div>
-                                    <div class="like-profile">
-                                        <img src="https://pbs.twimg.com/profile_images/2452384114/noplz47r59v1uxvyg8ku.png"
-                                            alt="" class="like-img">
-                                    </div>
-                                    <div class="like-profile">
-                                        <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1400&q=80"
-                                            alt="" class="like-img">
-                                    </div>
-                                    <div class="like-name"><span>Thabo Sehume</span> and<span> 3 other friends</span>
-                                        like this</div>
-                                </div>
-                            </div>
-
+                            <div class="tab-pane container fade" id="my-menu2">...</div>
                         </div>
+
             </div>
 
             <div id="productsDiv">
                 <h4> Store-Room: Products<h4>
                         <div class="">
 
-                          <div class="row">
+                            <div class="row">
 
-                            @for ($index = 0; $index < count($Products); $index++)
+                                @for ($index = 0; $index < count($Products); $index++)
 
-                                <div class="card col-sm-3">
-                                    <div class="card-body">
+                                    <div class="card col-sm-3">
+                                        <div class="card-body">
 
-                                      <img style="width:100%; height:310px;" class="lozad"
-                                        data-src="{{ $Products[$index]->ProductImage }}" alt="" class="product-img">
+                                            <img style="width:100%; height:310px;" class="lozad"
+                                                data-src="{{ $Products[$index]->ProductImage }}" alt=""
+                                                class="product-img">
 
-                                      <h5>{{ $Products[$index]->ProductName }}</h5>
-                                      <h3>({{ $Products[$index]->ProductCurrency }}) {{ $Products[$index]->ProductPrice }}</h3>
-                                      <p><strong>Description: </strong> {{ $Products[$index]->ProductDescription }}</p>
-                                      <p><strong>Quantity: </strong> {{ $Products[$index]->ProductQuantity }}</p>
+                                            <h5>{{ $Products[$index]->ProductName }}</h5>
+                                            <h3>({{ $Products[$index]->ProductCurrency }})
+                                                {{ $Products[$index]->ProductPrice }}
+                                            </h3>
+                                            <p><strong>Description: </strong>
+                                                {{ $Products[$index]->ProductDescription }}
+                                            </p>
+                                            <p><strong>Quantity: </strong> {{ $Products[$index]->ProductQuantity }}</p>
 
+                                        </div>
                                     </div>
-                                </div>
 
-                            @endfor
+                                @endfor
 
-                          </div>
+                            </div>
 
                         </div>
             </div>
@@ -437,7 +366,6 @@
         </div>
 
         <script>
-
             const observer = lozad();
             observer.observe();
 

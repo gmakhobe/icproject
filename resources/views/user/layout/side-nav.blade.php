@@ -107,22 +107,13 @@
 
         </div>
 
-        <ul class="categories">
-            <!--<div style="padding-left: 30px;">
-                <i class="fab fa-laravel"></i>
-                <span
-                    style="letter-spacing: 4px; color: rgba(190,184,184,0.9); color: white; font-size: 20px;">Following:
-                    365
-                    <!-- $FollowingCount -- >
-                </span><br>
-                <i class="fab fa-laravel"></i>
-                <span
-                    style="letter-spacing: 4px; color: rgba(190,184,184,0.9); color: white; font-size: 20px;">Followers:
-                    544
-                    <!-- $FollowerCount - -> 
-                </span>
+      <ul class="categories">
+      <div style="padding-left: 30px;">
+                    <!-- <i class="fab fa-laravel"></i>
+                    <span style="letter-spacing: 4px; color: rgba(190,184,184,0.9); color: white; font-size: 20px;">Icons: 365  $FollowingCount</span><br>
+                    <i class="fab fa-laravel"></i>
+                    <span style="letter-spacing: 4px; color: rgba(190,184,184,0.9); color: white; font-size: 20px;">Allies: 544 $FollowerCount </span>-->
             </div>
-          -->
 
             <li><i class="fa fa-home fa-fw" aria-hidden="true"></i>
                 <a href="/user/dashboard">Home</a>
@@ -143,12 +134,8 @@
             </li>
 
 
-            <li>
-                <i class="fa fa-support fa-fw"></i>
-                <a href="/user/rawmate">Raw-Mate</a>
-                    
+            <li><i class="fa fa-support fa-fw"></i><a href="/user/rawmate"> Raw-Mate</a>
                 <ul class="side-nav-dropdown">
-                    <li><a href="/user/rawmate"> Raw-Mate</a></li>
                     <li><a href="#">Seller Profile</a></li>
                     <li><a href="#">Timeline</a></li>
                 </ul>
@@ -207,7 +194,10 @@
                     </button>
 
 
-                </div>
+          </div>
+
+
+          <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
 
                 <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
 
@@ -344,7 +334,24 @@
                         <li><a href="#"><i data-show="show-side-navigation1" class="fa fa-bars show-side-btn"></i></a>
                         </li>
 
-                    </ul>
+            
+          </div>
+        </div>
+      </nav>
+      <!-- <footer>
+        <nav style="height: 80px;background: linear-gradient(135deg,#9526a9 5% ,#23212f 95%); color: #ffffff;">            
+                <div style="padding-top: 1%; padding-left: 25%;">
+                        <span style="letter-spacing: 3px;color: rgba(190,184,184,0.9); color: white;">&nbsp;&nbsp;&nbsp;&nbsp; Legal Aspects |</span>
+                        <span style="letter-spacing: 3px;color: rgba(190,184,184,0.9); color: white;">&nbsp;Disclosure |</span>
+                        <span style="letter-spacing: 3px;color: rgba(190,184,184,0.9); color: white;">&nbsp;Privacy |</span>
+                        <span style="letter-spacing: 3px;color: rgba(190,184,184,0.9); color: white;">&nbsp;Cookie Preference | </span>
+                        <span style="letter-spacing: 3px;color: rgba(190,184,184,0.9); color: white;">&nbsp;Contacts </span>
+                </div>
+            </nav>
+
+
+
+    </footer> -->
 
                     < </div>
                 </div>

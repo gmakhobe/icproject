@@ -14,6 +14,8 @@
     <link rel="stylesheet" href="{{ asset('assets1/css/Circle-Nav.css') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
     <link rel="stylesheet" href="{{ asset('assets1/css/styles.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets1/css/homepagetiles.css') }}">
+
 </head>
 
 <body>
@@ -37,9 +39,9 @@
 
                 <!--
                     <i class="fab fa-laravel"></i>
-                    <span style="letter-spacing: 3px;color: rgba(190,184,184,0.9); color: white;">Following: 365 <!-- $FollowingCount </span><br>-->
-                <!--<i class="fab fa-laravel"></i>
-                    <span style="letter-spacing: 3px;color: rgba(190,184,184,0.9); color: white;">Followers: 544 <!-- $FollowerCount </span>-->
+                    <span style="letter-spacing: 3px;color: rgba(190,184,184,0.9); color: white;">Icons: 365  $FollowingCount --></span><br>
+                    <!-- <i class="fab fa-laravel"></i>
+                    <span style="letter-spacing: 3px;color: rgba(190,184,184,0.9); color: white;">Allies: 544 <!-- $FollowerCount --></span>
             </div>
 
             <div style="padding-top: 75px; padding-left: 200px;">
@@ -50,6 +52,14 @@
                 </form>
             </div>
 
+            <div>
+                    <span style="letter-spacing: 3px;color: rgba(190,184,184,0.9); color: white;">&nbsp;&nbsp;&nbsp;&nbsp; Our Services |</span>
+                    <span style="letter-spacing: 3px;color: rgba(190,184,184,0.9); color: white;">&nbsp;About Us |</span>
+                    <span style="letter-spacing: 3px;color: rgba(190,184,184,0.9); color: white;">&nbsp;Overview |</span>
+                    <span style="letter-spacing: 3px;color: rgba(190,184,184,0.9); color: white;">&nbsp;Partners</span>
+            </div>
+           
+           
             <div class="collapse navbar-collapse" id="navcol-1"></div>
             <div class="dropdown no-arrow" style="color: rgb(186,40,180);"><a class="dropdown-toggle"
                     data-toggle="dropdown" aria-expanded="false" href="#" style="color: rgb(172,52,183);">
@@ -83,105 +93,83 @@
         </div>
     </nav>
 
-    <!-- Start: Side By Side Section -->
-    <section class="main-dashboard">
-        <hgroup class="heading">
-            <br>
-            <h1>Welcome Back, {{ $NameAndSurname }}</h1>
-            <h3>Just keep learning. Make new opportunities.</h3>
-        </hgroup>
+<section class="hero-unit">
 
-        <div class="psd-line pos-rel" style="position: relative;width: 1003px; padding-left: 250px;">
-            <!-- Start: Circle Nav -->
-            <section class="iq-features">
-                <div class="row align-items-center">
-                    <div class="col-lg-3 col-md-12"></div>
-                    <div class="col-lg-6 col-md-12">
-                        <div class="holderCircle">
-                            <div class="round"></div>
-                            <div class="dotCircle">
-                                <a href="/user/investment">
-                                    <span class="itemDot itemDot1" data-tab="1">
-                                        <i class="fa fa-chart-line"></i>
-                                        <span class="forActive"></span>
-                                    </span>
-                                </a>
-                                <a href="/user/rawmate">
-                                    <span class="itemDot itemDot3" data-tab="3">
-                                        <i class="fab fa-envira"></i>
-                                        <span class="forActive"></span>
-                                    </span>
-                                </a>
-                                <a href="/user/profile">
-                                    <span class="itemDot itemDot4" data-tab="4">
-                                        <i class="fa fa-user"></i>
-                                        <span class="forActive"></span>
-                                    </span>
-                                </a>
-                                <a href="/user/storeroom">
-                                    <span class="itemDot itemDot5" data-tab="5">
-                                        <i class="fa fa-upload"></i>
-                                        <span class="forActive"></span>
-                                    </span>
-                                </a>
-                                <a href="/user/create">
-                                    <span class="itemDot itemDot6" data-tab="6">
-                                        <i class="fa fa-plus-square"></i>
-                                        <span class="forActive"></span>
-                                    </span>
-                                </a>
-                                <a href="/user/news">
-                                    <span class="itemDot itemDot7" data-tab="7">
-                                        <i class="fa fa-newspaper"></i>
-                                        <span class="forActive"></span>
-                                    </span>
-                                </a>
-                            </div>
-                            <div class="contentCircle">
-                                <div class="CirItem title-box active CirItem1">
-                                    <h2 class="title"><span>INVESTMENTS</span></h2>
-                                    <i class="fa fa-clock-o" style="color:purple;"></i>
-                                </div>
-                                <div class="CirItem title-box CirItem3">
-                                    <h2 class="title"><span>RAW-MAT</span></h2>
-                                    <i class="fa fa-user" style="color:purple;"></i>
-                                </div>
-                                <div class="CirItem title-box CirItem4">
-                                    <h2 class="title"><span>PROFILE</span></h2>
-                                    <i class="fa fa-tags" style="color:purple;"></i>
-                                </div>
-                                <div class="CirItem title-box CirItem5">
-                                    <h2 class="title"><span>STORE-ROOM</span></h2>
-                                    <i class="fa fa-upload" style="color:purple;"></i>
-                                </div>
-                                <div class="CirItem title-box CirItem6">
-                                    <h2 class="title"><span>CREATE</span></h2>
-                                    <i class="fa fa-briefcase" style="color:purple;"></i>
-                                </div>
-                                <div class="CirItem title-box CirItem7">
-                                    <h2 class="title"><span>News</span></h2>
-                                    <i class="fa fa-briefcase" style="color:purple;"></i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-12"></div>
+  <div class="row" style="padding-left: 5%;">
+    <div class="large-12 columns">
+      <hgroup>
+        <h1>Welcome Back, {{ $NameAndSurname }}</h>
+        <h3>Just keep learning. Make new opportunities.</h3>
+      </hgroup>
+
+    <div style="padding-left: 30%;">
+        <ul class="small-block-grid-2 medium-block-grid-3 flip-cards" >
+
+            <li>
+                <div class="large button card-front">
+                    <a href="/user/investment">INVESTMENT</a>
+                    <i class="fa fa-chart-line card-icon"></i>
+                </i>
                 </div>
-        </div>
-    </section>
-    <!-- End: Circle Nav -->
-    <!-- </div>
-        </div>
-    </section> -->
-    <!-- End: Side By Side Section -->
-    <!-- Start: Footer with social media icons -->
-    <footer>
+            </li>
 
-        <div class="col-md-6 col-lg-8 mx-auto">
-            <!-- Start: paragraph -->
-            <p class="copyright text-muted text-center">PLUGIN &copy; 2020 </p>
-            <!-- End: paragraph -->
-        </div>
+            <li>
+                <div class="large button card-front">
+                    <a href="/user/rawmate">RAW-MATE</a>
+                    <i class="fa fa-pencil-square-o card-icon"></i>
+                </div>
+            </li>
+
+            <li>
+                <div class="large button card-front">
+                    <a href="/user/storeroom">STORE-ROOM</a>
+                    <i class="fa fa-paper-plane-o card-icon"></i>
+                </div>
+            </li>
+
+            <li>
+                <div class="large button card-front">
+                    <a href="/user/new">NEWS FEED</a>
+                    <i class="fa fa-map-o card-icon"></i>
+                </div>
+            </li>
+
+            <li>
+                <div class="large button card-front">
+                    <a href="/user/create">CREATE</a>
+                    <i class="fa fa-language card-icon"></i>
+                </div>
+            </li>
+
+            <li>
+                <div class="large button card-front">
+                    <a href="/user/profile">PROFILE</a>
+                    <i class="fa fa-users card-icon"></i>
+                </div>
+            </li>
+
+        </ul>
+    </div>
+   
+    </div>
+      <!-- end .clients -->
+    </div>
+
+  </div>
+</section>
+
+    <footer>
+        <nav style="height: 80px;background: linear-gradient(135deg,#9526a9 5% ,#23212f 95%); color: #ffffff;">            
+                <div style="padding-top: 1%; padding-left: 25%;">
+                        <span style="letter-spacing: 3px;color: rgba(190,184,184,0.9); color: white;">&nbsp;&nbsp;&nbsp;&nbsp; Legal Aspects |</span>
+                        <span style="letter-spacing: 3px;color: rgba(190,184,184,0.9); color: white;">&nbsp;Disclosure |</span>
+                        <span style="letter-spacing: 3px;color: rgba(190,184,184,0.9); color: white;">&nbsp;Privacy |</span>
+                        <span style="letter-spacing: 3px;color: rgba(190,184,184,0.9); color: white;">&nbsp;Cookie Preference | </span>
+                        <span style="letter-spacing: 3px;color: rgba(190,184,184,0.9); color: white;">&nbsp;Contacts </span>
+                </div>
+            </nav>
+
+
 
     </footer>
     <!-- End: Footer with social media icons -->

@@ -31,10 +31,11 @@
     <link rel="stylesheet" href="/assets1/css/awards.less">
     <link rel="stylesheet" href="/assets1/css/awardsNav.css">
     <link rel="stylesheet/less" type="text/css" href="/assets1/css/awards.less" />
-    
+    <link rel="stylesheet" href="/assets1/css/indicatorsAndStrategies.css">
+
 </head>
 
-<body onload="onload">
+<body onload="onload" style="background-color: lightgray;">
     <!-- Start: Vertical Left-SideBar by Jigar Mistry -->
     @include('/user/layout/side-nav')
     <!-- End: Vertical Left-SideBar by Jigar Mistry -->
@@ -42,15 +43,24 @@
 
     <div class="container">
 
-        <div class="row">
+        <div class="row" >
 
             <div class="col-md-1"></div>
-            <div class="col-md-11 card">
+            <div class="col-md-11 card" >
 
-                <div class="card-body">
+                <div class="card-body" >
+                <nav> <!-- The nav link semantically marks your main site navigation -->
+                    <ul>
+                        <li>
+                        <a href="/user/investment/aboutinvestments">About Investments</a></li>
+                        <li><a href="/user/stockbrokers"  style="color: purple; font-size: 15px;">Start Trading</a></li>
+                        <li><a href="/user/smallcapstock"  style="color: darkblue; font-size: 15px;">Small Cap Stocks</a></li>
 
-                    <h1>Industries</h1>
-                    <h2 class="text-white">Select Industry</h2>
+                    </ul>
+                </nav>
+
+                    <h1>Investments</h1>
+                    <h4 class="text-white"><i>Discover promising investing opportunities, by laying out money now to get more money back in the future</i></h4><br>
 
                     <div class="containerr">
                         <div class="tabs">
@@ -147,7 +157,7 @@
                     </div>
                     <br><br>
 
-                    <div class="row my-text-color-white">
+                    <div class="row my-text-color-white" style="background-color:white; border-radius: 2%;">
 
                         <div class="col-md-12" id="company">
                             <table class="table table-sm table-hover">
@@ -168,18 +178,18 @@
                                                     <div class="modal-content my-bg-color-grey">
 
                                                         <!-- Modal Header -->
-                                                        <div class="modal-header">
+                                                        <div class="modal-header" style="background-color: gray;">
                                                             <center>
-                                                                <h4 class="my-text-color-white">
+                                                                <h2 class="my-text-color-white" style="color: white;">
                                                                     {{ $CompanyInd['Name'] }} Sector Companies
-                                                                </h4>
+                                                                </h2>
                                                             </center>
                                                             <button type="button" class="close"
                                                                 data-dismiss="modal">&times;</button>
                                                         </div>
 
                                                         <!-- Modal body -->
-                                                        <div class="modal-body ">
+                                                        <div class="modal-body" style="background-color: gray;">
                                                             @foreach ($CompanyIndustriesCompanies as $CompanyIndustriesCompany)
 
                                                                 @for ($index = 0; $index < count($CompanyIndustriesCompany); $index++)
@@ -188,7 +198,7 @@
                                                                         <div class="list-group ">
                                                                             <a href="/user/investment/company/{{ $CompanyIndustriesCompany[$index]['Symbol'] }}"
                                                                                 class="list-group-item list-group-item-action my-bg-color-grey">
-                                                                                <span
+                                                                                <span style="font-size: 18px;"
                                                                                     class="my-text-color-white">{{ $CompanyIndustriesCompany[$index]['Company'] }},
                                                                                     {{ $CompanyIndustriesCompany[$index]['Symbol'] }}<br>
                                                                                     <ul class="pagination">
@@ -260,16 +270,16 @@
                                                     <div class="modal-content my-bg-color-grey">
 
                                                         <!-- Modal Header -->
-                                                        <div class="modal-header">
-                                                            <h4 class="modal-title text-center my-text-color-white">
+                                                        <div class="modal-header" style="background-color: gray;">
+                                                            <h2 class="modal-title text-center my-text-color-white" style="color:white;"> 
                                                                 {{ $ServiceInd['Name'] }} Sector Services
-                                                            </h4>
+                                                            </h2>
                                                             <button type="button" class="close"
                                                                 data-dismiss="modal">&times;</button>
                                                         </div>
 
                                                         <!-- Modal body -->
-                                                        <div class="modal-body ">
+                                                        <div class="modal-body " style="background-color: gray;">
                                                             @foreach ($CompanyIndustriesServices as $CompanyIndustriesService)
 
                                                                 @for ($index = 0; $index < count($CompanyIndustriesService); $index++)
@@ -278,7 +288,7 @@
                                                                         <div class="list-group ">
                                                                             <a href="/user/investment/service/{{ $CompanyIndustriesService[$index]['Service'] }}"
                                                                                 class="list-group-item list-group-item-action my-bg-color-grey">
-                                                                                <span class="my-text-color-white">
+                                                                                <span class="my-text-color-white" style="font-size:18px;">
                                                                                     {{ $CompanyIndustriesService[$index]['Service'] }}
                                                                                 </span>
                                                                             </a>
@@ -291,7 +301,7 @@
                                                         </div>
 
                                                         <!-- Modal footer -->
-                                                        <div class="modal-footer">
+                                                        <div class="modal-footer" style="background-color: gray;">
                                                             <button type="button" class="btn btn-secondary"
                                                                 data-dismiss="modal">Close</button>
                                                         </div>
@@ -326,7 +336,7 @@
                                                     <div class="modal-content my-bg-color-grey">
 
                                                         <!-- Modal Header -->
-                                                        <div class="modal-header">
+                                                        <div class="modal-header" style="background-color: gray;">
                                                             <h4 class="modal-title text-center my-text-color-white">
                                                                 {{ $EventInd['Name'] }}
                                                                 Event
@@ -336,7 +346,7 @@
                                                         </div>
 
                                                         <!-- Modal body -->
-                                                        <div class="modal-body ">
+                                                        <div class="modal-body " style="background-color: gray;">
                                                             @foreach ($CompanyIndustriesEvents as $CompanyIndustriesEvent)
 
                                                                 @for ($index = 0; $index < count($CompanyIndustriesEvent); $index++)
@@ -345,7 +355,7 @@
                                                                         <div class="list-group ">
                                                                             <a href="/user/investment/event/{{ $CompanyIndustriesEvent[$index]['Event'] }}"
                                                                                 class="list-group-item list-group-item-action my-bg-color-grey">
-                                                                                <span class="my-text-color-white">
+                                                                                <span class="my-text-color-white"  style="font-size:18px;">
                                                                                     {{ $CompanyIndustriesEvent[$index]['Event'] }}
                                                                                 </span>
                                                                             </a>
@@ -358,7 +368,7 @@
                                                         </div>
 
                                                         <!-- Modal footer -->
-                                                        <div class="modal-footer">
+                                                        <div class="modal-footer" style="background-color: gray;">
                                                             <button type="button" class="btn btn-secondary"
                                                                 data-dismiss="modal">Close</button>
                                                         </div>
@@ -394,7 +404,7 @@
                                                     <div class="modal-content my-bg-color-grey">
 
                                                         <!-- Modal Header -->
-                                                        <div class="modal-header">
+                                                        <div class="modal-header" style="background-color: gray;">
                                                             <h4 class="modal-title text-center my-text-color-white">
                                                                 {{ $HedgeFundInd['Name'] }} Sector Hedge Fund
                                                             </h4>
@@ -403,7 +413,7 @@
                                                         </div>
 
                                                         <!-- Modal body -->
-                                                        <div class="modal-body ">
+                                                        <div class="modal-body " style="background-color: gray;">
                                                             @foreach ($CompanyIndustriesHedgeFunds as $CompanyIndustriesHedgeFund)
 
                                                                 @for ($index = 0; $index < count($CompanyIndustriesHedgeFund); $index++)
@@ -412,8 +422,8 @@
                                                                         <div class="list-group ">
                                                                             <a href="/user/investment/hedgefund/{{ $CompanyIndustriesHedgeFund[$index]['HedgeFund'] }}"
                                                                                 class="list-group-item list-group-item-action my-bg-color-grey">
-                                                                                <span
-                                                                                    class="my-text-color-white">{{ $CompanyIndustriesHedgeFund[$index]['HedgeFund'] }}</span>
+                                                                                <span 
+                                                                                    class="my-text-color-white" style="font-size:18px;">{{ $CompanyIndustriesHedgeFund[$index]['HedgeFund'] }}</span>
                                                                             </a>
                                                                         </div>
                                                                     @endif
@@ -424,7 +434,7 @@
                                                         </div>
 
                                                         <!-- Modal footer -->
-                                                        <div class="modal-footer">
+                                                        <div class="modal-footer" style="background-color: gray;">
                                                             <button type="button" class="btn btn-secondary"
                                                                 data-dismiss="modal">Close</button>
                                                         </div>
@@ -471,7 +481,7 @@
                                                     <div class="modal-content my-bg-color-grey">
 
                                                         <!-- Modal Header -->
-                                                        <div class="modal-header">
+                                                        <div class="modal-header"  style="background-color: gray;">
                                                             <h4 class="modal-title text-center my-text-color-white">
                                                                 {{ $StartUpIndexInd['Name'] }} Sector Start-Up Index
                                                             </h4>
@@ -480,7 +490,7 @@
                                                         </div>
 
                                                         <!-- Modal body -->
-                                                        <div class="modal-body ">
+                                                        <div class="modal-body "  style="background-color: gray;">
                                                             @foreach ($CompanyIndustriesStartUpIndex as $CompanyIndustryStartUpIndex)
 
                                                                 @for ($index = 0; $index < count($CompanyIndustryStartUpIndex); $index++)
@@ -489,7 +499,7 @@
                                                                         <div class="list-group ">
                                                                             <a href="/user/investment/startupindex/{{ $CompanyIndustryStartUpIndex[$index]['Service'] }}"
                                                                                 class="list-group-item list-group-item-action my-bg-color-grey">
-                                                                                <span
+                                                                                <span style="font-size:18px;"
                                                                                     class="my-text-color-white">{{ $CompanyIndustryStartUpIndex[$index]['Service'] }}</span>
                                                                             </a>
                                                                         </div>
@@ -501,7 +511,7 @@
                                                         </div>
 
                                                         <!-- Modal footer -->
-                                                        <div class="modal-footer">
+                                                        <div class="modal-footer"  style="background-color: gray;">
                                                             <button type="button" class="btn btn-secondary"
                                                                 data-dismiss="modal">Close</button>
                                                         </div>
@@ -538,7 +548,7 @@
                                                     <div class="modal-content my-bg-color-grey">
 
                                                         <!-- Modal Header -->
-                                                        <div class="modal-header">
+                                                        <div class="modal-header"  style="background-color: gray;">
                                                             <h4 class="modal-title text-center">
                                                                 {{ $NewsChannelsInd['Name'] }} Sector news Channel
                                                             </h4>
@@ -547,7 +557,7 @@
                                                         </div>
 
                                                         <!-- Modal body -->
-                                                        <div class="modal-body ">
+                                                        <div class="modal-body "  style="background-color: gray;">
                                                             @foreach ($CompanyIndustriesNewsChannels as $CompanyIndustriesNewsChannel)
 
                                                                 @for ($index = 0; $index < count($CompanyIndustriesNewsChannel); $index++)
@@ -555,7 +565,7 @@
                                                                     @if ($NewsChannelsInd['Name'] == $CompanyIndustriesNewsChannel[$index]['Industry'])
                                                                         <div class="list-group ">
                                                                             <a href="/user/investment/newschannel/{{ $CompanyIndustriesNewsChannel[$index]['NewsChannel'] }}"
-                                                                                class="list-group-item list-group-item-action my-bg-color-grey">
+                                                                                class="list-group-item list-group-item-action my-bg-color-grey" style="font-size:18px;">
                                                                                 {{ $CompanyIndustriesNewsChannel[$index]['NewsChannel'] }}
                                                                             </a>
                                                                         </div>
@@ -567,7 +577,7 @@
                                                         </div>
 
                                                         <!-- Modal footer -->
-                                                        <div class="modal-footer">
+                                                        <div class="modal-footer"  style="background-color: gray;">
                                                             <button type="button" class="btn btn-secondary"
                                                                 data-dismiss="modal">Close</button>
                                                         </div>
@@ -685,6 +695,7 @@
     <script src="/assets1/js/theme.js"></script>
     <script src="/assets1/js/vertical-navbar-with-menu-and-social-menu.js"></script>
     <script src="/assets1/js/Vertical-Navigation-with-double-sub-menu--scroll-enable-by-Jigar-Mistry.js"></script>
-</body>
 
+
+</body>
 </html>
