@@ -57,10 +57,13 @@
                         <li><a href="/user/smallcapstock"  style="color: darkblue; font-size: 15px;">Small Cap Stocks</a></li>
 
                     </ul>
+                    
                 </nav>
+                <div class="investments-img" style="padding-top: 20%; padding-left: 40%;"></div>
+                
 
-                    <h1>Investments</h1>
-                    <h4 class="text-white"><i>Discover promising investing opportunities, by laying out money now to get more money back in the future</i></h4><br>
+                    <!-- <h1>Investments</h1>
+                    <h4 class="text-white"><i>Discover promising investing opportunities, by laying out money now to get more money back in the future</i></h4><br> -->
 
                     <div class="containerr">
                         <div class="tabs">
@@ -450,14 +453,6 @@
                             </table>
                         </div>
                         <!-- End : Populate Industries -->
-
-                    </div>
-
-                </div>
-
-                <div class="card-body">
-
-                    <div class="row my-text-color-black">
 
                         <div class="col-md-12" id="start-up">
                             <table class="table table-sm table-hover">

@@ -69,7 +69,7 @@
                                         <div class="panel-body">
 
                                             <!-- Start: Navigation -->
-                                            <ul class="nav nav-tabs">
+                                            <!-- <ul class="nav nav-tabs">
                                                 <li class="nav-item">
                                                     <a class="nav-link active" data-toggle="pill"
                                                         href="#create-service" style="color:purple; font-size: 20px;">
@@ -92,25 +92,25 @@
                                                     </a>
                                                 </li>
 
-                                            </ul>
+                                            </ul> -->
                                             <!-- End: Navigation -->
 
                                             <!-- Tab panes -->
-                                            <div class="tab-content">
+                                            <div class="tab-content" style="background-color: lightgrey;">
                                                 <div class="tab-pane active my-text-color-white" id="create-service">
                                                     <center>
-                                                        <h4 class="my-text-color-white">
+                                                        <h1 class="my-text-color-white">
                                                             Create An Investment Activity
-                                                        </h4>
-                                                        <p class="my-text-color-white">
+                                                        </h1>
+                                                        <h3 class="my-text-color-white">
                                                             Need investors? Create a service!
-                                                        </p>
+                                                        </h3>
                                                     </center>
                                                     <br />
 
                                                     <div class="service-slide">
 
-                                                        <label>Investment Name</label><br />
+                                                        <h>Investment Name</label><br />
                                                         <input type="text" id="service-def-name"
                                                             class="form-control" /><br />
 
@@ -228,45 +228,6 @@
 
                                                 </div>
                                             </div>
-
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="panel panel-default">
-                                    <div class="panel-heading p-2" data-toggle="collapse" data-target="#collapse2"
-                                        data-parent="#accordion">
-                                        <h4 class="panel-title my-text-color-white">
-                                            Create news Activities!
-                                        </h4>
-                                    </div>
-                                    <div id="collapse2" class="panel-collapse collapse">
-                                        <div class="panel-body">
-
-                                            <!-- Start: Navigation -->
-                                            <ul class="nav nav-tabs">
-                                                <li class="nav-item">
-                                                    <a class="nav-link active" data-toggle="pill" href="#" style="color:purple; font-size: 20px;">
-                                                        News Channel
-                                                    </a>
-                                                </li>
-                                                <li class="nav-item">
-                                                    <a class="nav-link" data-toggle="pill" href="#" style="color:purple; font-size: 20px;">
-                                                        TV Channel
-                                                    </a>
-                                                </li>
-                                                <li class="nav-item">
-                                                    <a class="nav-link" data-toggle="pill" href="#" style="color:purple; font-size: 20px;">
-                                                        Podcast Channel
-                                                    </a>
-                                                </li>
-                                                <li class="nav-item">
-                                                    <a class="nav-link" data-toggle="pill" href="#" style="color:purple; font-size: 20px;">
-                                                        Blog
-                                                    </a>
-                                                </li>
-
-                                            </ul>
-                                            <!-- End: Navigation -->
 
                                         </div>
                                     </div>
