@@ -30,6 +30,7 @@
 <body>
 
     <!-- Start: Vertical Left-SideBar by Jigar Mistry -->
+    @include('/user/layout/header-style-1')
     @include('/user/layout/side-nav')
     <!-- End: Vertical Left-SideBar by Jigar Mistry -->
     <!-- Start: Top Navbar -->
@@ -43,7 +44,7 @@
 
                 <!-- Start: Jumbotron -->
                 <div class="code--css" style="height: 150px;">
-                <div style="padding: 2%">                    
+                <div style="padding: 2%">
                 <h3>Plugin Blogs</h3>
                     <p class="my-text-color-white">Go through Blogs and Blog Posts</p>
                 </div>

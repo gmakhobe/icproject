@@ -32,7 +32,7 @@
   color: white;
   width: 30%;
   height: 200px;}
-  #glass-pane:before {    
+  #glass-pane:before {
     z-index: -1;
     position: absolute;
     content: '';
@@ -142,7 +142,7 @@
   background: -moz-linear-gradient(left, #a889e6 0%, #53005e 100%);
   background: -webkit-linear-gradient(left, #a889e6 0%, #53005e 100%);
   background: linear-gradient(to right,#a889e6 0%, #53005e 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#7d4ac7', endColorstr='#a733bb', GradientType=1); 
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#7d4ac7', endColorstr='#a733bb', GradientType=1);
   border: 2px solid #ffffff;
   -webkit-box-shadow: 0 30px 30px 0 rgba(0, 0, 0, .13);
   -moz-box-shadow: 0 30px 30px 0 rgba(0, 0, 0, .13);

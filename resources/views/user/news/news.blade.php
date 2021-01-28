@@ -31,6 +31,7 @@
 <body>
 
     <!-- Start: Vertical Left-SideBar by Jigar Mistry -->
+    @include('/user/layout/header-style-1')
     @include('/user/layout/side-nav')
     <!-- End: Vertical Left-SideBar by Jigar Mistry -->
     <!-- Start: Top Navbar -->
@@ -44,7 +45,7 @@
                 <br>
                 <!-- Start: Jumbotron -->
                 <div class="code--css" style="height: 160px;">
-                <div style="padding: 2%"> 
+                <div style="padding: 2%">
                     <h2 style="color:white;">Plugin News</h2>
                     <h3 style="color:white;">Daily news</h3>
                     <h4 style="color:white;"><i>Discover promising investing opportunities, by laying out money now to get more money back in the future</i></h4><br>

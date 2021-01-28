@@ -7,6 +7,7 @@ class AppSession{
     public static function sessionSet($instance){
         //Create an array
         $BuildSessionUserData = array(
+            "UserId"=> $instance[0]->UserId,
             "Name"=> $instance[0]->Name,
             "Surname"=> $instance[0]->Surname,
             "Email"=> $instance[0]->EmailAddress,

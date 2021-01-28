@@ -29,6 +29,7 @@
 <body >
 
     <!-- Start: Vertical Left-SideBar by Jigar Mistry -->
+    @include('/user/layout/header-style-1')
     @include('/user/layout/side-nav')
     <!-- End: Vertical Left-SideBar by Jigar Mistry -->
     <!-- Start: Top Navbar -->

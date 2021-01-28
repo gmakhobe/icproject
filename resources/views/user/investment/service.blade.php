@@ -40,6 +40,7 @@
 <body>
 
     <!-- Start: Vertical Left-SideBar by Jigar Mistry -->
+    @include('/user/layout/header-style-1')
     @include('/user/layout/side-nav')
     <!-- End: Vertical Left-SideBar by Jigar Mistry -->
     <!-- Start: Top Navbar -->
@@ -49,7 +50,7 @@
     <div class="container">
 
         <div class="row">
-            
+
             <div class="col-md-1"></div>
             <div class="col-md-10 card my-bg-color-grey">
 
@@ -65,7 +66,7 @@
                     <h2>Service Company, {{ $ServiceInfo['IndustryName'] }} Industry.</h2>
                 </div>
                 </div>
-<!-- 
+<!--
                     <div class="tabs">               -->
                             <!-- Nav pills -->
                             <ul class="nav nav-tabs">

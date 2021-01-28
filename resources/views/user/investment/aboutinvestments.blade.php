@@ -50,6 +50,7 @@
 <!-- Home Section -->
 
 <section id="home" class="parallax-section">
+
      <div class="container">
           <div class="row">
 
@@ -80,136 +81,100 @@
 <div class="row">
   <div class="large-12 columns">
     <hgroup style="color:black;padding-left:40%">
-      <h1 style="text-shadow: 2px 2px purple;">System Features</h1>
+      <h1 style="text-shadow: 2px 2px purple;">Services We Offer</h1>
 
     </hgroup>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      /* Create three equal columns that floats next to each other */
+      .column {
+        float: left;
+        width: 33.33%;
+        padding: 10px;
+        height: 300px; /* Should be removed. Only for demonstration */
+      }
+
+      /* Clear floats after the columns */
+      .row:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+      </style>
 
 
-    <ul  class="small-block-grid-2 medium-block-grid-3 flip-cards">
-
-      <li id="investment" ontouchstart="this.classList.toggle('hover');">
-        <div  class="large button card-front">
-          <a href="#">Investments</a>
-          <i class="fa fa-code card-icon "></i>
-        </div>
-        <div class="panel card-back">
-          <i class="fa fa-code card-icon"></i>
-          <div class="hub-info">
-            <a href="#">JKLCode.com</a>
-            <p>Find coding gists, cheatsheets, plugins, themes, resources, and tutorials.</p>
-          </div>
-          <small class="clear">Updated TTH.</small>
-        </div>
-      </li>
-
-      <li ontouchstart="this.classList.toggle('hover');">
-        <div class="large button card-front">
-          <a href="http://www.aaronsnowberger.com">Raw-Mate</a>
-          <i class="fa fa-pencil-square-o card-icon"></i>
-        </div>
-
-        <div class="panel card-back">
-          <i class="fa fa-pencil-square-o card-icon"></i>
-          <div class="hub-info">
-            <a href="http://www.aaronsnowberger.com">AaronSnowberger.com</a>
-            <p>Take a look at my graphic design portfolio and contact me for design work.</p>
-          </div>
-          <small class="clear">Updated Saturdays.</small>
-        </div>
-      </li>
-
-      <li ontouchstart="this.classList.toggle('hover');">
-        <div class="large button card-front">
-          <a href="">Store Room</a>
-          <i class="fa fa-paper-plane-o card-icon"></i>
-        </div>
-
-        <div class="panel card-back">
-          <i class="fa fa-paper-plane-o card-icon"></i>
-          <div class="hub-info">
-            <a href="">Udemy.com</a>
-            <p>Join classes about Computers, Technology, Coding, Design, and Language Learning.</p>
-          </div>
-          <small class="clear">Updated Mondays.</small>
-        </div>
-      </li>
-
-      <li ontouchstart="this.classList.toggle('hover');">
-        <div class="large button card-front">
-          <a href="">News Feed</a>
-          <i class="fa fa-map-o card-icon"></i>
-        </div>
-
-        <div class="panel card-back">
-          <i class="fa fa-map-o card-icon"></i>
-          <div class="hub-info">
-            <a href="">KeysToAGoodLife.com</a>
-            <p>Find resources about business, family, exercise, and other various topics.</p>
-          </div>
-          <small class="clear">Updated monthly.</small>
-        </div>
-      </li>
-
-      <li ontouchstart="this.classList.toggle('hover');">
-        <div class="large button card-front">
-          <a href="http://www.keytokorean.com">Create</a>
-          <i class="fa fa-language card-icon"></i>
-        </div>
-
-        <div class="panel card-back">
-          <i class="fa fa-language card-icon"></i>
-          <div class="hub-info">
-            <a href="http://www.keytokorean.com">KeyToKorean.com</a>
-            <p>Take your Korean from "foreign" to fluent with vocab lists and grammar guides.</p>
-          </div>
-          <small class="clear">Updated MWF.</small>
-        </div>
-      </li>
-
-      <li ontouchstart="this.classList.toggle('hover');">
-        <div class="large button card-front">
-          <a href="http://www.aicfchurch.org">Ideas</a>
-          <i class="fa fa-users card-icon"></i>
-        </div>
-
-        <div class="panel card-back">
-          <i class="fa fa-users card-icon"></i>
-          <div class="hub-info">
-            <a href="http://www.aicfchurch.org">AICFChurch.org</a>
-            <p>Listen to sermon podcasts or download church graphic design resources.</p>
-          </div>
-          <small class="clear">Updated the 4th Sunday.</small>
-        </div>
-      </li>
-
-    </ul>
+<div class="row">
+  <div class="column" style="background-color:#3d3d29; padding-left: 2%; ">
+    <h2>EMPOWERMENT</h2>
+    <p style="padding-top: 5%; padding-left: 1%; font-size: 18px; color:white;">We help build Small
+              Companies And
+              Businesses into leading
+              brand and Global
+              phermonanols that
+              empower peaople and
+              enrich the communities.</p>
   </div>
-
-  <div class="large-12 columns">
-    <div class="small-12 small-centered medium-6 medium-centered large-3 large-centered columns clients">
-      <a href="#">
-
-        <p class="text-center">
-          <span class="fa-stack">
-                      <i class="fa fa-circle fa-stack-2x"></i>
-                      <i class="fa fa-angle-right fa-inverse fa-stack-1x"></i>
-                  </span>
-        </p>
-      </a>
-    </div>
-    <!-- end .clients -->
+  <div class="column" style="background-color:#00134d; padding-left: 2%; ">
+    <h2>ANALYSIS</h2>
+    <p style=" padding-top: 5%; padding-left: 1%; font-size: 18px; color:white;">PLUGIN offfers a depth
+              Analysis tool that helps 
+              investors and traders
+              Make Affirmative
+              decisions before making
+              an investment</p>
   </div>
-
+  <div class="column" style="background-color:#660066; padding-left: 2%;">
+    <h2>INVESTING</h2>
+    <p style="padding-top: 5%; padding-left: 1%; font-size: 18px; color:white;">We are a strong advocate
+              for financial freedom, and
+              one of our tools we intend
+              to use to achieve our goal
+              is help to help spread
+              investing solutions
+              amongst both ordinary
+              and experts investors</p>  
+              </div>
 </div>
-</section>
 
 
 
 <div class="container-fluid main-content text-align-center bg-color-black text-color-white">
-        <h2 class="main-content-heading text-color-white">ABOUT US</h2>
+        <h2 class="main-content-heading text-color-white">EQUITIES</h2>
+        <div class="aboutus-paragraph">
+          <h3>COMPANIES (PUBLIC COMPANIES)</h3>
+          <h3>SERVICES (PRIVATE COMPANIES)</h3>
+          <h3>VIRTUAL HEDGE FUNDS</h3>
+          <h3>START UP INDEX (SME)</h3>
+          <h3>DIGITAL CHANNEL</h3>
+          <h3>EVENTS</h3>
+        </div>
+    </div>
 
-        <p class="aboutus-paragraph">We are a new global plartform with the aim of connecting investors with small business together with Markets!</p>
+    <div class="container-fluid main-content text-align-center bg-color-white text-color-black">
+        <h2 class="main-content-heading text-color-black">OVER 150,000 COMPANIES, BOTH BIG AND SMALL, ARE GROWING THEIR BUSINESS WITH PLUGIN.</h2>
+    </div>
 
+
+<div class="container-fluid main-content text-align-center bg-color-black text-color-white">
+        <h2 class="main-content-heading text-color-white">SOCKET ANALYSIS</h2>
+
+        <p class="aboutus-paragraph">As an all round Platform. We look for
+        investors clients to make informed
+        decisions and business owners to get
+        good deals. As such, we introduce an
+        innovation like never had before.
+        Socket! Your exclusive platform for in
+        depth analysis of Commodities, SME
+        and Companies with regard to a client's
+        area of interest. With a deliberate
+        policy to serve our clientele diligently
+        and to ensure propelling of financial
+        growth . Socket! Offers one on one
+        takes with our clients at a click of a
+        button.</p>
     </div>
 
 <!-- Contact Section -->
@@ -221,32 +186,25 @@
                <div class="col-md-6 col-sm-12">
                     <div class="contact-form">
                          <div class="wow fadeInUp section-title" data-wow-delay="0.2s">
-                              <h1 class="color-white">Contact Us</h1>
-                              <p class="color-white"></p>
+                              <h1 class="color-white">WANT TO LEARN MORE ABOUT PLUGIN?</h1>
+                              <div class="wow fadeInUp col-md-6 col-sm-8" data-wow-delay="1.6s">
+                                <input name="submit" type="submit" class="form-control" id="ContactFormSubmit" value="Try PLUGIN free for 30 days.">
+                              </div> 
+                              <br> <br> <br><hr>
+                              <h2 class="color-white">See it in Action</h2>
+                              <p class="color-white">Get an overview of what
+                                PLUGIN for you in our
+                                product demos.</p>
+                                <div class="wow fadeInUp col-md-6 col-sm-8" data-wow-delay="1.6s">
+                                        <input name="submit" type="submit" class="form-control" id="ContactFormSubmit" value="Watch Demos">
+                                   </div>                             
                          </div>
-
-                         <div id="contact-form">
-
-                                   <div class="wow fadeInUp" data-wow-delay="1s">
-                                        <input name="name" type="text" class="form-control" id="name" placeholder="Your Name">
-                                   </div>
-                                   <div class="wow fadeInUp" data-wow-delay="1.2s">
-                                        <input name="email" type="email" class="form-control" id="email" placeholder="Your Email">
-                                   </div>
-                                   <div class="wow fadeInUp" data-wow-delay="1.4s">
-                                        <textarea name="comments" rows="5" class="form-control" id="comments" placeholder="Write your comment..."></textarea>
-                                   </div>
-                                   <div class="wow fadeInUp col-md-6 col-sm-8" data-wow-delay="1.6s">
-                                        <input name="submit" type="submit" class="form-control" id="ContactFormSubmit" value="Send">
-                                   </div>
-
-                         </div>
-
                     </div>
                </div>
 
                <div class="col-md-3 col-sm-6">
                     <div class="background-image contact-img"></div>
+
                </div>
 
                <div class="bg-dark col-md-3 col-sm-6">
@@ -259,11 +217,13 @@
                          <div class="wow fadeInUp contact-info" data-wow-delay="0.8s">
                               <h3 class="color-white">Contact.</h3>
                               <p>Contact us and we'll get back to you within 24 hours.</p>
-                              <p><i class="fa fa-phone"></i>+27 000000000</p>
+                              <p><i class="fa fa-phone"></i>+27746101883</p>
                               <p><i class="fa fa-envelope-o"></i> <a href="mailto:hello@company.co">info@plugin.co.za</a></p>
                               <p><i class="fa fa-globe"></i> <a href="#">plugin.co</a></p>
+                              <div class="wow fadeInUp col-md-6 col-sm-8" data-wow-delay="1.6s">
+                                        <input name="submit" type="submit" class="form-control" id="ContactFormSubmit" value="Request a call">
+                                   </div>
                          </div>
-
                     </div>
                </div>
 
