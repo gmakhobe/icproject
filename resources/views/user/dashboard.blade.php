@@ -53,7 +53,7 @@
             </div>
 
             <div>
-                    <span style="letter-spacing: 3px;color: rgba(190,184,184,0.9); color: white;">&nbsp;&nbsp;&nbsp;&nbsp; Our Services |</span>
+                    <span style="letter-spacing: 3px;color: rgba(190,184,184,0.9); color: white;">&nbsp;&nbsp;&nbsp;&nbsp;  <a href="./services" target="_blank">Our Services</a> |</span>
                     <span style="letter-spacing: 3px;color: rgba(190,184,184,0.9); color: white;">&nbsp;About Us |</span>
                     <span style="letter-spacing: 3px;color: rgba(190,184,184,0.9); color: white;">&nbsp;Overview |</span>
                     <span style="letter-spacing: 3px;color: rgba(190,184,184,0.9); color: white;">&nbsp;<a href="./Partners" target="_blank">Partners</a></span>

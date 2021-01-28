@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>{{ $Title }}</title>
+        <title>Services</title>
         <meta http-equiv="X-UA-Compatible" content="IE=Edge">
         <meta name="description" content="">
         <meta name="keywords" content="">
@@ -43,7 +43,8 @@
                     <span class="icon icon-bar"></span>
                     <span class="icon icon-bar"></span>
                </button>
-               <a href="#" class="navbar-brand">HOME</a>
+               <a href="../user/dashboard" class="navbar-brand">HOME</a>
+
           </div>
      </div>
     </div>
