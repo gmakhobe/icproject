@@ -44,6 +44,18 @@
                     <span style="letter-spacing: 3px;color: rgba(190,184,184,0.9); color: white;">Allies: 544 <!-- $FollowerCount --></span>
             </div>
 
+
+            <!-- <div style="padding-top: 75px; padding-left: 200px;">
+                <form class="search-container">
+                    <input type="text" id="search-bar" placeholder="What can we help you with today?">
+                    <a href="#"><img class="search-icon"
+                            src="http://www.endlessicons.com/wp-content/uploads/2012/12/search-icon.png"></a>
+                </form>
+            </div> -->
+
+            <div style="padding-left: 25%;">
+                    <span style="letter-spacing: 3px;color: rgba(190,184,184,0.9); color: white;">&nbsp;&nbsp;&nbsp;&nbsp; Our Services |</span>
+
             <div style="padding-top: 75px; padding-left: 200px;">
                 <!-- <form class="search-container">
                     <input type="text" id="search-bar" placeholder="What can we help you with today?">
@@ -54,6 +66,7 @@
 
             <div>
                     <span style="letter-spacing: 3px;color: rgba(190,184,184,0.9); color: white;">&nbsp;&nbsp;&nbsp;&nbsp;  <a href="./services" target="_blank">Our Services</a> |</span>
+
                     <span style="letter-spacing: 3px;color: rgba(190,184,184,0.9); color: white;">&nbsp;About Us |</span>
                     <span style="letter-spacing: 3px;color: rgba(190,184,184,0.9); color: white;">&nbsp;Overview |</span>
                     <span style="letter-spacing: 3px;color: rgba(190,184,184,0.9); color: white;">&nbsp;<a href="./Partners" target="_blank">Partners</a></span>

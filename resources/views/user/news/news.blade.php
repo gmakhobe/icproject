@@ -41,14 +41,19 @@
     <div class="container m-2">
         <div class="row">
             <div class="col-md-1"></div>
-            <div class="col-md-11">
+            <div class="col-md-11" style="padding-right: 10%;">
                 <br>
                 <!-- Start: Jumbotron -->
+
+
+                    <!-- <h2 style="color:white;">Plugin News</h2>
                 <div class="code--css" style="height: 160px;">
                 <div style="padding: 2%">
                     <h2 style="color:white;">Plugin News</h2>
                     <h3 style="color:white;">Daily news</h3>
-                    <h4 style="color:white;"><i>Discover promising investing opportunities, by laying out money now to get more money back in the future</i></h4><br>
+                    <h4 style="color:white;"><i>Discover promising investing opportunities, by laying out money now to get more money back in the future</i></h4><br> -->
+                    <div class="news-img" style="padding-top: 20%; padding-left: 40%;">    
+                    <br>
                 </div>
                 </div>
 

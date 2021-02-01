@@ -7,6 +7,7 @@
 
     <!-- End: Header Content -->
     <title>{{ $Title }} - {{ $Name }}</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
     <link rel="stylesheet" href="{{ asset('assets1/fonts/fontawesome-all.min.css') }}">
     <link rel="stylesheet" href="{{ asset('assets1/fonts/font-awesome.min.css') }}">
     <link rel="stylesheet" href="{{ asset('assets1/fonts/fontawesome5-overrides.min.css') }}">
@@ -32,7 +33,17 @@
     <link rel="stylesheet" href="/assets1/css/awardsNav.css">
     <link rel="stylesheet/less" type="text/css" href="/assets1/css/awards.less" />
     <link rel="stylesheet" href="/assets1/css/indicatorsAndStrategies.css">
-
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+    .selcls { 
+        padding: 9px; 
+        border: solid 1px #517B97; 
+        outline: 0; 
+        border-radius: 5% 5% 5% 5%;
+        } 
+    
+    </style>    
 </head>
 
 <body onload="onload" style="background-color: lightgray;">
@@ -58,10 +69,13 @@
                         <li><a href="/user/smallcapstock"  style="color: darkblue; font-size: 15px;">Small Cap Stocks</a></li>
 
                     </ul>
+                    
                 </nav>
+                <div class="investments-img" style="padding-top: 20%; padding-left: 40%;"></div>
+                
 
-                    <h1>Investments</h1>
-                    <h4 class="text-white"><i>Discover promising investing opportunities, by laying out money now to get more money back in the future</i></h4><br>
+                    <!-- <h1>Investments</h1>
+                    <h4 class="text-white"><i>Discover promising investing opportunities, by laying out money now to get more money back in the future</i></h4><br> -->
 
                     <div class="containerr">
                         <div class="tabs">
@@ -159,6 +173,7 @@
                     <br><br>
 
                     <div class="row my-text-color-white" style="background-color:white; border-radius: 2%;">
+                    
 
                         <div class="col-md-12" id="company">
                             <table class="table table-sm table-hover">
@@ -180,6 +195,7 @@
 
                                                         <!-- Modal Header -->
                                                         <div class="modal-header" style="background-color: gray;">
+
                                                             <center>
                                                                 <h2 class="my-text-color-white" style="color: white;">
                                                                     {{ $CompanyInd['Name'] }} Sector Companies
@@ -191,6 +207,19 @@
 
                                                         <!-- Modal body -->
                                                         <div class="modal-body" style="background-color: gray;">
+
+                                                        <!-- <label for="country">Country Filter</label> -->
+                                                        <div style="padding-left: 30%;">
+                                                            <select class="selcls" aria-label=".form-select-lg example">
+                                                                <option>Country Filter</option>
+                                                                <option value="1">South Africa</option>
+                                                                <option value="2">United States of Africa</option>
+                                                                <option value="3">Nigeria</option>
+                                                            </select>
+                                                        </div>                                                  
+
+                                                        <hr>
+
                                                             @foreach ($CompanyIndustriesCompanies as $CompanyIndustriesCompany)
 
                                                                 @for ($index = 0; $index < count($CompanyIndustriesCompany); $index++)
@@ -281,6 +310,17 @@
 
                                                         <!-- Modal body -->
                                                         <div class="modal-body " style="background-color: gray;">
+
+                                                        <div style="padding-left: 30%;">
+                                                            <select class="selcls" aria-label=".form-select-lg example">
+                                                                <option>Country Filter</option>
+                                                                <option value="1">South Africa</option>
+                                                                <option value="2">United States of Africa</option>
+                                                                <option value="3">Nigeria</option>
+                                                            </select>
+                                                        </div>
+                                                        <hr>
+
                                                             @foreach ($CompanyIndustriesServices as $CompanyIndustriesService)
 
                                                                 @for ($index = 0; $index < count($CompanyIndustriesService); $index++)
@@ -348,6 +388,16 @@
 
                                                         <!-- Modal body -->
                                                         <div class="modal-body " style="background-color: gray;">
+                                                        <div style="padding-left: 30%;">
+                                                            <select class="selcls" aria-label=".form-select-lg example">
+                                                                <option>Country Filter</option>
+                                                                <option value="1">South Africa</option>
+                                                                <option value="2">United States of Africa</option>
+                                                                <option value="3">Nigeria</option>
+                                                            </select>
+                                                        </div>
+                                                        <hr>
+                                                        
                                                             @foreach ($CompanyIndustriesEvents as $CompanyIndustriesEvent)
 
                                                                 @for ($index = 0; $index < count($CompanyIndustriesEvent); $index++)
@@ -415,6 +465,15 @@
 
                                                         <!-- Modal body -->
                                                         <div class="modal-body " style="background-color: gray;">
+                                                        <div style="padding-left: 30%;">
+                                                            <select class="selcls" aria-label=".form-select-lg example">
+                                                                <option>Country Filter</option>
+                                                                <option value="1">South Africa</option>
+                                                                <option value="2">United States of Africa</option>
+                                                                <option value="3">Nigeria</option>
+                                                            </select>
+                                                        </div>
+                                                        <hr>
                                                             @foreach ($CompanyIndustriesHedgeFunds as $CompanyIndustriesHedgeFund)
 
                                                                 @for ($index = 0; $index < count($CompanyIndustriesHedgeFund); $index++)
@@ -452,14 +511,6 @@
                         </div>
                         <!-- End : Populate Industries -->
 
-                    </div>
-
-                </div>
-
-                <div class="card-body">
-
-                    <div class="row my-text-color-black">
-
                         <div class="col-md-12" id="start-up">
                             <table class="table table-sm table-hover">
                                 <thead>
@@ -492,6 +543,15 @@
 
                                                         <!-- Modal body -->
                                                         <div class="modal-body "  style="background-color: gray;">
+                                                        <div style="padding-left: 30%;">
+                                                            <select class="selcls" aria-label=".form-select-lg example">
+                                                                <option>Country Filter</option>
+                                                                <option value="1">South Africa</option>
+                                                                <option value="2">United States of Africa</option>
+                                                                <option value="3">Nigeria</option>
+                                                            </select>
+                                                        </div>
+                                                        <hr>
                                                             @foreach ($CompanyIndustriesStartUpIndex as $CompanyIndustryStartUpIndex)
 
                                                                 @for ($index = 0; $index < count($CompanyIndustryStartUpIndex); $index++)
@@ -559,6 +619,15 @@
 
                                                         <!-- Modal body -->
                                                         <div class="modal-body "  style="background-color: gray;">
+                                                        <div style="padding-left: 30%;">
+                                                            <select class="selcls" aria-label=".form-select-lg example">
+                                                                <option>Country Filter</option>
+                                                                <option value="1">South Africa</option>
+                                                                <option value="2">United States of Africa</option>
+                                                                <option value="3">Nigeria</option>
+                                                            </select>
+                                                        </div>
+                                                        <hr>
                                                             @foreach ($CompanyIndustriesNewsChannels as $CompanyIndustriesNewsChannel)
 
                                                                 @for ($index = 0; $index < count($CompanyIndustriesNewsChannel); $index++)

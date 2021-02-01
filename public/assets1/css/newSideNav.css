@@ -365,3 +365,31 @@
   border-radius: 10px 10px 10px 10px;
   
 }
+
+.news-img {
+  background: url('../img/news.jpg') no-repeat;
+  background-size: cover;
+  background-position: 100% 100%;
+  height: 40vh;
+}
+
+.investments-img {
+  background: url('../img/investments.jpg') no-repeat;
+  background-size: cover;
+  background-position: 100% 100%;
+  height: 40vh;
+}
+
+.startup-img {
+  background: url('../img/startup.jpg') no-repeat;
+  background-size: cover;
+  background-position: 100% 100%;
+  height: 40vh;
+}
+
+.profile-img {
+  background: url('../img/profile.jpg') no-repeat;
+  background-size: cover;
+  background-position: 20% 20%;
+  height: 40vh;
+}

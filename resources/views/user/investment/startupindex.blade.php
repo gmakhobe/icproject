@@ -44,6 +44,8 @@
     <!-- End: Top Navbar -->
 
     <div class="container my-text-color-white">
+        <div class="startup-img" style="padding-top: 20%; padding-left: 40%;"></div>
+        <br>
         <div class="row">
             <div class="col-md-1"></div>
             <div class="col-md-10 card my-bg-color-grey">
@@ -55,11 +57,11 @@
 
                 </style>
 
-                <div class="code--css" style="height: 200px;">
                 <div style="padding: 2%">
+                    <hr>
                     <h1>{{ $ServiceInfo['Name'] }}</h1>
                     <p>Service Company, {{ $ServiceInfo['IndustryName'] }} Industry.</p>
-                </div>
+                    <hr>
                 </div>
 
                 <!-- Nav pills -->

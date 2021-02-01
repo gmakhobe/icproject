@@ -18,10 +18,6 @@
 
       <ul class="categories">
       <div style="padding-left: 30px;">
-                    <!-- <i class="fab fa-laravel"></i>
-                    <span style="letter-spacing: 4px; color: rgba(190,184,184,0.9); color: white; font-size: 20px;">Icons: 365  $FollowingCount</span><br>
-                    <i class="fab fa-laravel"></i>
-                    <span style="letter-spacing: 4px; color: rgba(190,184,184,0.9); color: white; font-size: 20px;">Allies: 544 $FollowerCount </span>-->
             </div>
 
             <li><i class="fa fa-home fa-fw" aria-hidden="true"></i>
@@ -53,10 +49,10 @@
             <li><i class="fa fa-users fa-fw"></i><a href="/user/news">News & Events</a>
                 <ul class="side-nav-dropdown">
                     <li><a href="/user/news/articles">Articles</a></li>
-                    <li><a href="/user/news/where-to-invest">Where to Invest</a></li>
+                    <!-- <li><a href="/user/news/where-to-invest">Where to Invest</a></li> -->
                     <li><a href="/user/news/podcasts">Podcast & Radio</a></li>
                     <li><a href="/user/news/channels">Channels</a></li>
-                    <li><a href="#">Portfolio</a></li>
+                    <!-- <li><a href="#">Portfolio</a></li> -->
                     <li><a href="/user/news/blog">Blogs</a></li>
                 </ul>
             </li>
@@ -262,7 +258,7 @@
 
     </footer> -->
 
-                    < </div>
+                    </div>
                 </div>
         </nav>
 
