@@ -37,35 +37,47 @@
 
     <!-- End: Top Navbar -->
 
-    <div class="container">
+    <div class="container m-2">
         <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-12 p-5" style="padding:25px">
 
-                <div class="row">
-                    @for ($i_product_brand = 0; $i_product_brand < count($GetProductsBrand); $i_product_brand++)
-                        <div class="col-sm-3" onclick="window.location.assign('/user/rawmate/product/{{ $GetProductsBrand[$i_product_brand]['ProductName'] }}/{{ $GetProductsBrand[$i_product_brand]['ProductId'] }}')">
-                            
-                            <img class="lozad my-ecom-img" data-src='{{ $GetProductsBrand[$i_product_brand]['ProductImage'] }}' alt='Product' />
+                <h2 class="text-center">Products In  {{ $PageDescription }}</h2>
 
-                            <h3>
-                                {{ $GetProductsBrand[$i_product_brand]['ProductName'] }}
-                            </h3>
-                            <h4> <sup>{{ $GetProductsBrand[$i_product_brand]['ProductCurrency'] }}</sup>
-                                {{ $GetProductsBrand[$i_product_brand]['ProductPrice'] }}
-                            </h4>
-                            <p>{{ $GetProductsBrand[$i_product_brand]['ProductDescription'] }}
-                            </p>
+                <div class="row p-5">
+
+                    @for ($index = 0; $index < count($ProductsTypeSector); $index++)
+
+                        <div class="col-md-3 card p-5"
+                        onclick="window.location.assign('/user/rawmate/product/{{ $ProductsTypeSector[$index]['ProductName'] }}/{{ $ProductsTypeSector[$index]['ProductId'] }}')">
+
+                            <div class="card-body">
+
+                                <img class="lozad my-ecom-img" data-src='{{ $ProductsTypeSector[$index]['ProductImage'] }}'
+                                    alt='Product' />
+
+                                <h3>
+                                    {{ $ProductsTypeSector[$index]['ProductName'] }}
+                                </h3>
+                                <h4> <sup>{{ $ProductsTypeSector[$index]['ProductCurrency'] }}</sup>
+                                    {{ $ProductsTypeSector[$index]['ProductPrice'] }}
+                                </h4>
+                                <p>{{ $ProductsTypeSector[$index]['ProductDescription'] }}
+                                </p>
+
+                            </div>
 
                         </div>
+
                     @endfor
+
                 </div>
 
             </div>
         </div>
     </div>
 
-
     <script>
+
         const observer = lozad();
         observer.observe();
 

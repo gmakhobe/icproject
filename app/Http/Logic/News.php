@@ -64,9 +64,9 @@ class News{
     {
 
         //Info from Database
-        $Data = DB::select('SELECT NC.NCId AS "ChannelId", NC.Name AS "ChannelName", NV.NVId AS "VideoId", NV.VideoTitle AS "Title", NV.VideoLink AS "Video", NV.Author AS "Author", NV.VideoBanner AS "Banner", NV.PublishedDate AS "Date", NS.Subject AS "Subject" FROM newsvideos NV INNER JOIN newssubjects NS ON NS.SubjectId = NV.TopicId INNER JOIN newschannel NC ON NC.NCId = NV.ChannelId WHERE NC.ChannelType = ? ORDER BY NV.PublishedDate DESC LIMIT ?', [1, $Limit]);
+        $Data = DB::select('SELECT NC.NCId AS "ChannelId", NC.Name AS "ChannelName", NV.NVId AS "VideoId", NV.VideoTitle AS "Title", NV.VideoLink AS "Video", NV.Author AS "Author", NV.VideoBanner AS "Banner", NV.PublishedDate AS "Date", NS.Subject AS "Subject" FROM newsvideos NV INNER JOIN newssubjects NS ON NS.SubjectId = NV.TopicId INNER JOIN newschannel NC ON NC.NCId = NV.ChannelId WHERE NC.ChannelType = ? ORDER BY NV.PublishedDate DESC LIMIT ?', [0, $Limit]);
         $myArray = [];
-
+        
         //Loop through
         for ($index = 0; $index < count($Data); $index++) {
             //Push to array

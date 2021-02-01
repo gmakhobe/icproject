@@ -33,6 +33,9 @@ Route::get('/alert/messagecenter/off', 'AlertsController@AlertShutMessagesCenter
 
 // /Alerts/AlertCenter*
 Route::get('/user/dashboard', 'UserController@Dashboard')->middleware('IsSessionValid');
+Route::get('user/Partners', 'UserController@PartnersView')->middleware('IsSessionValid');
+Route::get('user/services', 'UserController@ServicesView')->middleware('IsSessionValid');
+
 
 // /User/Profile
 Route::get('/user/profile', 'UserProfile')->middleware('IsSessionValid');
@@ -86,7 +89,15 @@ Route::get('/user/smallcapstock', 'UserController@SmallCapStock')->middleware('I
 Route::get('/user/rawmate', 'RawmateterialController@RawmateView')->middleware('IsSessionValid');
 Route::get('/user/rawmate/product/{name}/{id}', 'RawmateterialController@RawmateProductView')->middleware('IsSessionValid');
 Route::get('/user/rawmate/seller/{name}/{id}', 'RawmateterialController@RawmateSellerProfileView')->middleware('IsSessionValid');
+// Route::get('/user/rawmate/InfoPage', 'RawmateterialController@PageInfoView')->middleware('IsSessionValid');
+Route::get('/user/rawmate/InfoPage', 'RawmateterialController@PageInfoView')->middleware('IsSessionValid');
+
+
+
 Route::get('/user/rawmate/brand/{name}', 'RawmateterialController@RawmateBrandView')->middleware('IsSessionValid');
+// >>>>>>> 5098e72ffcaf1b2aca5ca4b5ae85325bde100bfe
+
+Route::get('/user/rawmate/type/{type}/sector/{sector}', 'RawmateterialController@RawmateTypeSectorView')->middleware('IsSessionValid');
 
 // /User/profile
 Route::get('/user/profile', 'ProfileController@ProfileView')->middleware('IsSessionValid');

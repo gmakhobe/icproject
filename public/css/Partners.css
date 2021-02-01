@@ -1,0 +1,627 @@
+@import "//fonts.googleapis.com/css?family=Open+Sans";
+ html {
+	 font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	 font-size: 18px;
+}
+ body {
+	 color: #333;
+	 height: 100%;
+	 line-height: 1.5em;
+	 margin-bottom: 1.5em;
+}
+ main {
+	 margin: 0 auto;
+	 width: 66.66667%;
+}
+ header {
+	 background-color: #333;
+	 background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, .25) 100%);
+	 box-sizing: border-box;
+	 color: #eee;
+	 margin-bottom: 1.5rem;
+	 overflow: hidden;
+	 padding: 3rem 25%;
+	 pointer-events: none;
+	 position: relative;
+	 left: -25%;
+	 width: 150%;
+	 transition: all 0.25s ease-in-out;
+}
+ header:before {
+	 background-image: linear-gradient(115deg, rgba(255, 255, 255, .025) 0%, rgba(255, 255, 255, .05) 50%, rgba(255, 255, 255, 0) 50%), linear-gradient(to left, #005952 0%, #005e20 100%);
+	 content: "";
+	 opacity: 0;
+	 position: absolute;
+	 top: 0;
+	 left: 0;
+	 right: 0;
+	 bottom: 0;
+	 transition: all 0.25s ease-in-out;
+}
+ header:hover:before {
+	 opacity: 1;
+}
+ header > * {
+	 position: relative;
+}
+ header h1 {
+	 font-weight: bold;
+	 font-size: 3em;
+	 line-height: 1em;
+	 margin: 0 0 0.5rem 0;
+	 text-align: center;
+}
+ header .byline {
+	 color: rgba(255, 255, 255, .75);
+	 display: block;
+	 font-size: 0.8em;
+	 letter-spacing: 1px;
+	 text-align: center;
+	 text-transform: uppercase;
+}
+ p {
+	 margin-bottom: 1.5rem;
+}
+ .message {
+	 background-color: #8b008b;
+	 border-left: 0.75rem solid #ddd;
+	 padding: 0.95rem 2rem;
+	 font-size:1rem;
+}
+ .message a:hover {
+	 border-color: rgba(0, 0, 0, .5);
+	 color: rgba(0, 0, 0, .5);
+}
+ .message.note {
+	 background-color: #8b008b;
+     border-color: #ddd;
+     margin: 0 auto;
+     font-size: 1em;
+     padding-bottom: 2%;
+	 width: 66.66667%;
+	 color: white;
+}
+ hr {
+	 border: none;
+	 border-top: 0.125rem solid #ddd;
+	 margin-bottom: 1.375rem;
+}
+ a {
+	 border-bottom: 2px solid #333;
+	 color: #333;
+	 text-decoration: none;
+	 transition: all 0.125s ease-in-out;
+}
+ a:hover {
+	 border-bottom-color: #4a7298;
+	 color: #4a7298;
+}
+ ul {
+	 margin-top: -0.75rem;
+}
+ code {
+	 background-color: rgba(0, 0, 0, .125);
+	 border: 1px solid rgba(0, 0, 0, .125);
+	 border-radius: 4px;
+	 display: inline-block;
+	 margin: 0 0.125em;
+	 padding: 0 0.25em;
+}
+/* Cards */
+ .cards {
+	 border-radius: 0.25rem;
+	 display: flex;
+	 flex-flow: row nowrap;
+	 margin-bottom: 1.5rem;
+	 overflow: hidden;
+}
+ .cards > a {
+	 box-sizing: border-box;
+	 border: none;
+	 flex: 1 100%;
+	 padding: 1.5rem;
+	 text-align: center;
+}
+ .cards > a svg {
+	 display: block;
+	 margin: 0 auto 0.75rem;
+	 width: 5.25rem;
+	 height: 5.25rem;
+	 transition: all 0.125s ease-in-out;
+}
+ .cards > a svg path {
+	 transition: fill 0.125s ease-in-out;
+}
+ .cards > a:first-child {
+	 background-color: #333;
+	 color: #eee;
+}
+ .cards > a:first-child svg {
+	 background-color: #eee;
+}
+ .cards > a:first-child svg path {
+	 fill: #333;
+}
+ .cards > a:first-child:hover {
+	 background-color: #222;
+	 color: rgba(87, 173, 104, 1);
+}
+ .cards > a:first-child:hover svg {
+	 background-color: rgba(87, 173, 104, 1);
+}
+ .cards > a:first-child:hover svg path {
+	 fill: #222;
+}
+ .cards > a:last-child {
+	 background-color: #eee;
+	 color: #555;
+}
+ .cards > a:last-child svg path {
+	 fill: #333;
+}
+ .cards > a:last-child:hover {
+	 background-color: #ccc;
+}
+/* Fluidbox styling starts here */
+ a[data-fluidbox] {
+	 background-color: #eee;
+	 border: none;
+	 cursor: -webkit-zoom-in;
+	 cursor: -moz-zoom-in;
+	 margin-bottom: 1.5rem;
+}
+ a[data-fluidbox].fluidbox-opened {
+	 cursor: -webkit-zoom-out;
+	 cursor: -moz-zoom-out;
+}
+ a[data-fluidbox] img {
+	 display: block;
+	 margin: 0 auto;
+	 opacity: 100;
+	 max-width: 100%;
+	 transition: all 0.25s ease-in-out;
+}
+ a[class^='float'] {
+	 margin: 1rem;
+	 margin-top: 0;
+	 width: 33.33333%;
+}
+ a[class^='float'].float-left {
+	 float: left;
+	 margin-left: 0;
+}
+ a[class^='float'].float-right {
+	 float: right;
+	 margin-right: 0;
+}
+ #fluidbox-overlay {
+	 background-color: rgba(255, 255, 255, .85);
+	 cursor: pointer;
+	 cursor: -webkit-zoom-out;
+	 cursor: -moz-zoom-out;
+	 display: none;
+	 position: fixed;
+	 top: 0;
+	 left: 0;
+	 bottom: 0;
+	 right: 0;
+	 z-index: 500;
+}
+ .fluidbox-wrap {
+	 background-position: center center;
+	 background-size: cover;
+	 margin: 0 auto;
+	 position: relative;
+	 z-index: 400;
+	 transition: all 0.25s ease-in-out;
+}
+ .fluidbox-opened .fluidbox-wrap {
+	 z-index: 600;
+}
+ .fluidbox-ghost {
+	 background-size: cover;
+	 background-position: center center;
+	 position: absolute;
+	 transition: all 0.25s ease-in-out;
+}
+ .gallery {
+	 display: flex;
+	 -webkit-flex-flow: row wrap;
+	/* Fix for iOS */
+	 flex-flow: row wrap;
+	 justify-content: space-between;
+}
+ .gallery a {
+	 margin-bottom: 1rem;
+}
+ .gallery a.col-2 {
+	 width: 49%;
+}
+ .gallery a.col-3 {
+	 width: 32%;
+}
+ .gallery a.col-4 {
+	 width: 28%;
+}
+/* Media queries, unrelated to functionality of Fluidbox */
+ @media only screen and (max-width: 768px) {
+	 .cards {
+		 flex-flow: row wrap;
+	}
+	 a[class^='float'] {
+		 width: 50%;
+	}
+}
+ @media only screen and (max-width: 600px) {
+	 .gallery a, .gallery a[class^='col'] {
+		 margin-bottom: 0.5rem;
+		 width: 100%;
+	}
+}
+ @media only screen and (max-width: 480px) {
+	 html {
+		 font-size: 12px;
+	}
+	 .message {
+		 border: 0;
+		 border-top: 0.75rem solid #f26c4f;
+	}
+	 a[class^='float'] {
+		 float: none;
+		 margin: 0 0 1rem 0;
+		 width: 100%;
+	}
+}
+ .column, .row {
+	 box-sizing: border-box;
+}
+/* Create four equal columns that floats next to each other */
+ .column {
+	 float: left;
+	 width: 25%;
+	 padding: 10px;
+	 height: 300px;
+	/* Should be removed. Only for demonstration */
+}
+/* Clear floats after the columns */
+ .row:after {
+	 content: "";
+	 display: table;
+	 clear: both;
+}
+/* ----------------------------------------------- * Timeline * --------------------------------------------- */
+ timeline {
+	 margin: 5px 20px;
+	 font-family: 'Open Sans';
+	 font-weight: 300;
+}
+ h2 {
+	 margin-bottom: 30px;
+	 color: #4679bd;
+	 font-weight: 400;
+	 text-align: center;
+}
+ p.footer {
+	 margin-bottom: 20px;
+	 color: #999;
+	 font-size: 18px;
+	 text-align: center;
+}
+ .timeline {
+	 list-style: none;
+	 padding: 10px 0;
+	 position: relative;
+	 font-weight: 300;
+}
+ .timeline:before {
+	 top: 0;
+	 bottom: 0;
+	 position: absolute;
+	 content: " ";
+	 width: 2px;
+	 background: #fff;
+	 left: 50%;
+	 margin-left: -1.5px;
+}
+ .timeline > li {
+	 margin-bottom: 20px;
+	 position: relative;
+	 width: 50%;
+	 float: left;
+	 clear: left;
+}
+ .timeline > li:before {
+	 content: " ";
+	 display: table;
+	 content: " ";
+	 display: table;
+}
+ .timeline > li:after {
+	 content: " ";
+	 display: table;
+	 clear: both;
+	 content: " ";
+	 display: table;
+	 clear: both;
+}
+ .timeline > li > .timeline-panel {
+	 width: calc(100% - 25px);
+	 width: -moz-calc(100% - 25px);
+	 width: -webkit-calc(100% - 25px);
+	 float: left;
+	 border: 1px solid #dcdcdc;
+	 background: #fff;
+	 position: relative;
+}
+ .timeline > li > .timeline-panel:before {
+	 position: absolute;
+	 top: 26px;
+	 right: -15px;
+	 display: inline-block;
+	 border-top: 15px solid transparent;
+	 border-left: 15px solid #dcdcdc;
+	 border-right: 0 solid #dcdcdc;
+	 border-bottom: 15px solid transparent;
+	 content: " ";
+}
+ .timeline > li > .timeline-panel:after {
+	 position: absolute;
+	 top: 27px;
+	 right: -14px;
+	 display: inline-block;
+	 border-top: 14px solid transparent;
+	 border-left: 14px solid #fff;
+	 border-right: 0 solid #fff;
+	 border-bottom: 14px solid transparent;
+	 content: " ";
+}
+ .timeline > li > .timeline-badge {
+	 color: #fff;
+	 width: 24px;
+	 height: 24px;
+	 line-height: 50px;
+	 text-align: center;
+	 position: absolute;
+	 top: 16px;
+	 right: -12px;
+	 z-index: 100;
+}
+ .timeline > li:nth-child(2) {
+	 margin-top: 60px;
+}
+ .timeline > li.timeline-inverted {
+	 float: right;
+	 clear: right;
+}
+ .timeline > li.timeline-inverted > .timeline-panel {
+	 float: right;
+}
+ .timeline > li.timeline-inverted > .timeline-panel:before {
+	 border-left-width: 0;
+	 border-right-width: 15px;
+	 left: -15px;
+	 right: auto;
+}
+ .timeline > li.timeline-inverted > .timeline-panel:after {
+	 border-left-width: 0;
+	 border-right-width: 14px;
+	 left: -14px;
+	 right: auto;
+}
+ .timeline > li.timeline-inverted > .timeline-badge {
+	 left: -12px;
+}
+ .timeline-badge > a {
+	 color: #fff !important;
+}
+ .timeline-badge a:hover {
+	 color: #dcdcdc !important;
+}
+ .timeline-title {
+	 margin-top: 0;
+	 color: inherit;
+}
+ .timeline-heading h4 {
+	 font-weight: 400;
+	 padding: 0 15px;
+	 color: #4679bd;
+}
+ .timeline-body > p {
+	 padding: 10px 15px;
+	 margin-bottom: 0;
+}
+ .timeline-body > ul {
+	 padding: 10px 15px;
+	 margin-bottom: 0;
+}
+ .timeline-footer {
+	 padding: 5px 15px;
+	 background-color: #f4f4f4;
+}
+ .timeline-footer p {
+	 margin-bottom: 0;
+}
+ .timeline-footer > a {
+	 cursor: pointer;
+	 text-decoration: none;
+}
+ .no-float {
+	 float: none !important;
+}
+ @media (max-width: 767px) {
+	 ul.timeline:before {
+		 left: 40px;
+	}
+	 ul.timeline > li {
+		 margin-bottom: 0px;
+		 position: relative;
+		 width: 100%;
+		 float: left;
+		 clear: left;
+	}
+	 ul.timeline > li > .timeline-panel {
+		 width: calc(100% - 65px);
+		 width: -moz-calc(100% - 65px);
+		 width: -webkit-calc(100% - 65px);
+		 float: right;
+	}
+	 ul.timeline > li > .timeline-panel:before {
+		 border-left-width: 0;
+		 border-right-width: 15px;
+		 left: -15px;
+		 right: auto;
+	}
+	 ul.timeline > li > .timeline-panel:after {
+		 border-left-width: 0;
+		 border-right-width: 14px;
+		 left: -14px;
+		 right: auto;
+	}
+	 ul.timeline > li > .timeline-badge {
+		 left: 28px;
+		 margin-left: 0;
+		 top: 16px;
+	}
+	 .timeline > li.timeline-inverted {
+		 float: left;
+		 clear: left;
+		 margin-top: 30px;
+		 margin-bottom: 30px;
+	}
+	 .timeline > li.timeline-inverted > .timeline-badge {
+		 left: 28px;
+	}
+}
+ .column2 {
+	 box-sizing: border-box;
+}
+/* Create three equal columns that floats next to each other */
+ .column2 {
+	 float: left;
+	 width: 33.33%;
+	 padding: 10px;
+	 height: 300px;
+	/* Should be removed. Only for demonstration */
+}
+/* Clear floats after the columns */
+ .row2:after {
+	 content: "";
+	 display: table;
+	 clear: both;
+}
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+ @media screen and (max-width: 600px) {
+	 .column2 {
+		 width: 100%;
+	}
+}
+
+
+/*
+
+Cards
+
+
+*/
+
+/* Font */
+@import url('https://fonts.googleapis.com/css?family=Quicksand:400,700');
+
+
+
+.main{
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h1 {
+    font-size: 24px;
+    font-weight: 400;
+    text-align: center;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+.btn {
+  color: #ffffff;
+  padding: 0.8rem;
+  font-size: 14px;
+  text-transform: uppercase;
+  border-radius: 4px;
+  font-weight: 400;
+  display: block;
+  width: 100%;
+  cursor: pointer;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: transparent;
+}
+
+.btn:hover {
+  background-color: rgba(255, 255, 255, 0.12);
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.cards_item {
+  display: flex;
+  padding: 1rem;
+}
+
+@media (min-width: 40rem) {
+  .cards_item {
+    width: 70%;
+  }
+}
+
+@media (min-width: 56rem) {
+  .cards_item {
+    width: 33.3333%;
+  }
+}
+
+.card {
+  background-color: white;
+  border-radius: 0.25rem;
+  box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.card_content {
+  padding: 1rem;
+  background: linear-gradient(to bottom left, #c61aec 40%, #ffffff 100%);
+}
+
+.card_title {
+  color: #ffffff;
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+  margin: 0px;
+}
+
+.card_text {
+  color: #ffffff;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  margin-bottom: 1.25rem;
+  font-weight: 400;
+}
+.made_by{
+  font-weight: 400;
+  font-size: 13px;
+  margin-top: 35px;
+  text-align: center;
+}

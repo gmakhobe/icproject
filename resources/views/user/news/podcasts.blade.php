@@ -31,6 +31,7 @@
 <body>
 
     <!-- Start: Vertical Left-SideBar by Jigar Mistry -->
+    @include('/user/layout/header-style-1')
     @include('/user/layout/side-nav')
 
     <!-- End: Top Navbar -->
@@ -166,7 +167,7 @@
                                                 class="btn btn-light">Search</button>
                                         </div>
                                     </div>
-                                    
+
                                 </div>
                                 <br>
                             </div>
@@ -190,7 +191,7 @@
                                                         title="{{ $TopPodcasts['Username'] }}"
                                                         data-content="{{ $TopPodcasts['Description'] }}">
                                                         <i class="fa fa-bars" aria-hidden="true"></i>
-                                                        
+
                                                     </button>
                                                     <br />
                                                     <span id="Subject{{ $index }}">{{ $TopPodcasts['Subject'] }}</span>

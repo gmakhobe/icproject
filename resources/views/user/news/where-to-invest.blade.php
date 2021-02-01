@@ -25,6 +25,7 @@
 
 
      <!-- Start: Vertical Left-SideBar by Jigar Mistry -->
+     @include('/user/layout/header-style-1')
      @include('/user/layout/side-nav')
      <!-- End: Vertical Left-SideBar by Jigar Mistry -->
      <!-- Start: Top Navbar -->
@@ -43,9 +44,9 @@
  <div class="main-wrapper">
   <div class="popular-books">
    <div class="main-menu">
-     
+
   <div style="padding-right: 50px;" class="genre">Where To Invest</div>
-  
+
     <div class="book-types">
      <a href="#" id="namesid" class="book-type active">Names</a>
      <a href="#" id="pricesid" class="book-type"> Prices</a>
@@ -69,30 +70,30 @@
                 $("#names").show();
                 $("#prices").hide();
                   $("#notes").hide();
-                    $("#strategiesandanalysis").hide(); 
-            });       
+                    $("#strategiesandanalysis").hide();
+            });
 
             $("#pricesid").click(function(){
                 $("#names").hide();
                 $("#prices").show();
                   $("#notes").hide();
-                    $("#strategiesandanalysis").hide(); 
-            }); 
+                    $("#strategiesandanalysis").hide();
+            });
 
             $("#notesid").click(function(){
                 $("#names").hide();
                 $("#prices").hide();
                   $("#notes").show();
-                    $("#strategiesandanalysis").hide(); 
-            }); 
+                    $("#strategiesandanalysis").hide();
+            });
 
             $("#strategiesandanalysisid").click(function(){
                 $("#names").hide();
                 $("#prices").hide();
                   $("#notes").hide();
-                    $("#strategiesandanalysis").show(); 
-            }); 
-          });        
+                    $("#strategiesandanalysis").show();
+            });
+          });
     </script>
 
 <div class="book-store">
@@ -489,7 +490,7 @@
               </div>
                 </div>
 
-            
+
 
       </div>
     </div>

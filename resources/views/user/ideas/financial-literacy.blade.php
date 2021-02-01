@@ -24,6 +24,7 @@
 <body onload="onload">
 
      <!-- Start: Vertical Left-SideBar by Jigar Mistry -->
+     @include('/user/layout/header-style-1')
      @include('/user/layout/side-nav')
      <!-- End: Vertical Left-SideBar by Jigar Mistry -->
      <!-- Start: Top Navbar -->
@@ -46,7 +47,7 @@
  <div class="main-wrapper">
   <div class="popular-books">
    <div class="main-menu">
-     
+
   <div style="padding-right: 50px;" class="genre">Financial Literacy</div>
 
   <select name="assess" class="assess">
@@ -55,7 +56,7 @@
     <option value="2">Excercises and Exmaples</option>
     <option value="3">Tutorials</option>
   </select>
-  
+
     <div class="book-types">
      <a href="#" id="allLessonsid" class="book-type active">All Lessons</a>
      <a href="#" id="Testimoniesid" class="book-type"> Testimonies</a>
@@ -85,7 +86,7 @@
                     $("#MyClasses").hide();
                       $("#HowToUseIC").hide();
                         $("#InvestingStrategies").hide();
-            });       
+            });
 
             $("#Testimoniesid").click(function(){
               $("#allLessons").hide();
@@ -131,7 +132,7 @@
                       $("#HowToUseIC").hide();
                         $("#InvestingStrategies").show();
             });
-          });        
+          });
     </script>
 
 <div class="book-store">
@@ -463,7 +464,7 @@
                   <span class="fa fa-star" style="font-size:15px;"></span>
                   <span class="fa fa-star" style="font-size:15px;"></span>
             </div>
-      <div class="book-cards">      
+      <div class="book-cards">
          <div class="book-card">
               <div class="content-wrapper">
                 <img src="https://www.wikihow.com/images/d/da/FinanceChartNumbersFontColour.png" alt="" class="book-card-img2">

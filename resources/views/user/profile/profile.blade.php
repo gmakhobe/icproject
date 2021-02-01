@@ -76,9 +76,9 @@
     <div class="profile-card" style="padding-left:20%; width: 890px;">
         <div class="profile-cover">
             <div class="menu-container">
-                <a class="list-icon" title="Expand"></a>          
+                <a class="list-icon" title="Expand"></a>
             </div>
-            
+
             <div class="profile-avatar">
                 <a href="#"><img src="{{ $ProfilePicture }}" /></a>
             </div>
@@ -89,6 +89,8 @@
             </div>
         </div>
 
+        <div class="profile-content">
+        <br><br>
 
         <div class="profile-content">
         <br><br>
@@ -103,8 +105,12 @@
                 <p style=" padding-top: 5%; padding-bottom: 5%; padding-left: 1%; padding-right: 1%; font-size: 25px; color:white;">{{ $NameAndSurname }}</p>
               </div>
 
+
               <div class="column" style="background-color:#00134d; padding-left: 2%; width: 250px;">
                 <p style=" padding-top: 5%; padding-bottom: 5%; padding-left: 1%; padding-right: 1%; font-size: 25px; color:white;"> 21 January 1987 - 34 years old</p>
+              <div class="column" style="background-color:#3d3d29; padding-left: 2%; width: 400px;">
+                <p style="padding-top: 5%; padding-left: 1%; font-size: 25px; color:white;">darylnyawasha@gmail.com</p>
+
               </div>
 
    
@@ -116,6 +122,7 @@
                 <p style=" padding-top: 5%; padding-bottom: 5%; padding-left: 1%; padding-right: 1%; font-size: 25px; color:white;">+27 61 758 2543</p>
               </div>
 
+
         
            
 
@@ -125,6 +132,11 @@
 
               <div class="column" style="background-color:#660066; padding-left: 2%; width: 400px;">
                 <p style=" padding-top: 5%; padding-bottom: 5%; padding-left: 1%; padding-right: 1%; font-size: 25px; color:white;">South Africa</p>  
+
+
+              <div class="column" style="background-color:#660066; padding-left: 2%; width: 550px;">
+                <p style="padding-top: 5%; padding-left: 1%; font-size: 25px; color:white;">176 Glenwood Road, Pretoria</p>
+
               </div>
 
             </div>

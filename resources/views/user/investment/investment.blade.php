@@ -48,6 +48,7 @@
 
 <body onload="onload" style="background-color: lightgray;">
     <!-- Start: Vertical Left-SideBar by Jigar Mistry -->
+    @include('/user/layout/header-style-1')
     @include('/user/layout/side-nav')
     <!-- End: Vertical Left-SideBar by Jigar Mistry -->
     <!-- Start: Top Navbar -->
@@ -300,7 +301,7 @@
 
                                                         <!-- Modal Header -->
                                                         <div class="modal-header" style="background-color: gray;">
-                                                            <h2 class="modal-title text-center my-text-color-white" style="color:white;"> 
+                                                            <h2 class="modal-title text-center my-text-color-white" style="color:white;">
                                                                 {{ $ServiceInd['Name'] }} Sector Services
                                                             </h2>
                                                             <button type="button" class="close"
@@ -481,7 +482,7 @@
                                                                         <div class="list-group ">
                                                                             <a href="/user/investment/hedgefund/{{ $CompanyIndustriesHedgeFund[$index]['HedgeFund'] }}"
                                                                                 class="list-group-item list-group-item-action my-bg-color-grey">
-                                                                                <span 
+                                                                                <span
                                                                                     class="my-text-color-white" style="font-size:18px;">{{ $CompanyIndustriesHedgeFund[$index]['HedgeFund'] }}</span>
                                                                             </a>
                                                                         </div>
